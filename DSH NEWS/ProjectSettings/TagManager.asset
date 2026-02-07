@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - ScreenText
+  - CinemachineTarget
+  - Item
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 

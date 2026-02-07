@@ -5,6 +5,7 @@ public class Crosshair : MonoBehaviour
     [Header("Outlook")]
     [SerializeField] private Color color = Color.white;
     [SerializeField, Tooltip("点的大小（像素）")] private float size = 4f;
+    [SerializeField, Tooltip("当瞄准可交互物体时的高亮颜色")] private Color highlightColor = Color.green;
 
     [Header("Setting")]
     [SerializeField, Tooltip("是否在解锁鼠标时也显示")] private bool showWhenCursorUnlocked = false;
@@ -12,6 +13,7 @@ public class Crosshair : MonoBehaviour
 
     private Texture2D tex;
     private bool isEnabled;
+    private bool isHighlighted = false;
 
     private void Awake()
     {
@@ -35,7 +37,7 @@ public class Crosshair : MonoBehaviour
         if (!showWhenCursorUnlocked && Cursor.lockState != CursorLockMode.Locked) return;
 
         var oldColor = GUI.color;
-        GUI.color = color;
+        GUI.color = isHighlighted ? highlightColor : color;
 
         float cx = Screen.width * 0.5f;
         float cy = Screen.height * 0.5f;
@@ -49,4 +51,8 @@ public class Crosshair : MonoBehaviour
     // 运行时可通过脚本启/关准星
     public void SetEnabled(bool on) => isEnabled = on;
     public bool IsEnabled() => isEnabled;
+
+    // 由外部（如 PlayerController）设置高亮状态
+    public void SetHighlighted(bool on) => isHighlighted = on;
+    public bool IsHighlighted() => isHighlighted;
 }

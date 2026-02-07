@@ -30,11 +30,11 @@ public class PlayerController : MonoBehaviour
         if (playerCamera == null)
             playerCamera = GetComponentInChildren<Camera>();
 
-        // 回退到主摄像机，避免未赋值导致无法俯仰
+        // 禄脴脥脣碌陆脰梅脡茫脧帽禄煤拢卢卤脺脙芒脦麓赂鲁脰碌碌录脰脗脦脼路篓赂漏脩枚
         if (playerCamera == null)
             playerCamera = Camera.main;
 
-        // 锁定并隐藏光标（运行时）
+        // 脣酶露篓虏垄脪镁虏脴鹿芒卤锚拢篓脭脣脨脨脢卤拢漏
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -51,16 +51,16 @@ public class PlayerController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        // 横向由角色转动（Yaw）
+        // 潞谩脧貌脫脡陆脟脡芦脳陋露炉拢篓Yaw拢漏
         transform.Rotate(Vector3.up * mouseX);
 
-        // 俯仰（Pitch），在摄像机本地空间中应用
+        // 赂漏脩枚拢篓Pitch拢漏拢卢脭脷脡茫脧帽禄煤卤戮碌脴驴脮录盲脰脨脫娄脫脙
         cameraPitch -= mouseY;
         cameraPitch = Mathf.Clamp(cameraPitch, -maxPitch, maxPitch);
 
         if (playerCamera != null)
         {
-            // 使用 Quaternion 更可靠地设置局部俯仰
+            // 脢鹿脫脙 Quaternion 赂眉驴脡驴驴碌脴脡猫脰脙戮脰虏驴赂漏脩枚
             playerCamera.transform.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
         }
     }
@@ -73,12 +73,12 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         Vector3 horizontalVelocity = move * walkSpeed;
 
-        // 应用水平移动
+        // 脫娄脫脙脣庐脝陆脪脝露炉
         controller.Move(horizontalVelocity * Time.deltaTime);
 
-        // 简单重力
+        // 录貌碌楼脰脴脕娄
         if (controller.isGrounded && velocity.y < 0f)
-            velocity.y = -2f; // 保持贴地
+            velocity.y = -2f; // 卤拢鲁脰脤霉碌脴
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
@@ -92,11 +92,11 @@ public class PlayerController : MonoBehaviour
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
         {
-            // 尝试获取交互接口
+            // 鲁垄脢脭禄帽脠隆陆禄禄楼陆脫驴脷
             var interactable = hit.collider.GetComponent<IInteractable>();
             if (interactable != null)
             {
-                // 可在此处显示交互提示（TODO）
+                // 驴脡脭脷麓脣麓娄脧脭脢戮陆禄禄楼脤谩脢戮拢篓TODO拢漏
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -106,16 +106,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 可在需要时解锁光标
+    // 驴脡脭脷脨猫脪陋脢卤陆芒脣酶鹿芒卤锚
     public void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-}
-
-// 简单交互接口：任何可交互物体实现此接口
-public interface IInteractable
-{
-    void OnInteract();
 }

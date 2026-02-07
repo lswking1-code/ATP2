@@ -165,6 +165,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   playerCamera: {fileID: 4518138068506165416}
+  crosshair: {fileID: 0}
 --- !u!114 &3763036545377909083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,9 +180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   canPush: 1
-  strength: 1.1
+  strength: 0.5
 --- !u!114 &7455070304266235652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 1, a: 1}
   size: 4
+  highlightColor: {r: 0, g: 1, b: 0, a: 1}
   showWhenCursorUnlocked: 0
   enabledAtStart: 1
 --- !u!1 &2197591686778995083

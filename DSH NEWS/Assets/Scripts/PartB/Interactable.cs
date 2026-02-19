@@ -44,7 +44,7 @@ public class Interactable : MonoBehaviour, IInteractable
         onInteract?.Invoke();// 触发事件（如果有订阅）
 
         if (interactSound != null)
-            AudioSource.PlayClipAtPoint(interactSound, transform.position, soundVolume);
+           AudioManager.Instance.PlaySFX(interactSound, soundVolume);
 
         if (destroyOnInteract)
         {

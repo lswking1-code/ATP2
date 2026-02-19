@@ -953,8 +953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 27
   buttonName: 
-  inputAction: {fileID: 0}
-  disableInputActionAfterClick: 0
   anyKeyOrButton: 0
   skipIfBeingClickedBySubmit: 1
   simulateButtonClick: 1

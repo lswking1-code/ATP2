@@ -80,11 +80,9 @@ MonoBehaviour:
       cancelSubtitle:
         key: 27
         buttonName: 
-        inputAction: {fileID: 0}
       cancelConversation:
         key: 27
         buttonName: 
-        inputAction: {fileID: 0}
     dialogueUI: {fileID: 161038, guid: 5c56f58e2d14e894c96171a7540a6a1d, type: 3}
     defaultCanvas: {fileID: 223944997660514316}
     localizationSettings:
@@ -131,11 +129,9 @@ MonoBehaviour:
       cancel:
         key: 27
         buttonName: 
-        inputAction: {fileID: 0}
       cancelConversation:
         key: 27
         buttonName: 
-        inputAction: {fileID: 0}
     barkSettings:
       allowBarksDuringConversations: 1
       barkCharsPerSecond: 0
@@ -350,10 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077ae7f842e61834cbf79303bdb7f29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.Wrappers.InputActionRegistry
-  inputActions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1092739927580670
 GameObject:
   m_ObjectHideFlags: 0

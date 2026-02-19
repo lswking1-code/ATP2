@@ -170,7 +170,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
 
         if (playerTrans != null)
         {
-            playerTrans.gameObject.SetActive(true);
+            //playerTrans.gameObject.SetActive(true);
         }
 
         if (fadeScreen && fadeEvent != null)

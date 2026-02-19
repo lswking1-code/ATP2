@@ -349,8 +349,8 @@ MonoBehaviour:
   afterSceneLoadedEvent: {fileID: 11400000, guid: f1b163b394c5bcc4aab91757f936f203, type: 2}
   fadeEvent: {fileID: 11400000, guid: 13106d00223a8354082c41108e795c73, type: 2}
   unloadedSceneEvent: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
-  firstLoadScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
-  menuScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  firstLoadScene: {fileID: 11400000, guid: eb46d7beac41b43e79d4cb88005c69fe, type: 2}
+  menuScene: {fileID: 11400000, guid: eb46d7beac41b43e79d4cb88005c69fe, type: 2}
   fadeDuration: 0.5
 --- !u!1 &1714002137
 GameObject:

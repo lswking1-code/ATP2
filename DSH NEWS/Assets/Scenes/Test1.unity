@@ -1294,17 +1294,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 815572041}
   ValueEvent: {fileID: 11400000, guid: 87b558a72a5ac1745b3f4db88cc30473, type: 2}
+  GlitchEvent: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
+  GlitchTextDelay: 0.5
   Entries:
   - Manuscript: {fileID: 1658591185}
+    HasGlitch: 1
     TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+    GlitchTextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
     ValueIndex: 1
     ValueAmount: 15
   - Manuscript: {fileID: 1060024581}
+    HasGlitch: 0
     TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+    GlitchTextFile: {fileID: 0}
     ValueIndex: 2
     ValueAmount: 30
   - Manuscript: {fileID: 1837471582}
+    HasGlitch: 0
     TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+    GlitchTextFile: {fileID: 0}
     ValueIndex: 1
     ValueAmount: 50
 --- !u!1001 &1060024579

@@ -85,7 +85,8 @@ public class Manuscript : MonoBehaviour
             return;
         }
 
-        Manager.OnManuscriptSelected(this);
+        // 使用带故障逻辑的接口
+        Manager.OnManuscriptSelectedWithGlitch(this);
     }
     private void OnClick()
     {

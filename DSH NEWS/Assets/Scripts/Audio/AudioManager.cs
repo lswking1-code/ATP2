@@ -35,6 +35,7 @@ public class AudioManager : MonoBehaviour
         }
 
         Instance = this;
+        Debug.Log("AudioManager initialized.");
         DontDestroyOnLoad(gameObject);
 
         EnsureAudioSources();

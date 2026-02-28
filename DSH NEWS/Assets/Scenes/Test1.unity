@@ -1047,6 +1047,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1295,26 +1296,40 @@ MonoBehaviour:
   Text: {fileID: 815572041}
   ValueEvent: {fileID: 11400000, guid: 87b558a72a5ac1745b3f4db88cc30473, type: 2}
   GlitchEvent: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
-  GlitchTextDelay: 0.5
-  Entries:
-  - Manuscript: {fileID: 1658591185}
-    HasGlitch: 1
-    TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-    GlitchTextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
-    ValueIndex: 1
-    ValueAmount: 15
-  - Manuscript: {fileID: 1060024581}
-    HasGlitch: 0
-    TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
-    GlitchTextFile: {fileID: 0}
-    ValueIndex: 2
-    ValueAmount: 30
-  - Manuscript: {fileID: 1837471582}
-    HasGlitch: 0
-    TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
-    GlitchTextFile: {fileID: 0}
-    ValueIndex: 1
-    ValueAmount: 50
+  ScriptChangeEvent: {fileID: 11400000, guid: 0c77619f6fc792c43803f1b1735ad37c, type: 2}
+  SceneLoadEvent: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
+  PositionToGo: {x: 0, y: 1, z: 0}
+  SceneToGo: {fileID: 11400000, guid: eb46d7beac41b43e79d4cb88005c69fe, type: 2}
+  GlitchTextDelay: 0.3
+  EntryGroups:
+  - Name: Day1
+    Day: 1
+    Entries:
+    - Manuscript: {fileID: 1658591185}
+      HasGlitch: 1
+      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      Id: a
+      ScriptIndex: 0
+      Values:
+      - ValueIndex: 1
+        ValueAmount: 15
+      - ValueIndex: 2
+        ValueAmount: 15
+    - Manuscript: {fileID: 1060024581}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      GlitchTextFile: {fileID: 0}
+      Id: 
+      ScriptIndex: 0
+      Values: []
+    - Manuscript: {fileID: 1837471582}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      GlitchTextFile: {fileID: 0}
+      Id: 
+      ScriptIndex: 0
+      Values: []
 --- !u!1001 &1060024579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2212,6 +2227,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

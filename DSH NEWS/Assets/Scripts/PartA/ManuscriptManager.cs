@@ -3,33 +3,92 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class EntryGroup
+{
+    [Tooltip("该组命名，便于在 Inspector 中区分")]
+    public string Name = "New Group";
+    [Tooltip("当 ValueManage.day 等于此值时使用本组 Entries")]
+    public int Day = 0;
+    public List<ManuscriptEntry> Entries = new List<ManuscriptEntry>();
+}
+
 public class ManuscriptManager : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     public ValueEventSO ValueEvent;
     public GlitchEventSO GlitchEvent;
+    public ScriptChangeEventSO ScriptChangeEvent;
+    [Header("Scene Load")]
+    public SceneLoadEventSO SceneLoadEvent;
+    public Vector3 PositionToGo;
+    public GameSceneSO SceneToGo;
     [Header("Glitch Settings")]
     public float GlitchTextDelay = 1f;
-    [Header("Manuscripts")]
-    public List<ManuscriptEntry> Entries = new List<ManuscriptEntry>();
+    [Header("Manuscripts - 按 day 切换使用的组")]
+    public List<EntryGroup> EntryGroups = new List<EntryGroup>();
 
+    private List<ManuscriptEntry> _activeEntries = new List<ManuscriptEntry>();
     private Coroutine glitchRoutine;
-
+    private ValueManage valueManage;
     private void Awake()
     {
-        AssignTextFiles();
+        ValueEvent.RaiseEvent(3, 1);
+    }
+
+    private void Start()
+    {
+        int day = 0;
+        valueManage = FindFirstObjectByType<ValueManage>();
+        if (valueManage != null)
+        {
+            day = valueManage.day;
+        }
+
+        EntryGroup selected = null;
+        for (int i = 0; i < EntryGroups.Count; i++)
+        {
+            if (EntryGroups[i] != null && EntryGroups[i].Day == day)
+            {
+                selected = EntryGroups[i];
+                break;
+            }
+        }
+
+        if (selected != null)
+        {
+            _activeEntries = selected.Entries ?? new List<ManuscriptEntry>();
+        }
+        else if (EntryGroups.Count > 0 && EntryGroups[0] != null)
+        {
+            _activeEntries = EntryGroups[0].Entries ?? new List<ManuscriptEntry>();
+            Debug.LogWarning($"ManuscriptManager: 未找到 day={day} 的 EntryGroup，使用第一组 \"{EntryGroups[0].Name}\"。", this);
+        }
+        else
+        {
+            _activeEntries = new List<ManuscriptEntry>();
+        }
+
+        AssignTextFiles(_activeEntries);
     }
 
     private void OnValidate()
     {
-        AssignTextFiles();
+        for (int g = 0; g < EntryGroups.Count; g++)
+        {
+            if (EntryGroups[g] != null && EntryGroups[g].Entries != null)
+            {
+                AssignTextFiles(EntryGroups[g].Entries);
+            }
+        }
     }
 
-    private void AssignTextFiles()
+    private void AssignTextFiles(List<ManuscriptEntry> entries)
     {
-        for (int i = 0; i < Entries.Count; i++)
+        if (entries == null) return;
+        for (int i = 0; i < entries.Count; i++)
         {
-            ManuscriptEntry entry = Entries[i];
+            ManuscriptEntry entry = entries[i];
             if (entry == null || entry.Manuscript == null)
             {
                 continue;
@@ -49,11 +108,11 @@ public class ManuscriptManager : MonoBehaviour
         }
 
         ManuscriptEntry entry = null;
-        for (int i = 0; i < Entries.Count; i++)
+        for (int i = 0; i < _activeEntries.Count; i++)
         {
-            if (Entries[i] != null && Entries[i].Manuscript == manuscript)
+            if (_activeEntries[i] != null && _activeEntries[i].Manuscript == manuscript)
             {
-                entry = Entries[i];
+                entry = _activeEntries[i];
                 break;
             }
         }
@@ -87,11 +146,11 @@ public class ManuscriptManager : MonoBehaviour
         }
 
         ManuscriptEntry entry = null;
-        for (int i = 0; i < Entries.Count; i++)
+        for (int i = 0; i < _activeEntries.Count; i++)
         {
-            if (Entries[i] != null && Entries[i].Manuscript == manuscript)
+            if (_activeEntries[i] != null && _activeEntries[i].Manuscript == manuscript)
             {
-                entry = Entries[i];
+                entry = _activeEntries[i];
                 break;
             }
         }
@@ -108,7 +167,31 @@ public class ManuscriptManager : MonoBehaviour
             return;
         }
 
-        ValueEvent.RaiseEvent(entry.ValueIndex, entry.ValueAmount);
+        // 支持多个 Value：优先使用 Values 列表，为空时使用单值（兼容旧配置）
+        if (entry.Values != null && entry.Values.Count > 0)
+        {
+            for (int i = 0; i < entry.Values.Count; i++)
+            {
+                ValueChange v = entry.Values[i];
+                ValueEvent.RaiseEvent(v.ValueIndex, v.ValueAmount);
+            }
+        }
+        else
+        {
+            //ValueEvent.RaiseEvent(entry.ValueIndex, entry.ValueAmount);
+        }
+        if (entry.Id != string.Empty)
+        {
+            valueManage.SetSituation(entry.Id, true);
+        }
+        if (entry.ScriptIndex != 0)
+        {
+            ScriptChangeEvent.RaiseEvent(entry.ScriptIndex);
+        }
+        if (SceneToGo != null)
+        {
+            SceneLoadEvent.RaiseLoadRequestEvent(SceneToGo, PositionToGo, true);
+        }
     }
 
     // 带故障逻辑的选中接口，供 Manuscript 调用
@@ -121,11 +204,11 @@ public class ManuscriptManager : MonoBehaviour
         }
 
         ManuscriptEntry entry = null;
-        for (int i = 0; i < Entries.Count; i++)
+        for (int i = 0; i < _activeEntries.Count; i++)
         {
-            if (Entries[i] != null && Entries[i].Manuscript == manuscript)
+            if (_activeEntries[i] != null && _activeEntries[i].Manuscript == manuscript)
             {
-                entry = Entries[i];
+                entry = _activeEntries[i];
                 break;
             }
         }

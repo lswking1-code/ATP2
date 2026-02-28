@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b378119bb953949a9dbaf038eb1663, type: 3}
-  m_Name: Test1
+  m_Script: {fileID: 11500000, guid: 71e7311cb468a1b4bb977148ae0e99bd, type: 3}
+  m_Name: ScriptChangeEventSO
   m_EditorClassIdentifier: 
-  sceneType: 1
-  sceneReference:
-    m_AssetGUID: 99c9720ab356a0642a771bea13969a05
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0

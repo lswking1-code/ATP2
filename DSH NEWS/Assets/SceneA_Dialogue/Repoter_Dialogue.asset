@@ -505,8 +505,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 344.2394
-        y: 381.86307
+        x: 343.01746
+        y: 384.79523
         width: 160
         height: 30
     - id: 6
@@ -651,13 +651,17 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AnimatorTrigger(StartGlitch,
-          GlitchManager);
+          AnimatorTrigger(Glitch1,GlitchManager);
 
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
         value: 
         type: 0
         typeString: 
@@ -682,8 +686,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345.77487
-        y: 438.7726
+        x: 340.85623
+        y: 445.37064
         width: 160
         height: 30
     - id: 9
@@ -831,10 +835,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AnimatorTrigger(StopGlitch,
-          GlitchManager);
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -891,6 +893,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
+          Audio(BeBack);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
@@ -915,8 +919,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 106.115204, y: 381.69055}
-    canvasZoom: 1.1772053
+    canvasScrollPosition: {x: 14.4869, y: 162.71956}
+    canvasZoom: 0.8913463
   syncInfo:
     syncActors: 0
     syncItems: 0

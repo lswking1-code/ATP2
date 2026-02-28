@@ -505,8 +505,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 344.2394
-        y: 381.86307
+        x: 342.13583
+        y: 382.91483
         width: 160
         height: 30
     - id: 6
@@ -682,8 +682,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345.77487
-        y: 438.7726
+        x: 342.6195
+        y: 446.1351
         width: 160
         height: 30
     - id: 9
@@ -831,8 +831,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          AnimatorTrigger(StopGlitch,
+          GlitchManager);
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 1
@@ -913,8 +915,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 146.90057, y: 201.05817}
-    canvasZoom: 1.3025364
+    canvasScrollPosition: {x: 212.21054, y: 221.55186}
+    canvasZoom: 1.1342686
   syncInfo:
     syncActors: 0
     syncItems: 0

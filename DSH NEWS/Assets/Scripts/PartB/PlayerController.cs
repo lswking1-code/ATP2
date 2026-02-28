@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     [Header("UI")]
     [SerializeField, Tooltip("准星组件")] private Crosshair crosshair;
 
+    [Header("Cursor")]
+    [SerializeField, Tooltip("是否在启动时锁定并隐藏光标（关闭后不会自动锁定）")]
+    private bool lockCursorOnStart = false;
+
     [Header("Footsteps")]
     [SerializeField, Tooltip("脚步音效（可配置多个用于随机播放）")]
     private AudioClip[] footstepClips;
@@ -58,9 +62,17 @@ public class PlayerController : MonoBehaviour
         // 初始化脚步位置记录
         lastPosition = transform.position;
 
-        // 锁定并隐藏光标（运行时）
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // 根据配置决定是否在启动时锁定并隐藏光标（默认关闭，不锁定）
+        if (lockCursorOnStart)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+    private void OnDisable()
+    {
+        UnlockCursor();
+        Debug.Log("PlayerController disabled, cursor unlocked");
     }
 
     private void Update()

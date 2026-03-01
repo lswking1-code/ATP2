@@ -11,6 +11,10 @@ public class SceneLoader : MonoBehaviour, ISaveable
     public Vector3 firstPosition;
     public Vector3 menuPosition;
 
+    [Header("Camera")]
+    [Tooltip("常驻在 Persistent 场景的备用相机，在过渡期或 Menu 时保证始终有相机渲染，避免 \"No cameras rendering\"")]
+    public Camera fallbackCamera;
+
     [Header("Event Listeners")]
     public SceneLoadEventSO loadEventSO;
     public VoidEventSO newGameEvent;
@@ -34,6 +38,10 @@ public class SceneLoader : MonoBehaviour, ISaveable
 
     private void Start()
     {
+        // 先启用备用相机，确保从第一帧起就有相机渲染（避免首次加载 Menu 时闪烁）
+        if (fallbackCamera != null)
+            fallbackCamera.gameObject.SetActive(true);
+
         if (loadEventSO != null && menuScene != null)
         {
             loadEventSO.RaiseLoadRequestEvent(menuScene, menuPosition, true);
@@ -116,6 +124,10 @@ public class SceneLoader : MonoBehaviour, ISaveable
         positionToGo = posToGo;
         this.fadeScreen = fadeScreen;
 
+        // 切换场景前先启用备用相机，避免卸载旧场景后出现 "No cameras rendering"
+        if (fallbackCamera != null)
+            fallbackCamera.gameObject.SetActive(true);
+
         if (currentLoadedScene != null)
         {
             StartCoroutine(UnLoadPreviousScene());
@@ -145,10 +157,8 @@ public class SceneLoader : MonoBehaviour, ISaveable
             yield return currentLoadedScene.sceneReference.UnLoadScene();
         }
 
-        if (playerTrans != null)
-        {
-            playerTrans.gameObject.SetActive(false);
-        }
+        // 不在此处禁用 Player，避免相机随之关闭导致 "No cameras rendering"
+        // 改为在 OnLoadCompleted 中根据新场景类型再设置 Player 激活状态
 
         LoadNewScene();
     }
@@ -166,11 +176,11 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (playerTrans != null)
         {
             playerTrans.position = positionToGo;
-        }
-
-        if (playerTrans != null)
-        {
-            //playerTrans.gameObject.SetActive(true);
+            bool enablePlayer = currentLoadedScene.sceneType != SceneType.Menu;
+            playerTrans.gameObject.SetActive(enablePlayer);
+            // 有 Player 相机时关闭备用相机，避免双相机；Menu 或无 Player 时保留备用相机
+            if (fallbackCamera != null && enablePlayer)
+                fallbackCamera.gameObject.SetActive(false);
         }
 
         if (fadeScreen && fadeEvent != null)

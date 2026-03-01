@@ -1,18 +1,22 @@
 using UnityEngine;
 
-public class TeleprotPoint : MonoBehaviour, IInteractable
+public class TeleprotPoint : MonoBehaviour
 {
     public SceneLoadEventSO loadEventSO;
     public GameSceneSO sceneToGo;
     public Vector3 positionToGo;
 
-    public void OnInteract()
+    public void OnTriggerEnter(Collider other)
     {
-        if (loadEventSO == null || sceneToGo == null)
+        if (other.CompareTag("Player"))
         {
-            return;
-        }
+            if (loadEventSO == null || sceneToGo == null)
+            {
+                return;
+            }
 
-        loadEventSO.RaiseLoadRequestEvent(sceneToGo, positionToGo, true);
+            loadEventSO.RaiseLoadRequestEvent(sceneToGo, positionToGo, true);
+        }
+       
     }
 }

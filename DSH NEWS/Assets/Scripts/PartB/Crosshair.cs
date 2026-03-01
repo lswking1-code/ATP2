@@ -34,7 +34,7 @@ public class Crosshair : MonoBehaviour
     private void OnGUI()
     {
         if (!isEnabled) return;
-        if (!showWhenCursorUnlocked && Cursor.lockState != CursorLockMode.Locked) return;
+        if (!showWhenCursorUnlocked && Cursor.lockState != CursorLockMode.Locked) return;// 仅在鼠标锁定时显示，除非设置了 showWhenCursorUnlocked
 
         var oldColor = GUI.color;
         GUI.color = isHighlighted ? highlightColor : color;

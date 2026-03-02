@@ -4,6 +4,8 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class SceneLoader : MonoBehaviour, ISaveable
 {
@@ -172,6 +174,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     private void OnLoadCompleted(AsyncOperationHandle<SceneInstance> obj)
     {
         currentLoadedScene = sceneToLoad;
+        ApplyRenderScaleForScene(currentLoadedScene);
 
         if (playerTrans != null)
         {
@@ -193,6 +196,24 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (currentLoadedScene.sceneType == SceneType.Loaction && afterSceneLoadedEvent != null)
         {
             afterSceneLoadedEvent.RaiseEvent();
+        }
+    }
+
+    private void ApplyRenderScaleForScene(GameSceneSO targetScene)
+    {
+        var urpAsset = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+        if (urpAsset == null)
+        {
+            return;
+        }
+
+        if (targetScene != null && targetScene.useShader)
+        {
+            urpAsset.renderScale = 0.3f;
+        }
+        else
+        {
+            urpAsset.renderScale = 1f;
         }
     }
 

@@ -27,8 +27,11 @@ public class ManuscriptManager : MonoBehaviour
     public float GlitchTextDelay = 1f;
     [Header("Manuscripts - 按 day 切换使用的组")]
     public List<EntryGroup> EntryGroups = new List<EntryGroup>();
-
+    
+    public int MaxSelectionCount = 2;
     private List<ManuscriptEntry> _activeEntries = new List<ManuscriptEntry>();
+    private HashSet<Manuscript> _selectedManuscripts = new HashSet<Manuscript>();
+    private HashSet<Manuscript> _glitchTriggeredManuscripts = new HashSet<Manuscript>();
     private Coroutine glitchRoutine;
     private ValueManage valueManage;
     private void Awake()
@@ -161,14 +164,18 @@ public class ManuscriptManager : MonoBehaviour
             return;
         }
 
-        if (ValueEvent == null)
+        // 切换选中状态：已在选中列表中则取消，否则加入选中
+        if (_selectedManuscripts.Contains(manuscript))
         {
-            Debug.LogWarning("ManuscriptManager: ValueEvent is not assigned.", this);
+            _selectedManuscripts.Remove(manuscript);
+            manuscript.SetSelected(false);
             return;
         }
 
-        // 支持多个 Value：优先使用 Values 列表，为空时使用单值（兼容旧配置）
-        if (entry.Values != null && entry.Values.Count > 0)
+        _selectedManuscripts.Add(manuscript);
+        manuscript.SetSelected(true);
+
+        if (ValueEvent != null && entry.Values != null && entry.Values.Count > 0)
         {
             for (int i = 0; i < entry.Values.Count; i++)
             {
@@ -176,19 +183,17 @@ public class ManuscriptManager : MonoBehaviour
                 ValueEvent.RaiseEvent(v.ValueIndex, v.ValueAmount);
             }
         }
-        else
-        {
-            //ValueEvent.RaiseEvent(entry.ValueIndex, entry.ValueAmount);
-        }
-        if (entry.Id != string.Empty)
+        if (valueManage != null && entry.Id != string.Empty)
         {
             valueManage.SetSituation(entry.Id, true);
         }
-        if (entry.ScriptIndex != 0)
+        if (ScriptChangeEvent != null && entry.ScriptIndex != 0)
         {
             ScriptChangeEvent.RaiseEvent(entry.ScriptIndex);
         }
-        if (SceneToGo != null)
+
+        // 仅当选中数量达到 MaxSelectionCount 时才载入下一场景
+        if (_selectedManuscripts.Count >= MaxSelectionCount && SceneToGo != null && SceneLoadEvent != null)
         {
             SceneLoadEvent.RaiseLoadRequestEvent(SceneToGo, PositionToGo, true);
         }
@@ -225,6 +230,24 @@ public class ManuscriptManager : MonoBehaviour
             return;
         }
 
+        // 已触发过 Glitch 的稿件：悬停时直接显示故障文本，不再播放动画
+        if (_glitchTriggeredManuscripts.Contains(manuscript))
+        {
+            if (entry.GlitchTextFile != null)
+            {
+                Text.text = entry.GlitchTextFile.text;
+            }
+            else if (entry.TextFile != null)
+            {
+                Text.text = entry.TextFile.text;
+            }
+            else if (manuscript.TextFile != null)
+            {
+                Text.text = manuscript.TextFile.text;
+            }
+            return;
+        }
+
         // 停掉之前的故障流程
         if (glitchRoutine != null)
         {
@@ -232,10 +255,10 @@ public class ManuscriptManager : MonoBehaviour
             glitchRoutine = null;
         }
 
-        // 有故障的 Manuscript：先显示正常文本，再播放故障动画，最后换成故障文本
+        // 有故障的 Manuscript：仅首次触发——先显示正常文本，再播放故障动画，最后换成故障文本
         if (entry.HasGlitch && GlitchEvent != null && entry.GlitchTextFile != null)
         {
-            glitchRoutine = StartCoroutine(HandleGlitchSelection(entry));
+            glitchRoutine = StartCoroutine(HandleGlitchSelection(entry, manuscript));
         }
         else
         {
@@ -254,7 +277,7 @@ public class ManuscriptManager : MonoBehaviour
         }
     }
 
-    private IEnumerator HandleGlitchSelection(ManuscriptEntry entry)
+    private IEnumerator HandleGlitchSelection(ManuscriptEntry entry, Manuscript manuscript)
     {
         // 先显示原始文本
         if (entry.TextFile != null)
@@ -262,7 +285,7 @@ public class ManuscriptManager : MonoBehaviour
             Text.text = entry.TextFile.text;
         }
 
-        // 触发 Glitch2 动画
+        // 触发 Glitch2 动画（仅此一次）
         GlitchEvent.RaiseEvent(2);
 
         // 等待动画结束（在 Inspector 中通过 GlitchTextDelay 调整，需与动画长度一致）
@@ -271,11 +294,12 @@ public class ManuscriptManager : MonoBehaviour
             yield return new WaitForSeconds(GlitchTextDelay);
         }
 
-        // 动画结束后显示故障文本
+        // 动画结束后显示故障文本，并标记该稿件已触发过 Glitch
         if (entry.GlitchTextFile != null)
         {
             Text.text = entry.GlitchTextFile.text;
         }
+        _glitchTriggeredManuscripts.Add(manuscript);
 
         glitchRoutine = null;
     }

@@ -13,6 +13,7 @@ public class Manuscript : MonoBehaviour
 
     private Vector3 initialLocalPosition;
     private Coroutine moveRoutine;
+    private bool _isSelected;
     [Header("EventRaiser")]
     public ValueEventSO ValueEvent;
 
@@ -22,6 +23,21 @@ public class Manuscript : MonoBehaviour
         if (Manager == null)
         {
             Manager = FindFirstObjectByType<ManuscriptManager>();
+        }
+    }
+
+    /// <summary> 由 Manager 调用：设置选中状态，选中时保持在最高点，取消时回到初始位置。 </summary>
+    public void SetSelected(bool selected)
+    {
+        _isSelected = selected;
+        if (selected)
+        {
+            Vector3 localForward = transform.localRotation * Vector3.forward;
+            StartMove(initialLocalPosition + localForward * Duration);
+        }
+        else
+        {
+            StartMove(initialLocalPosition);
         }
     }
 
@@ -37,6 +53,7 @@ public class Manuscript : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (_isSelected) return; // 已选中时保持最高点，不重复移动
         Vector3 localForward = transform.localRotation * Vector3.forward;
         StartMove(initialLocalPosition + localForward * Duration);
         OnSelect();
@@ -44,6 +61,7 @@ public class Manuscript : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (_isSelected) return; // 选中状态下保持最高点，不回到初始位置
         StartMove(initialLocalPosition);
     }
     private void OnMouseDown()

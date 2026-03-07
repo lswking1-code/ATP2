@@ -177,6 +177,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         currentLoadedScene = sceneToLoad;
         ApplyRenderScaleForScene(currentLoadedScene);
         ApplyFullScreenRetroForScene(currentLoadedScene);
+        ApplyVHSEffectForScene(currentLoadedScene);
 
         if (playerTrans != null)
         {
@@ -248,6 +249,57 @@ public class SceneLoader : MonoBehaviour, ISaveable
             if (feature != null && feature.name == "FullScreenPassRendererFeatureRetroDither")
             {
                 bool enable = targetScene != null && targetScene.useFullScreenRetro;
+                feature.SetActive(enable);
+                break;
+            }
+        }
+    }
+
+    private void ApplyVHSEffectForScene(GameSceneSO targetScene)
+    {
+        var urpAsset = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+        if (urpAsset == null)
+        {
+            return;
+        }
+
+        ScriptableRendererData rendererData = null;
+        var urpType = urpAsset.GetType();
+        var srProp = urpType.GetProperty("scriptableRendererData", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        if (srProp != null)
+        {
+            rendererData = srProp.GetValue(urpAsset) as ScriptableRendererData;
+        }
+
+        if (rendererData == null)
+        {
+            var listField = urpType.GetField("m_RendererDataList", BindingFlags.Instance | BindingFlags.NonPublic);
+            var indexField = urpType.GetField("m_DefaultRendererIndex", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            if (listField != null && indexField != null)
+            {
+                var list = listField.GetValue(urpAsset) as ScriptableRendererData[];
+                if (list != null && list.Length > 0)
+                {
+                    int defaultIndex = (int)indexField.GetValue(urpAsset);
+                    if (defaultIndex >= 0 && defaultIndex < list.Length)
+                    {
+                        rendererData = list[defaultIndex];
+                    }
+                }
+            }
+        }
+
+        if (rendererData == null || rendererData.rendererFeatures == null)
+        {
+            return;
+        }
+
+        foreach (var feature in rendererData.rendererFeatures)
+        {
+            if (feature != null && feature.name == "Blit")
+            {
+                bool enable = targetScene != null && targetScene.useVHSEffect;
                 feature.SetActive(enable);
                 break;
             }

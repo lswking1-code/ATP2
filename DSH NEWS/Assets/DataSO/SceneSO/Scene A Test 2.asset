@@ -19,3 +19,6 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  useShader: 0
+  useFullScreenRetro: 0
+  useVHSEffect: 1

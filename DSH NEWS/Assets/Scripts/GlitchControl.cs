@@ -1,13 +1,35 @@
 using UnityEngine;
+using UnityEngine.Rendering;
+using URPGlitch;
 
 public class GlitchControl : MonoBehaviour
 {
+    [Header("Glitch1 Settings")]
     public Material glitchMaterial;
     public float noiseAmount;
     public float glitchStrength;
     public float scanLineStrength;
+
+    [Header("Volume & Analog Glitch")]
+    [Tooltip("留空则自动从当前物体获取 Volume 组件")]
+    public Volume volume;
+    private AnalogGlitchVolume analogGlitchVolume;
+
+    [Range(0f, 1f)] public float scanLineJitter = 0f;
+    [Range(0f, 1f)] public float verticalJump = 0f;
+    [Range(0f, 1f)] public float horizontalShake = 0f;
+    [Range(0f, 1f)] public float colorDrift = 0f;
+
     public Animator animator;
     public GlitchEventSO glitchEventSO;
+
+    private void Start()
+    {
+        if (volume == null)
+            volume = GetComponent<Volume>();
+        if (volume != null && volume.profile != null)
+            volume.profile.TryGet(out analogGlitchVolume);
+    }
 
     private void OnEnable()
     {
@@ -21,9 +43,20 @@ public class GlitchControl : MonoBehaviour
 
     void Update()
     {
-        glitchMaterial.SetFloat("_NoiseAmount", noiseAmount);
-        glitchMaterial.SetFloat("_GlitchStrength", glitchStrength);
-        glitchMaterial.SetFloat("_ScanLineStrength", scanLineStrength);
+        if (glitchMaterial != null)
+        {
+            glitchMaterial.SetFloat("_NoiseAmount", noiseAmount);
+            glitchMaterial.SetFloat("_GlitchStrength", glitchStrength);
+            glitchMaterial.SetFloat("_ScanLineStrength", scanLineStrength);
+        }
+
+        if (analogGlitchVolume != null)
+        {
+            analogGlitchVolume.scanLineJitter.value = scanLineJitter;
+            analogGlitchVolume.verticalJump.value = verticalJump;
+            analogGlitchVolume.horizontalShake.value = horizontalShake;
+            analogGlitchVolume.colorDrift.value = colorDrift;
+        }
     }
 
     private void OnGlitchEventRaised(int index)

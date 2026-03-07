@@ -16,12 +16,17 @@ public class ValueSender : MonoBehaviour
     {
         public int index;
         public float amount;
+
     }
+
+    
 
     public void SendValueData(ValueData data)
     {
         SendValue(data.index, data.amount);
     }
+
+    
 
     public void SendValue(int index, float amount)
     {

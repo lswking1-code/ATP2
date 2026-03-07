@@ -48,6 +48,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Distortion: 0.15
+    - _LensValue: 0
     - _NoiseIntensity: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -56,11 +57,12 @@ Material:
     - _ScreenSaverScanlineFlowSpeed: 0.32
     - _ScreenSaverScanlineOffset: 0.402
     - _VignetteBrightness: 36
-    - _VignetteIntensity: 1
+    - _VignetteIntensity: 0.5
     - _pixelScanlineFlowSpeed: 6.52
     m_Colors:
+    - _DistortionMask: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseRandomRange: {r: 500, g: 700, b: 0, a: 0}
-    - _TearThreshold: {r: 0.2, g: 1, b: 0, a: 0}
+    - _TearThreshold: {r: 1, g: 1, b: 0, a: 0}
     - _pixelScanlineBrightness: {r: 0.05, g: 1, b: 0.5, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

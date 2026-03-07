@@ -46,5 +46,9 @@ public class BroadcastConversationLauncher : MonoBehaviour
         Debug.Log($"[Broadcast] 啟動後 IsConversationActive: {DialogueManager.IsConversationActive}");
     }
 
-    
+    void Update()
+    {
+        int finished = DialogueLua.GetVariable("FinishedBranch").asInt;
+    Debug.Log($"[Broadcast] FinishedBranch: {finished}");
+    }
 }

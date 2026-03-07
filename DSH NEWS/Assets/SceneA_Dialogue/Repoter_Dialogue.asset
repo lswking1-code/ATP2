@@ -4277,8 +4277,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1033.6935
-        y: 869.7968
+        x: 1027.8341
+        y: 831.7116
         width: 160
         height: 30
     - id: 34
@@ -4628,14 +4628,14 @@ MonoBehaviour:
         destinationDialogueID: 49
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FinishedBranch"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1796.345
+        x: 1797.9144
         y: 1173.377
         width: 160
         height: 30
@@ -5401,7 +5401,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FinishedBranch"] = Variable["FinishedBranch"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5518,8 +5518,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1563.5964
-        y: 319.22952
+        x: 1564.5735
+        y: 318.2525
         width: 160
         height: 30
     - id: 57
@@ -5629,13 +5629,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1786.5854
-        y: 328.60867
+        x: 1800.2638
+        y: 318.8384
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1066.8245, y: 854.3446}
-    canvasZoom: 0.7608339
+    canvasScrollPosition: {x: 1269.0825, y: 76.82541}
+    canvasZoom: 1.0235137
   - id: 6
     fields:
     - title: Title

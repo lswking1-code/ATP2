@@ -47,6 +47,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Distortion: 0.15
     - _NoiseIntensity: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -55,7 +56,7 @@ Material:
     - _ScreenSaverScanlineFlowSpeed: 0.32
     - _ScreenSaverScanlineOffset: 0.402
     - _VignetteBrightness: 36
-    - _VignetteIntensity: 0.6
+    - _VignetteIntensity: 1
     - _pixelScanlineFlowSpeed: 6.52
     m_Colors:
     - _NoiseRandomRange: {r: 500, g: 700, b: 0, a: 0}

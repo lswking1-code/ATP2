@@ -52,7 +52,7 @@ Material:
     - _NoiseIntensity: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RGBSplitOffset: 0.006
+    - _RGBSplitOffset: 0.003
     - _ScreenSaverScanlineBrightness: 0.037
     - _ScreenSaverScanlineFlowSpeed: 0.32
     - _ScreenSaverScanlineOffset: 0.402

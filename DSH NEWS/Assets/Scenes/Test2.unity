@@ -3607,7 +3607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &693338636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3637,13 +3637,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693338635}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.44, y: -4.73, z: -14}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.57, y: -2.19, z: -0.47}
   m_LocalScale: {x: 2.0628, y: 2.6952329, z: 5.6453}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &693338638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3657,7 +3657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
-  sceneToGo: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  sceneToGo: {fileID: 11400000, guid: fe727a5ba5231c34182b3c4ac1a6b608, type: 2}
   positionToGo: {x: 0, y: 0, z: 0}
 --- !u!1 &703315297
 GameObject:
@@ -7407,6 +7407,11 @@ MonoBehaviour:
   noiseAmount: 0
   glitchStrength: 0
   scanLineStrength: 1
+  volume: {fileID: 0}
+  scanLineJitter: 0
+  verticalJump: 0
+  horizontalShake: 0
+  colorDrift: 0
   animator: {fileID: 1801773908}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
 --- !u!4 &1801773910

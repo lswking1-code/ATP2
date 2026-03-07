@@ -1379,6 +1379,11 @@ MonoBehaviour:
   noiseAmount: 0
   glitchStrength: 0
   scanLineStrength: 1
+  volume: {fileID: 0}
+  scanLineJitter: 0
+  verticalJump: 0
+  horizontalShake: 0
+  colorDrift: 0
   animator: {fileID: 1141351223}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
 --- !u!4 &1141351225
@@ -1876,7 +1881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   sceneToGo: {fileID: 11400000, guid: 48962fef9db5e2d42ab28438edc5d694, type: 2}
-  positionToGo: {x: 0, y: 1, z: 0}
+  positionToGo: {x: 28, y: -12, z: 2}
 --- !u!114 &1693797253
 MonoBehaviour:
   m_ObjectHideFlags: 0

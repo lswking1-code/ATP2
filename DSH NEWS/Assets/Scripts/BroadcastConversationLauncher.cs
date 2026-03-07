@@ -45,4 +45,6 @@ public class BroadcastConversationLauncher : MonoBehaviour
         DialogueManager.StartConversation(conversationTitle, actor);
         Debug.Log($"[Broadcast] 啟動後 IsConversationActive: {DialogueManager.IsConversationActive}");
     }
+
+    
 }

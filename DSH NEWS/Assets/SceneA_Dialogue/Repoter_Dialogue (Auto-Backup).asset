@@ -4388,7 +4388,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1247.407
-        y: 905.3045
+        y: 903.9549
         width: 160
         height: 30
     - id: 36
@@ -4628,14 +4628,14 @@ MonoBehaviour:
         destinationDialogueID: 49
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FinishedBranch"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1796.345
+        x: 1797.9144
         y: 1173.377
         width: 160
         height: 30
@@ -5401,7 +5401,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FinishedBranch"] = Variable["FinishedBranch"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5518,8 +5518,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1563.5964
-        y: 319.22952
+        x: 1564.5735
+        y: 318.2525
         width: 160
         height: 30
     - id: 57
@@ -5629,13 +5629,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1786.5854
-        y: 328.60867
+        x: 1800.2638
+        y: 318.8384
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 757.6519, y: 47.337044}
-    canvasZoom: 0.5219318
+    canvasScrollPosition: {x: 1039.492, y: 69.60193}
+    canvasZoom: 0.76293796
   - id: 6
     fields:
     - title: Title
@@ -5719,13 +5719,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 0
-        destinationConversationID: 6
-        destinationDialogueID: 77
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -5795,8 +5789,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1047.8315
-        y: 774.9141
+        x: 1418.679
+        y: 789.09143
         width: 160
         height: 30
     - id: 60
@@ -5858,8 +5852,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.8574
-        y: 838.7161
+        x: 1417.705
+        y: 852.89325
         width: 160
         height: 30
     - id: 61
@@ -5920,14 +5914,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1050.0691
-        y: 1327.0012
+        x: 1415.0571
+        y: 1303.0933
         width: 160
         height: 30
     - id: 62
@@ -5981,8 +5975,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 924.24286
-        y: 1410.5139
+        x: 1295.0903
+        y: 1424.6912
         width: 160
         height: 30
     - id: 63
@@ -6036,8 +6030,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1218.5597
-        y: 1404.0974
+        x: 1634.63
+        y: 1375.3365
         width: 160
         height: 30
     - id: 64
@@ -6088,15 +6082,16 @@ MonoBehaviour:
         destinationDialogueID: 59
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationA"] == true
+      conditionsString: 'Variable["SituationA"] == true and (Variable["PlayedA"]
+        == false) '
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1043.6122
-        y: 720.187
+        x: 1414.4596
+        y: 734.3643
         width: 160
         height: 30
     - id: 65
@@ -6160,8 +6155,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1221.329
-        y: 1473.6213
+        x: 1641.4259
+        y: 1435.2659
         width: 160
         height: 30
     - id: 66
@@ -6219,8 +6214,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 924.24286
-        y: 1475.3923
+        x: 1295.0903
+        y: 1489.5696
         width: 160
         height: 30
     - id: 67
@@ -6272,15 +6267,15 @@ MonoBehaviour:
         destinationDialogueID: 76
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FinishedBranch"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1372.8107
-        y: 1744.916
+        x: 2185.1375
+        y: 1644.7585
         width: 160
         height: 30
     - id: 68
@@ -6338,8 +6333,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.0674
-        y: 890.33844
+        x: 1416.9149
+        y: 904.5157
         width: 160
         height: 30
     - id: 69
@@ -6398,8 +6393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.7637
-        y: 951.8774
+        x: 1417.6112
+        y: 966.0546
         width: 160
         height: 30
     - id: 70
@@ -6457,8 +6452,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.0674
-        y: 1001.8775
+        x: 1416.9149
+        y: 1016.0546
         width: 160
         height: 30
     - id: 71
@@ -6516,8 +6511,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.0674
-        y: 1051.877
+        x: 1416.9149
+        y: 1066.0544
         width: 160
         height: 30
     - id: 72
@@ -6575,8 +6570,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1045.2255
-        y: 1101.8772
+        x: 1416.0729
+        y: 1116.0544
         width: 160
         height: 30
     - id: 73
@@ -6634,8 +6629,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1046.0674
-        y: 1171.2427
+        x: 1416.9149
+        y: 1185.4199
         width: 160
         height: 30
     - id: 74
@@ -6693,8 +6688,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1044.9032
-        y: 1221.2427
+        x: 1415.7506
+        y: 1235.4199
         width: 160
         height: 30
     - id: 75
@@ -6749,8 +6744,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1215.412
-        y: 1537.427
+        x: 1846.7539
+        y: 1436.2114
         width: 160
         height: 30
     - id: 76
@@ -6798,8 +6793,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1370.5409
-        y: 1856.7637
+        x: 2181.2983
+        y: 1757.9204
         width: 160
         height: 30
     - id: 77
@@ -6825,7 +6820,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: this is day 2, just for testing
+        value: 
         type: 0
         typeString: 
       - title: Sequence
@@ -6864,15 +6859,15 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FinishedBranch"] < 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1441.5114
-        y: 611.4932
+        x: 1812.3588
+        y: 627.02655
         width: 160
         height: 30
     - id: 78
@@ -6919,15 +6914,16 @@ MonoBehaviour:
         destinationDialogueID: 79
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationB"] == true
+      conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
+        false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1295.1941
-        y: 723.039
+        x: 1661.5708
+        y: 731.3894
         width: 160
         height: 30
     - id: 79
@@ -6975,14 +6971,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1291.9896
-        y: 766.25903
+        x: 1670.588
+        y: 788.1874
         width: 160
         height: 30
     - id: 80
@@ -7015,6 +7011,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -7026,24 +7026,24 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 80
         destinationConversationID: 6
-        destinationDialogueID: 77
+        destinationDialogueID: 67
         isConnector: 0
         priority: 2
       - originConversationID: 6
         originDialogueID: 80
         destinationConversationID: 6
-        destinationDialogueID: 67
+        destinationDialogueID: 77
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FinishedBranch"] = Variable["FinishedBranch"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1372.2186
-        y: 1656.2844
+        x: 2086.5674
+        y: 1522.8999
         width: 160
         height: 30
     - id: 81
@@ -7090,15 +7090,16 @@ MonoBehaviour:
         destinationDialogueID: 82
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true
+      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+        false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1570.6342
-        y: 713.9836
+        x: 1941.4817
+        y: 726.85114
         width: 160
         height: 30
     - id: 82
@@ -7146,14 +7147,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedC"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1570.6342
-        y: 763.9836
+        x: 1951.7965
+        y: 789.63416
         width: 160
         height: 30
     - id: 83
@@ -7200,15 +7201,16 @@ MonoBehaviour:
         destinationDialogueID: 84
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+        false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1804.5175
-        y: 712.46875
+        x: 2175.3647
+        y: 726.64606
         width: 160
         height: 30
     - id: 84
@@ -7256,19 +7258,19 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedD"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1804.5175
-        y: 762.46875
+        x: 2187.4868
+        y: 790.2201
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 997.44635, y: 659.19763}
-    canvasZoom: 0.7374616
+    canvasScrollPosition: {x: 1295.0903, y: 460.80914}
+    canvasZoom: 1.2032433
   - id: 7
     fields:
     - title: Title

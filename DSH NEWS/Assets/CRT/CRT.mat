@@ -56,7 +56,7 @@ Material:
     - _ScreenSaverScanlineBrightness: 0.037
     - _ScreenSaverScanlineFlowSpeed: 0.32
     - _ScreenSaverScanlineOffset: 0.402
-    - _VignetteBrightness: 36
+    - _VignetteBrightness: 33.3
     - _VignetteIntensity: 0.5
     - _pixelScanlineFlowSpeed: 6.52
     m_Colors:

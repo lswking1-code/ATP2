@@ -16,6 +16,12 @@ public class VHSEffectDriver : MonoBehaviour
     [Range(0f, 1f)]
     [Tooltip("效果强度：0 为无效果，1 为完整效果")]
     public float intensity = 0.5f;
+    [Range(0.1f, 5f)]
+    [Tooltip("噪点视频播放速度：1 为正常速度，越大越快，越小越慢")]
+    public float noisePlaybackSpeed = 1f;
+    [Range(0f, 1f)]
+    [Tooltip("扫描线随机闪动概率：0 为不随机闪（几乎无闪烁），越大闪得越频繁")]
+    public float scanlineGlitchChance = 0.05f;
 
     private float _yScanline;
     private float _xScanline;
@@ -32,6 +38,7 @@ public class VHSEffectDriver : MonoBehaviour
         _player.renderMode = VideoRenderMode.APIOnly;
         _player.audioOutputMode = VideoAudioOutputMode.None;
         _player.clip = vhsClip;
+        _player.playbackSpeed = noisePlaybackSpeed;
         _player.Play();
     }
 
@@ -41,13 +48,14 @@ public class VHSEffectDriver : MonoBehaviour
             return;
 
         vhsMaterial.SetTexture(VHSTexId, _player.texture);
+        _player.playbackSpeed = noisePlaybackSpeed;
 
         _yScanline += Time.deltaTime * 0.01f;
         _xScanline -= Time.deltaTime * 0.1f;
 
         if (_yScanline >= 1f)
             _yScanline = Random.value;
-        if (_xScanline <= 0f || Random.value < 0.05f)
+        if (_xScanline <= 0f || (scanlineGlitchChance > 0f && Random.value < scanlineGlitchChance))
             _xScanline = Random.value;
 
         vhsMaterial.SetFloat(YScanlineId, _yScanline);

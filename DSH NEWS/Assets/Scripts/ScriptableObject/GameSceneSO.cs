@@ -7,4 +7,5 @@ public class GameSceneSO : ScriptableObject
     public SceneType sceneType;
     public AssetReference sceneReference;
     public bool useShader;
+    public bool useFullScreenRetro;
 }

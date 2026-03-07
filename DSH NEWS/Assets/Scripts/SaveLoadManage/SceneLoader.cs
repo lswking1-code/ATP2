@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -175,6 +176,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     {
         currentLoadedScene = sceneToLoad;
         ApplyRenderScaleForScene(currentLoadedScene);
+        ApplyFullScreenRetroForScene(currentLoadedScene);
 
         if (playerTrans != null)
         {
@@ -196,6 +198,59 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (currentLoadedScene.sceneType == SceneType.Loaction && afterSceneLoadedEvent != null)
         {
             afterSceneLoadedEvent.RaiseEvent();
+        }
+    }
+
+    private void ApplyFullScreenRetroForScene(GameSceneSO targetScene)
+    {
+        var urpAsset = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+        if (urpAsset == null)
+        {
+            return;
+        }
+
+        // 兼容不同 URP 版本：优先用属性 scriptableRendererData，失败则退回到 m_RendererDataList + m_DefaultRendererIndex
+        ScriptableRendererData rendererData = null;
+
+        var urpType = urpAsset.GetType();
+        var srProp = urpType.GetProperty("scriptableRendererData", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        if (srProp != null)
+        {
+            rendererData = srProp.GetValue(urpAsset) as ScriptableRendererData;
+        }
+
+        if (rendererData == null)
+        {
+            var listField = urpType.GetField("m_RendererDataList", BindingFlags.Instance | BindingFlags.NonPublic);
+            var indexField = urpType.GetField("m_DefaultRendererIndex", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            if (listField != null && indexField != null)
+            {
+                var list = listField.GetValue(urpAsset) as ScriptableRendererData[];
+                if (list != null && list.Length > 0)
+                {
+                    int defaultIndex = (int)indexField.GetValue(urpAsset);
+                    if (defaultIndex >= 0 && defaultIndex < list.Length)
+                    {
+                        rendererData = list[defaultIndex];
+                    }
+                }
+            }
+        }
+
+        if (rendererData == null || rendererData.rendererFeatures == null)
+        {
+            return;
+        }
+
+        foreach (var feature in rendererData.rendererFeatures)
+        {
+            if (feature != null && feature.name == "FullScreenPassRendererFeatureRetroDither")
+            {
+                bool enable = targetScene != null && targetScene.useFullScreenRetro;
+                feature.SetActive(enable);
+                break;
+            }
         }
     }
 

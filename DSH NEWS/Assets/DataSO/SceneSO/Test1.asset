@@ -20,3 +20,4 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   useShader: 1
+  useFullScreenRetro: 1

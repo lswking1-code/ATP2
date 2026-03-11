@@ -35,6 +35,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     private GameSceneSO currentLoadedScene;
     private GameSceneSO sceneToLoad;
     private Vector3 positionToGo;
+    private Vector3 rotationToGo;
     private bool fadeScreen;
     private bool isLoading;
     public float fadeDuration = 0.5f;
@@ -47,7 +48,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
 
         if (loadEventSO != null && menuScene != null)
         {
-            loadEventSO.RaiseLoadRequestEvent(menuScene, menuPosition, true);
+            loadEventSO.RaiseLoadRequestEvent(menuScene, menuPosition, Vector3.zero, true);
         }
     }
 
@@ -101,7 +102,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         }
 
         sceneToLoad = menuScene;
-        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, Vector3.zero, true);
     }
 
     private void NewGame()
@@ -112,10 +113,10 @@ public class SceneLoader : MonoBehaviour, ISaveable
         }
 
         sceneToLoad = firstLoadScene;
-        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, Vector3.zero, true);
     }
 
-    private void OnLoadRequestEvent(GameSceneSO locationToLoad, Vector3 posToGo, bool fadeScreen)
+    private void OnLoadRequestEvent(GameSceneSO locationToLoad, Vector3 posToGo, Vector3 rotToGo, bool fadeScreen)
     {
         if (isLoading || locationToLoad == null)
         {
@@ -125,6 +126,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         isLoading = true;
         sceneToLoad = locationToLoad;
         positionToGo = posToGo;
+        rotationToGo = rotToGo;
         this.fadeScreen = fadeScreen;
 
         // 切换场景前先启用备用相机，避免卸载旧场景后出现 "No cameras rendering"
@@ -152,7 +154,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
 
         if (unloadedSceneEvent != null)
         {
-            unloadedSceneEvent.RaiseLoadRequestEvent(sceneToLoad, positionToGo, true);
+            unloadedSceneEvent.RaiseLoadRequestEvent(sceneToLoad, positionToGo, rotationToGo, true);
         }
 
         if (currentLoadedScene != null)
@@ -182,11 +184,12 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (playerTrans != null)
         {
             playerTrans.position = positionToGo;
+            playerTrans.rotation = Quaternion.Euler(rotationToGo);
             bool enablePlayer = currentLoadedScene.sceneType != SceneType.Menu;
             playerTrans.gameObject.SetActive(enablePlayer);
-            // 有 Player 相机时关闭备用相机，避免双相机；Menu 或无 Player 时保留备用相机
-            if (fallbackCamera != null && enablePlayer)
-                fallbackCamera.gameObject.SetActive(false);
+            // 保持备用相机始终开启，以确保始终有相机为 Display1 渲染
+            if (fallbackCamera != null)
+                fallbackCamera.gameObject.SetActive(true);
         }
 
         if (fadeScreen && fadeEvent != null)
@@ -346,7 +349,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         {
             positionToGo = data.characterPosDict[playerID].ToVector3();
             sceneToLoad = data.GetSavedScene();
-            OnLoadRequestEvent(sceneToLoad, positionToGo, true);
+            OnLoadRequestEvent(sceneToLoad, positionToGo, playerTrans.rotation.eulerAngles, true);
         }
     }
 }

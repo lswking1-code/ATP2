@@ -7532,6 +7532,11 @@ MonoBehaviour:
   colorDrift: 0
   animator: {fileID: 1801773908}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
+  glitchSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1801773910
 Transform:
   m_ObjectHideFlags: 0
@@ -8072,7 +8077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5569bb6b7c0185b429b468edfcbc853d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.58
+      value: -11.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5569bb6b7c0185b429b468edfcbc853d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8267,7 +8272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 040c3b46f4ddbbd48af6c35399188d3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.23
+      value: -11.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 040c3b46f4ddbbd48af6c35399188d3a, type: 3}
       propertyPath: m_LocalPosition.z

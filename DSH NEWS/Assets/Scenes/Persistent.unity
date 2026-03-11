@@ -135,6 +135,30 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: d6e5d7933bccd8340a0581622dc61d5e, type: 2}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: stepDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: footstepClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: 'footstepClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 0df1c1b5a45066447af21dcc9fc11e5a, type: 3}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: 'footstepClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f6a8781f09e154c89f9a04f96a4637, type: 3}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: 'footstepClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c8e1caa4ea1aa94f93d5e8cb263d0c2, type: 3}
+    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: 'footstepClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
     - target: {fileID: 7877517574923195727, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

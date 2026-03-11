@@ -4694,7 +4694,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.6919
+        x: 1028.7781
         y: 433.13403
         width: 160
         height: 30
@@ -5262,7 +5262,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkD, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5318,7 +5321,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5342,8 +5348,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1283.365
-        y: 316.80573
+        x: 1277.8147
+        y: 333.45657
         width: 160
         height: 30
     - id: 54
@@ -5438,7 +5444,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5494,7 +5503,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5518,8 +5530,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1564.5735
-        y: 318.2525
+        x: 1561.7983
+        y: 337.67847
         width: 160
         height: 30
     - id: 57
@@ -5634,8 +5646,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 606.8457, y: 0}
-    canvasZoom: 0.49105355
+    canvasScrollPosition: {x: 1022.5061, y: 604.8837}
+    canvasZoom: 0.8483192
   - id: 6
     fields:
     - title: Title
@@ -10680,7 +10692,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What a day.
+        value: What a day...
         type: 0
         typeString: 
       - title: Sequence
@@ -10699,12 +10711,6 @@ MonoBehaviour:
         originDialogueID: 5
         destinationConversationID: 11
         destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
-      - originConversationID: 11
-        originDialogueID: 5
-        destinationConversationID: 11
-        destinationDialogueID: 7
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10741,7 +10747,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: (you earn 500$ from the excellent work you done last week)
         type: 0
         typeString: 
       - title: Sequence
@@ -10769,11 +10775,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 17.80008
-        y: 222.01967
+        x: 150.78543
+        y: 200.09901
         width: 160
         height: 30
-    - id: 7
+    - id: 8
       fields:
       - title: Title
         value: 
@@ -10796,7 +10802,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: the rent cost 200$
         type: 0
         typeString: 
       - title: Sequence
@@ -10812,9 +10818,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 11
-        originDialogueID: 7
+        originDialogueID: 8
         destinationConversationID: 11
-        destinationDialogueID: 8
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10824,11 +10830,121 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 296.1999
-        y: 221.38506
+        x: 152.59785
+        y: 302.0378
         width: 160
         height: 30
-    - id: 8
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 500-200=300, you have 300$ left.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 9
+        destinationConversationID: 11
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 153.3285
+        y: 412.68488
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I feel tired, I should get some sleep right now...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 10
+        destinationConversationID: 11
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 154.05919
+        y: 504.33417
+        width: 160
+        height: 30
+    - id: 11
       fields:
       - title: Title
         value: 
@@ -10856,6 +10972,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: dd170553-5296-4a43-b2d4-785954b7705b
         type: 0
         typeString: 
       conversationID: 11
@@ -10873,13 +10993,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 145.29092
-        y: 356.83954
+        x: 155.52162
+        y: 619.4131
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8733552
+    canvasScrollPosition: {x: 0, y: 181.79077}
+    canvasZoom: 1.3675718
   syncInfo:
     syncActors: 0
     syncItems: 0

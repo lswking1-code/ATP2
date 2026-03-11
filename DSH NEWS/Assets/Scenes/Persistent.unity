@@ -408,6 +408,54 @@ MonoBehaviour:
   viewership: 0
   day: 0
   Situations: []
+--- !u!1 &799467042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799467044}
+  - component: {fileID: 799467043}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &799467043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799467042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef4e3a728cacab459003084d000d0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  musicVolume: 1
+  sfxVolume: 1
+--- !u!4 &799467044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799467042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.087903, y: -18.773794, z: 10.06074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826892470
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +813,11 @@ MonoBehaviour:
   colorDrift: 0
   animator: {fileID: 1714002140}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
+  glitchSounds:
+  - {fileID: 8300000, guid: aa501719587d4dd4889e76d43665923f, type: 3}
+  - {fileID: 8300000, guid: 29d8cc0cd92a798448d6bd8ba3df03c7, type: 3}
+  - {fileID: 8300000, guid: 65a35abd2b951aa49a5ef52e235b5406, type: 3}
+  - {fileID: 0}
 --- !u!4 &1714002139
 Transform:
   m_ObjectHideFlags: 0
@@ -1009,3 +1062,4 @@ SceneRoots:
   - {fileID: 1714002139}
   - {fileID: 523066670}
   - {fileID: 826892473}
+  - {fileID: 799467044}

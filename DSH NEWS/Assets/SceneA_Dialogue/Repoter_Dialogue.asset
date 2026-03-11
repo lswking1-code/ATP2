@@ -4074,7 +4074,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 0
         destinationConversationID: 5
-        destinationDialogueID: 50
+        destinationDialogueID: 63
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4084,8 +4084,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1232.8712
-        y: 70.24983
+        x: 2239.5925
+        y: 346.66754
         width: 160
         height: 30
     - id: 31
@@ -4146,8 +4146,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1031.4559
-        y: 320.43857
+        x: 1842.7844
+        y: 932.69116
         width: 160
         height: 30
     - id: 32
@@ -4209,8 +4209,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1030.4819
-        y: 381.5116
+        x: 1841.8104
+        y: 993.7642
         width: 160
         height: 30
     - id: 33
@@ -4241,6 +4241,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
+
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4277,8 +4279,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1027.8341
-        y: 831.7116
+        x: 1839.1626
+        y: 1443.9634
         width: 160
         height: 30
     - id: 34
@@ -4332,8 +4334,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 907.0156
-        y: 953.3095
+        x: 1718.3441
+        y: 1565.561
         width: 160
         height: 30
     - id: 35
@@ -4366,6 +4368,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 3483e5e6-0a22-47d3-81c0-3a3df51ec0b9
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -4387,8 +4393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1248.2587
-        y: 903.9549
+        x: 2059.5872
+        y: 1516.2065
         width: 160
         height: 30
     - id: 36
@@ -4447,8 +4453,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1027.2366
-        y: 264.80185
+        x: 1838.5651
+        y: 877.05444
         width: 160
         height: 30
     - id: 37
@@ -4479,9 +4485,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
-
-          AnimatorTrigger(Glitch1,GlitchManager);
+        value: 'AnimatorTrigger(TalkD, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4512,8 +4516,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1254.2029
-        y: 964.73584
+        x: 2065.5312
+        y: 1576.9875
         width: 160
         height: 30
     - id: 38
@@ -4571,8 +4575,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 907.8673
-        y: 1018.1879
+        x: 1719.1958
+        y: 1630.4397
         width: 160
         height: 30
     - id: 40
@@ -4635,8 +4639,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1797.9144
-        y: 1173.377
+        x: 2609.2427
+        y: 1785.6287
         width: 160
         height: 30
     - id: 41
@@ -4694,8 +4698,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1028.7781
-        y: 433.13403
+        x: 1840.1066
+        y: 1045.3865
         width: 160
         height: 30
     - id: 42
@@ -4727,7 +4731,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4754,8 +4758,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1030.3882
-        y: 494.67297
+        x: 1840.5803
+        y: 1106.9248
         width: 160
         height: 30
     - id: 43
@@ -4813,8 +4817,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.6919
-        y: 544.673
+        x: 1841.0204
+        y: 1156.9248
         width: 160
         height: 30
     - id: 44
@@ -4845,7 +4849,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4872,8 +4876,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.6919
-        y: 594.67285
+        x: 1841.0204
+        y: 1206.9248
         width: 160
         height: 30
     - id: 45
@@ -4931,8 +4935,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1028.8499
-        y: 644.67285
+        x: 1840.1783
+        y: 1256.9248
         width: 160
         height: 30
     - id: 46
@@ -4990,8 +4994,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.6919
-        y: 714.0382
+        x: 1841.0204
+        y: 1326.29
         width: 160
         height: 30
     - id: 47
@@ -5022,7 +5026,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5049,8 +5053,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1028.5276
-        y: 764.0382
+        x: 1839.8561
+        y: 1376.29
         width: 160
         height: 30
     - id: 48
@@ -5081,7 +5085,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5105,8 +5112,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1459.5309
-        y: 964.8297
+        x: 2271.9956
+        y: 1577.0813
         width: 160
         height: 30
     - id: 49
@@ -5158,8 +5165,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1794.0753
-        y: 1286.5388
+        x: 2605.4033
+        y: 1898.7905
         width: 160
         height: 30
     - id: 50
@@ -5231,8 +5238,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1425.1357
-        y: 155.64491
+        x: 2236.4644
+        y: 767.8975
         width: 160
         height: 30
     - id: 51
@@ -5258,11 +5265,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Test test, There is nothing here, just the situation B test.
+        value: The cityhall is celebrating the new year!
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkD, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5290,8 +5297,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1274.3478
-        y: 260.00778
+        x: 2085.6763
+        y: 871.28955
         width: 160
         height: 30
     - id: 52
@@ -5317,11 +5324,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Pretend that there are some gossip of celebrity...
+        value: Anyway, let's move on to the next topic....
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkB, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5348,8 +5355,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1279.3689
-        y: 537.0553
+        x: 2080.9888
+        y: 1111.0343
         width: 160
         height: 30
     - id: 54
@@ -5413,8 +5420,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1699.3442
-        y: 1051.5183
+        x: 2510.6724
+        y: 1663.77
         width: 160
         height: 30
     - id: 55
@@ -5440,7 +5447,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is SituiationC, some political bullshit bruh bruh.
+        value: This is just Situation C testing text.
         type: 0
         typeString: 
       - title: Sequence
@@ -5472,8 +5479,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1559.7012
-        y: 246.1399
+        x: 2372.1287
+        y: 868.2825
         width: 160
         height: 30
     - id: 56
@@ -5534,8 +5541,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1562.5759
-        y: 333.01367
+        x: 2375.0032
+        y: 940.8706
         width: 160
         height: 30
     - id: 57
@@ -5561,11 +5568,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: SituationD, testestest
+        value: This is just Situation D testing text.
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5590,8 +5600,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1788.1418
-        y: 255.26439
+        x: 2599.4702
+        y: 867.51697
         width: 160
         height: 30
     - id: 58
@@ -5617,11 +5627,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: asdasdiuhuixscvciuovhusdovhudsiohcdsuicd
+        value: bruhbruhbruh
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5645,8 +5658,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1800.2638
-        y: 318.8384
+        x: 2611.5918
+        y: 931.091
         width: 160
         height: 30
     - id: 59
@@ -5672,11 +5685,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Should be some glitching here...
+        value: And.....wait, it was on fire!!! wtf!!! shdfkjldshjkxlzhvcuixcovnesjklfsndjkslndkjlsfhsduifohxuicovnu
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkD, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -5704,8 +5720,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1273.5707
-        y: 328.6581
+        x: 2084.8992
+        y: 940.9107
         width: 160
         height: 30
     - id: 60
@@ -5731,11 +5747,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Function testing
+        value: Oh, just joking haha.
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 3622469b-7410-473a-9a46-44b159d00f74
         type: 0
         typeString: 
       conversationID: 5
@@ -5759,13 +5782,134 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1271.2394
-        y: 412.07312
+        x: 2082.5679
+        y: 1024.3257
+        width: 160
+        height: 30
+    - id: 61
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Hello everyone, this is INTERNATIONAL NEWS channel!, welcome to the
+          daily news.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 61
+        destinationConversationID: 5
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2236.9658
+        y: 632.5075
+        width: 160
+        height: 30
+    - id: 63
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Microphone testing, microphone testing.....
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          Audio(news_opening);
+
+          SendMessage(HideImage);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 63
+        destinationConversationID: 5
+        destinationDialogueID: 61
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2236.5117
+        y: 436.23047
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1108.1298, y: 118.67357}
-    canvasZoom: 1.2862294
+    canvasScrollPosition: {x: 1726.3529, y: 530.58044}
+    canvasZoom: 0.9999995
   - id: 6
     fields:
     - title: Title
@@ -6869,8 +7013,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 839.9992, y: 502.51077}
-    canvasZoom: 0.36570364
+    canvasScrollPosition: {x: 1461.3202, y: 391.08368}
+    canvasZoom: 0.99570316
   - id: 7
     fields:
     - title: Title
@@ -7974,8 +8118,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 605.6334, y: 672.212}
-    canvasZoom: 0.60400087
+    canvasScrollPosition: {x: 600.03973, y: 679.56335}
+    canvasZoom: 0.90400064
   - id: 8
     fields:
     - title: Title

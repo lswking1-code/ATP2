@@ -1474,11 +1474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.requireContinueOnLastLine
@@ -1931,11 +1931,31 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 3483e5e6-0a22-47d3-81c0-3a3df51ec0b9
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797250}
+          m_TargetAssemblyTypeName: ValueSender, Assembly-CSharp
+          m_MethodName: StartGlitching
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 3622469b-7410-473a-9a46-44b159d00f74
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1544884886
 Transform:
   m_ObjectHideFlags: 0
@@ -2038,6 +2058,7 @@ GameObject:
   - component: {fileID: 1693797250}
   - component: {fileID: 1693797252}
   - component: {fileID: 1693797253}
+  - component: {fileID: 1693797254}
   m_Layer: 0
   m_Name: ValueMaster
   m_TagString: Untagged
@@ -2103,6 +2124,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 834808561}
+--- !u!114 &1693797254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693797249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bf4652472017a4e87cdeb003f22d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tvImage: {fileID: 1007248065}
+  subtitle: {fileID: 349282385}
+  earthquake: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
+  fire: {fileID: 0}
+  news: {fileID: 0}
 --- !u!1 &1916549506
 GameObject:
   m_ObjectHideFlags: 0

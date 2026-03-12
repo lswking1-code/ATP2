@@ -38,6 +38,11 @@ public class ValueSender : MonoBehaviour
 
     public void SendNormalValue() => SendValue(2, 1.0f);
 
+    public void StartGlitching(int index)
+    {
+        GlitchEvent.RaiseEvent(index);
+    }
+
 
 
 

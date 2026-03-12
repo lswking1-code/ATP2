@@ -23,6 +23,7 @@ public class ManuscriptManager : MonoBehaviour
     public SceneLoadEventSO SceneLoadEvent;
     public Vector3 PositionToGo;
     public GameSceneSO SceneToGo;
+    public Vector3 RotationToGo;
     [Header("Glitch Settings")]
     public float GlitchTextDelay = 1f;
     [Header("Manuscripts - 按 day 切换使用的组")]
@@ -195,7 +196,7 @@ public class ManuscriptManager : MonoBehaviour
         // 仅当选中数量达到 MaxSelectionCount 时才载入下一场景
         if (_selectedManuscripts.Count >= MaxSelectionCount && SceneToGo != null && SceneLoadEvent != null)
         {
-            SceneLoadEvent.RaiseLoadRequestEvent(SceneToGo, PositionToGo, true);
+            SceneLoadEvent.RaiseLoadRequestEvent(SceneToGo, PositionToGo, RotationToGo, true);
         }
     }
 

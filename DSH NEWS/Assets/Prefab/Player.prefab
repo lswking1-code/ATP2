@@ -169,17 +169,13 @@ MonoBehaviour:
   playerCamera: {fileID: 4518138068506165416}
   crosshair: {fileID: 0}
   lockCursorOnStart: 0
+  hideCursorOnStart: 0
   footstepClips:
-  - {fileID: 8300000, guid: 1cfae1fed0299d54abae7a479cbf1246, type: 3}
-  - {fileID: 8300000, guid: b6560f3028e5c62458ad5c647df4c206, type: 3}
-  - {fileID: 8300000, guid: 497ee176e55c7aa43ba1bf8cbed4077b, type: 3}
-  - {fileID: 8300000, guid: ac1d2455df545a74b8ad8d50135ee588, type: 3}
-  - {fileID: 8300000, guid: 0a9f0b8f533131d4b873bc04d6a99783, type: 3}
-  - {fileID: 8300000, guid: 270f0443d71b52847a5fce611ceb0c28, type: 3}
-  - {fileID: 8300000, guid: 67e47f1668b3d6244b7ce104e915848d, type: 3}
-  - {fileID: 8300000, guid: b9a455f6a0f59ea42907d2180aaa73f1, type: 3}
-  - {fileID: 8300000, guid: 80450e43312c27d48b042d365e449252, type: 3}
-  stepDistance: 2
+  - {fileID: 8300000, guid: 0df1c1b5a45066447af21dcc9fc11e5a, type: 3}
+  - {fileID: 8300000, guid: 37f6a8781f09e154c89f9a04f96a4637, type: 3}
+  - {fileID: 8300000, guid: 6c8e1caa4ea1aa94f93d5e8cb263d0c2, type: 3}
+  - {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
+  stepDistance: 1
   stepVolume: 1
   minMoveSpeedSqr: 0.5
 --- !u!114 &3763036545377909083

@@ -5,6 +5,7 @@ public class TeleprotPoint : MonoBehaviour
     public SceneLoadEventSO loadEventSO;
     public GameSceneSO sceneToGo;
     public Vector3 positionToGo;
+    public Vector3 rotationToGo;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -15,7 +16,7 @@ public class TeleprotPoint : MonoBehaviour
                 return;
             }
 
-            loadEventSO.RaiseLoadRequestEvent(sceneToGo, positionToGo, true);
+            loadEventSO.RaiseLoadRequestEvent(sceneToGo, positionToGo, rotationToGo, true);
         }
        
     }

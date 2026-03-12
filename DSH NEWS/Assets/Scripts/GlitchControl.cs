@@ -23,6 +23,10 @@ public class GlitchControl : MonoBehaviour
     public Animator animator;
     public GlitchEventSO glitchEventSO;
 
+    [Header("Glitch 音效")]
+    [Tooltip("按顺序对应 Glitch1~4，留空则该类型不播放音效")]
+    public AudioClip[] glitchSounds = new AudioClip[4];
+
     private void Start()
     {
         if (volume == null)
@@ -65,16 +69,29 @@ public class GlitchControl : MonoBehaviour
         {
             case 1:
                 animator.SetTrigger("Glitch1");
+                PlayGlitchSound(0);
                 break;
             case 2:
                 animator.SetTrigger("Glitch2");
+                PlayGlitchSound(1);
                 break;
             case 3:
                 animator.SetTrigger("Glitch3");
+                PlayGlitchSound(2);
                 break;
             case 4:
                 animator.SetTrigger("Glitch4");
+                PlayGlitchSound(3);
                 break;
         }
+    }
+
+    private void PlayGlitchSound(int soundIndex)
+    {
+        if (glitchSounds == null || soundIndex < 0 || soundIndex >= glitchSounds.Length)
+            return;
+        var clip = glitchSounds[soundIndex];
+        if (clip != null && AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(clip);
     }
 }

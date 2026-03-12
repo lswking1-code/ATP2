@@ -4427,8 +4427,14 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
+          Audio(selection);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: e14a32f2-e71b-498f-8035-dcc2d4f48e6c
         type: 0
         typeString: 
       conversationID: 5
@@ -4453,8 +4459,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1838.5651
-        y: 877.05444
+        x: 1853.0411
+        y: 866.011
         width: 160
         height: 30
     - id: 37
@@ -5199,6 +5205,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: fc2d3545-543c-4b3e-af02-4ea77d74f507
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -5876,10 +5886,12 @@ MonoBehaviour:
 
           Audio(news_opening);
 
-          SendMessage(HideImage);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 212b1339-2f47-432e-8ee2-3cd8366d2de5
         type: 0
         typeString: 
       conversationID: 5
@@ -5908,8 +5920,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1726.3529, y: 530.58044}
-    canvasZoom: 0.9999995
+    canvasScrollPosition: {x: 1475.0532, y: 545.2487}
+    canvasZoom: 0.54794616
   - id: 6
     fields:
     - title: Title

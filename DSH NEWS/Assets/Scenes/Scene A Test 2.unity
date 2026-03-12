@@ -1956,6 +1956,66 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls: []
+  - guid: 212b1339-2f47-432e-8ee2-3cd8366d2de5
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: e14a32f2-e71b-498f-8035-dcc2d4f48e6c
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowImage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: earthquake
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: Subtitle
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: A fucking fossil??????
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: fc2d3545-543c-4b3e-af02-4ea77d74f507
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1544884886
 Transform:
   m_ObjectHideFlags: 0

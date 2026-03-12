@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour
         stepAccumulator += dist;
 
         // 调试：运行时查看输出确认逻辑生效（确认后可删除）
-        Debug.Log($"Footstep: moved {dist:F3}m, speed {horizSpeed:F3}m/s, accumulator={stepAccumulator:F3}/{stepDistance:F3} vertDeltaFrame={verticalDeltaSinceLastFrame:F3}");
+        //Debug.Log($"Footstep: moved {dist:F3}m, speed {horizSpeed:F3}m/s, accumulator={stepAccumulator:F3}/{stepDistance:F3} vertDeltaFrame={verticalDeltaSinceLastFrame:F3}");
 
         if (stepAccumulator >= stepDistance)
         {

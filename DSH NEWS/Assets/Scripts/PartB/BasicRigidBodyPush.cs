@@ -13,23 +13,22 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 	private void PushRigidBodies(ControllerColliderHit hit)
 	{
-		// https://docs.unity3d.com/ScriptReference/CharacterController.OnControllerColliderHit.html
 
-		// make sure we hit a non kinematic rigidbody
+		// 确保碰到的刚体存在且不是运动学刚体
 		Rigidbody body = hit.collider.attachedRigidbody;
 		if (body == null || body.isKinematic) return;
 
-		// make sure we only push desired layer(s)
+		// 确保只推动指定的图层
 		var bodyLayerMask = 1 << body.gameObject.layer;
 		if ((bodyLayerMask & pushLayers.value) == 0) return;
 
-		// We dont want to push objects below us
+		// 不要推动位于我们下方的物体
 		if (hit.moveDirection.y < -0.3f) return;
 
-		// Calculate push direction from move direction, horizontal motion only
+		// 根据移动方向计算推动方向，仅保留水平分量
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 
-		// Apply the push and take strength into account
+		// 应用推动力并考虑强度
 		body.AddForce(pushDir * strength, ForceMode.Impulse);
 	}
 }

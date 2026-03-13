@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   sceneToGo: {fileID: 11400000, guid: 48962fef9db5e2d42ab28438edc5d694, type: 2}
-  positionToGo: {x: 2.37, y: -5.12, z: -8.8}
+  positionToGo: {x: 30, y: -16, z: 20}
   rotationToGo: {x: 0, y: 180, z: 0}
 --- !u!114 &1693797253
 MonoBehaviour:

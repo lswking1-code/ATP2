@@ -5636,7 +5636,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 58
         destinationConversationID: 5
-        destinationDialogueID: 54
+        destinationDialogueID: 75
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6226,7 +6226,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: If you encounter a screeching sound coming from the sewers, Do not
-          approach. Leave the
+          approach
         type: 0
         typeString: 
       - title: Sequence
@@ -6234,6 +6234,10 @@ MonoBehaviour:
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: ca58e130-bb10-418a-abdd-7935a56a2b9c
         type: 0
         typeString: 
       conversationID: 5
@@ -6296,7 +6300,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 61718ee6-3155-47c2-986c-c194da3e8d27
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -6415,6 +6419,10 @@ MonoBehaviour:
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -6547,7 +6555,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 75
+        destinationConversationID: 5
+        destinationDialogueID: 76
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["PlayedD"] = true
       onExecute:
@@ -6559,9 +6573,127 @@ MonoBehaviour:
         y: 999.5841
         width: 160
         height: 30
+    - id: 76
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'While children have shown great enthusiasm, parental concerns have
+          risen. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 77
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2593.9854
+        y: 1086.4723
+        width: 160
+        height: 30
+    - id: 77
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Many parents remain wary of such products, fearing they may disrupt
+          their children\u2019s normal daily life."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 77
+        destinationConversationID: 5
+        destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2588.2683
+        y: 1174.7672
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2354.8984, y: 770.63666}
-    canvasZoom: 1.3299991
+    canvasScrollPosition: {x: 1653.6953, y: 824.9917}
+    canvasZoom: 0.42999962
   - id: 6
     fields:
     - title: Title

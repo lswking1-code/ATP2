@@ -8,6 +8,7 @@ public class ValueSender : MonoBehaviour
     public ValueEventSO valueEvent;
 
     public GlitchEventSO GlitchEvent;
+    public GlitchEventSO GlitchVideoEvent;
 
 
 
@@ -43,7 +44,10 @@ public class ValueSender : MonoBehaviour
         GlitchEvent.RaiseEvent(index);
     }
 
-
+    public void StartGlitchingVideo(int index)
+    {
+        GlitchVideoEvent.RaiseEvent(index);
+    }
 
 
 

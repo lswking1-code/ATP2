@@ -842,19 +842,13 @@ MonoBehaviour:
   sfxSource: {fileID: 0}
   musicVolume: 1
   sfxVolume: 1
-  playlist: []
-  loadFromResources: 0
-  resourcesPath: Sound
-  playPlaylistOnAwake: 0
-  playlistFadeTime: 0.5
-  playlistLoop: 1
   autoSwitchOnSceneLoad: 1
   defaultMusicClip: {fileID: 0}
   defaultSceneFadeTime: 0.5
   sceneMusic:
   - sceneName: Test2
     sceneBuildIndex: 0
-    clip: {fileID: 8300000, guid: 545e0857f44b32b46a624f0c53f6e8a2, type: 3}
+    clip: {fileID: 8300000, guid: 99814ae5452181d4787709efb26eb965, type: 3}
     fadeTime: 0
     loop: 1
 --- !u!1 &826892470
@@ -1478,5 +1472,5 @@ SceneRoots:
   - {fileID: 1617128524}
   - {fileID: 1714002139}
   - {fileID: 523066670}
-  - {fileID: 826892473}
   - {fileID: 799467044}
+  - {fileID: 826892473}

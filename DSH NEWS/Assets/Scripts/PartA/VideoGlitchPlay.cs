@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Video;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -113,20 +114,28 @@ public class VideoGlitchPlay : MonoBehaviour
         RenderTexture.active = prev;
     }
 
-    private void OnGlitchVideoEventRaised(int index)
+    private void OnGlitchVideoEventRaised(int index, float value)
     {
+        StartCoroutine(PlayVideoWithDelay(index, value));
+    }
+
+    private IEnumerator PlayVideoWithDelay(int index, float delay)
+    {
+        if (delay > 0f)
+            yield return new WaitForSeconds(delay);
+
         if (videoPlayer == null)
             videoPlayer = GetComponent<VideoPlayer>();
         if (videoPlayer == null)
         {
             Debug.LogWarning("VideoGlitchPlay: videoPlayer 未设置/不存在。", this);
-            return;
+            yield break;
         }
 
         if (videoClips == null || videoClips.Count == 0)
         {
             Debug.LogWarning("VideoGlitchPlay: videoClips 为空，请在 Inspector 按顺序填充。", this);
-            return;
+            yield break;
         }
 
         // 按你的约定：index 取值主要为 1-4
@@ -134,14 +143,14 @@ public class VideoGlitchPlay : MonoBehaviour
         if (listIndex < 0 || listIndex >= videoClips.Count)
         {
             Debug.LogWarning($"VideoGlitchPlay: index={index} 对应的 listIndex={listIndex} 越界。videoClips.Count={videoClips.Count}", this);
-            return;
+            yield break;
         }
 
         VideoClip clip = videoClips[listIndex];
         if (clip == null)
         {
             Debug.LogWarning($"VideoGlitchPlay: videoClips[{listIndex}] 为空（index={index}）。", this);
-            return;
+            yield break;
         }
 
         // 停止旧视频并从头开始播放新视频

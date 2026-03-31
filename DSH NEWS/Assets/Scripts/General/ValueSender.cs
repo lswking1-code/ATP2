@@ -39,14 +39,14 @@ public class ValueSender : MonoBehaviour
 
     public void SendNormalValue() => SendValue(2, 1.0f);
 
-    public void StartGlitching(int index)
+    public void StartGlitching(int index, float delay)
     {
-        GlitchEvent.RaiseEvent(index);
+        GlitchEvent.RaiseEvent(index, delay);
     }
 
-    public void StartGlitchingVideo(int index)
+    public void StartGlitchingVideo(int index, float delay)
     {
-        GlitchVideoEvent.RaiseEvent(index);
+        GlitchVideoEvent.RaiseEvent(index, delay);
     }
 
 

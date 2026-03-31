@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.Rendering;
 using URPGlitch;
 
@@ -63,8 +64,16 @@ public class GlitchControl : MonoBehaviour
         }
     }
 
-    private void OnGlitchEventRaised(int index)
+    private void OnGlitchEventRaised(int index, float value)
     {
+        StartCoroutine(PlayGlitchWithDelay(index, value));
+    }
+
+    private IEnumerator PlayGlitchWithDelay(int index, float delay)
+    {
+        if (delay > 0f)
+            yield return new WaitForSeconds(delay);
+
         switch (index)
         {
             case 1:

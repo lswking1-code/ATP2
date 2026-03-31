@@ -287,7 +287,7 @@ public class ManuscriptManager : MonoBehaviour
         }
 
         // 触发 Glitch2 动画（仅此一次）
-        GlitchEvent.RaiseEvent(2);
+        GlitchEvent.RaiseEvent(2, 0f);
 
         // 等待动画结束（在 Inspector 中通过 GlitchTextDelay 调整，需与动画长度一致）
         if (GlitchTextDelay > 0f)

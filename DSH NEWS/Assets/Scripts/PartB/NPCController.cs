@@ -6,11 +6,7 @@ using UnityEngine.AI;
 public class NPCController : MonoBehaviour
 {
     /// <summary>
-    /// NPC 行为状态：仅保留需要的状态以简化逻辑。
-    /// - Idle: 空闲，不移动。
-    /// - Patrol: 按 patrolPoints 巡逻。
-    /// - VisitingInterest: 临时偏离巡逻去访问兴趣点（兴趣点可能触发停留动作）。
-    /// - Stop: 停止（用于被玩家阻挡或显式暂停）。
+    /// NPC 行为状态（简化）
     /// </summary>
     private enum State
     {
@@ -21,7 +17,7 @@ public class NPCController : MonoBehaviour
     }
 
     [Header("References")]
-    [SerializeField, Tooltip("可选：Animator（用于接收速度以驱动动画），若留空会尝试自动获取）。")]
+    [SerializeField, Tooltip("可选：Animator（用于接收速度与坡度以驱动动画），若留空会尝试自动获取）。")]
     private Animator animator;
 
     [SerializeField, Tooltip("NavMeshAgent（自动获取）。")]
@@ -31,11 +27,24 @@ public class NPCController : MonoBehaviour
     [SerializeField, Tooltip("Animator 中接收速度的 Float 参数名（例如 Speed）。")]
     private string speedParam = "Speed";
 
+    [SerializeField, Tooltip("Animator 中接收坡度的 Float 参数名，范围约定为 -1 (下坡) 到 +1 (上坡)。")]
+    private string slopeParam = "Slope";
+
+    [SerializeField, Tooltip("将坡度值传入 Animator 时的阻尼时间（秒），用于平滑过渡）。")]
+    private float slopeDampTime = 0.12f;
+
+    [SerializeField, Tooltip("水平速度平滑时间（秒），用于在开始/停止时平滑过渡动画参数）。")]
+    private float speedSmoothTime = 0.15f;
+
+    // 平滑状态缓存（不在 Inspector 显示）
+    private float smoothedSpeed = 0f;
+    private float smoothedSpeedVel = 0f;
+
     [Header("Patrol")]
     [SerializeField, Tooltip("按顺序的巡逻点（为空则不巡逻）。")]
     private Transform[] patrolPoints;
 
-    [SerializeField, Tooltip("到达巡逻点后的等待时间（秒）。<=0 表示不巡逻时停止在最后一个点）。")]
+    [SerializeField, Tooltip("到达巡逻点后的等待时间（秒）。<=0 表示不等待）。")]
     private float patrolWaitTime = 0f;
 
     [SerializeField, Tooltip("巡逻是否循环（到末尾回到开头）。")]
@@ -73,6 +82,13 @@ public class NPCController : MonoBehaviour
     [SerializeField, Tooltip("是否要求与玩家有直线视野（射线不被障碍遮挡）才判定阻挡）。")]
     private bool requireLineOfSight = true;
 
+    [Header("Slope Detection")]
+    [SerializeField, Tooltip("将垂直高度差归一化为坡度值的阈值（米）；dy / threshold 映射到 [-1,1]。")]
+    private float slopeNormalizeThreshold = 0.25f;
+
+    [SerializeField, Tooltip("检测坡度时的最小移动速度（m/s），低于则不更新坡度）。")]
+    private float minSpeedToDetectSlope = 0.05f;
+
     // 运行时字段
     private State currentState = State.Idle;
     private int patrolIndex = 0;
@@ -80,35 +96,36 @@ public class NPCController : MonoBehaviour
     private Coroutine interestCoroutine;
 
     // 暂停/恢复相关
-    private bool pausedByPlayer = false;                 // 是否因为玩家阻挡或交互而暂停
-    private State prevStateBeforePause = State.Idle;    // 暂停前的状态，用于恢复
-    private Vector3 lastDestination;                    // 暂停前的目标，用于恢复目的地
+    private bool pausedByPlayer = false;
+    private State prevStateBeforePause = State.Idle;
+    private Vector3 lastDestination;
+
+    // 楼面高度缓存（用于坡度计算）
+    private float lastGroundY;
 
     private void Reset()
     {
-        // 在 Inspector 的 Reset 操作或首次添加组件时自动抓取必需组件，方便配置
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
 
     private void Awake()
     {
-        // 确保必要引用存在
         if (agent == null) agent = GetComponent<NavMeshAgent>();
         if (animator == null) animator = GetComponent<Animator>();
 
-        // 由 NavMeshAgent 管理旋转以更好配合其寻路（若你希望手动旋转，可改为 false 并自行处理）
         if (agent != null)
             agent.updateRotation = true;
 
-        // 由 Agent 驱动位移时通常关闭 Animator 的 Root Motion
         if (animator != null)
             animator.applyRootMotion = false;
+
+        // 初始化地面高度缓存
+        lastGroundY = SampleGroundY(transform.position);
     }
 
     private void Start()
     {
-        // 启动时如果配置了巡逻点，进入巡逻状态并设置第一个目标（带随机偏移）
         if (patrolPoints != null && patrolPoints.Length > 0)
         {
             patrolIndex = 0;
@@ -128,8 +145,7 @@ public class NPCController : MonoBehaviour
     {
         if (agent == null) return;
 
-        // 1) 检测玩家阻挡（若不是已被显式暂停）
-        // 若玩家阻挡则 PauseForPlayer()，玩家离开后 ResumeFromPlayer()
+        // 检测玩家阻挡并暂停/恢复
         if (!pausedByPlayer && IsPlayerBlocking())
         {
             PauseForPlayer();
@@ -139,20 +155,17 @@ public class NPCController : MonoBehaviour
             ResumeFromPlayer();
         }
 
-        // 2) 将 NavMeshAgent 的实际速度（m/s）传给 Animator 的 speed 参数，用于 BlendTree/过渡
-        if (animator != null && !string.IsNullOrEmpty(speedParam))
-        {
-            animator.SetFloat(speedParam, agent.velocity.magnitude);
-        }
+        // 更新坡度参数（始终写入 Animator 的 Slope）
+        UpdateSlopeParam();
 
-        // 3) 若处于被玩家暂停状态则不继续行为逻辑（agent.isStopped 已在 PauseForPlayer 中设置）
+        // 平滑水平速度并写入 Animator（避免动画突变）
+        UpdateSmoothedSpeedAndApply();
+
         if (pausedByPlayer) return;
 
-        // 4) 根据当前状态执行逻辑
         switch (currentState)
         {
             case State.Idle:
-                // 可在此处添加空闲行为
                 break;
             case State.Patrol:
                 UpdatePatrol();
@@ -166,23 +179,68 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    // ========== 玩家阻挡判定与暂停/恢复逻辑 ==========
+    // 采样 NavMesh 上的地面 Y，失败退化为 worldPos.y
+    private float SampleGroundY(Vector3 worldPos)
+    {
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(worldPos, out hit, 1.0f, NavMesh.AllAreas))
+            return hit.position.y;
+        return worldPos.y;
+    }
 
-    /// <summary>
-    /// 判断玩家是否在 NPC 前方一定半径与角度范围内并（可选）有视线。
-    /// 若满足则认为玩家在“挡路”并返回 true。
-    /// </summary>
+    // 计算并写入 Animator.Slope（-1..1）
+    private void UpdateSlopeParam()
+    {
+        if (animator == null || string.IsNullOrEmpty(slopeParam)) return;
+
+        float speed = agent.velocity.magnitude;
+        float currentGroundY = SampleGroundY(agent.nextPosition);
+        float dy = currentGroundY - lastGroundY;
+
+        float slopeValue = 0f;
+        if (speed >= minSpeedToDetectSlope && Mathf.Abs(dy) > 0.0001f)
+        {
+            slopeValue = Mathf.Clamp(dy / Mathf.Max(0.0001f, slopeNormalizeThreshold), -1f, 1f);
+        }
+
+        // 将坡度值写入 Animator，并使用阻尼平滑
+        animator.SetFloat(slopeParam, slopeValue, slopeDampTime, Time.deltaTime);
+
+        // 平滑更新缓存，避免抖动
+        lastGroundY = Mathf.Lerp(lastGroundY, currentGroundY, 0.5f);
+    }
+
+    // 平滑水平速度并应用到 Animator 的 speed 参数
+    private void UpdateSmoothedSpeedAndApply()
+    {
+        if (animator == null || string.IsNullOrEmpty(speedParam)) return;
+
+        // 取水平分量速度（忽略 y）
+        Vector3 horizVel = agent.velocity;
+        horizVel.y = 0f;
+        float targetSpeed = horizVel.magnitude;
+
+        // 如果 agent 被停止（例如被玩家挡住），目标速度应为 0
+        if (agent.isStopped) targetSpeed = 0f;
+
+        // 平滑过渡当前速度到目标速度
+        smoothedSpeed = Mathf.SmoothDamp(smoothedSpeed, targetSpeed, ref smoothedSpeedVel, speedSmoothTime);
+
+        // 将平滑后的速度写入 Animator（我们已在这里做平滑，因此使用无阻尼的 SetFloat 重载）
+        animator.SetFloat(speedParam, smoothedSpeed);
+    }
+
+    // ========== 玩家阻挡判定、暂停/恢复（同前） ==========
     private bool IsPlayerBlocking()
     {
-        if (playerLayer == 0) return false; // 未配置 layer mask 则不判定
+        if (playerLayer == 0) return false;
         Collider[] hits = Physics.OverlapSphere(transform.position, playerBlockRadius, playerLayer);
         if (hits == null || hits.Length == 0) return false;
 
         foreach (var col in hits)
         {
             if (col == null) continue;
-            // 只考虑水平方向（忽略高度差）
-            Vector3 dir = (col.transform.position - transform.position);
+            Vector3 dir = col.transform.position - transform.position;
             dir.y = 0f;
             if (dir.sqrMagnitude < 0.0001f) continue;
             float angle = Vector3.Angle(transform.forward, dir);
@@ -190,12 +248,11 @@ public class NPCController : MonoBehaviour
 
             if (requireLineOfSight)
             {
-                // 从 NPC 适当高度向玩家射线，检测首个命中是否为玩家自身
                 Vector3 origin = transform.position + Vector3.up * 0.5f;
                 Vector3 to = (col.transform.position + Vector3.up * 0.9f) - origin;
                 if (Physics.Raycast(origin, to.normalized, out RaycastHit hit, to.magnitude))
                 {
-                    if (hit.collider != col) continue; // 有障碍遮挡，则视为不可见
+                    if (hit.collider != col) continue;
                 }
                 else
                 {
@@ -203,18 +260,11 @@ public class NPCController : MonoBehaviour
                 }
             }
 
-            // 满足所有判定条件 -> 认为玩家挡路
             return true;
         }
         return false;
     }
 
-    /// <summary>
-    /// 被玩家阻挡或交互时暂停 NPC：
-    /// - 记录当前状态与目标以便恢复
-    /// - 设置 agent.isStopped = true
-    /// - 把当前状态置为 Stop
-    /// </summary>
     private void PauseForPlayer()
     {
         if (pausedByPlayer) return;
@@ -225,11 +275,6 @@ public class NPCController : MonoBehaviour
         currentState = State.Stop;
     }
 
-    /// <summary>
-    /// 玩家离开或交互结束后恢复 NPC：
-    /// - 恢复暂停前状态，若存在保存的目的地则重新设置
-    /// - 解除暂停标记并启用 agent
-    /// </summary>
     private void ResumeFromPlayer()
     {
         if (!pausedByPlayer) return;
@@ -240,27 +285,10 @@ public class NPCController : MonoBehaviour
             agent.SetDestination(lastDestination);
     }
 
-    /// <summary>
-    /// 外部显式调用：玩家开始交互时（例如 PlayerController 调用），暂停 NPC。
-    /// </summary>
-    public void OnPlayerInteractStart()
-    {
-        PauseForPlayer();
-    }
+    public void OnPlayerInteractStart() => PauseForPlayer();
+    public void OnPlayerInteractEnd() => ResumeFromPlayer();
 
-    /// <summary>
-    /// 外部显式调用：玩家结束交互时（例如 PlayerController 调用），恢复 NPC。
-    /// </summary>
-    public void OnPlayerInteractEnd()
-    {
-        ResumeFromPlayer();
-    }
-
-    // ========== 巡逻与兴趣点逻辑 ==========
-
-    /// <summary>
-    /// 巡逻逻辑：当到达巡逻点时，按概率偏离去兴趣点；否则等待或继续下个巡逻点。
-    /// </summary>
+    // ========== 巡逻与兴趣点逻辑（不变） ==========
     private void UpdatePatrol()
     {
         if (patrolPoints == null || patrolPoints.Length == 0) { currentState = State.Idle; return; }
@@ -268,7 +296,6 @@ public class NPCController : MonoBehaviour
 
         if (!agent.hasPath || agent.remainingDistance <= arriveThreshold)
         {
-            // 到达巡逻点：先尝试访问兴趣点
             if (ShouldVisitInterest())
             {
                 Transform ip = ChooseInterestPoint();
@@ -279,7 +306,6 @@ public class NPCController : MonoBehaviour
                 }
             }
 
-            // 否则等待或前往下一巡逻点
             if (patrolWaitTime > 0f && patrolWaitCoroutine == null)
             {
                 patrolWaitCoroutine = StartCoroutine(PatrolWait());
@@ -291,9 +317,6 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 访问兴趣点时的更新：到达兴趣点后启动停留动作协程。
-    /// </summary>
     private void UpdateVisitingInterest()
     {
         if (agent.pathPending) return;
@@ -307,18 +330,12 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 是否按概率选择去访问兴趣点（根据 interestChance）。
-    /// </summary>
     private bool ShouldVisitInterest()
     {
         if (interestPoints == null || interestPoints.Length == 0) return false;
         return Random.value <= interestChance;
     }
 
-    /// <summary>
-    /// 随机选择一个兴趣点（简单随机，未去重或权重）。
-    /// </summary>
     private Transform ChooseInterestPoint()
     {
         if (interestPoints == null || interestPoints.Length == 0) return null;
@@ -326,9 +343,6 @@ public class NPCController : MonoBehaviour
         return interestPoints[idx];
     }
 
-    /// <summary>
-    /// 开始前往并访问指定兴趣点：设置状态、目标与记录目标用于恢复。
-    /// </summary>
     private void StartVisitingInterest(Transform interest)
     {
         if (interest == null) { AdvancePatrol(); return; }
@@ -339,9 +353,6 @@ public class NPCController : MonoBehaviour
         agent.SetDestination(dest);
     }
 
-    /// <summary>
-    /// 在兴趣点执行动作的协程（停留一段时间），完成后返回巡逻流。
-    /// </summary>
     private IEnumerator InterestActionCoroutine()
     {
         agent.isStopped = true;
@@ -353,9 +364,6 @@ public class NPCController : MonoBehaviour
         currentState = (patrolPoints != null && patrolPoints.Length > 0) ? State.Patrol : State.Idle;
     }
 
-    /// <summary>
-    /// 巡逻点等待协程，等待结束后继续前往下一个巡逻点。
-    /// </summary>
     private IEnumerator PatrolWait()
     {
         agent.isStopped = true;
@@ -365,9 +373,6 @@ public class NPCController : MonoBehaviour
         AdvancePatrol();
     }
 
-    /// <summary>
-    /// 推进到下一个巡逻点并下达带随机偏移的目的地。
-    /// </summary>
     private void AdvancePatrol()
     {
         if (patrolPoints == null || patrolPoints.Length == 0) { currentState = State.Idle; return; }
@@ -382,10 +387,6 @@ public class NPCController : MonoBehaviour
         agent.SetDestination(target);
     }
 
-    /// <summary>
-    /// 在 basePosition 周围按给定 radius 随机采样一个点，并使用 NavMesh.SamplePosition 返回最近可达点（失败则返回 basePosition）。
-    /// 这样可以保证目标点位于 NavMesh 上，避免设置不可达目标。
-    /// </summary>
     private Vector3 GetRandomizedDestination(Vector3 basePosition, float radius)
     {
         if (radius <= 0f) return basePosition;

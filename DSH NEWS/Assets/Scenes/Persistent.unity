@@ -132,12 +132,24 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 801456700501915494, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 801456700501915494, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197591686778995083, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2393887717565330718, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939059940153852602, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: walkSpeed
@@ -461,6 +473,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7877517574923195727, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715415038254814529, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1070,8 +1086,8 @@ MonoBehaviour:
   afterSceneLoadedEvent: {fileID: 11400000, guid: f1b163b394c5bcc4aab91757f936f203, type: 2}
   fadeEvent: {fileID: 11400000, guid: 13106d00223a8354082c41108e795c73, type: 2}
   unloadedSceneEvent: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
-  firstLoadScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
-  menuScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  firstLoadScene: {fileID: 11400000, guid: 48962fef9db5e2d42ab28438edc5d694, type: 2}
+  menuScene: {fileID: 11400000, guid: 48962fef9db5e2d42ab28438edc5d694, type: 2}
   fadeDuration: 0.5
 --- !u!1 &1595356897
 GameObject:

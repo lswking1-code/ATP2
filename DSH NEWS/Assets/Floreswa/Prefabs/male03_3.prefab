@@ -202,7 +202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6522329275384735907}
   - component: {fileID: 852338737146232748}
-  - component: {fileID: 5271046984516031280}
   - component: {fileID: 678762006853580396}
   - component: {fileID: 898487809101111818}
   m_Layer: 0
@@ -251,29 +250,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5271046984516031280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352303529906801858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61fa0820f68425b4f8aeb805c9782159, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 678762006853580396}
-  agent: {fileID: 852338737146232748}
-  speedParam: Speed
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  patrolWaitTime: 3
-  patrolLoop: 1
-  arriveThreshold: 0.2
 --- !u!95 &678762006853580396
 Animator:
   serializedVersion: 7

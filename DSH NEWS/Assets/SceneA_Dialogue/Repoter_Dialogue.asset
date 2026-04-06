@@ -4365,7 +4365,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(GlitchFromSequence, 1, ValueMaster) ;
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -5932,11 +5932,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -5948,23 +5948,25 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: If you encounter a screeching sound coming from the sewers, Do not
           approach
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchVideoFromSequence,
+          2|2, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: ca58e130-bb10-418a-abdd-7935a56a2b9c
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -5987,7 +5989,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2544.8354
-        y: 981.3672
+        y: 980.0447
         width: 160
         height: 30
     - id: 71
@@ -6172,7 +6174,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2546.5422
-        y: 1231.1438
+        y: 1229.127
         width: 160
         height: 30
     - id: 74
@@ -6206,8 +6208,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchFromSequence,
+          1|1.5, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -6417,8 +6421,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.24999985
+    canvasScrollPosition: {x: 2171.4443, y: 753.7202}
+    canvasZoom: 0.7299998
   - id: 6
     fields:
     - title: Title

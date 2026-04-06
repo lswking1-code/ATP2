@@ -7753,7 +7753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1801773908
 Animator:
   serializedVersion: 7
@@ -7799,6 +7799,7 @@ MonoBehaviour:
   colorDrift: 0
   animator: {fileID: 1801773908}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
+  SwitchScanLineEvent: {fileID: 0}
   glitchSounds:
   - {fileID: 0}
   - {fileID: 0}

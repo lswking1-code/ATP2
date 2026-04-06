@@ -1224,6 +1224,7 @@ MonoBehaviour:
   colorDrift: 0
   animator: {fileID: 1714002140}
   glitchEventSO: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
+  SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}
   glitchSounds:
   - {fileID: 8300000, guid: 29d8cc0cd92a798448d6bd8ba3df03c7, type: 3}
   - {fileID: 8300000, guid: 29d8cc0cd92a798448d6bd8ba3df03c7, type: 3}

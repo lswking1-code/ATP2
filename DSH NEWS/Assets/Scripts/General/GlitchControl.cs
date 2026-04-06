@@ -23,6 +23,7 @@ public class GlitchControl : MonoBehaviour
 
     public Animator animator;
     public GlitchEventSO glitchEventSO;
+    public VoidEventSO SwitchScanLineEvent;
 
     [Header("Glitch 音效")]
     [Tooltip("按顺序对应 Glitch1~4，留空则该类型不播放音效")]
@@ -39,11 +40,13 @@ public class GlitchControl : MonoBehaviour
     private void OnEnable()
     {
         glitchEventSO.OnEventRaised += OnGlitchEventRaised;
+        SwitchScanLineEvent.OnEventRaised += OnSwitchScanLineEventRaised;
     }
 
     private void OnDisable()
     {
         glitchEventSO.OnEventRaised -= OnGlitchEventRaised;
+        SwitchScanLineEvent.OnEventRaised -= OnSwitchScanLineEventRaised;
     }
 
     void Update()
@@ -102,5 +105,10 @@ public class GlitchControl : MonoBehaviour
         var clip = glitchSounds[soundIndex];
         if (clip != null && AudioManager.Instance != null)
             AudioManager.Instance.PlaySFX(clip);
+    }
+
+    private void OnSwitchScanLineEventRaised()
+    {
+        animator.SetTrigger("SwitchScanLine");
     }
 }

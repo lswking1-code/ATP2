@@ -1575,6 +1575,7 @@ MonoBehaviour:
   ValueEvent: {fileID: 11400000, guid: 87b558a72a5ac1745b3f4db88cc30473, type: 2}
   GlitchEvent: {fileID: 11400000, guid: 550ce902514419d4e82b6048b9b8e36d, type: 2}
   ScriptChangeEvent: {fileID: 11400000, guid: 0c77619f6fc792c43803f1b1735ad37c, type: 2}
+  SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}
   SceneLoadEvent: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   PositionToGo: {x: 0, y: 1, z: 0}
   SceneToGo: {fileID: 11400000, guid: eb46d7beac41b43e79d4cb88005c69fe, type: 2}

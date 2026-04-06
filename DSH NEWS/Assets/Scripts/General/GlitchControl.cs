@@ -74,8 +74,9 @@ public class GlitchControl : MonoBehaviour
 
     private IEnumerator PlayGlitchWithDelay(int index, float delay)
     {
+        // 对话期间 timeScale 可能为 0，需用真实时间等待
         if (delay > 0f)
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSecondsRealtime(delay);
 
         switch (index)
         {

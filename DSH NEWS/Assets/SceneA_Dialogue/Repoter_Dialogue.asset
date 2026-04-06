@@ -5468,8 +5468,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -5497,8 +5499,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2543.446
-        y: 905.6874
+        x: 2542.242
+        y: 902.83685
         width: 160
         height: 30
     - id: 57
@@ -5989,7 +5991,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2544.8354
-        y: 980.0447
+        y: 978.16846
         width: 160
         height: 30
     - id: 71
@@ -6173,8 +6175,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2546.5422
-        y: 1227.8665
+        x: 2545.2817
+        y: 1226.606
         width: 160
         height: 30
     - id: 74
@@ -6421,8 +6423,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2076.9153, y: 1026.4884}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 1902.4417, y: 816.8667}
+    canvasZoom: 0.48999998
   - id: 6
     fields:
     - title: Title

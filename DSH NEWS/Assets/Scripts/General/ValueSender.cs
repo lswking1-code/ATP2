@@ -72,7 +72,7 @@ public class ValueSender : MonoBehaviour
     /// <summary> 同 <see cref="GlitchFromSequence"/>，触发 <see cref="GlitchVideoEvent"/>。 </summary>
     public void GlitchVideoFromSequence(string payload)
     {
-        if (GlitchVideoEvent == null || !TryParseGlitchPayload(payload, out int index, out float delay))
+        if (GlitchVideoEvent == null || !TryParseGlitchPayload(payload ?? "", out int index, out float delay))
             return;
         GlitchVideoEvent.RaiseEvent(index, delay);
     }

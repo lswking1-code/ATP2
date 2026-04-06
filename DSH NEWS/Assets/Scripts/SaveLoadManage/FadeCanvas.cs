@@ -11,6 +11,23 @@ public class FadeCanvas : MonoBehaviour
 
     private Coroutine fadeRoutine;
 
+    private void Awake()
+    {
+        SyncFadeRaycastBlocking();
+    }
+
+    /// <summary>
+    /// 全屏 fade 在 alpha≈0 时仍默认 raycastTarget=true 会挡住整界面点击（与 glitch 视频层无关）。
+    /// 仅在需要遮罩（渐显中有不透明度）时参与射线检测。
+    /// </summary>
+    private void SyncFadeRaycastBlocking()
+    {
+        if (fadeImage == null)
+            return;
+        const float threshold = 1f / 255f;
+        fadeImage.raycastTarget = fadeImage.color.a > threshold;
+    }
+
     private void OnEnable()
     {
         if (fadeEvent != null)
@@ -52,10 +69,12 @@ public class FadeCanvas : MonoBehaviour
             elapsed += Time.deltaTime;
             var t = Mathf.Clamp01(elapsed / duration);
             fadeImage.color = Color.Lerp(start, target, t);
+            SyncFadeRaycastBlocking();
             yield return null;
         }
 
         fadeImage.color = target;
+        SyncFadeRaycastBlocking();
         fadeRoutine = null;
     }
 }

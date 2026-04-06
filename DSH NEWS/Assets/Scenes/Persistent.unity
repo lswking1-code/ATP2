@@ -848,7 +848,7 @@ MonoBehaviour:
   sceneMusic:
   - sceneName: Test2
     sceneBuildIndex: 0
-    clip: {fileID: 8300000, guid: 99814ae5452181d4787709efb26eb965, type: 3}
+    clip: {fileID: 8300000, guid: c4932605c5962b541b0e5517fac8e59c, type: 3}
     fadeTime: 0
     loop: 1
 --- !u!1 &826892470

@@ -6423,8 +6423,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1902.4417, y: 816.8667}
-    canvasZoom: 0.48999998
+    canvasScrollPosition: {x: 1182.1514, y: 349.67688}
+    canvasZoom: 0.52
   - id: 6
     fields:
     - title: Title
@@ -7721,8 +7721,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1806.2758, y: 676.0569}
-    canvasZoom: 0.5457038
+    canvasScrollPosition: {x: 1718.9172, y: 596.746}
+    canvasZoom: 0.6957037
   - id: 7
     fields:
     - title: Title
@@ -8417,6 +8417,12 @@ MonoBehaviour:
         destinationDialogueID: 84
         isConnector: 0
         priority: 2
+      - originConversationID: 7
+        originDialogueID: 96
+        destinationConversationID: 7
+        destinationDialogueID: 120
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["FinishedBranch"] < 2
       userScript: 
       onExecute:
@@ -8550,7 +8556,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2652.187
-        y: 1466.2089
+        y: 1469.8921
         width: 160
         height: 30
     - id: 101
@@ -9437,9 +9443,195 @@ MonoBehaviour:
         y: 1830.6116
         width: 160
         height: 30
+    - id: 120
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "The results of the governer of Utah election were announced today,
+          with XXX securing the position of Utah Governor by an overwhelming number
+          of votes \u2014 this being his second term as Governor of Utah."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 120
+        destinationConversationID: 7
+        destinationDialogueID: 121
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2940.958
+        y: 1467.5079
+        width: 160
+        height: 30
+    - id: 121
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Regarding the outcome, he stated: "Thank you for the public''s support!
+          I will fulfil my promises and do everything in my power to ensure that
+          basic conditions of daily life are maintained for the public in the face
+          of the various issues brought about by Y2K.'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 121
+        destinationConversationID: 7
+        destinationDialogueID: 123
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2943.4707
+        y: 1529.5348
+        width: 160
+        height: 30
+    - id: 123
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "It is reported that XXX plans to invest 1 billion dollars to procure
+          emergency supplies across the state, as well as establish 15 data centres
+          to store the personal information of all residents within the state and
+          various categories of critical data \u2014 all in preparation for the potential
+          societal impacts of Y2K.\n"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 123
+        destinationConversationID: 7
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2948.0032
+        y: 1599.6383
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1482.4976, y: 906.15594}
-    canvasZoom: 0.36400118
+    canvasScrollPosition: {x: 1841.2773, y: 1228.396}
+    canvasZoom: 0.694001
   - id: 8
     fields:
     - title: Title
@@ -12401,8 +12593,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1667.7395
-        y: 1475.0754
+        x: 1669.4636
+        y: 1454.3857
         width: 160
         height: 30
     - id: 82
@@ -12457,7 +12649,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1910.2986
-        y: 1467.2657
+        y: 1451.7485
         width: 160
         height: 30
     - id: 83
@@ -12583,7 +12775,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1913.6113
+        x: 1915.3353
         y: 1518.0809
         width: 160
         height: 30
@@ -12642,8 +12834,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1668.5913
-        y: 1539.9541
+        x: 1665.1431
+        y: 1517.5403
         width: 160
         height: 30
     - id: 86
@@ -14259,8 +14451,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 810.0353, y: 593.7125}
-    canvasZoom: 0.3400004
+    canvasScrollPosition: {x: 1091.7859, y: 624.75885}
+    canvasZoom: 0.58000034
   - id: 11
     fields:
     - title: Title
@@ -16827,8 +17019,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 800.17395, y: 212.12674}
-    canvasZoom: 0.7400012
+    canvasScrollPosition: {x: 913.8573, y: 650.0409}
+    canvasZoom: 0.6500013
   syncInfo:
     syncActors: 0
     syncItems: 0

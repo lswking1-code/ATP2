@@ -9192,8 +9192,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1724.5483, y: 1285.4424}
-    canvasZoom: 0.36400118
+    canvasScrollPosition: {x: 2364.0496, y: 1140.9602}
+    canvasZoom: 0.78400093
   - id: 8
     fields:
     - title: Title
@@ -9457,13 +9457,13 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 86
         destinationConversationID: 8
-        destinationDialogueID: 99
+        destinationDialogueID: 109
         isConnector: 0
         priority: 2
       - originConversationID: 8
         originDialogueID: 86
         destinationConversationID: 8
-        destinationDialogueID: 109
+        destinationDialogueID: 121
         isConnector: 0
         priority: 2
       conditionsString: Variable["FinishedBranch"] < 2
@@ -9625,7 +9625,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Family members have contacted the station claiming that the young
+        value: 'The family members have contacted the station claiming that the young
           man has a strange reflection
 
 '
@@ -10201,66 +10201,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 3818.4368
         y: 1800.9471
-        width: 160
-        height: 30
-    - id: 99
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Recently, there have been multiple reports regarding unusual noises
-          coming from the city''s sewers. '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 99
-        destinationConversationID: 8
-        destinationDialogueID: 100
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
-        false)
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3119.8628
-        y: 1502.9509
         width: 160
         height: 30
     - id: 100
@@ -11353,9 +11293,68 @@ MonoBehaviour:
         y: 1691.8706
         width: 160
         height: 30
+    - id: 121
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Recently, there have been multiple reports regarding unusual noises
+          coming from the city''s sewers. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 121
+        destinationConversationID: 8
+        destinationDialogueID: 100
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3127.3057
+        y: 1497.7997
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2969.1929, y: 1381.1592}
-    canvasZoom: 0.84999967
+    canvasScrollPosition: {x: 3023.356, y: 1249.9503}
+    canvasZoom: 0.69999975
   - id: 9
     fields:
     - title: Title

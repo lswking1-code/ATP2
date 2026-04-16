@@ -10233,10 +10233,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 8
@@ -11079,10 +11077,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 8
@@ -11139,10 +11135,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 8
@@ -11167,7 +11161,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3024.4854
-        y: 1941.8146
+        y: 1940.2632
         width: 160
         height: 30
     - id: 119
@@ -11199,7 +11193,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
+          SendMessage(GlitchFromSequence,
           1|1, ValueMaster) ;
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
@@ -11253,7 +11247,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '                   '
+        value: ' '
         type: 0
         typeString: 
       - title: Sequence
@@ -11263,7 +11257,7 @@ MonoBehaviour:
           4|0, ValueMaster) ;
 
           SendMessage(GlitchVideoFromSequence, 9|1,
-          ValueMaster) ; Delay(3);
+          ValueMaster) ; Delay(5.1);
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -11353,8 +11347,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3023.356, y: 1249.9503}
-    canvasZoom: 0.69999975
+    canvasScrollPosition: {x: 2813.645, y: 1671.9117}
+    canvasZoom: 0.72999954
   - id: 9
     fields:
     - title: Title

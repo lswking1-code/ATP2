@@ -5378,8 +5378,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1305.3994, y: 449.55893}
-    canvasZoom: 0.3399999
+    canvasScrollPosition: {x: 1219.8724, y: 675.6266}
+    canvasZoom: 0.31
   - id: 6
     fields:
     - title: Title
@@ -5905,7 +5905,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2251.2522
+        x: 2252.719
         y: 1148.3286
         width: 160
         height: 30
@@ -5932,14 +5932,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It is truly beautiful.
+        value: '                                                     '
         type: 0
         typeString: 
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchVideoFromSequence,
+          10|0, ValueMaster); Delay(5.5);
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 6
@@ -7281,8 +7283,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1865.1886, y: 805.6105}
-    canvasZoom: 0.51570404
+    canvasScrollPosition: {x: 1985.6235, y: 1031.0718}
+    canvasZoom: 0.8199997
   - id: 7
     fields:
     - title: Title
@@ -11073,14 +11075,17 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: If you encounter a screeching sound coming from the sewers, do not
-          approach.
+          approach
         type: 0
         typeString: 
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
+          SendMessage(GlitchFromSequence,
+          4|0.5, ValueMaster) ;
+
+          SendMessage(GlitchVideoFromSequence, 9|1.5,
+          ValueMaster) ;
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -11106,8 +11111,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3119.7766
-        y: 1633.276
+        x: 3115.3762
+        y: 1639.1431
         width: 160
         height: 30
     - id: 117
@@ -11291,8 +11296,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2567.496, y: 1614.8842}
-    canvasZoom: 0.49000022
+    canvasScrollPosition: {x: 2688.8713, y: 1735.7865}
+    canvasZoom: 0.61000013
   - id: 9
     fields:
     - title: Title

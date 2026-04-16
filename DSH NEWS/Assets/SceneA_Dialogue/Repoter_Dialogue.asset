@@ -10504,8 +10504,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3133.5007
-        y: 1700.6693
+        x: 3119.7498
+        y: 1749.9003
         width: 160
         height: 30
     - id: 107
@@ -11081,13 +11081,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchFromSequence,
-          4|0.5, ValueMaster) ;
-
-          SendMessage(GlitchVideoFromSequence, 9|1.5,
-          ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 8
@@ -11101,7 +11096,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 116
         destinationConversationID: 8
-        destinationDialogueID: 106
+        destinationDialogueID: 120
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -11111,8 +11106,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3115.3762
-        y: 1639.1431
+        x: 3113.4087
+        y: 1640.1268
         width: 160
         height: 30
     - id: 117
@@ -11171,8 +11166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3128.5679
-        y: 1776.8655
+        x: 3117.9531
+        y: 1801.2794
         width: 160
         height: 30
     - id: 118
@@ -11295,9 +11290,72 @@ MonoBehaviour:
         y: 1931.9661
         width: 160
         height: 30
+    - id: 120
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '                   '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchFromSequence,
+          4|0, ValueMaster) ;
+
+          SendMessage(GlitchVideoFromSequence, 9|1,
+          ValueMaster) ; Delay(3);
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 120
+        destinationConversationID: 8
+        destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3116.925
+        y: 1691.8706
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2688.8713, y: 1735.7865}
-    canvasZoom: 0.61000013
+    canvasScrollPosition: {x: 2969.1929, y: 1381.1592}
+    canvasZoom: 0.84999967
   - id: 9
     fields:
     - title: Title

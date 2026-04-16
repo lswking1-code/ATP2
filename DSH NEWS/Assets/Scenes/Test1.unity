@@ -1776,6 +1776,45 @@ MonoBehaviour:
       Id: d
       ScriptIndex: 0
       Values: []
+  - Name: Day6
+    Day: 6
+    Entries:
+    - Manuscript: {fileID: 1060024581}
+      HasGlitch: 1
+      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      Id: a
+      ScriptIndex: 0
+      Values:
+      - ValueIndex: 1
+        ValueAmount: 15
+      - ValueIndex: 2
+        ValueAmount: 15
+    - Manuscript: {fileID: 1658591185}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      GlitchTextFile: {fileID: 0}
+      Id: b
+      ScriptIndex: 0
+      Values: []
+    - Manuscript: {fileID: 486947756}
+      HasGlitch: 1
+      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      Id: c
+      ScriptIndex: 0
+      Values:
+      - ValueIndex: 1
+        ValueAmount: 15
+      - ValueIndex: 2
+        ValueAmount: 15
+    - Manuscript: {fileID: 1837471582}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      GlitchTextFile: {fileID: 0}
+      Id: d
+      ScriptIndex: 0
+      Values: []
   MaxSelectionCount: 2
 --- !u!1001 &1036110393
 PrefabInstance:

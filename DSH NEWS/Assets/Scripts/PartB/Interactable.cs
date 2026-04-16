@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using PixelCrushers.DialogueSystem;
 
 
 /// 通用可交互物体组件。
@@ -25,6 +26,19 @@ public class Interactable : MonoBehaviour, IInteractable
     [SerializeField, Tooltip("交互后是否禁止重复交互（若为 false，可重复触发 onInteract）")]
     private bool disableAfterInteract = true;
 
+    [Header("Dialogue System")]
+    [SerializeField, Tooltip("是否在交互時啟動 Pixel Crushers 對話")]
+    private bool startDialogueOnInteract = false;
+
+    [SerializeField, Tooltip("要啟動的 Conversation Title（需與 Dialogue Database 內名稱一致）")]
+    private string conversationTitle;
+
+    [SerializeField, Tooltip("Actor（通常是玩家）。留空時會使用 Camera.main 的 Transform")]
+    private Transform dialogueActor;
+
+    [SerializeField, Tooltip("Conversant（通常是當前可互動物件/NPC）。留空時會使用自身 Transform")]
+    private Transform dialogueConversant;
+
     [Header("Audio")]
     [SerializeField, Tooltip("交互时播放的音频（可选）")]
     private AudioClip interactSound;
@@ -43,6 +57,8 @@ public class Interactable : MonoBehaviour, IInteractable
 
         onInteract?.Invoke();// 触发事件（如果有订阅）
 
+        TryStartDialogue();
+
         if (interactSound != null)
            AudioManager.Instance.PlaySFX(interactSound, soundVolume);
 
@@ -56,6 +72,24 @@ public class Interactable : MonoBehaviour, IInteractable
             hasInteracted = true;
 
         // 可选：在交互后更新提示状态（如果需要 UI 刷新提示显示）
+    }
+
+    private void TryStartDialogue()
+    {
+        if (!startDialogueOnInteract) return;
+
+        if (string.IsNullOrWhiteSpace(conversationTitle))
+        {
+            Debug.LogWarning($"[{name}] 已勾选 startDialogueOnInteract，但 conversationTitle 为空。");
+            return;
+        }
+
+        if (DialogueManager.IsConversationActive) return;
+
+        Transform actor = dialogueActor != null ? dialogueActor : (Camera.main != null ? Camera.main.transform : null);
+        Transform conversant = dialogueConversant != null ? dialogueConversant : transform;
+
+        DialogueManager.StartConversation(conversationTitle, actor, conversant);
     }
 
 

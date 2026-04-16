@@ -153,8 +153,10 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
         {
-            // 尝试获取交互接口
+            // 先取自身，再向父级查找，兼容“子 Collider + 父物体挂 Interactable”的常见结构
             var interactable = hit.collider.GetComponent<IInteractable>();
+            if (interactable == null)
+                interactable = hit.collider.GetComponentInParent<IInteractable>();
             if (interactable != null)
             {
                 hitInteractable = true;

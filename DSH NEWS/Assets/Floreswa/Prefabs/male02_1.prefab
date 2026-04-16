@@ -775,6 +775,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4369455191309817779}
+  - component: {fileID: 8655988441694629685}
+  - component: {fileID: 1693830189573731706}
+  - component: {fileID: 4502226398190939699}
+  - component: {fileID: 3466012417301248178}
   m_Layer: 0
   m_Name: male02_1
   m_TagString: Untagged
@@ -799,6 +803,108 @@ Transform:
   - {fileID: 3458821722751162186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8655988441694629685
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507138504148570191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!195 &1693830189573731706
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507138504148570191}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4502226398190939699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507138504148570191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa0820f68425b4f8aeb805c9782159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3466012417301248178}
+  agent: {fileID: 1693830189573731706}
+  speedParam: Speed
+  slopeParam: Slope
+  slopeDampTime: 0.12
+  speedSmoothTime: 0.15
+  patrolPoints: []
+  patrolWaitTime: 0
+  patrolLoop: 1
+  arriveThreshold: 0.2
+  patrolPointRadius: 0.5
+  interestPoints: []
+  interestChance: 0.2
+  interestActionTime: 3
+  interestPointRadius: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerBlockRadius: 1
+  playerBlockAngle: 90
+  requireLineOfSight: 1
+  slopeNormalizeThreshold: 0.25
+  minSpeedToDetectSlope: 0.05
+--- !u!95 &3466012417301248178
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507138504148570191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 89ec959954575f94b93e606fff2cb187, type: 3}
+  m_Controller: {fileID: 9100000, guid: 6e843ea70b412334eb7d62bd478c73ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5637333706861436455
 GameObject:
   m_ObjectHideFlags: 0

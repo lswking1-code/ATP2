@@ -6,18 +6,10 @@ using PixelCrushers.DialogueSystem;
 /// 通用可交互物体组件。
 /// 在 Inspector 中通过 UnityEvent 指定交互时触发的行为
 /// （例如播放动画、切换状态、发送事件等）。
-/// 可以选择播放音效、在交互后销毁自身或禁止再次交互，
-/// 并通过 GetPrompt() 提供交互提示文本供 UI 显示。
+/// 可以选择播放音效、在交互后销毁自身或禁止再次交互。
 
 public class Interactable : MonoBehaviour, IInteractable
 {
-    [Header("提示")]
-    [SerializeField, Tooltip("交互提示文本（UI 可通过 GetPrompt() 获取并显示）。")]
-    private string prompt = "Press E To Have A Look";
-
-    [SerializeField, Tooltip("是否允许显示提示（仅供 UI 使用）。")]
-    private bool showPrompt = true;
-
     [Header("事件")]
     [SerializeField, Tooltip("交互时触发的事件（可在 Inspector 中拖入其他组件的方法）。")]
     private UnityEvent onInteract;
@@ -93,18 +85,6 @@ public class Interactable : MonoBehaviour, IInteractable
 
         DialogueManager.StartConversation(conversationTitle, actor, conversant);
     }
-
-
-    /// 返回应显示的交互提示文本；如果不应显示则返回 null。
-    /// PlayerController 或 UI 管理器可调用此方法在屏幕上显示提示。
-
-    public string GetPrompt()
-    {
-        if (!showPrompt) return null;
-        if (hasInteracted && disableAfterInteract) return null;
-        return prompt;
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

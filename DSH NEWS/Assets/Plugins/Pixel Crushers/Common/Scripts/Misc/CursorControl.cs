@@ -12,6 +12,8 @@ namespace PixelCrushers
     {
 
         public static CursorLockMode cursorLockMode { get; set; } = CursorLockMode.Locked;
+        // 为 true 时，阻止 Pixel Crushers 插件在运行时自动改写光标状态。
+        public static bool blockPluginCursorChanges { get; set; } = true;
 
         public static bool isCursorActive
         {
@@ -36,11 +38,13 @@ namespace PixelCrushers
 		
 		public static void ShowCursor(bool value) 
 		{
+            if (blockPluginCursorChanges) return;
 			Cursor.visible = value;
 		}
 		
 		public static void LockCursor(bool value) 
 		{
+            if (blockPluginCursorChanges) return;
 			if (value == false && isCursorLocked) 
 			{
 				cursorLockMode = Cursor.lockState;

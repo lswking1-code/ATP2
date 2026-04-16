@@ -45,6 +45,7 @@ namespace PixelCrushers.DialogueSystem
 
         public void OnConversationStart(Transform actor)
         {
+            if (PixelCrushers.CursorControl.blockPluginCursorChanges) return;
             wasCursorVisible = Cursor.visible;
             savedLockState = Cursor.lockState;
             StartCoroutine(ShowCursorAfterOneFrame());
@@ -59,6 +60,7 @@ namespace PixelCrushers.DialogueSystem
 
         public void OnConversationEnd(Transform actor)
         {
+            if (PixelCrushers.CursorControl.blockPluginCursorChanges) return;
             Cursor.visible = wasCursorVisible;
             Cursor.lockState = savedLockState;
         }

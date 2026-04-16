@@ -525,6 +525,7 @@ namespace PixelCrushers.DialogueSystem
         private void OnConversationStartAnywhere(Transform actor)
         {
             DialogueManager.instance.conversationStarted -= OnConversationStartAnywhere;
+            if (PixelCrushers.CursorControl.blockPluginCursorChanges) return;
             if (showCursorDuringConversation)
             {
                 wasCursorVisible = Cursor.visible;
@@ -548,6 +549,7 @@ namespace PixelCrushers.DialogueSystem
 
         private void OnConversationEndAnywhere(Transform actor)
         {
+            if (PixelCrushers.CursorControl.blockPluginCursorChanges) return;
             var didMyConversationEnd = !DialogueManager.allowSimultaneousConversations ||
                 (activeConversation == null) || !activeConversation.conversationController.isActive;
             if (didMyConversationEnd)

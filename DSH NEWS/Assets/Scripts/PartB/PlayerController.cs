@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     [SerializeField, Tooltip("准星组件")] private Crosshair crosshair;
+    [SerializeField, Tooltip("交互提示文本（如：Press E To Interact）")] private Text interactPromptText;
 
     [Header("Cursor")]
     [SerializeField, Tooltip("是否在启动时锁定光标（关闭后不会自动锁定）")]
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour
     private float stairVerticalThreshold = 0.15f;
 
     private CharacterController controller;
+    private Rigidbody rb;
     private Vector3 velocity;
     private float cameraPitch = 0f;
 
@@ -62,14 +66,30 @@ public class PlayerController : MonoBehaviour
     // 交互状态
     private bool isInteracting = false;
     private IInteractable currentInteractable;
-    private bool cursorWasLocked;
-    private bool cursorWasVisible;
+    private bool cursorWasLocked = true;
+    private bool cursorWasVisible = true;
+    private bool hasApplicationFocus = true;
 
     private void Awake()
     {
+        
+       
+
         controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
         if (playerCamera == null)
             playerCamera = GetComponentInChildren<Camera>();
+
+        // CharacterController 与非运动学 Rigidbody 同时存在会导致物理冲突（常见现象：Y 轴漂移/弹飞）。
+        // 这里强制将刚体设为运动学，确保玩家只由 CharacterController 驱动。
+        if (rb != null && (!rb.isKinematic || rb.useGravity))
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            Debug.LogWarning("[PlayerController] Detected Rigidbody on player. Auto-switched to kinematic + no gravity to avoid CharacterController conflict.");
+        }
 
         // 回退到主摄像机，避免未赋值导致无法俯仰
         if (playerCamera == null)
@@ -79,20 +99,19 @@ public class PlayerController : MonoBehaviour
         if (crosshair == null)
             crosshair = Object.FindFirstObjectByType<Crosshair>();
 
+        // 初始化交互提示为隐藏
+        if (interactPromptText != null)
+            interactPromptText.gameObject.SetActive(false);
+
         // 初始化脚步位置记录
         lastPosition = transform.position;
         lastStepY = transform.position.y;
 
-        // 根据配置决定是否在启动时锁定并/或隐藏光标（两者互不依赖，可分别控制）
-        if (lockCursorOnStart)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+    }
 
-        if (hideCursorOnStart)
-        {
-            Cursor.visible = false;
-        }
+    private void Start()
+    {
+        ApplyGameplayCursorState("Start");
     }
     private void OnDisable()
     {
@@ -100,8 +119,27 @@ public class PlayerController : MonoBehaviour
         Debug.Log("PlayerController disabled, cursor unlocked");
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        hasApplicationFocus = focus;
+
+        if (focus)
+        {
+            ApplyGameplayCursorState("FocusGained");
+        }
+        else
+        {
+            UnlockCursor();
+            Debug.Log("[Cursor Debug] FocusLost -> cursor unlocked");
+        }
+    }
+
     private void Update()
     {
+        // 防止被其它系统在运行时改回可见/解锁
+        if (!isInteracting && hasApplicationFocus)
+            EnsureGameplayCursorState();
+
         if (isInteracting)
         {
             // 交互期间锁定视角/移动，只响应退出交互的按键
@@ -177,7 +215,12 @@ public class PlayerController : MonoBehaviour
             {
                 hitInteractable = true;
 
-                // 可在此处显示交互提示（TODO）
+                // 命中可交互物体时显示提示
+                if (interactPromptText != null)
+                {
+                    interactPromptText.text = GetPromptTextByTag(hit.collider, interactable);
+                    interactPromptText.gameObject.SetActive(true);
+                }
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -186,8 +229,35 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // 未命中可交互物体时隐藏提示
+        if (!hitInteractable && interactPromptText != null)
+        {
+            interactPromptText.gameObject.SetActive(false);
+        }
+
         if (crosshair != null)
             crosshair.SetHighlighted(hitInteractable);
+    }
+
+    private string GetPromptTextByTag(Collider hitCollider, IInteractable interactable)
+    {
+        GameObject target = null;
+
+        // 优先使用交互组件所在物体的 tag，避免子 Collider 的 tag 不一致导致文案错误
+        if (interactable is Component interactableComponent)
+            target = interactableComponent.gameObject;
+        else if (hitCollider != null)
+            target = hitCollider.gameObject;
+
+        if (target != null)
+        {
+            if (target.CompareTag("Item"))
+                return "Press E to Have A Look";
+            if (target.CompareTag("NPC"))
+                return "Press E to Chat";
+        }
+
+        return "Press E To Interact";
     }
 
     // 根据水平位移累积距离并在达到设定步距时播放脚步声
@@ -285,6 +355,10 @@ public class PlayerController : MonoBehaviour
         if (interactable == null) return;
         if (isInteracting) return;
 
+        // 进入交互时隐藏提示
+        if (interactPromptText != null)
+            interactPromptText.gameObject.SetActive(false);
+
         // 先执行交互逻辑
         interactable.OnInteract();
 
@@ -322,6 +396,32 @@ public class PlayerController : MonoBehaviour
 
         currentInteractable = null;
         isInteracting = false;
+
+        ApplyGameplayCursorState("EndInteraction");
+    }
+
+    private void ApplyGameplayCursorState(string reason)
+    {
+        if (!hasApplicationFocus) return;
+        if (isInteracting) return;
+
+        Cursor.lockState = lockCursorOnStart ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !hideCursorOnStart;
+
+        Debug.Log($"[Cursor Debug] {reason} apply | lockState={Cursor.lockState}, visible={Cursor.visible}");
+    }
+
+    private void EnsureGameplayCursorState()
+    {
+        CursorLockMode targetLock = lockCursorOnStart ? CursorLockMode.Locked : CursorLockMode.None;
+        bool targetVisible = !hideCursorOnStart;
+
+        if (Cursor.lockState != targetLock || Cursor.visible != targetVisible)
+        {
+            Cursor.lockState = targetLock;
+            Cursor.visible = targetVisible;
+            Debug.Log($"[Cursor Debug] Runtime corrected | lockState={Cursor.lockState}, visible={Cursor.visible}");
+        }
     }
 }
 

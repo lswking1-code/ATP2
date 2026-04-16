@@ -546,12 +546,14 @@ namespace PixelCrushers
 
         public void SetCursor(bool visible)
         {
+            if (CursorControl.blockPluginCursorChanges) return;
             if (!controlCursorState) return;
             ForceCursor(visible);
         }
 
         public void ForceCursor(bool visible)
         {
+            if (CursorControl.blockPluginCursorChanges) return;
             Cursor.visible = visible;
             Cursor.lockState = visible ? CursorLockMode.None : cursorLockMode;
             m_lastMousePosition = GetMousePosition();

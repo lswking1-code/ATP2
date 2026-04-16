@@ -4432,8 +4432,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -4738,9 +4740,9 @@ MonoBehaviour:
         value: 'AnimatorTrigger(TalkB, Reporter);
 
           SendMessage(GlitchFromSequence,
-          4|0.7, ValueMaster) ;
+          4|0.5, ValueMaster) ;
 
-          SendMessage(GlitchVideoFromSequence, 2|2,
+          SendMessage(GlitchVideoFromSequence, 9|1.5,
           ValueMaster) ;
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
@@ -4771,8 +4773,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2545.4158
-        y: 975.3109
+        x: 2544.8354
+        y: 977.0509
         width: 160
         height: 30
     - id: 71
@@ -4806,17 +4808,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchFromSequence,
-          5|0, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -4842,7 +4838,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2546.2124
-        y: 1054.4866
+        y: 1055.5481
         width: 160
         height: 30
     - id: 75
@@ -5382,9 +5378,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 590.8448, y: 333.6518}
-    canvasZoom: 0.22000009
-
+    canvasScrollPosition: {x: 1305.3994, y: 449.55893}
+    canvasZoom: 0.3399999
   - id: 6
     fields:
     - title: Title
@@ -6510,8 +6505,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2490.8909
-        y: 1018.2477
+        x: 2488.9458
+        y: 1020.5834
         width: 160
         height: 30
     - id: 111
@@ -6569,8 +6564,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2494.0535
-        y: 1113.4968
+        x: 2486.417
+        y: 1096.5269
         width: 160
         height: 30
     - id: 112
@@ -6628,8 +6623,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2491.2207
-        y: 1193.8435
+        x: 2489.5237
+        y: 1160.7522
         width: 160
         height: 30
     - id: 113
@@ -6688,8 +6683,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2485.003
-        y: 1262.3633
+        x: 2495.185
+        y: 1223.3325
         width: 160
         height: 30
     - id: 114
@@ -7404,8 +7399,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1776.8226, y: 475.61243}
-    canvasZoom: 0.3957038
+    canvasScrollPosition: {x: 2035.3068, y: 722.25806}
+    canvasZoom: 0.6357038
   - id: 7
     fields:
     - title: Title
@@ -9581,6 +9576,12 @@ MonoBehaviour:
         destinationDialogueID: 99
         isConnector: 0
         priority: 2
+      - originConversationID: 8
+        originDialogueID: 86
+        destinationConversationID: 8
+        destinationDialogueID: 109
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["FinishedBranch"] < 2
       userScript: 
       onExecute:
@@ -9680,9 +9681,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: According to the latest news from NASA, the launch ceremony for the
-          new Mars exploration vessel "Mars Polar Lander" will take place this coming
-          Sunday.
+        value: Disturbing reports are emerging from the household of the returned
+          Jason Jowoski.
         type: 0
         typeString: 
       - title: Sequence
@@ -9714,8 +9714,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3654.286
-        y: 1490.1035
+        x: 3597.6394
+        y: 1513.5911
         width: 160
         height: 30
     - id: 89
@@ -9741,8 +9741,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The Mars Polar Lander will carry the new Mars rover "Deep Space 2"
-          to Mars to carry out an exploration mission.
+        value: 'Family members have contacted the station claiming that the young
+          man has a strange reflection
+
+'
         type: 0
         typeString: 
       - title: Sequence
@@ -9775,8 +9777,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3653.148
-        y: 1559.8411
+        x: 3596.5015
+        y: 1583.3286
         width: 160
         height: 30
     - id: 90
@@ -9802,8 +9804,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Yesterday, a long line formed outside Department Store A as crowds
-          gathered to await the release of the new Tamagotchi. '
+        value: 'A bizarre trend is sweeping through local elementary schools involving
+          the popular Tamagotchi digital pets. '
         type: 0
         typeString: 
       - title: Sequence
@@ -9835,8 +9837,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3881.6274
-        y: 1490.0046
+        x: 3824.981
+        y: 1513.4922
         width: 160
         height: 30
     - id: 91
@@ -9862,8 +9864,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'The toy has sparked a social craze since its launch, enjoying particular
-          popularity among young people. '
+        value: "Dozens of parents have reported their children\u2019s devices 'dying'
+          prematurely, only to be replaced by a pixelated image that does not resemble
+          any known character. \n"
         type: 0
         typeString: 
       - title: Sequence
@@ -9894,8 +9897,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3879.513
-        y: 1554.7651
+        x: 3822.8665
+        y: 1578.2527
         width: 160
         height: 30
     - id: 92
@@ -10074,8 +10077,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3655.7415
-        y: 1635.1726
+        x: 3597.6177
+        y: 1657.9215
         width: 160
         height: 30
     - id: 95
@@ -10101,9 +10104,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'NASA experts have stated: "It is hoped that this will help us gain
-          a more comprehensive understanding of Mars, as well as search for traces
-          of life on the planet.'
+        value: "Witnesses say that while his physical body is present, his reflection
+          in mirrors appears to be delayed by several seconds, performing actions
+          he had finished moments prior. \n"
         type: 0
         typeString: 
       - title: Sequence
@@ -10124,7 +10127,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 95
         destinationConversationID: 8
-        destinationDialogueID: 87
+        destinationDialogueID: 108
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10134,8 +10137,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3657.1184
-        y: 1712.5522
+        x: 3597.7795
+        y: 1723.7584
         width: 160
         height: 30
     - id: 96
@@ -10161,8 +10164,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Company A says the new model offers interactive features and can
-          even recognize and respond to users\u2019 speech. "
+        value: "This 'audio glitch' reportedly emits a high-pitched frequency that
+          local pets find distressing. \n"
         type: 0
         typeString: 
       - title: Sequence
@@ -10193,8 +10196,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3877.3855
-        y: 1622.0719
+        x: 3820.739
+        y: 1645.5594
         width: 160
         height: 30
     - id: 97
@@ -10252,8 +10255,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3876.1426
-        y: 1708.96
+        x: 3819.496
+        y: 1732.4475
         width: 160
         height: 30
     - id: 98
@@ -10279,8 +10282,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Many parents remain wary of such products, fearing they may disrupt
-          their children\u2019s normal daily life."
+        value: Bandai has yet to issue a formal statement, but some parents claim
+          the devices are displaying the actual names of family members on the tiny
+          LCD screens.
         type: 0
         typeString: 
       - title: Sequence
@@ -10311,8 +10315,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3870.4255
-        y: 1797.2549
+        x: 3818.4368
+        y: 1800.9471
         width: 160
         height: 30
     - id: 99
@@ -10422,13 +10426,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 100
         destinationConversationID: 8
-        destinationDialogueID: 101
-        isConnector: 0
-        priority: 2
-      - originConversationID: 8
-        originDialogueID: 100
-        destinationConversationID: 8
-        destinationDialogueID: 102
+        destinationDialogueID: 116
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10438,186 +10436,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3117.5603
+        x: 3116.8276
         y: 1572.6885
-        width: 160
-        height: 30
-    - id: 101
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: It's dangerous
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          SendMessage(GlitchVideoFromSequence,
-          2|2, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 101
-        destinationConversationID: 8
-        destinationDialogueID: 103
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3006.762
-        y: 1665.3481
-        width: 160
-        height: 30
-    - id: 102
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: It's fine
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 102
-        destinationConversationID: 8
-        destinationDialogueID: 106
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3219.9238
-        y: 1666.6777
-        width: 160
-        height: 30
-    - id: 103
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "If you encounter a screeching sound coming from the sewers, do not
-          approach. Leave the area immediately and call the municipal hotline at
-          3557-5431.\u25BC "
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 103
-        destinationConversationID: 8
-        destinationDialogueID: 104
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3006.488
-        y: 1765.7773
         width: 160
         height: 30
     - id: 104
@@ -10661,7 +10481,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 104
+        destinationConversationID: 8
+        destinationDialogueID: 119
+        isConnector: 0
+        priority: 2
+      - originConversationID: 8
+        originDialogueID: 104
+        destinationConversationID: 8
+        destinationDialogueID: 118
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["PlayedC"] = true
       onExecute:
@@ -10669,8 +10501,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3008.171
-        y: 1844.4742
+        x: 3127.8665
+        y: 1859.8999
         width: 160
         height: 30
     - id: 105
@@ -10715,7 +10547,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 105
+        destinationConversationID: 8
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["PlayedC"] = true
       onExecute:
@@ -10723,8 +10561,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3010.0564
-        y: 1926.1368
+        x: 3031.092
+        y: 2009.1381
         width: 160
         height: 30
     - id: 106
@@ -10772,7 +10610,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 106
         destinationConversationID: 8
-        destinationDialogueID: 107
+        destinationDialogueID: 117
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10782,8 +10620,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3221.4128
-        y: 1761.4752
+        x: 3133.5007
+        y: 1700.6693
         width: 160
         height: 30
     - id: 107
@@ -10828,7 +10666,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 107
+        destinationConversationID: 8
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["PlayedC"] = true
       onExecute:
@@ -10836,13 +10680,737 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3225.0996
-        y: 1849.9501
+        x: 3277.1147
+        y: 1999.9501
+        width: 160
+        height: 30
+    - id: 108
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Local clergy and 'paranormal investigators' have begun to gather
+          outside the home, but the family has retreated inside, claiming that there
+          is nothing wrong with their son. \n"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 108
+        destinationConversationID: 8
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3598.8394
+        y: 1789.8857
+        width: 160
+        height: 30
+    - id: 109
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Maintenance of various computer systems appears to still be progressing
+          slowly. Governments around the world have yet to publicly release any updated
+          information regarding Y2K.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 109
+        destinationConversationID: 8
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4069.7363
+        y: 1509.1943
+        width: 160
+        height: 30
+    - id: 110
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: However, a spokesperson clarified at the latest technology press conference
+          that the maintenance initiative may be expanded beyond computer systems
+          to encompass all electronic products, including household items such as
+          televisions and radios.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 110
+        destinationConversationID: 8
+        destinationDialogueID: 111
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4064.8584
+        y: 1575.3364
+        width: 160
+        height: 30
+    - id: 111
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Various sectors of society have already begun to express scepticism
+          over the actions currently being taken by governments worldwide, as well
+          as their refusal to disclose further information.
+
+'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 111
+        destinationConversationID: 8
+        destinationDialogueID: 112
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4064.1128
+        y: 1641.2616
+        width: 160
+        height: 30
+    - id: 112
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Last week, isolated social groups took to the streets in protest over
+          their dissatisfaction with the system maintenance initiative. The primary
+          accusation levelled at the government centred on suspicions that the motives
+          behind carrying out this maintenance are not entirely above board
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 112
+        destinationConversationID: 8
+        destinationDialogueID: 113
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4064.2515
+        y: 1728.1497
+        width: 160
+        height: 30
+    - id: 113
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: They believe the entire initiative is nothing more than an excuse
+          for the government to once again line its own pockets.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 113
+        destinationConversationID: 8
+        destinationDialogueID: 114
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4063.192
+        y: 1796.6493
+        width: 160
+        height: 30
+    - id: 114
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Local police have deployed a certain number of officers to the scene
+          to maintain order and prevent the protesting crowd from blocking traffic
+          lanes and obstructing the passage of vehicles.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 114
+        destinationConversationID: 8
+        destinationDialogueID: 115
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4054.5388
+        y: 1894.6649
+        width: 160
+        height: 30
+    - id: 115
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: This station will continue to track the latest update.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 115
+        destinationConversationID: 8
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4047.6904
+        y: 1961.0033
+        width: 160
+        height: 30
+    - id: 116
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: If you encounter a screeching sound coming from the sewers, do not
+          approach.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 116
+        destinationConversationID: 8
+        destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3119.7766
+        y: 1633.276
+        width: 160
+        height: 30
+    - id: 117
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Leave the area immediately and call the municipal hotline at 3557-5431.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 117
+        destinationConversationID: 8
+        destinationDialogueID: 104
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3128.5679
+        y: 1776.8655
+        width: 160
+        height: 30
+    - id: 118
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Beware
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 118
+        destinationConversationID: 8
+        destinationDialogueID: 105
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3024.4854
+        y: 1941.8146
+        width: 160
+        height: 30
+    - id: 119
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: It's Fine
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 119
+        destinationConversationID: 8
+        destinationDialogueID: 107
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3270.6973
+        y: 1931.9661
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2508.8252, y: 1484.3766}
-    canvasZoom: 0.5425266
+    canvasScrollPosition: {x: 2506.9346, y: 1821.5378}
+    canvasZoom: 0.37000015
   - id: 9
     fields:
     - title: Title
@@ -16703,8 +17271,216 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 553.235, y: 206.24905}
-    canvasZoom: 0.32000148
+    canvasScrollPosition: {x: 913.8573, y: 650.0409}
+    canvasZoom: 0.6500013
+  - id: 13
+    fields:
+    - title: Title
+      value: Interactable_test
+      type: 0
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 1
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: 
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 30
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: A box...cool
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 1
+        destinationConversationID: 13
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 159
+        y: 154
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: but there is nothing special about it.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 162
+        y: 255
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
   syncInfo:
     syncActors: 0
     syncItems: 0
@@ -16714,7 +17490,7 @@ MonoBehaviour:
     syncItemsDatabase: {fileID: 0}
     syncLocationsDatabase: {fileID: 0}
     syncVariablesDatabase: {fileID: 0}
-  templateJson: '{"treatItemsAsQuests":true,"actorFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"IsPlayer","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"itemFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":""},{"title":"Is
+  templateJson: '{"treatItemsAsQuests":true,"actorFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":""},{"title":"IsPlayer","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"itemFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":""},{"title":"Is
     Item","value":"True","type":2,"typeString":"CustomFieldType_Boolean"}],"questFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":""},{"title":"Success
     Description","value":"","type":0,"typeString":""},{"title":"Failure Description","value":"","type":0,"typeString":""},{"title":"State","value":"unassigned","type":0,"typeString":""},{"title":"Is
     Item","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"locationFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Description","value":"","type":0,"typeString":""}],"variableFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Initial

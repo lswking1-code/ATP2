@@ -5378,8 +5378,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1765.8273, y: 643.46277}
-    canvasZoom: 0.54999995
+    canvasScrollPosition: {x: 1305.3994, y: 449.55893}
+    canvasZoom: 0.3399999
   - id: 6
     fields:
     - title: Title
@@ -6236,8 +6236,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Recently, there have been multiple reports regarding unusual noises
-          coming from the city''s sewers. '
+        value: Recently, the municipal department is planning to renovate the city's
+          aging pipelines to improve local water quality and ensure a reliable residential
+          water supply.
         type: 0
         typeString: 
       - title: Sequence
@@ -6296,8 +6297,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The Department of Environment is currently collecting relevant information
-          and will launch an investigation in due course.
+        value: The construction will last for three days from 6:00 AM this Saturday
+          to 6:00 AM the following Monday.
         type: 0
         typeString: 
       - title: Sequence
@@ -6414,8 +6415,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: If you encounter a screeching sound coming from the sewers, Do not
-          approach
+        value: During this time, the section from Appleby Road to Dixon Way will
+          be temporarily closed
         type: 0
         typeString: 
       - title: Sequence
@@ -6446,8 +6447,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2488.1414
-        y: 961.9098
+        x: 2485.556
+        y: 965.78796
         width: 160
         height: 30
     - id: 110
@@ -6473,8 +6474,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Citizens need not worry about this situation; It has been identified
-          as noise from new filtration devices installed by water purification plant.
+        value: And This work may result in a temporary loss of tap water service
+          for some residents living along this stretch of road.
         type: 0
         typeString: 
       - title: Sequence
@@ -6505,8 +6506,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2490.8909
-        y: 1018.2477
+        x: 2488.9458
+        y: 1020.5834
         width: 160
         height: 30
     - id: 111
@@ -6532,8 +6533,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'There are also reports about abnormal liquids flowing back up through
-          household drains:'
+        value: Local government urges citizens to purchase bottled water and to avoid
+          the construction area during the scheduled work period.
         type: 0
         typeString: 
       - title: Sequence
@@ -6554,125 +6555,6 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 111
         destinationConversationID: 6
-        destinationDialogueID: 112
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2494.0535
-        y: 1113.4968
-        width: 160
-        height: 30
-    - id: 112
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'If you encounter such a situation, immediately move away and stop
-          using all water '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 112
-        destinationConversationID: 6
-        destinationDialogueID: 113
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2491.2207
-        y: 1193.8435
-        width: 160
-        height: 30
-    - id: 113
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'The backflow of liquid was a sudden drainage system failure which
-          has now been completely resolved. Citizens may use their household tap
-          water with confidence. '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 113
-        destinationConversationID: 6
         destinationDialogueID: 99
         isConnector: 0
         priority: 2
@@ -6683,8 +6565,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2485.003
-        y: 1262.3633
+        x: 2486.417
+        y: 1096.5269
         width: 160
         height: 30
     - id: 114
@@ -7399,8 +7281,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1776.8226, y: 475.61243}
-    canvasZoom: 0.3957038
+    canvasScrollPosition: {x: 1865.1886, y: 805.6105}
+    canvasZoom: 0.51570404
   - id: 7
     fields:
     - title: Title
@@ -10426,13 +10308,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 100
         destinationConversationID: 8
-        destinationDialogueID: 101
-        isConnector: 0
-        priority: 2
-      - originConversationID: 8
-        originDialogueID: 100
-        destinationConversationID: 8
-        destinationDialogueID: 102
+        destinationDialogueID: 116
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10442,186 +10318,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3117.5603
+        x: 3116.8276
         y: 1572.6885
-        width: 160
-        height: 30
-    - id: 101
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: It's dangerous
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          SendMessage(GlitchVideoFromSequence,
-          2|2, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 101
-        destinationConversationID: 8
-        destinationDialogueID: 103
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3006.762
-        y: 1665.3481
-        width: 160
-        height: 30
-    - id: 102
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: It's fine
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 102
-        destinationConversationID: 8
-        destinationDialogueID: 106
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3219.9238
-        y: 1666.6777
-        width: 160
-        height: 30
-    - id: 103
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "If you encounter a screeching sound coming from the sewers, do not
-          approach. Leave the area immediately and call the municipal hotline at
-          3557-5431.\u25BC "
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 103
-        destinationConversationID: 8
-        destinationDialogueID: 104
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3006.488
-        y: 1765.7773
         width: 160
         height: 30
     - id: 104
@@ -10669,7 +10367,13 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 104
         destinationConversationID: 8
-        destinationDialogueID: 105
+        destinationDialogueID: 119
+        isConnector: 0
+        priority: 2
+      - originConversationID: 8
+        originDialogueID: 104
+        destinationConversationID: 8
+        destinationDialogueID: 118
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10679,8 +10383,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3008.171
-        y: 1844.4742
+        x: 3127.8665
+        y: 1859.8999
         width: 160
         height: 30
     - id: 105
@@ -10739,8 +10443,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3010.0564
-        y: 1926.1368
+        x: 3031.092
+        y: 2009.1381
         width: 160
         height: 30
     - id: 106
@@ -10788,7 +10492,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 106
         destinationConversationID: 8
-        destinationDialogueID: 107
+        destinationDialogueID: 117
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10798,8 +10502,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3221.4128
-        y: 1761.4752
+        x: 3133.5007
+        y: 1700.6693
         width: 160
         height: 30
     - id: 107
@@ -10858,8 +10562,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3225.0996
-        y: 1849.9501
+        x: 3277.1147
+        y: 1999.9501
         width: 160
         height: 30
     - id: 108
@@ -11345,9 +11049,250 @@ MonoBehaviour:
         y: 1961.0033
         width: 160
         height: 30
+    - id: 116
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: If you encounter a screeching sound coming from the sewers, do not
+          approach.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 116
+        destinationConversationID: 8
+        destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3119.7766
+        y: 1633.276
+        width: 160
+        height: 30
+    - id: 117
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Leave the area immediately and call the municipal hotline at 3557-5431.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 117
+        destinationConversationID: 8
+        destinationDialogueID: 104
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3128.5679
+        y: 1776.8655
+        width: 160
+        height: 30
+    - id: 118
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Beware
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 118
+        destinationConversationID: 8
+        destinationDialogueID: 105
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3024.4854
+        y: 1941.8146
+        width: 160
+        height: 30
+    - id: 119
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: It's Fine
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          1|1, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 119
+        destinationConversationID: 8
+        destinationDialogueID: 107
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3270.6973
+        y: 1931.9661
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2330.8665, y: 1110.538}
-    canvasZoom: 0.31
+    canvasScrollPosition: {x: 2567.496, y: 1614.8842}
+    canvasZoom: 0.49000022
   - id: 9
     fields:
     - title: Title

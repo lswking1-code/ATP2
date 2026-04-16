@@ -4,20 +4,20 @@ public class Crosshair : MonoBehaviour
 {
     [Header("Outlook")]
     [SerializeField] private Color color = Color.white;
-    [SerializeField, Tooltip("µãµÄ´óÐ¡£¨ÏñËØ£©")] private float size = 4f;
-    [SerializeField, Tooltip("µ±Ãé×¼¿É½»»¥ÎïÌåÊ±µÄ¸ßÁÁÑÕÉ«")] private Color highlightColor = Color.green;
+    [SerializeField, Tooltip("×¼ï¿½Ç´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½")] private float size = 4f;
+    [SerializeField, Tooltip("ï¿½É½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼Ê±ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½É„1ï¿½7")] private Color highlightColor = Color.green;
 
     [Header("Setting")]
-    [SerializeField, Tooltip("ÊÇ·ñÔÚ½âËøÊó±êÊ±Ò²ÏÔÊ¾")] private bool showWhenCursorUnlocked = false;
-    [SerializeField, Tooltip("ÊÇ·ñÆôÓÃ×¼ÐÇ")] private bool enabledAtStart = true;
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ç·ï¿½Ò²ï¿½ï¿½Ê¾×¼ï¿½ï¿„1ï¿½7")] private bool showWhenCursorUnlocked = false;
+    [SerializeField, Tooltip("ï¿½Ç·ï¿½ï¿½Ú¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½")] private bool enabledAtStart = true;
 
     private Texture2D tex;
     private bool isEnabled;
-    private bool isHighlighted = false;
+    private bool isHighlighted;
 
     private void Awake()
     {
-        // ´´½¨ 1x1 °×É«ÏñËØÎÆÀíÓÃÓÚ»æÖÆ
+        // Create 1x1 white texture for crosshair drawing.
         tex = new Texture2D(1, 1, TextureFormat.RGBA32, false) { hideFlags = HideFlags.DontSave };
         tex.SetPixel(0, 0, Color.white);
         tex.Apply();
@@ -34,7 +34,7 @@ public class Crosshair : MonoBehaviour
     private void OnGUI()
     {
         if (!isEnabled) return;
-        if (!showWhenCursorUnlocked && Cursor.lockState != CursorLockMode.Locked) return;// ½öÔÚÊó±êËø¶¨Ê±ÏÔÊ¾£¬³ý·ÇÉèÖÃÁË showWhenCursorUnlocked
+        if (!showWhenCursorUnlocked && Cursor.lockState != CursorLockMode.Locked) return; // Hide when unlocked unless explicitly allowed.
 
         var oldColor = GUI.color;
         GUI.color = isHighlighted ? highlightColor : color;
@@ -42,17 +42,15 @@ public class Crosshair : MonoBehaviour
         float cx = Screen.width * 0.5f;
         float cy = Screen.height * 0.5f;
 
-        // µ¥µã×¼ÐÇ£¨Õý·½ÐÎÏñËØ¿é£©
+        // Draw center block crosshair.
         GUI.DrawTexture(new Rect(cx - size * 0.5f, cy - size * 0.5f, size, size), tex);
 
         GUI.color = oldColor;
     }
 
-    // ÔËÐÐÊ±¿ÉÍ¨¹ý½Å±¾Æô/¹Ø×¼ÐÇ
     public void SetEnabled(bool on) => isEnabled = on;
     public bool IsEnabled() => isEnabled;
 
-    // ÓÉÍâ²¿£¨Èç PlayerController£©ÉèÖÃ¸ßÁÁ×´Ì¬
     public void SetHighlighted(bool on) => isHighlighted = on;
     public bool IsHighlighted() => isHighlighted;
 }

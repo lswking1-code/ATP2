@@ -59,6 +59,12 @@ public class PlayerController : MonoBehaviour
     // 记录上一次触发脚步时的垂直位置，用于判断是上楼还是下楼
     private float lastStepY = 0f;
 
+    // 交互状态
+    private bool isInteracting = false;
+    private IInteractable currentInteractable;
+    private bool cursorWasLocked;
+    private bool cursorWasVisible;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -96,6 +102,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isInteracting)
+        {
+            // 交互期间锁定视角/移动，只响应退出交互的按键
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                EndInteraction();
+            }
+            return;
+        }
+
         HandleLook();
         HandleMove();
         HandleInteract();
@@ -165,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    interactable.OnInteract();
+                    BeginInteraction(interactable);
                 }
             }
         }
@@ -262,6 +278,50 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    private void BeginInteraction(IInteractable interactable)
+    {
+        if (interactable == null) return;
+        if (isInteracting) return;
+
+        // 先执行交互逻辑
+        interactable.OnInteract();
+
+        // 记录并修改光标状态
+        cursorWasLocked = Cursor.lockState == CursorLockMode.Locked;
+        cursorWasVisible = Cursor.visible;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        // 可选：隐藏准星
+        if (crosshair != null)
+        {
+            crosshair.SetHighlighted(false);
+            crosshair.SetEnabled(false);
+        }
+
+        currentInteractable = interactable;
+        isInteracting = true;
+    }
+
+    private void EndInteraction()
+    {
+        if (!isInteracting) return;
+
+        // 恢复光标状态
+        Cursor.lockState = cursorWasLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = cursorWasVisible;
+
+        // 恢复准星显示
+        if (crosshair != null)
+        {
+            crosshair.SetEnabled(true);
+        }
+
+        currentInteractable = null;
+        isInteracting = false;
     }
 }
 

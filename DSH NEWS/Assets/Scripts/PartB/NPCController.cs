@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class NPCController : MonoBehaviour
 {
     /// <summary>
-    /// NPC ĞĞÎª×´Ì¬£¨¼ò»¯£©
+    /// NPC è¡Œä¸ºçŠ¶æ€æšä¸¾ã€‚
     /// </summary>
     private enum State
     {
@@ -17,90 +17,90 @@ public class NPCController : MonoBehaviour
     }
 
     [Header("References")]
-    [SerializeField, Tooltip("¿ÉÑ¡£ºAnimator£¨ÓÃÓÚ½ÓÊÕËÙ¶ÈÓëÆÂ¶ÈÒÔÇı¶¯¶¯»­£©£¬ÈôÁô¿Õ»á³¢ÊÔ×Ô¶¯»ñÈ¡£©¡£")]
+    [SerializeField, Tooltip("å¯é€‰ Animatorã€‚ç”¨äºæ›´æ–°é€Ÿåº¦å’Œå¡åº¦å‚æ•°ï¼›æœªæŒ‡å®šæ—¶è‡ªåŠ¨å°è¯•è·å–ã€‚")]
     private Animator animator;
 
-    [SerializeField, Tooltip("NavMeshAgent£¨×Ô¶¯»ñÈ¡£©¡£")]
+    [SerializeField, Tooltip("NavMeshAgent ç»„ä»¶ï¼›æœªæŒ‡å®šæ—¶è‡ªåŠ¨è·å–ã€‚")]
     private NavMeshAgent agent;
 
     [Header("Animator")]
-    [SerializeField, Tooltip("Animator ÖĞ½ÓÊÕËÙ¶ÈµÄ Float ²ÎÊıÃû£¨ÀıÈç Speed£©¡£")]
+    [SerializeField, Tooltip("Animator ä¸­è¡¨ç¤ºé€Ÿåº¦çš„ Float å‚æ•°åï¼Œä¾‹å¦‚ Speedã€‚")]
     private string speedParam = "Speed";
 
-    [SerializeField, Tooltip("Animator ÖĞ½ÓÊÕÆÂ¶ÈµÄ Float ²ÎÊıÃû£¬·¶Î§Ô¼¶¨Îª -1 (ÏÂÆÂ) µ½ +1 (ÉÏÆÂ)¡£")]
+    [SerializeField, Tooltip("Animator ä¸­è¡¨ç¤ºå¡åº¦çš„ Float å‚æ•°åï¼ŒèŒƒå›´é€šå¸¸ä¸º -1ï¼ˆä¸‹å¡ï¼‰åˆ° +1ï¼ˆä¸Šå¡ï¼‰ã€‚")]
     private string slopeParam = "Slope";
 
-    [SerializeField, Tooltip("½«ÆÂ¶ÈÖµ´«Èë Animator Ê±µÄ×èÄáÊ±¼ä£¨Ãë£©£¬ÓÃÓÚÆ½»¬¹ı¶É£©¡£")]
+    [SerializeField, Tooltip("å†™å…¥å¡åº¦å‚æ•°æ—¶çš„é˜»å°¼æ—¶é—´ï¼ˆç§’ï¼‰ï¼Œç”¨äºå¹³æ»‘è¿‡æ¸¡ã€‚")]
     private float slopeDampTime = 0.12f;
 
-    [SerializeField, Tooltip("Ë®Æ½ËÙ¶ÈÆ½»¬Ê±¼ä£¨Ãë£©£¬ÓÃÓÚÔÚ¿ªÊ¼/Í£Ö¹Ê±Æ½»¬¹ı¶É¶¯»­²ÎÊı£©¡£")]
+    [SerializeField, Tooltip("æ°´å¹³é€Ÿåº¦å¹³æ»‘æ—¶é—´ï¼ˆç§’ï¼‰ï¼Œç”¨äºèµ·æ­¥/åœä¸‹æ—¶å‡å°çªå˜ã€‚")]
     private float speedSmoothTime = 0.15f;
 
-    // Æ½»¬×´Ì¬»º´æ£¨²»ÔÚ Inspector ÏÔÊ¾£©
+    // å¹³æ»‘é€Ÿåº¦ç¼“å­˜ï¼ˆä¸åœ¨ Inspector æ˜¾ç¤ºï¼‰
     private float smoothedSpeed = 0f;
     private float smoothedSpeedVel = 0f;
 
     [Header("Patrol")]
-    [SerializeField, Tooltip("°´Ë³ĞòµÄÑ²Âßµã£¨Îª¿ÕÔò²»Ñ²Âß£©¡£")]
+    [SerializeField, Tooltip("æŒ‰é¡ºåºå·¡é€»ç‚¹åˆ—è¡¨ï¼ˆä¸ºç©ºåˆ™ä¸å·¡é€»ï¼‰ã€‚")]
     private Transform[] patrolPoints;
 
-    [SerializeField, Tooltip("µ½´ïÑ²ÂßµãºóµÄµÈ´ıÊ±¼ä£¨Ãë£©¡£<=0 ±íÊ¾²»µÈ´ı£©¡£")]
+    [SerializeField, Tooltip("åˆ°è¾¾å·¡é€»ç‚¹åçš„ç­‰å¾…æ—¶é—´ï¼ˆç§’ï¼‰ï¼Œ<=0 è¡¨ç¤ºä¸ç­‰å¾…ã€‚")]
     private float patrolWaitTime = 0f;
 
-    [SerializeField, Tooltip("Ñ²ÂßÊÇ·ñÑ­»·£¨µ½Ä©Î²»Øµ½¿ªÍ·£©¡£")]
+    [SerializeField, Tooltip("æ˜¯å¦å¾ªç¯å·¡é€»ï¼ˆæœ«å°¾å›åˆ°èµ·ç‚¹ï¼‰ã€‚")]
     private bool patrolLoop = true;
 
-    [SerializeField, Tooltip("ÅĞ¶¨ÒÑµ½´ïÄ¿±êµãµÄ×îĞ¡¾àÀë£¨Ã×£©¡£")]
+    [SerializeField, Tooltip("åˆ¤å®šåˆ°è¾¾ç›®æ ‡ç‚¹çš„æœ€å°è·ç¦»ï¼ˆç±³ï¼‰ã€‚")]
     private float arriveThreshold = 0.2f;
 
-    [SerializeField, Tooltip("ÔÚÂ·µãÖÜÎ§Ëæ»úÆ«ÒÆµÄ°ë¾¶£¨Ã×£©£¬±ÜÃâÃ¿´Î²ÈÔÚ¾«È·µãÉÏ£©¡£")]
+    [SerializeField, Tooltip("å·¡é€»ç‚¹éšæœºåç§»åŠå¾„ï¼ˆç±³ï¼‰ï¼Œé¿å…æ¯æ¬¡èµ°åˆ°åŒä¸€ç‚¹ã€‚")]
     private float patrolPointRadius = 0.5f;
 
     [Header("Interest Points")]
-    [SerializeField, Tooltip("ĞËÈ¤µãÁĞ±í£ºNPC ÓĞ¸ÅÂÊÆ«ÀëÂ·ÏßÇ°ÍùÕâĞ©µãÖ´ĞĞ¶ÌÊ±¶¯×÷¡£")]
+    [SerializeField, Tooltip("å…´è¶£ç‚¹åˆ—è¡¨ã€‚NPC å¯èƒ½ä¼šåç¦»å·¡é€»å»è¿™äº›ç‚¹åœç•™ã€‚")]
     private Transform[] interestPoints;
 
-    [SerializeField, Range(0f, 1f), Tooltip("µ½´ïÑ²ÂßµãºóÆ«ÀëÈ¥ĞËÈ¤µãµÄ¸ÅÂÊ¡£")]
+    [SerializeField, Range(0f, 1f), Tooltip("åˆ°è¾¾å·¡é€»ç‚¹åè½¬å»å…´è¶£ç‚¹çš„æ¦‚ç‡ã€‚")]
     private float interestChance = 0.2f;
 
-    [SerializeField, Tooltip("ÔÚĞËÈ¤µãÍ£Áô/Ö´ĞĞ¶¯×÷µÄÊ±³¤£¨Ãë£©¡£")]
+    [SerializeField, Tooltip("åœ¨å…´è¶£ç‚¹åœç•™/æ‰§è¡ŒåŠ¨ä½œçš„æ—¶é•¿ï¼ˆç§’ï¼‰ã€‚")]
     private float interestActionTime = 3f;
 
-    [SerializeField, Tooltip("ĞËÈ¤µãÄ¿±êËæ»úÆ«ÒÆ°ë¾¶£¬±ÜÃâ×Ü²ÈÖĞĞÄ£©¡£")]
+    [SerializeField, Tooltip("å…´è¶£ç‚¹ç›®æ ‡éšæœºåç§»åŠå¾„ã€‚")]
     private float interestPointRadius = 0.5f;
 
     [Header("Player Blocking")]
-    [SerializeField, Tooltip("ÅĞ¶¨Íæ¼ÒµÄ Layer£¨°Ñ Player ·Åµ½¸Ã Layer£©¡£")]
+    [SerializeField, Tooltip("ç©å®¶æ‰€åœ¨ Layerï¼ˆè¯·æŠŠ Player æ”¾åˆ°å¯¹åº” Layerï¼‰ã€‚")]
     private LayerMask playerLayer;
 
-    [SerializeField, Tooltip("¼ì²âÍæ¼ÒÊÇ·ñ×èµ²µÄ°ë¾¶£¨Ã×£©¡£")]
+    [SerializeField, Tooltip("æ£€æµ‹ç©å®¶é˜»æŒ¡çš„åŠå¾„ï¼ˆç±³ï¼‰ã€‚")]
     private float playerBlockRadius = 1.0f;
 
-    [SerializeField, Range(0f, 180f), Tooltip("Ö»ÓĞµ±Íæ¼ÒÎ»ÓÚ NPC Ç°·½¸Ã½Ç¶È·¶Î§ÄÚ²ÅÊÓÎª×èµ²£¨¶È£©¡£")]
+    [SerializeField, Range(0f, 180f), Tooltip("ä»…å½“å‰æ–¹è¯¥è§’åº¦èŒƒå›´å†…çš„ç©å®¶æ‰ç®—é˜»æŒ¡ã€‚")]
     private float playerBlockAngle = 90f;
 
-    [SerializeField, Tooltip("ÊÇ·ñÒªÇóÓëÍæ¼ÒÓĞÖ±ÏßÊÓÒ°£¨ÉäÏß²»±»ÕÏ°­ÕÚµ²£©²ÅÅĞ¶¨×èµ²£©¡£")]
+    [SerializeField, Tooltip("æ˜¯å¦è¦æ±‚è§†çº¿å¯è¾¾ï¼ˆRaycast ä¸è¢«é®æŒ¡ï¼‰æ‰åˆ¤å®šä¸ºé˜»æŒ¡ã€‚")]
     private bool requireLineOfSight = true;
 
     [Header("Slope Detection")]
-    [SerializeField, Tooltip("½«´¹Ö±¸ß¶È²î¹éÒ»»¯ÎªÆÂ¶ÈÖµµÄãĞÖµ£¨Ã×£©£»dy / threshold Ó³Éäµ½ [-1,1]¡£")]
+    [SerializeField, Tooltip("é«˜åº¦å·®å½’ä¸€åŒ–é˜ˆå€¼ï¼ˆç±³ï¼‰ï¼Œdy / threshold æ˜ å°„åˆ° [-1,1]ã€‚")]
     private float slopeNormalizeThreshold = 0.25f;
 
-    [SerializeField, Tooltip("¼ì²âÆÂ¶ÈÊ±µÄ×îĞ¡ÒÆ¶¯ËÙ¶È£¨m/s£©£¬µÍÓÚÔò²»¸üĞÂÆÂ¶È£©¡£")]
+    [SerializeField, Tooltip("æ£€æµ‹å¡åº¦æ—¶çš„æœ€å°ç§»åŠ¨é€Ÿåº¦ï¼ˆm/sï¼‰ï¼Œä½äºè¯¥å€¼ä¸æ›´æ–°å¡åº¦ã€‚")]
     private float minSpeedToDetectSlope = 0.05f;
 
-    // ÔËĞĞÊ±×Ö¶Î
+    // è¿è¡Œæ—¶çŠ¶æ€
     private State currentState = State.Idle;
     private int patrolIndex = 0;
     private Coroutine patrolWaitCoroutine;
     private Coroutine interestCoroutine;
 
-    // ÔİÍ£/»Ö¸´Ïà¹Ø
+    // æš‚åœ/æ¢å¤ç›¸å…³
     private bool pausedByPlayer = false;
     private State prevStateBeforePause = State.Idle;
     private Vector3 lastDestination;
 
-    // Â¥Ãæ¸ß¶È»º´æ£¨ÓÃÓÚÆÂ¶È¼ÆËã£©
+    // åœ°é¢é«˜åº¦ç¼“å­˜ï¼ˆç”¨äºå¡åº¦è®¡ç®—ï¼‰
     private float lastGroundY;
 
     private void Reset()
@@ -120,7 +120,7 @@ public class NPCController : MonoBehaviour
         if (animator != null)
             animator.applyRootMotion = false;
 
-        // ³õÊ¼»¯µØÃæ¸ß¶È»º´æ
+        // åˆå§‹åŒ–åœ°é¢é«˜åº¦ç¼“å­˜
         lastGroundY = SampleGroundY(transform.position);
     }
 
@@ -145,7 +145,7 @@ public class NPCController : MonoBehaviour
     {
         if (agent == null) return;
 
-        // ¼ì²âÍæ¼Ò×èµ²²¢ÔİÍ£/»Ö¸´
+        // æ£€æµ‹ç©å®¶é˜»æŒ¡å¹¶æš‚åœ/æ¢å¤
         if (!pausedByPlayer && IsPlayerBlocking())
         {
             PauseForPlayer();
@@ -155,10 +155,10 @@ public class NPCController : MonoBehaviour
             ResumeFromPlayer();
         }
 
-        // ¸üĞÂÆÂ¶È²ÎÊı£¨Ê¼ÖÕĞ´Èë Animator µÄ Slope£©
+        // æ›´æ–°å¡åº¦å‚æ•°ï¼ˆæŒç»­å†™å…¥ Animator çš„ Slopeï¼‰
         UpdateSlopeParam();
 
-        // Æ½»¬Ë®Æ½ËÙ¶È²¢Ğ´Èë Animator£¨±ÜÃâ¶¯»­Í»±ä£©
+        // å¹³æ»‘æ°´å¹³é€Ÿåº¦å¹¶å†™å…¥ Animatorï¼ˆé¿å…åŠ¨ç”»çªå˜ï¼‰
         UpdateSmoothedSpeedAndApply();
 
         if (pausedByPlayer) return;
@@ -179,7 +179,7 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    // ²ÉÑù NavMesh ÉÏµÄµØÃæ Y£¬Ê§°ÜÍË»¯Îª worldPos.y
+    // é‡‡æ · NavMesh ä¸Šçš„åœ°é¢ Yï¼Œå¤±è´¥æ—¶è¿”å› worldPos.y
     private float SampleGroundY(Vector3 worldPos)
     {
         NavMeshHit hit;
@@ -188,7 +188,7 @@ public class NPCController : MonoBehaviour
         return worldPos.y;
     }
 
-    // ¼ÆËã²¢Ğ´Èë Animator.Slope£¨-1..1£©
+    // è®¡ç®—å¹¶å†™å…¥ Animator.Slopeï¼ˆ-1..1ï¼‰
     private void UpdateSlopeParam()
     {
         if (animator == null || string.IsNullOrEmpty(slopeParam)) return;
@@ -203,34 +203,34 @@ public class NPCController : MonoBehaviour
             slopeValue = Mathf.Clamp(dy / Mathf.Max(0.0001f, slopeNormalizeThreshold), -1f, 1f);
         }
 
-        // ½«ÆÂ¶ÈÖµĞ´Èë Animator£¬²¢Ê¹ÓÃ×èÄáÆ½»¬
+        // å†™å…¥ Animatorï¼Œå¹¶ä½¿ç”¨é˜»å°¼å¹³æ»‘
         animator.SetFloat(slopeParam, slopeValue, slopeDampTime, Time.deltaTime);
 
-        // Æ½»¬¸üĞÂ»º´æ£¬±ÜÃâ¶¶¶¯
+        // å¹³æ»‘æ›´æ–°ç¼“å­˜ï¼Œå‡å°‘æŠ–åŠ¨
         lastGroundY = Mathf.Lerp(lastGroundY, currentGroundY, 0.5f);
     }
 
-    // Æ½»¬Ë®Æ½ËÙ¶È²¢Ó¦ÓÃµ½ Animator µÄ speed ²ÎÊı
+    // å¹³æ»‘æ°´å¹³é€Ÿåº¦å¹¶åº”ç”¨åˆ° Animator çš„ speed å‚æ•°
     private void UpdateSmoothedSpeedAndApply()
     {
         if (animator == null || string.IsNullOrEmpty(speedParam)) return;
 
-        // È¡Ë®Æ½·ÖÁ¿ËÙ¶È£¨ºöÂÔ y£©
+        // ä»…ä½¿ç”¨æ°´å¹³åˆ†é‡ï¼Œå¿½ç•¥ y
         Vector3 horizVel = agent.velocity;
         horizVel.y = 0f;
         float targetSpeed = horizVel.magnitude;
 
-        // Èç¹û agent ±»Í£Ö¹£¨ÀıÈç±»Íæ¼Òµ²×¡£©£¬Ä¿±êËÙ¶ÈÓ¦Îª 0
+        // åœæ­¢æ—¶é€Ÿåº¦å½’é›¶
         if (agent.isStopped) targetSpeed = 0f;
 
-        // Æ½»¬¹ı¶Éµ±Ç°ËÙ¶Èµ½Ä¿±êËÙ¶È
+        // å¹³æ»‘è¿‡æ¸¡åˆ°ç›®æ ‡é€Ÿåº¦
         smoothedSpeed = Mathf.SmoothDamp(smoothedSpeed, targetSpeed, ref smoothedSpeedVel, speedSmoothTime);
 
-        // ½«Æ½»¬ºóµÄËÙ¶ÈĞ´Èë Animator£¨ÎÒÃÇÒÑÔÚÕâÀï×öÆ½»¬£¬Òò´ËÊ¹ÓÃÎŞ×èÄáµÄ SetFloat ÖØÔØ£©
+        // å†™å› Animator
         animator.SetFloat(speedParam, smoothedSpeed);
     }
 
-    // ========== Íæ¼Ò×èµ²ÅĞ¶¨¡¢ÔİÍ£/»Ö¸´£¨Í¬Ç°£© ==========
+    // ========== ç©å®¶é˜»æŒ¡åˆ¤å®šã€æš‚åœ/æ¢å¤ ==========
     private bool IsPlayerBlocking()
     {
         if (playerLayer == 0) return false;
@@ -288,7 +288,7 @@ public class NPCController : MonoBehaviour
     public void OnPlayerInteractStart() => PauseForPlayer();
     public void OnPlayerInteractEnd() => ResumeFromPlayer();
 
-    // ========== Ñ²ÂßÓëĞËÈ¤µãÂß¼­£¨²»±ä£© ==========
+    // ========== å·¡é€»ä¸å…´è¶£ç‚¹é€»è¾‘ ==========
     private void UpdatePatrol()
     {
         if (patrolPoints == null || patrolPoints.Length == 0) { currentState = State.Idle; return; }

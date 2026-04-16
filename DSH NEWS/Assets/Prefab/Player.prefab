@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7455070304266235652}
   - component: {fileID: 1799588481135008329}
   - component: {fileID: 371413836828736968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -168,7 +168,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   playerCamera: {fileID: 4518138068506165416}
   crosshair: {fileID: 0}
-  lockCursorOnStart: 0
+  interactPromptText: {fileID: 0}
+  interactPromptTMP: {fileID: 0}
+  lockCursorOnStart: 1
   hideCursorOnStart: 1
   footstepClips:
   - {fileID: 8300000, guid: 491dbdbb4a597b948bb19e0f82081fad, type: 3}

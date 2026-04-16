@@ -131,318 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 801456700501915494, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 801456700501915494, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2197591686778995083, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2393887717565330718, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5939059940153852602, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: crosshair
+      propertyPath: interactPromptTMP
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: walkSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: stepDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: hideCursorOnStart
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: lockCursorOnStart
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538747208}
     - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: interactPromptText
       value: 
-      objectReference: {fileID: 695319176}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: footstepClips.Array.size
-      value: 35
       objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: footstepClipsUp.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 491dbdbb4a597b948bb19e0f82081fad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 2a336d55f84b4bc498ec574370ac5fd0, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 89098e68abbbdbe41ad489488cc375fe, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[3]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 983f6c85556fcc842b0e212e0525f2a0, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[4]'
-      value: 
-      objectReference: {fileID: 8300000, guid: bf01c9b4eca78414f9fb889a97192277, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[5]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 2a6ee4a6840497b4f978124c142a6af1, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[6]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 58e27aff2088bc44ca2e1aa91c634cad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[7]'
-      value: 
-      objectReference: {fileID: 8300000, guid: dde1cab087120b445b57987f3e4ab8aa, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[8]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 71a746df9be222b42bd2106c02a6a7d0, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[9]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4916a7a284ba5cc458ceae1d44a16b69, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[10]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ade709da029871646be4437509f7850d, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[11]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4182733c5e0c6054b83510c3fa142e26, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[12]'
-      value: 
-      objectReference: {fileID: 8300000, guid: b5949adea83ffc243b7ba7ce5214d564, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[13]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 7a5445f2ef4b38442824f0e6c2e181a6, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[14]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 3993be287c3bcdd49b229a11dadb9457, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[15]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9bea983fb88b9cf4ca084864e495458f, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[16]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 935b9be06c4bef847883e3b365c71fe1, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[17]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 6d420becf53cf5d4d9b5bf739e8b1988, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[18]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4fe2c6c5ddac38b42877c130ad725842, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[19]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 945ce507a0e24c14f8eef37e362dba7d, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[20]'
-      value: 
-      objectReference: {fileID: 8300000, guid: e41ea2fd0e681624b83c5b8d6b9e8c38, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[21]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 0257d0c71759d2744a89bfc103b86315, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[22]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 6bf4d9c7260251e4c996803bcc0d272f, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[23]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 67ea5cce35f3aa14d8ba6fe614cd117e, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[24]'
-      value: 
-      objectReference: {fileID: 8300000, guid: fb7a67a68bc435345bc616346579980a, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[25]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 39597e2ba85449040a2e3bf57ebfb872, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[26]'
-      value: 
-      objectReference: {fileID: 8300000, guid: bf203a4c35ddd4f49b0ec1665337e4a6, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[27]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ff20543452f931c47bd062edcc393a4b, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[28]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c289632af577df488622315cd996acf, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[29]'
-      value: 
-      objectReference: {fileID: 8300000, guid: d067986a87098e94bba1d9cd5f0f6760, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[30]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 290add77dcc90074eb69781c61cf5543, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[31]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 92a069c2df965cf498735a19b1dba06a, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[32]'
-      value: 
-      objectReference: {fileID: 8300000, guid: a372d04ef72c4b54ba08b66fe6477cff, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[33]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 3cd806e3fa5b80340b50d58ee186582a, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[34]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9b23211318b161f45894a37ac17073df, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[35]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[36]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[37]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[38]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[39]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[40]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[41]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[42]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[43]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[44]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[45]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[46]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[47]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[48]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[49]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[50]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[51]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[52]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[53]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[54]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[55]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[56]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClips.Array.data[57]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 99207697bef908a40b70baa7c2699bad, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: footstepClipsDown.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsUp.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: fad1dcdbe5e87f14c9a0d14e8fc406e8, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsUp.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b1ae249457733c4aaeb7e53f24e8455, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsUp.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 02c49696aa90a594d80938c0b2ef3b53, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsDown.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: fad1dcdbe5e87f14c9a0d14e8fc406e8, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsDown.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b1ae249457733c4aaeb7e53f24e8455, type: 3}
-    - target: {fileID: 6118408115546526775, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: 'footstepClipsDown.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 02c49696aa90a594d80938c0b2ef3b53, type: 3}
     - target: {fileID: 7877517574923195727, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -481,10 +177,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7877517574923195727, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715415038254814529, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
-      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -671,6 +363,143 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &538747206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538747207}
+  - component: {fileID: 538747209}
+  - component: {fileID: 538747208}
+  m_Layer: 5
+  m_Name: InteractPromptTMP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &538747207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538747206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310701933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &538747208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538747206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Press E to Have A Look
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &538747209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538747206}
+  m_CullTransparentMesh: 1
 --- !u!1 &595010403
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,85 +549,6 @@ MonoBehaviour:
   viewership: 0
   day: 1
   Situations: []
---- !u!1 &695319174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 695319175}
-  - component: {fileID: 695319177}
-  - component: {fileID: 695319176}
-  m_Layer: 5
-  m_Name: InteractionText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &695319175
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695319174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1310701933}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &695319176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695319174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 50
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &695319177
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695319174}
-  m_CullTransparentMesh: 1
 --- !u!1 &799467042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +963,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 695319175}
+  - {fileID: 538747207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

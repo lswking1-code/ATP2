@@ -82,6 +82,10 @@ public class NPCController : MonoBehaviour
     [SerializeField, Tooltip("是否要求视线可达（Raycast 不被遮挡）才判定为阻挡。")]
     private bool requireLineOfSight = true;
 
+    [Header("Forced Look")]
+    [SerializeField, Tooltip("强制看向目标时的旋转速度（度/秒）。")]
+    private float forcedLookRotateSpeed = 360f;
+
     [Header("Slope Detection")]
     [SerializeField, Tooltip("高度差归一化阈值（米），dy / threshold 映射到 [-1,1]。")]
     private float slopeNormalizeThreshold = 0.25f;
@@ -102,6 +106,8 @@ public class NPCController : MonoBehaviour
 
     // 地面高度缓存（用于坡度计算）
     private float lastGroundY;
+    private bool forceLookAtTarget = false;
+    private Transform forcedLookTarget;
 
     private void Reset()
     {
@@ -160,6 +166,9 @@ public class NPCController : MonoBehaviour
 
         // 平滑水平速度并写入 Animator（避免动画突变）
         UpdateSmoothedSpeedAndApply();
+
+        if (forceLookAtTarget)
+            UpdateForcedLookAt();
 
         if (pausedByPlayer) return;
 
@@ -287,6 +296,42 @@ public class NPCController : MonoBehaviour
 
     public void OnPlayerInteractStart() => PauseForPlayer();
     public void OnPlayerInteractEnd() => ResumeFromPlayer();
+
+    // 启用强制朝向某个目标（例如玩家）。
+    // 仅控制朝向，不直接改巡逻点数据。
+    public void SetForcedLookTarget(Transform target)
+    {
+        forcedLookTarget = target;
+        forceLookAtTarget = target != null;
+    }
+
+    // 关闭强制朝向，恢复 NPC 原有朝向逻辑。
+    public void ClearForcedLookTarget()
+    {
+        forceLookAtTarget = false;
+        forcedLookTarget = null;
+    }
+
+    // 每帧将 NPC 的水平朝向缓慢旋转到目标方向（忽略 y，避免抬头低头）。
+    private void UpdateForcedLookAt()
+    {
+        if (forcedLookTarget == null)
+        {
+            forceLookAtTarget = false;
+            return;
+        }
+
+        Vector3 dir = forcedLookTarget.position - transform.position;
+        dir.y = 0f;
+        if (dir.sqrMagnitude < 0.0001f) return;
+
+        Quaternion targetRot = Quaternion.LookRotation(dir, Vector3.up);
+        transform.rotation = Quaternion.RotateTowards(
+            transform.rotation,
+            targetRot,
+            forcedLookRotateSpeed * Time.deltaTime
+        );
+    }
 
     // ========== 巡逻与兴趣点逻辑 ==========
     private void UpdatePatrol()

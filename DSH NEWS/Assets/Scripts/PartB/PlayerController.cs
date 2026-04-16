@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.IO;
+using PixelCrushers.DialogueSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -24,7 +26,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     [SerializeField, Tooltip("准星组件")] private Crosshair crosshair;
-    [SerializeField, Tooltip("交互提示文本（如：Press E To Interact）")] private Text interactPromptText;
+    [SerializeField, Tooltip("交互提示文本（Legacy Text，可选）")] private Text interactPromptText;
+    [SerializeField, Tooltip("交互提示文本（TextMeshProUGUI，可选）")] private TMP_Text interactPromptTMP;
 
     [Header("Cursor")]
     [SerializeField, Tooltip("是否在启动时锁定光标（关闭后不会自动锁定）")]
@@ -100,8 +103,7 @@ public class PlayerController : MonoBehaviour
             crosshair = Object.FindFirstObjectByType<Crosshair>();
 
         // 初始化交互提示为隐藏
-        if (interactPromptText != null)
-            interactPromptText.gameObject.SetActive(false);
+        SetInteractPromptVisible(false);
 
         // 初始化脚步位置记录
         lastPosition = transform.position;
@@ -144,6 +146,17 @@ public class PlayerController : MonoBehaviour
         {
             // 交互期间锁定视角/移动，只响应退出交互的按键
             if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                // 若当前由对话系统驱动，先尝试结束对话，再恢复玩家控制。
+                if (DialogueManager.IsConversationActive)
+                {
+                    DialogueManager.StopConversation();
+                }
+                EndInteraction();
+            }
+
+            // 对话自然结束后自动退出交互态，避免玩家一直被锁定。
+            if (!DialogueManager.IsConversationActive)
             {
                 EndInteraction();
             }
@@ -216,11 +229,8 @@ public class PlayerController : MonoBehaviour
                 hitInteractable = true;
 
                 // 命中可交互物体时显示提示
-                if (interactPromptText != null)
-                {
-                    interactPromptText.text = GetPromptTextByTag(hit.collider, interactable);
-                    interactPromptText.gameObject.SetActive(true);
-                }
+                SetInteractPromptText(GetPromptTextByTag(hit.collider, interactable));
+                SetInteractPromptVisible(true);
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -230,10 +240,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // 未命中可交互物体时隐藏提示
-        if (!hitInteractable && interactPromptText != null)
-        {
-            interactPromptText.gameObject.SetActive(false);
-        }
+        if (!hitInteractable) SetInteractPromptVisible(false);
 
         if (crosshair != null)
             crosshair.SetHighlighted(hitInteractable);
@@ -356,8 +363,7 @@ public class PlayerController : MonoBehaviour
         if (isInteracting) return;
 
         // 进入交互时隐藏提示
-        if (interactPromptText != null)
-            interactPromptText.gameObject.SetActive(false);
+        SetInteractPromptVisible(false);
 
         // 先执行交互逻辑
         interactable.OnInteract();
@@ -422,6 +428,18 @@ public class PlayerController : MonoBehaviour
             Cursor.visible = targetVisible;
             Debug.Log($"[Cursor Debug] Runtime corrected | lockState={Cursor.lockState}, visible={Cursor.visible}");
         }
+    }
+
+    private void SetInteractPromptText(string text)
+    {
+        if (interactPromptText != null) interactPromptText.text = text;
+        if (interactPromptTMP != null) interactPromptTMP.text = text;
+    }
+
+    private void SetInteractPromptVisible(bool visible)
+    {
+        if (interactPromptText != null) interactPromptText.gameObject.SetActive(visible);
+        if (interactPromptTMP != null) interactPromptTMP.gameObject.SetActive(visible);
     }
 }
 

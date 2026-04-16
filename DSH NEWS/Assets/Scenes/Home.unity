@@ -958,6 +958,8 @@ MonoBehaviour:
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   sceneToGo: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
   positionToGo: {x: 0, y: 0, z: 0}
+  rotationToGo: {x: 0, y: 0, z: 0}
+  SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}
 --- !u!1 &2063610305
 GameObject:
   m_ObjectHideFlags: 0

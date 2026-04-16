@@ -78,25 +78,11 @@ public class GlitchControl : MonoBehaviour
         if (delay > 0f)
             yield return new WaitForSecondsRealtime(delay);
 
-        switch (index)
-        {
-            case 1:
-                animator.SetTrigger("Glitch1");
-                PlayGlitchSound(0);
-                break;
-            case 2:
-                animator.SetTrigger("Glitch2");
-                PlayGlitchSound(1);
-                break;
-            case 3:
-                animator.SetTrigger("Glitch3");
-                PlayGlitchSound(2);
-                break;
-            case 4:
-                animator.SetTrigger("Glitch4");
-                PlayGlitchSound(3);
-                break;
-        }
+        if (index <= 0)
+            yield break;
+
+        animator.SetTrigger($"Glitch{index}");
+        PlayGlitchSound(index - 1);
     }
 
     private void PlayGlitchSound(int soundIndex)

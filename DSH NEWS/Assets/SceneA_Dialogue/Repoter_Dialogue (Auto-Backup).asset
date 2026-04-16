@@ -5468,10 +5468,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -5959,8 +5957,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          2|2, ValueMaster) ;
+          SendMessage(GlitchFromSequence,
+          4|0.7, ValueMaster) ;
+
+          SendMessage(GlitchVideoFromSequence, 2|2,
+          ValueMaster) ;
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -5990,8 +5991,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2544.8354
-        y: 978.16846
+        x: 2545.4158
+        y: 975.3109
         width: 160
         height: 30
     - id: 71
@@ -6024,11 +6025,17 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+          SendMessage(GlitchFromSequence,
+          5|0, ValueMaster) ;
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -6054,7 +6061,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2546.2124
-        y: 1055.5481
+        y: 1054.4866
         width: 160
         height: 30
     - id: 72
@@ -6423,8 +6430,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1182.1514, y: 349.67688}
-    canvasZoom: 0.52
+    canvasScrollPosition: {x: 2203.7898, y: 868.8458}
+    canvasZoom: 0.8499997
   - id: 6
     fields:
     - title: Title
@@ -7721,8 +7728,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1718.9172, y: 596.746}
-    canvasZoom: 0.6957037
+    canvasScrollPosition: {x: 1433.5651, y: 373.35193}
+    canvasZoom: 0.39570385
   - id: 7
     fields:
     - title: Title
@@ -11161,8 +11168,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 549.23914, y: 207.26337}
-    canvasZoom: 0.7825263
+    canvasScrollPosition: {x: 444.75928, y: 114.627464}
+    canvasZoom: 0.5725265
   - id: 9
     fields:
     - title: Title
@@ -17019,8 +17026,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 913.8573, y: 650.0409}
-    canvasZoom: 0.6500013
+    canvasScrollPosition: {x: 1382.5168, y: 214.12128}
+    canvasZoom: 0.50000143
   syncInfo:
     syncActors: 0
     syncItems: 0

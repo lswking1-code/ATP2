@@ -5367,8 +5367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 933.48535, y: 738.4556}
-    canvasZoom: 0.42999998
+    canvasScrollPosition: {x: 1486.6685, y: 358.9451}
+    canvasZoom: 0.37000003
   - id: 6
     fields:
     - title: Title
@@ -5894,6 +5894,10 @@ MonoBehaviour:
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: b7f5c443-e626-4074-adf7-a6759b9c5a68
         type: 0
         typeString: 
       conversationID: 6
@@ -7128,8 +7132,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1731.1859, y: 729.3598}
-    canvasZoom: 0.66999996
+    canvasScrollPosition: {x: 2248.3694, y: 1116.1205}
+    canvasZoom: 0.75999975
   - id: 7
     fields:
     - title: Title
@@ -9039,7 +9043,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1464.542, y: 1591.3844}
+    canvasScrollPosition: {x: 2227.275, y: 1170.4553}
     canvasZoom: 0.57400143
   - id: 8
     fields:
@@ -11203,8 +11207,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2596.2412, y: 1300.1757}
-    canvasZoom: 0.5799999
+    canvasScrollPosition: {x: 2575.0347, y: 948.7698}
+    canvasZoom: 0.3099999
   - id: 9
     fields:
     - title: Title
@@ -14503,8 +14507,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 770.1775, y: 671.9972}
-    canvasZoom: 0.5199999
+    canvasScrollPosition: {x: 1603.012, y: 608.8489}
+    canvasZoom: 0.48999992
   - id: 11
     fields:
     - title: Title
@@ -17075,8 +17079,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 890.0745, y: 374.99136}
-    canvasZoom: 0.6200011
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.11000112
   - id: 13
     fields:
     - title: Title

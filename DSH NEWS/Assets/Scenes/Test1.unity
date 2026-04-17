@@ -1262,7 +1262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91, y: 138}
+  m_AnchoredPosition: {x: 53, y: 138}
   m_SizeDelta: {x: 1500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &815572041
@@ -1285,8 +1285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next News Next News Next News Next News Next News Next News Next News Next
-    News Next News Next News
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1332,7 +1331,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -1352,7 +1351,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -224.37177}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1585,9 +1584,9 @@ MonoBehaviour:
     Day: 1
     Entries:
     - Manuscript: {fileID: 1060024581}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: a7cfe6433f2dc5a4db179693f1069d79, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1597,15 +1596,15 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: 8899db57840cc574599975590ebec03c, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
       Values: []
     - Manuscript: {fileID: 486947756}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 77549de6157ba144cad78ff866a1c0de, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1626,7 +1625,7 @@ MonoBehaviour:
     - Manuscript: {fileID: 1060024581}
       HasGlitch: 1
       TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: eeecb3b6c1229c0409e48e263c83d039, type: 3}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1636,15 +1635,15 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: 35c01d8297a6be4409ade48f855f3bb4, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
       Values: []
     - Manuscript: {fileID: 486947756}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 84683af2a55f14d4e8cf3e7275d95093, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1654,7 +1653,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1837471582}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      TextFile: {fileID: 4900000, guid: 7c249ed46212777449496c7145034e0c, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: d
       ScriptIndex: 0
@@ -1663,9 +1662,9 @@ MonoBehaviour:
     Day: 3
     Entries:
     - Manuscript: {fileID: 1060024581}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: d2c4225d13c01bb42a9d235c2059b706, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1675,7 +1674,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: 4aa23b6d1a9c6d743aa1cfd08bf47446, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
@@ -1683,7 +1682,7 @@ MonoBehaviour:
     - Manuscript: {fileID: 486947756}
       HasGlitch: 1
       TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: 2d00005590ee40543b027e68ac30793a, type: 3}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1693,7 +1692,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1837471582}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      TextFile: {fileID: 4900000, guid: c360116cb8bc8bd49a0cf12047d2d525, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: d
       ScriptIndex: 0
@@ -1704,7 +1703,7 @@ MonoBehaviour:
     - Manuscript: {fileID: 1060024581}
       HasGlitch: 1
       TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: 3ab23188546f8d449a3ad9c1fa9db1d0, type: 3}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1714,15 +1713,15 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: f7636a1ba59de404bbd477691b79419d, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
       Values: []
     - Manuscript: {fileID: 486947756}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 6b926962ebe3d1049bc0f10fca02b4f0, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1732,7 +1731,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1837471582}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      TextFile: {fileID: 4900000, guid: d0e7dcfe3a019714b9381294bac5ebf6, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: d
       ScriptIndex: 0
@@ -1743,7 +1742,7 @@ MonoBehaviour:
     - Manuscript: {fileID: 1060024581}
       HasGlitch: 1
       TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: 5e04ecd8e19a919489039be4f127219d, type: 3}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1753,15 +1752,15 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: 4a4c4a9a602d30948acaf6499352e029, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
       Values: []
     - Manuscript: {fileID: 486947756}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 3caa01eedca09ee45b7520215bc09e52, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1771,7 +1770,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1837471582}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      TextFile: {fileID: 4900000, guid: cd8aa6bf57ec47446ba0112b10adaaa9, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: d
       ScriptIndex: 0
@@ -1782,7 +1781,7 @@ MonoBehaviour:
     - Manuscript: {fileID: 1060024581}
       HasGlitch: 1
       TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: c7be8296d33a6cd47b8110033b76c3ad, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: bec10d57a94f70c4bb41738b0def03e7, type: 3}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1792,15 +1791,15 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
+      TextFile: {fileID: 4900000, guid: aabcf40c863a35b4e9e74ef6793f9faa, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: b
       ScriptIndex: 0
       Values: []
     - Manuscript: {fileID: 486947756}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: e61794cdb3a4cc347a381a2f2c611c71, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 8dd95974b3ecb3b40b600adad73cc72b, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: dd489035677bcd446ae6eb14067db06e, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: c
       ScriptIndex: 0
       Values:
@@ -1810,7 +1809,7 @@ MonoBehaviour:
         ValueAmount: 15
     - Manuscript: {fileID: 1837471582}
       HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: 2bb93f6a89995d1489cfd9e66abe0293, type: 3}
+      TextFile: {fileID: 4900000, guid: a6ea7e1af8fbaf5499db86741bda31de, type: 3}
       GlitchTextFile: {fileID: 0}
       Id: d
       ScriptIndex: 0

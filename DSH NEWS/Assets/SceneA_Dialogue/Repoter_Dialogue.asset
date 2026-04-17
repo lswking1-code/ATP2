@@ -5378,8 +5378,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1219.8724, y: 675.6266}
-    canvasZoom: 0.31
+    canvasScrollPosition: {x: 1633.7362, y: 379.21274}
+    canvasZoom: 0.63999987
   - id: 6
     fields:
     - title: Title
@@ -5542,7 +5542,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2255.366
-        y: 901.507
+        y: 899.63086
         width: 160
         height: 30
     - id: 80
@@ -5594,7 +5594,7 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 80
         destinationConversationID: 6
-        destinationDialogueID: 88
+        destinationDialogueID: 90
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5639,10 +5639,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: d2e8cb18-e425-4de1-9490-69a5cbc76c55
         type: 0
         typeString: 
       conversationID: 6
@@ -5664,7 +5666,31 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 2256.735
@@ -5731,126 +5757,6 @@ MonoBehaviour:
         y: 1478.5437
         width: 160
         height: 30
-    - id: 88
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Furthermore, as the hills on the outskirts of the city are considered
-          the best viewing spots, rentals and purchases of camping equipment are
-          expected to see a new surge in demand.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 88
-        destinationConversationID: 6
-        destinationDialogueID: 89
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2251.3284
-        y: 1030.822
-        width: 160
-        height: 30
-    - id: 89
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: However, the forestry authorities have urged astronomy enthusiasts
-          to exercise caution when hiking in the mountains at night, so as to avoid
-          accidents such as wildfires and falls.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 89
-        destinationConversationID: 6
-        destinationDialogueID: 90
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2252.8188
-        y: 1090.4963
-        width: 160
-        height: 30
     - id: 90
       fields:
       - title: Title
@@ -5878,10 +5784,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+        value: "AnimatorTrigger(TalkA, Reporter);\nSendMessage(GlitchFromSequence,
+          1|0, ValueMaster); \nAnimatorTrigger(StopTalk, Reporter)@{{end}};"
         type: 0
         typeString: 
       conversationID: 6
@@ -5905,8 +5809,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2252.719
-        y: 1148.3286
+        x: 2254.3323
+        y: 1031.3538
         width: 160
         height: 30
     - id: 91
@@ -5939,7 +5843,7 @@ MonoBehaviour:
         value: 'AnimatorTrigger(TalkC, Reporter);
 
           SendMessage(GlitchVideoFromSequence,
-          10|0, ValueMaster); Delay(5.5);
+          10|0, ValueMaster); Delay(9.0);
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -6273,7 +6177,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2486.6853
-        y: 824.6219
+        y: 823.6007
         width: 160
         height: 30
     - id: 101
@@ -6365,8 +6269,14 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
+          Audio(news_opening);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 7814f5a6-d966-4433-9314-31be174add51
         type: 0
         typeString: 
       conversationID: 6
@@ -7160,7 +7070,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2831.391
-        y: 868.77637
+        y: 867.225
         width: 160
         height: 30
     - id: 124
@@ -7283,8 +7193,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1985.6235, y: 1031.0718}
-    canvasZoom: 0.8199997
+    canvasScrollPosition: {x: 2005.9891, y: 453.36536}
+    canvasZoom: 0.6399998
   - id: 7
     fields:
     - title: Title
@@ -9192,8 +9102,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2364.0496, y: 1140.9602}
-    canvasZoom: 0.78400093
+    canvasScrollPosition: {x: 2178.8667, y: 997.64777}
+    canvasZoom: 0.6340011
   - id: 8
     fields:
     - title: Title
@@ -9879,6 +9789,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 237f3af5-81da-4457-9986-ccb5e615eff8
+        type: 0
+        typeString: 
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -9901,7 +9815,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3352.296
-        y: 1129.0071
+        y: 1126.7969
         width: 160
         height: 30
     - id: 94
@@ -11321,6 +11235,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 8b04f22b-024d-48a0-a840-b04766c8f691
+        type: 0
+        typeString: 
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -11347,8 +11265,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2813.645, y: 1671.9117}
-    canvasZoom: 0.72999954
+    canvasScrollPosition: {x: 2911.2373, y: 1261.9592}
+    canvasZoom: 0.90999943
   - id: 9
     fields:
     - title: Title
@@ -13837,6 +13755,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
+          Audio(news_opening);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
@@ -14641,8 +14561,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1140.2101, y: 549.9445}
-    canvasZoom: 0.4000004
+    canvasScrollPosition: {x: 1166.0465, y: 760.08185}
+    canvasZoom: 0.28
   - id: 11
     fields:
     - title: Title
@@ -17209,8 +17129,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 913.8573, y: 650.0409}
-    canvasZoom: 0.6500013
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.2000013
   - id: 13
     fields:
     - title: Title

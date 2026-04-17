@@ -2057,6 +2057,82 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: d2e8cb18-e425-4de1-9490-69a5cbc76c55
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowImage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: fire
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: Subtitle
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Observe The Moon
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 7814f5a6-d966-4433-9314-31be174add51
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 237f3af5-81da-4457-9986-ccb5e615eff8
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 8b04f22b-024d-48a0-a840-b04766c8f691
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowImage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: News
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1544884886
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,8 +2318,8 @@ MonoBehaviour:
   tvImage: {fileID: 1007248065}
   subtitle: {fileID: 349282385}
   earthquake: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
-  fire: {fileID: 0}
-  news: {fileID: 0}
+  fire: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
+  news: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}
 --- !u!1 &1916549506
 GameObject:
   m_ObjectHideFlags: 0

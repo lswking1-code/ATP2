@@ -4432,10 +4432,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -4739,13 +4737,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchFromSequence,
-          4|0.5, ValueMaster) ;
-
-          SendMessage(GlitchVideoFromSequence, 9|1.5,
-          ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -5075,7 +5068,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2008.9568
-        y: 845.9468
+        y: 844.9977
         width: 160
         height: 30
     - id: 79
@@ -5108,10 +5101,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 5
@@ -5169,10 +5160,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          2|2, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -5197,7 +5186,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2010.4124
-        y: 991.016
+        y: 989.1398
         width: 160
         height: 30
     - id: 81
@@ -5255,7 +5244,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2011.7893
+        x: 2010.7278
         y: 1068.3958
         width: 160
         height: 30
@@ -5378,8 +5367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1991.3014, y: 776.28766}
-    canvasZoom: 0.7899997
+    canvasScrollPosition: {x: 1400.491, y: 875.0471}
+    canvasZoom: 0.63999987
   - id: 6
     fields:
     - title: Title
@@ -5962,6 +5951,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 9daeaaff-4412-4e84-b95d-c848014f26b8
+        type: 0
+        typeString: 
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -6478,7 +6471,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2486.417
-        y: 1096.5269
+        y: 1094.7731
         width: 160
         height: 30
     - id: 114
@@ -6822,7 +6815,7 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 119
         destinationConversationID: 6
-        destinationDialogueID: 120
+        destinationDialogueID: 121
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6834,65 +6827,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 3047.4119
         y: 1167.4664
-        width: 160
-        height: 30
-    - id: 120
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Over the years, his family has remained deeply involved in keeping
-          his case in the public eye. '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 120
-        destinationConversationID: 6
-        destinationDialogueID: 121
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3050.802
-        y: 1253.8297
         width: 160
         height: 30
     - id: 121
@@ -6918,8 +6852,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But despite extensive investigation and national attention, Jason
-          was still not found.
+        value: Police have released his photo and are appealing to the public for
+          information. Anyone who sees the man in the image is urged to contact the
+          police immediately.
         type: 0
         typeString: 
       - title: Sequence
@@ -6950,8 +6885,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3056.536
-        y: 1312.4933
+        x: 3043.5242
+        y: 1242.2302
         width: 160
         height: 30
     - id: 122
@@ -7193,8 +7128,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2306.1216, y: 764.156}
-    canvasZoom: 0.66999984
+    canvasScrollPosition: {x: 1731.1859, y: 729.3598}
+    canvasZoom: 0.66999996
   - id: 7
     fields:
     - title: Title
@@ -7543,7 +7478,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3026.0608
-        y: 2459.094
+        y: 2460.6
         width: 160
         height: 30
     - id: 88
@@ -7774,7 +7709,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7812,6 +7747,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: e3914008-e65c-4ea6-b12e-c928b4b2f5d7
         type: 0
         typeString: 
       conversationID: 7
@@ -8147,7 +8086,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3199.655
-        y: 1456.7296
+        y: 1455.5011
         width: 160
         height: 30
     - id: 103
@@ -8623,8 +8562,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2798.0452
-        y: 1898.2916
+        x: 2790.515
+        y: 1887.7494
         width: 160
         height: 30
     - id: 114
@@ -8742,7 +8681,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3194.1702
-        y: 1675.6849
+        y: 1676.9133
         width: 160
         height: 30
     - id: 117
@@ -8911,7 +8850,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2787.4497
+        x: 2769.3774
         y: 1830.6116
         width: 160
         height: 30
@@ -8973,7 +8912,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2940.958
-        y: 1466.3937
+        y: 1464.491
         width: 160
         height: 30
     - id: 121
@@ -9026,8 +8965,7 @@ MonoBehaviour:
         destinationDialogueID: 123
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
-        false)
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9089,9 +9027,8 @@ MonoBehaviour:
         destinationDialogueID: 99
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
-        false)
-      userScript: 
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9102,8 +9039,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1868.1401, y: 1155.3146}
-    canvasZoom: 0.5140012
+    canvasScrollPosition: {x: 953.40936, y: 927.97546}
+    canvasZoom: 0.45400137
   - id: 8
     fields:
     - title: Title
@@ -9293,6 +9230,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: b3532c37-58a4-402a-ae5a-daa82f7edee8
         type: 0
         typeString: 
       conversationID: 8
@@ -9500,7 +9441,7 @@ MonoBehaviour:
         destinationDialogueID: 89
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationA"] == true and (Variable["PlayedA"] ==
         false)
       userScript: 
       onExecute:
@@ -9509,7 +9450,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3597.6394
-        y: 1513.5911
+        y: 1511.9517
         width: 160
         height: 30
     - id: 89
@@ -9544,10 +9485,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          1|1, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       conversationID: 8
@@ -9623,7 +9562,7 @@ MonoBehaviour:
         destinationDialogueID: 91
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+      conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
         false)
       userScript: 
       onExecute:
@@ -9848,10 +9787,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          SendMessage(GlitchVideoFromSequence,
-          2|2, ValueMaster) ;
-
-          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -10107,7 +10044,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10470,7 +10407,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11253,7 +11190,8 @@ MonoBehaviour:
         destinationDialogueID: 100
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: 'Variable["SituationC"] == true and (Variable["PlayedC"]
+        == false) '
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11265,8 +11203,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2911.2373, y: 1261.9592}
-    canvasZoom: 0.90999943
+    canvasScrollPosition: {x: 2668.6545, y: 1760.5206}
+    canvasZoom: 0.5799999
   - id: 9
     fields:
     - title: Title
@@ -13091,6 +13029,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 58320cb0-9b35-4496-9018-01e9c9b5f9a6
+        type: 0
+        typeString: 
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -14319,7 +14261,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2030.9976
-        y: 1057.3486
+        y: 1055.3318
         width: 160
         height: 30
     - id: 122
@@ -14561,8 +14503,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1486.2158, y: 622.54236}
-    canvasZoom: 0.6099999
+    canvasScrollPosition: {x: 2055.2114, y: 1425.2955}
+    canvasZoom: 0.7899997
   - id: 11
     fields:
     - title: Title
@@ -14660,8 +14602,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 829.89606
+        y: 45.546104
         width: 160
         height: 30
     - id: 5
@@ -14715,8 +14657,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 146.32538
-        y: 110.5
+        x: 824.7011
+        y: 123.219574
         width: 160
         height: 30
     - id: 6
@@ -14770,8 +14712,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 150.78543
-        y: 200.09901
+        x: 826.33466
+        y: 215.64511
         width: 160
         height: 30
     - id: 8
@@ -14825,8 +14767,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 152.59785
-        y: 302.0378
+        x: 822.4939
+        y: 317.58392
         width: 160
         height: 30
     - id: 9
@@ -14880,8 +14822,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 153.3285
-        y: 412.68488
+        x: 823.22455
+        y: 428.231
         width: 160
         height: 30
     - id: 10
@@ -14935,8 +14877,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 154.05919
-        y: 504.33417
+        x: 823.95526
+        y: 519.88025
         width: 160
         height: 30
     - id: 11
@@ -14988,13 +14930,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 155.52162
-        y: 619.4131
+        x: 825.41766
+        y: 634.9591
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 158.1783}
-    canvasZoom: 1.157572
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.70757246
   - id: 12
     fields:
     - title: Title
@@ -15184,6 +15126,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a5d60ac4-dc95-4094-b9b0-607d950d8c88
         type: 0
         typeString: 
       conversationID: 12
@@ -15387,7 +15333,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1444.713
+        x: 1442.9965
         y: 650.1572
         width: 160
         height: 30
@@ -15484,7 +15430,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalKC, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -16408,7 +16354,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2180.141
+        x: 2178.018
         y: 576.28345
         width: 160
         height: 30
@@ -17059,14 +17005,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2610.3264
-        y: 1159.6006
+        x: 2405.488
+        y: 1220.8907
         width: 160
         height: 30
     - id: 174
@@ -17118,7 +17064,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17129,8 +17075,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.2000013
+    canvasScrollPosition: {x: 893.30035, y: 170.15308}
+    canvasZoom: 0.6200011
   - id: 13
     fields:
     - title: Title

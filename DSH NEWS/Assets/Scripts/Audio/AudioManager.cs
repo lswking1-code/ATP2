@@ -339,6 +339,59 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 在指定挂点播放可停止的 3D 循环音效。
+    /// 调用 StopLoopSFX(source) 可停止并清理。
+    /// </summary>
+    public AudioSource PlayLoopSFX3D(
+        AudioClip clip,
+        Transform anchor,
+        float volume = 1f,
+        float minDistance = 1f,
+        float maxDistance = 25f,
+        AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic)
+    {
+        if (clip == null) return null;
+
+        var loopGo = new GameObject($"Loop3D_{clip.name}");
+        if (anchor != null)
+        {
+            loopGo.transform.SetParent(anchor, false);
+            loopGo.transform.localPosition = Vector3.zero;
+        }
+
+        var source = loopGo.AddComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.spatialBlend = 1f;
+        source.rolloffMode = rolloffMode;
+        source.minDistance = Mathf.Max(0f, minDistance);
+        source.maxDistance = Mathf.Max(source.minDistance, maxDistance);
+        source.loop = true;
+        source.clip = clip;
+        source.volume = Mathf.Clamp01(volume * sfxVolume);
+        source.Play();
+
+        return source;
+    }
+
+    /// <summary>
+    /// 停止由 PlayLoopSFX3D 创建的循环音效，并清理临时对象。
+    /// fadeOut <= 0 时立即停止；否则按时长淡出后停止。
+    /// </summary>
+    public void StopLoopSFX(AudioSource source, float fadeOut = 0f)
+    {
+        if (source == null) return;
+
+        if (fadeOut <= 0f)
+        {
+            source.Stop();
+            Destroy(source.gameObject);
+            return;
+        }
+
+        StartCoroutine(FadeOutAndDestroySource(source, fadeOut));
+    }
+
+    /// <summary>
     /// 立即设置并播放背景音乐（无淡入淡出）。
     /// </summary>
     public void PlayMusicImmediate(AudioClip clip, bool loop = true)
@@ -481,6 +534,25 @@ public class AudioManager : MonoBehaviour
             return null;
         }
         return null;
+    }
+
+    private IEnumerator FadeOutAndDestroySource(AudioSource source, float duration)
+    {
+        if (source == null) yield break;
+
+        float startVolume = source.volume;
+        float t = 0f;
+        while (t < duration && source != null)
+        {
+            t += Time.unscaledDeltaTime;
+            float factor = Mathf.Clamp01(t / duration);
+            source.volume = Mathf.Lerp(startVolume, 0f, factor);
+            yield return null;
+        }
+
+        if (source == null) yield break;
+        source.Stop();
+        Destroy(source.gameObject);
     }
 
 #if UNITY_EDITOR

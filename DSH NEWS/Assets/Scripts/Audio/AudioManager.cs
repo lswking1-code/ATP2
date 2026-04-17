@@ -262,6 +262,83 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 在指定世界坐标播放 3D 一次性音效。
+    /// 使用临时 AudioSource，播放完毕后自动销毁。
+    /// </summary>
+    public AudioSource PlaySFX3D(
+        AudioClip clip,
+        Vector3 worldPosition,
+        float volume = 1f,
+        float minDistance = 1f,
+        float maxDistance = 25f,
+        AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic)
+    {
+        if (clip == null) return null;
+
+        var tempGo = new GameObject($"OneShot3D_{clip.name}");
+        tempGo.transform.position = worldPosition;
+
+        var source = tempGo.AddComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.spatialBlend = 1f;
+        source.rolloffMode = rolloffMode;
+        source.minDistance = Mathf.Max(0f, minDistance);
+        source.maxDistance = Mathf.Max(source.minDistance, maxDistance);
+        source.loop = false;
+        source.clip = clip;
+        source.volume = Mathf.Clamp01(volume * sfxVolume);
+
+        source.Play();
+
+        // 考虑 pitch 变化后，按实际播放时长销毁，避免场景残留。
+        float pitchAbs = Mathf.Max(0.01f, Mathf.Abs(source.pitch));
+        float lifeTime = (clip.length / pitchAbs) + 0.1f;
+        Destroy(tempGo, lifeTime);
+
+        return source;
+    }
+
+    /// <summary>
+    /// 在指定挂点（Transform）位置播放 3D 一次性音效。
+    /// 声源会跟随挂点移动，播放完毕后自动销毁。
+    /// </summary>
+    public AudioSource PlaySFX3D(
+        AudioClip clip,
+        Transform anchor,
+        float volume = 1f,
+        float minDistance = 1f,
+        float maxDistance = 25f,
+        AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic)
+    {
+        if (clip == null) return null;
+
+        var tempGo = new GameObject($"OneShot3D_{clip.name}");
+        if (anchor != null)
+        {
+            tempGo.transform.SetParent(anchor, false);
+            tempGo.transform.localPosition = Vector3.zero;
+        }
+
+        var source = tempGo.AddComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.spatialBlend = 1f;
+        source.rolloffMode = rolloffMode;
+        source.minDistance = Mathf.Max(0f, minDistance);
+        source.maxDistance = Mathf.Max(source.minDistance, maxDistance);
+        source.loop = false;
+        source.clip = clip;
+        source.volume = Mathf.Clamp01(volume * sfxVolume);
+
+        source.Play();
+
+        float pitchAbs = Mathf.Max(0.01f, Mathf.Abs(source.pitch));
+        float lifeTime = (clip.length / pitchAbs) + 0.1f;
+        Destroy(tempGo, lifeTime);
+
+        return source;
+    }
+
+    /// <summary>
     /// 立即设置并播放背景音乐（无淡入淡出）。
     /// </summary>
     public void PlayMusicImmediate(AudioClip clip, bool loop = true)

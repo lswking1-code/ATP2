@@ -4390,7 +4390,7 @@ MonoBehaviour:
         destinationDialogueID: 56
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationA"] == true and (Variable["PlayedA"] ==
         false)
       userScript: 
       onExecute:
@@ -4515,7 +4515,7 @@ MonoBehaviour:
         destinationDialogueID: 58
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
         false)
       userScript: 
       onExecute:
@@ -4831,13 +4831,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2546.2124
+        x: 2545.06
         y: 1055.5481
         width: 160
         height: 30
@@ -5008,7 +5008,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: Variable["PlayedC"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5066,7 +5066,7 @@ MonoBehaviour:
         destinationDialogueID: 79
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
         false)
       userScript: 
       onExecute:
@@ -5255,7 +5255,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2011.7893
+        x: 2010.7278
         y: 1068.3958
         width: 160
         height: 30
@@ -5367,19 +5367,19 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 2010.8586
-        y: 1239.4536
+        y: 1237.8073
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1633.7362, y: 379.21274}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 1944.7495, y: 710.91125}
+    canvasZoom: 0.6099999
   - id: 6
     fields:
     - title: Title
@@ -5694,7 +5694,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2256.735
-        y: 834.8267
+        y: 833.43585
         width: 160
         height: 30
     - id: 87
@@ -5922,7 +5922,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PlayedA"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6168,7 +6168,7 @@ MonoBehaviour:
         destinationDialogueID: 101
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
         false)
       userScript: 
       onExecute:
@@ -6471,7 +6471,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6537,7 +6537,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3045.622
-        y: 814.71594
+        y: 813.16455
         width: 160
         height: 30
     - id: 115
@@ -6822,7 +6822,7 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 119
         destinationConversationID: 6
-        destinationDialogueID: 120
+        destinationDialogueID: 121
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6834,65 +6834,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 3047.4119
         y: 1167.4664
-        width: 160
-        height: 30
-    - id: 120
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Over the years, his family has remained deeply involved in keeping
-          his case in the public eye. '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 120
-        destinationConversationID: 6
-        destinationDialogueID: 121
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3050.802
-        y: 1253.8297
         width: 160
         height: 30
     - id: 121
@@ -6918,8 +6859,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But despite extensive investigation and national attention, Jason
-          was still not found.
+        value: Police have released his photo and are appealing to the public for
+          information. Anyone who sees the man in the image is urged to contact the
+          police immediately.
         type: 0
         typeString: 
       - title: Sequence
@@ -6950,8 +6892,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3056.536
-        y: 1312.4933
+        x: 3043.5242
+        y: 1242.2302
         width: 160
         height: 30
     - id: 122
@@ -7002,7 +6944,7 @@ MonoBehaviour:
         destinationDialogueID: 123
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
         false)
       userScript: 
       onExecute:
@@ -7182,7 +7124,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: Variable["PlayedD"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7193,8 +7135,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2005.9891, y: 453.36536}
-    canvasZoom: 0.6399998
+    canvasScrollPosition: {x: 2194.7458, y: 670.6338}
+    canvasZoom: 0.6699998
   - id: 7
     fields:
     - title: Title
@@ -8027,8 +7969,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2652.187
-        y: 1469.8921
+        x: 2651.0728
+        y: 1468.7778
         width: 160
         height: 30
     - id: 101
@@ -8138,7 +8080,7 @@ MonoBehaviour:
         destinationDialogueID: 103
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+      conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
         false)
       userScript: 
       onExecute:
@@ -8735,7 +8677,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8964,7 +8906,7 @@ MonoBehaviour:
         destinationDialogueID: 121
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
         false)
       userScript: 
       onExecute:
@@ -8973,7 +8915,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2940.958
-        y: 1467.5079
+        y: 1466.3937
         width: 160
         height: 30
     - id: 121
@@ -9089,7 +9031,7 @@ MonoBehaviour:
         destinationDialogueID: 99
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationC"] == true and (Variable["PlayedC"] ==
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
         false)
       userScript: 
       onExecute:
@@ -9102,8 +9044,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2178.8667, y: 997.64777}
-    canvasZoom: 0.6340011
+    canvasScrollPosition: {x: 1868.1401, y: 1155.3146}
+    canvasZoom: 0.5140012
   - id: 8
     fields:
     - title: Title
@@ -14561,8 +14503,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1166.0465, y: 760.08185}
-    canvasZoom: 0.28
+    canvasScrollPosition: {x: 1486.2158, y: 622.54236}
+    canvasZoom: 0.6099999
   - id: 11
     fields:
     - title: Title

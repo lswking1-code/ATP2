@@ -9931,8 +9931,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tunnelLights:
-  - {fileID: 454621972}
-  - {fileID: 541399891}
+  - {fileID: 2336062595163137928}
+  - {fileID: 2336062595163137927}
+  - {fileID: 2336062595163137926}
   blinkDuration: 5
   blinkIntervalMin: 0.06
   blinkIntervalMax: 0.2
@@ -10072,6 +10073,21 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 124f1bce01516084783222f05b89fa18, type: 2}
   m_BuildHeightMesh: 0
+--- !u!108 &2336062595163137926 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6820837709333959989, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+  m_PrefabInstance: {fileID: 2336062595163137923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &2336062595163137927 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6498642467864094741, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+  m_PrefabInstance: {fileID: 2336062595163137923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &2336062595163137928 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2392694508850291522, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+  m_PrefabInstance: {fileID: 2336062595163137923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6117769955083007748
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5367,8 +5367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1971.5867, y: 394.41495}
-    canvasZoom: 0.9699996
+    canvasScrollPosition: {x: 1595.622, y: 72.090645}
+    canvasZoom: 0.6099999
   - id: 6
     fields:
     - title: Title
@@ -7134,8 +7134,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1807.3365, y: 604.8996}
-    canvasZoom: 0.34000015
+    canvasScrollPosition: {x: 2283.2393, y: 385.42633}
+    canvasZoom: 0.64000005
   - id: 7
     fields:
     - title: Title
@@ -9002,7 +9002,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2120.1938, y: 1230.1967}
+    canvasScrollPosition: {x: 1905.2275, y: 860.12836}
     canvasZoom: 0.4899997
   - id: 8
     fields:
@@ -9597,7 +9597,7 @@ MonoBehaviour:
         y: 1578.2527
         width: 160
         height: 30
-    - id: 92
+    - id: 93
       fields:
       - title: Title
         value: 
@@ -9625,64 +9625,6 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 92
-        destinationConversationID: 8
-        destinationDialogueID: 86
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3347.8718
-        y: 1290.3247
-        width: 160
-        height: 30
-    - id: 93
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Microphone testing, microphone testing.....
-        type: 0
-        typeString: 
-      - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
           Audio(news_opening);
@@ -9706,7 +9648,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 93
         destinationConversationID: 8
-        destinationDialogueID: 92
+        destinationDialogueID: 86
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -9716,8 +9658,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3352.296
-        y: 1126.7969
+        x: 3348.4497
+        y: 1203.7201
         width: 160
         height: 30
     - id: 94
@@ -11107,8 +11049,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3068.8398, y: 1438.0698}
-    canvasZoom: 0.6699994
+    canvasScrollPosition: {x: 2803.812, y: 1045.9152}
+    canvasZoom: 0.63999945
   - id: 9
     fields:
     - title: Title
@@ -13548,6 +13490,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 3dfd1ac7-7de2-40ce-b24c-890321a861b4
+        type: 0
+        typeString: 
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -13569,8 +13515,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2186.3613
-        y: 542.8356
+        x: 2188.3513
+        y: 473.18384
         width: 160
         height: 30
     - id: 112
@@ -14230,8 +14176,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1451.6188, y: 631.0589}
-    canvasZoom: 0.55000013
+    canvasScrollPosition: {x: 1603.6838, y: 216.37112}
+    canvasZoom: 0.67
   - id: 11
     fields:
     - title: Title
@@ -15340,6 +15286,10 @@ MonoBehaviour:
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 2e0d7a7f-9052-491f-8ce9-ed746d089416
         type: 0
         typeString: 
       conversationID: 12
@@ -16568,8 +16518,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1141.1456, y: 349.03818}
-    canvasZoom: 0.59000146
+    canvasScrollPosition: {x: 999.4795, y: 0}
+    canvasZoom: 0.5600015
   - id: 13
     fields:
     - title: Title

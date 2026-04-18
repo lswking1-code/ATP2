@@ -4084,8 +4084,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2259.2004
-        y: 363.13815
+        x: 2243.9
+        y: 367.50977
         width: 160
         height: 30
     - id: 40
@@ -4370,7 +4370,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkB, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4398,7 +4398,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2543.38
+        x: 2544.473
         y: 833.09924
         width: 160
         height: 30
@@ -4455,14 +4455,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 2542.242
-        y: 902.83685
+        y: 903.98627
         width: 160
         height: 30
     - id: 57
@@ -4493,7 +4493,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4574,7 +4574,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4612,7 +4612,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkB, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4703,7 +4703,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2241.39
+        x: 2240.297
         y: 472.0028
         width: 160
         height: 30
@@ -4735,7 +4735,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
+        value: 'AnimatorTrigger(TalkB, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4760,7 +4760,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4830,8 +4830,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2545.06
-        y: 1055.5481
+        x: 2548.3953
+        y: 1054.4552
         width: 160
         height: 30
     - id: 75
@@ -4862,7 +4862,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4883,7 +4883,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4921,7 +4921,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4942,7 +4942,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5007,7 +5007,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2759.5195
+        x: 2761.8186
         y: 1140.2507
         width: 160
         height: 30
@@ -5039,7 +5039,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5120,13 +5120,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2007.8188
+        x: 2008.9683
         y: 915.6843
         width: 160
         height: 30
@@ -5179,13 +5179,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2010.4124
+        x: 2011.2253
         y: 989.1398
         width: 160
         height: 30
@@ -5238,13 +5238,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2010.7278
+        x: 2009.8147
         y: 1068.3958
         width: 160
         height: 30
@@ -5276,7 +5276,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5297,14 +5297,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2014.9519
-        y: 1163.6448
+        x: 2006.9058
+        y: 1140.6562
         width: 160
         height: 30
     - id: 83
@@ -5335,7 +5335,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5362,13 +5362,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2010.8586
-        y: 1237.8073
+        x: 2009.7092
+        y: 1213.6693
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1928.8273, y: 654.13196}
-    canvasZoom: 0.58
+    canvasScrollPosition: {x: 1421.7294, y: 594.02856}
+    canvasZoom: 0.37000006
   - id: 6
     fields:
     - title: Title
@@ -6226,7 +6226,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6350,14 +6350,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 2485.556
-        y: 965.78796
+        y: 941.67444
         width: 160
         height: 30
     - id: 110
@@ -6409,14 +6409,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2484.5454
-        y: 1020.5834
+        x: 2483.8362
+        y: 1007.8174
         width: 160
         height: 30
     - id: 111
@@ -6474,8 +6474,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2486.417
-        y: 1094.7731
+        x: 2488.5444
+        y: 1078.4609
         width: 160
         height: 30
     - id: 114
@@ -6501,7 +6501,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: We now interrupt with a missing person announcement.
+        value: 'We now broadcasting a missing person annoucnement from a conerned
+          parents, who are also one of the loyal audience of our programme. '
         type: 0
         typeString: 
       - title: Sequence
@@ -6560,8 +6561,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Jason Jowoski was a 19-year-old college student who mysteriously vanished
-          on June 13
+        value: They are looking for their son, Jason Jowoski, a 19-year-old college
+          student who mysteriously vanished on 13 of this month.
         type: 0
         typeString: 
       - title: Sequence
@@ -6586,7 +6587,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6645,14 +6646,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3048.4502
-        y: 939.6507
+        x: 3051.4805
+        y: 919.19617
         width: 160
         height: 30
     - id: 117
@@ -6705,14 +6706,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3048.4546
-        y: 1009.7145
+        x: 3049.2122
+        y: 970.3207
         width: 160
         height: 30
     - id: 118
@@ -6738,8 +6739,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "But one of the most haunting aspects of Jason\u2019s case is how
-          little there is to work with."
+        value: "One of the most haunting aspects of Jason\u2019s case is that there
+          were no signs, no footage of him arriving at the school, and no physical
+          evidence pointing investigators in any direction. "
         type: 0
         typeString: 
       - title: Sequence
@@ -6764,14 +6766,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3050.2446
-        y: 1087.1198
+        x: 3048.7295
+        y: 1027.4175
         width: 160
         height: 30
     - id: 119
@@ -6797,8 +6799,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'There were no signs of foul play, no footage of him arriving at the
-          school, and no physical evidence pointing investigators in any direction. '
+        value: 'There were no signs, no footage of him arriving at the school, and
+          no physical evidence pointing investigators in any direction. '
         type: 0
         typeString: 
       - title: Sequence
@@ -6823,14 +6825,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3047.4119
-        y: 1167.4664
+        x: 3047.6338
+        y: 1082.3776
         width: 160
         height: 30
     - id: 121
@@ -6889,8 +6891,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3043.5242
-        y: 1240.7634
+        x: 3047.7551
+        y: 1137.5614
         width: 160
         height: 30
     - id: 122
@@ -6950,7 +6952,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2828.5796
-        y: 816.77673
+        y: 815.78174
         width: 160
         height: 30
     - id: 123
@@ -7002,14 +7004,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 2831.391
-        y: 867.225
+        y: 875.89166
         width: 160
         height: 30
     - id: 124
@@ -7061,14 +7063,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2831.4077
-        y: 941.71155
+        x: 2832.0742
+        y: 938.37823
         width: 160
         height: 30
     - id: 125
@@ -7127,13 +7129,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2831.412
-        y: 1011.7755
+        x: 2832.0789
+        y: 998.44226
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1982.8816, y: 676.91974}
-    canvasZoom: 0.52
+    canvasScrollPosition: {x: 1931.8696, y: 969.2018}
+    canvasZoom: 0.5800001
   - id: 7
     fields:
     - title: Title
@@ -7627,7 +7629,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The failure of this Mars observation mission has dampened the institute's 
+        value: The failure of this Mars observation mission has dampened the institute's
           attempts, and has prompted them to begin reassessing the feasibility of
           the programme
         type: 0
@@ -7650,65 +7652,6 @@ MonoBehaviour:
       - originConversationID: 7
         originDialogueID: 90
         destinationConversationID: 7
-        destinationDialogueID: 91
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2267.6042
-        y: 1803.2411
-        width: 160
-        height: 30
-    - id: 91
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: As well as redesigning the Planet series space probes in order to
-          better withstand the complex and unpredictable environment of Mars.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 7
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 7
-        originDialogueID: 91
-        destinationConversationID: 7
         destinationDialogueID: 99
         isConnector: 0
         priority: 2
@@ -7719,8 +7662,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2269.1118
-        y: 1859.5692
+        x: 2273.6208
+        y: 1829.498
         width: 160
         height: 30
     - id: 95
@@ -8023,7 +7966,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8142,7 +8085,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8320,7 +8263,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8385,7 +8328,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8393,64 +8336,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 2666.7222
         y: 1648.4923
-        width: 160
-        height: 30
-    - id: 111
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'There are also reports about abnormal liquids flowing back up through
-          household drains:'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'However, after analyzing the photograph, the Department of Science
-          discovered that prolonged viewing of the image lead to fainting amongst
-          research team. '
-        type: 0
-        typeString: 
-      conversationID: 7
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 7
-        originDialogueID: 111
-        destinationConversationID: 7
-        destinationDialogueID: 112
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedC"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2540.0632
-        y: 1826.3304
         width: 160
         height: 30
     - id: 112
@@ -8508,8 +8393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2562.0925
-        y: 1884.5779
+        x: 2527.6914
+        y: 1823.9954
         width: 160
         height: 30
     - id: 113
@@ -8566,8 +8451,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2779.905
-        y: 1891.7281
+        x: 2758.9993
+        y: 1884.7595
         width: 160
         height: 30
     - id: 114
@@ -8619,7 +8504,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8729,7 +8614,7 @@ MonoBehaviour:
       - originConversationID: 7
         originDialogueID: 117
         destinationConversationID: 7
-        destinationDialogueID: 111
+        destinationDialogueID: 112
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8739,7 +8624,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2527.2322
+        x: 2527.9695
         y: 1765.8882
         width: 160
         height: 30
@@ -8848,14 +8733,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2769.3774
-        y: 1830.6116
+        x: 2753.1172
+        y: 1822.4814
         width: 160
         height: 30
     - id: 120
@@ -9043,8 +8928,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2227.275, y: 1170.4553}
-    canvasZoom: 0.57400143
+    canvasScrollPosition: {x: 2138.8918, y: 1517.3733}
+    canvasZoom: 0.6040015
   - id: 8
     fields:
     - title: Title
@@ -9508,7 +9393,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9810,14 +9695,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3597.6177
-        y: 1657.9215
+        x: 3594.3386
+        y: 1646.9926
         width: 160
         height: 30
     - id: 95
@@ -9870,7 +9755,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10446,7 +10331,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Maintenance of various computer systems appears to still be progressing
           slowly. Governments around the world have yet to publicly release any updated
-          information regarding Y2K.
+          information regarding the Y2K problem.
         type: 0
         typeString: 
       - title: Sequence
@@ -10505,10 +10390,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: However, a spokesperson clarified at the latest technology press conference
-          that the maintenance initiative may be expanded beyond computer systems
-          to encompass all electronic products, including household items such as
-          televisions and radios.
+        value: However, a spokesperson clarified at the latest press conference that
+          the maintenance  may be expanded beyond computer systems to encompass all
+          electronic products, including household items such as televisions and
+          radios.
         type: 0
         typeString: 
       - title: Sequence
@@ -10566,9 +10451,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Various sectors of society have already begun to express scepticism
-          over the actions currently being taken by governments worldwide, as well
-          as their refusal to disclose further information.
+        value: 'Yet the public have already begun to express scepticism over the
+          actions currently being taken by governments worldwide, as well as their
+          refusal to disclose further information.
 
 '
         type: 0
@@ -10628,8 +10513,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Last week, isolated social groups took to the streets in protest over
-          their dissatisfaction with the system maintenance initiative. The primary
+        value: Last week, some social groups took to the streets in protest over
+          their dissatisfaction with the system maintenance initiative. Their primary
           accusation levelled at the government centred on suspicions that the motives
           behind carrying out this maintenance are not entirely above board
         type: 0
@@ -10652,65 +10537,6 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 112
         destinationConversationID: 8
-        destinationDialogueID: 113
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 4064.2515
-        y: 1728.1497
-        width: 160
-        height: 30
-    - id: 113
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: They believe the entire initiative is nothing more than an excuse
-          for the government to once again line its own pockets.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 113
-        destinationConversationID: 8
         destinationDialogueID: 114
         isConnector: 0
         priority: 2
@@ -10721,8 +10547,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4062.0396
-        y: 1796.6493
+        x: 4064.2515
+        y: 1713.2374
         width: 160
         height: 30
     - id: 114
@@ -10782,8 +10608,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4054.5388
-        y: 1894.6649
+        x: 4060.4495
+        y: 1785.0588
         width: 160
         height: 30
     - id: 115
@@ -10809,7 +10635,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This station will continue to track the latest update.
+        value: This programme will continue to track the latest update.
         type: 0
         typeString: 
       - title: Sequence
@@ -10840,8 +10666,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4047.6904
-        y: 1961.0033
+        x: 4060.4136
+        y: 1855.1553
         width: 160
         height: 30
     - id: 116
@@ -11207,8 +11033,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2789.9194, y: 1095.3076}
-    canvasZoom: 0.45999968
+    canvasScrollPosition: {x: 3068.8398, y: 1438.0698}
+    canvasZoom: 0.6699994
   - id: 9
     fields:
     - title: Title
@@ -12420,7 +12246,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -12483,7 +12309,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -12584,8 +12410,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1788.5581
-        y: 1353.4778
+        x: 1801.6017
+        y: 1138.9851
         width: 160
         height: 30
     - id: 81
@@ -12611,7 +12437,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u039E Information remains scarce"
+        value: Information remains scarce
         type: 0
         typeString: 
       - title: Sequence
@@ -12639,8 +12465,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1669.4636
-        y: 1454.3857
+        x: 1682.5072
+        y: 1239.8931
         width: 160
         height: 30
     - id: 82
@@ -12666,7 +12492,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u039E This is yet another cover-up by the government"
+        value: This is yet another cover-up operation from the government
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12694,8 +12520,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1910.2986
-        y: 1451.7485
+        x: 1923.3422
+        y: 1237.2559
         width: 160
         height: 30
     - id: 83
@@ -12727,7 +12553,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
           Audio(selection);
 
@@ -12821,8 +12647,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1915.3353
-        y: 1518.0809
+        x: 1924.8678
+        y: 1288.7815
         width: 160
         height: 30
     - id: 85
@@ -12880,8 +12706,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1665.1431
-        y: 1517.5403
+        x: 1683.6849
+        y: 1289.989
         width: 160
         height: 30
     - id: 86
@@ -12972,7 +12798,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -12999,8 +12825,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2137.181
-        y: 1555.1963
+        x: 1928.0636
+        y: 1338.1644
         width: 160
         height: 30
     - id: 94
@@ -13175,7 +13001,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 96
         destinationConversationID: 10
-        destinationDialogueID: 103
+        destinationDialogueID: 104
         isConnector: 0
         priority: 2
       conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
@@ -13186,8 +13012,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2035.0718
-        y: 780.8046
+        x: 2037.3706
+        y: 798.04596
         width: 160
         height: 30
     - id: 97
@@ -13213,8 +13039,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: When asked why he was filming other people, the man remained completely
-          silent and continued operating his recording device.
+        value: 'When asked the reason to record, the man remained silent and continue.
+          Until another witness knocked out the device from his hand. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -13239,14 +13065,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2033.5092
-        y: 945.62476
+        x: 2038.805
+        y: 912.8306
         width: 160
         height: 30
     - id: 98
@@ -13371,8 +13197,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2321.5242
-        y: 777.1308
+        x: 2433.0186
+        y: 769.08484
         width: 160
         height: 30
     - id: 100
@@ -13424,14 +13250,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2321.5903
-        y: 849.71893
+        x: 2433.0847
+        y: 841.673
         width: 160
         height: 30
     - id: 101
@@ -13489,8 +13315,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2548.8655
-        y: 777.03204
+        x: 2660.3599
+        y: 768.9861
         width: 160
         height: 30
     - id: 102
@@ -13543,73 +13369,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2546.7512
-        y: 841.7924
-        width: 160
-        height: 30
-    - id: 103
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'According to witness descriptions, after selecting what he deemed
-          a suitable target, '
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkD, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 103
-        destinationConversationID: 10
-        destinationDialogueID: 104
-        isConnector: 0
-        priority: 2
-      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2034.2944
-        y: 835.4768
+        x: 2659.664
+        y: 829.49115
         width: 160
         height: 30
     - id: 104
@@ -13667,8 +13434,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2036.6509
-        y: 888.5825
+        x: 2038.6509
+        y: 855.91583
         width: 160
         height: 30
     - id: 105
@@ -13777,18 +13544,18 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 112
         destinationConversationID: 10
-        destinationDialogueID: 121
+        destinationDialogueID: 122
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2030.4801
-        y: 1001.0049
+        x: 2039.7875
+        y: 979.5331
         width: 160
         height: 30
     - id: 113
@@ -13840,14 +13607,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2322.9797
-        y: 925.3986
+        x: 2434.474
+        y: 917.35266
         width: 160
         height: 30
     - id: 114
@@ -13873,13 +13640,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: In a bid to rally public response, Apple is working at full capacity
-          to develop a consumer version of the i-ifi, dedicated to replacing the
-          existing outdated wired network transmission devices found in households.
+        value: Currently, apple is working at full capacity to develop a consumer
+          version of the i-ifi, dedicated to replacing the existing outdated wired
+          network transmission devices found in households.
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -13900,14 +13667,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2324.3567
-        y: 999.57916
+        x: 2435.851
+        y: 991.5332
         width: 160
         height: 30
     - id: 115
@@ -13959,14 +13726,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2327.5193
-        y: 1094.8279
+        x: 2440.163
+        y: 1064.943
         width: 160
         height: 30
     - id: 116
@@ -14024,8 +13791,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2328.3628
-        y: 1161.2042
+        x: 2441.0066
+        y: 1131.3192
         width: 160
         height: 30
     - id: 118
@@ -14078,14 +13845,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2545.5012
-        y: 909.0992
+        x: 2659.8325
+        y: 896.0887
         width: 160
         height: 30
     - id: 119
@@ -14140,14 +13907,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedD"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2543.3806
-        y: 995.9869
+        x: 2661.9844
+        y: 954.6316
         width: 160
         height: 30
     - id: 120
@@ -14205,67 +13972,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2537.6638
-        y: 1084.2817
-        width: 160
-        height: 30
-    - id: 121
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 'He only left the scene after another witness forcibly knocked the
-          equipment out of his hands. '
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 121
-        destinationConversationID: 10
-        destinationDialogueID: 122
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedB"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2030.9976
-        y: 1055.3318
+        x: 2663.5847
+        y: 1012.4407
         width: 160
         height: 30
     - id: 122
@@ -14318,14 +14026,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2032.2639
-        y: 1121.9055
+        x: 2043.065
+        y: 1039.2646
         width: 160
         height: 30
     - id: 123
@@ -14378,14 +14086,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2033.5293
-        y: 1177.6018
+        x: 2043.105
+        y: 1100.091
         width: 160
         height: 30
     - id: 124
@@ -14411,8 +14119,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Further details regarding the case and his motives for filming remain
-          unclear, '
+        value: Further details regarding the case remain unclear, But the local court
+          is compulsorily expected to hear the case next month.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14433,65 +14141,6 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 124
         destinationConversationID: 10
-        destinationDialogueID: 125
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedB"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2032.8391
-        y: 1229.8628
-        width: 160
-        height: 30
-    - id: 125
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: But what we do know is that the local court is compulsorily expected
-          to hear the case next month.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 125
-        destinationConversationID: 10
         destinationDialogueID: 98
         isConnector: 0
         priority: 2
@@ -14502,13 +14151,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2033.9714
-        y: 1286.4365
+        x: 2037.5576
+        y: 1156.6334
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1603.012, y: 608.8489}
-    canvasZoom: 0.48999992
+    canvasScrollPosition: {x: 1451.6188, y: 631.0589}
+    canvasZoom: 0.55000013
   - id: 11
     fields:
     - title: Title
@@ -15245,8 +14894,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'According to the latest announcement from the Japan Institute of
-          Space and Astronautical Science, '
+        value: According to the latest announcement from the Institute of Space and
+          Astronautical Science, an improved version of Planet-B is set to launch
+          once again before the end of this month.
         type: 0
         typeString: 
       - title: Sequence
@@ -15267,7 +14917,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 138
         destinationConversationID: 12
-        destinationDialogueID: 145
+        destinationDialogueID: 146
         isConnector: 0
         priority: 2
       conditionsString: Variable["SituationB"] == true and (Variable["PlayedB"] ==
@@ -15305,7 +14955,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: It is specifically designed to contend with the complex atmospheric
+        value: Which it is specifically designed to contend with the complex atmospheric
           conditions surrounding Mars.
         type: 0
         typeString: CustomFieldType_Text
@@ -15327,18 +14977,18 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 139
         destinationConversationID: 12
-        destinationDialogueID: 148
+        destinationDialogueID: 156
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1442.9965
-        y: 650.1572
+        x: 1442.0576
+        y: 600.36237
         width: 160
         height: 30
     - id: 140
@@ -15515,7 +15165,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15523,65 +15173,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1848.0483
         y: 547.4718
-        width: 160
-        height: 30
-    - id: 145
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: An improved version of Planet-B is set to launch once again before
-          the end of this month.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkD, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 145
-        destinationConversationID: 12
-        destinationDialogueID: 146
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1445.4984
-        y: 540.0093
         width: 160
         height: 30
     - id: 146
@@ -15639,8 +15230,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1447.8549
-        y: 593.115
+        x: 1446.695
+        y: 543.4561
         width: 160
         height: 30
     - id: 147
@@ -15702,65 +15293,6 @@ MonoBehaviour:
         y: 247.36807
         width: 160
         height: 30
-    - id: 148
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 'Through an optimised thermal dissipation system and the use of the
-          latest insulating materials, '
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 148
-        destinationConversationID: 12
-        destinationDialogueID: 156
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedB"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1441.684
-        y: 705.53735
-        width: 160
-        height: 30
     - id: 149
       fields:
       - title: Title
@@ -15784,8 +15316,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Passengers awaiting their flights will be able to enjoy free and high-speed
-          wireless internet access during their wait.
+        value: Passengers who are waiting their flights will be able to enjoy free
+          and high-speed wireless internet access during their wait.
         type: 0
         typeString: 
       - title: Sequence
@@ -15810,7 +15342,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15844,8 +15376,8 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Telecommunications companies across various regions have stated that
-          comprehensive troubleshooting is currently underway,  however there is
-          as yet no information as to whether or when the network will be restored.
+          comprehensive troubleshooting is currently underway, however there is as
+          yet no information as to whether or when the network will be restored.
         type: 0
         typeString: 
       - title: Sequence
@@ -15870,7 +15402,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15935,8 +15467,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1853.9773
-        y: 792.5807
+        x: 1851.2745
+        y: 777.2654
         width: 160
         height: 30
     - id: 156
@@ -15988,14 +15520,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1442.2015
-        y: 761.8811
+        x: 1443.3403
+        y: 660.4782
         width: 160
         height: 30
     - id: 157
@@ -16047,14 +15579,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1443.4679
-        y: 826.438
+        x: 1449.1018
+        y: 717.4648
         width: 160
         height: 30
     - id: 158
@@ -16080,8 +15612,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'As for Planet-B, it will continue to orbit Mars and conduct ongoing
-          observations of the Martian surface conditions '
+        value: 'It will continue to orbit around Mars and conduct ongoing observations
+          of the Martian surface conditions. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16106,14 +15638,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedB"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1444.7333
-        y: 882.1343
+        x: 1447.5502
+        y: 774.1
         width: 160
         height: 30
     - id: 159
@@ -16171,8 +15703,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1444.0431
-        y: 934.39526
+        x: 1449.677
+        y: 831.99475
         width: 160
         height: 30
     - id: 160
@@ -16467,7 +15999,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 164
         destinationConversationID: 12
-        destinationDialogueID: 165
+        destinationDialogueID: 166
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16479,65 +16011,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 2178.5679
         y: 704.19885
-        width: 160
-        height: 30
-    - id: 165
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: The humanoid fossil figure on display this week is not yet finished,
-          the majority of its recognizable shape has already been pieced together.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkA, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 165
-        destinationConversationID: 12
-        destinationDialogueID: 166
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2177.0015
-        y: 762.0311
         width: 160
         height: 30
     - id: 166
@@ -16563,8 +16036,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Currently, the fossils are displayed in humanoid skeletal form alongside
-          other excavated artifacts of the suspected extraterrestrial civilization. '
+        value: Currently, the fossils are displayed in humanoid skeletal form alongside
+          other excavated artifacts of the suspected extraterrestrial civilization,
+          housed in the Extraterrestrial Biology Gallery
         type: 0
         typeString: 
       - title: Sequence
@@ -16585,65 +16059,6 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 166
         destinationConversationID: 12
-        destinationDialogueID: 167
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2178.5093
-        y: 818.3595
-        width: 160
-        height: 30
-    - id: 167
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: They are housed in the Extraterrestrial Biology Gallery as an open-concept
-          exhibition
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 167
-        destinationConversationID: 12
         destinationDialogueID: 168
         isConnector: 0
         priority: 2
@@ -16654,8 +16069,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2178.5444
-        y: 883.8009
+        x: 2178.5093
+        y: 773.37964
         width: 160
         height: 30
     - id: 168
@@ -16681,8 +16096,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Visitors need only purchase a "Special Extraterrestrial Research
-          Exhibition" ticket to enter the hall. '
+        value: Visitors need purchase a "Special Extraterrestrial Research Exhibition"
+          ticket for entry.
         type: 0
         typeString: 
       - title: Sequence
@@ -16713,8 +16128,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2178.187
-        y: 934.6078
+        x: 2181.6716
+        y: 848.5736
         width: 160
         height: 30
     - id: 169
@@ -16783,8 +16198,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2177.4934
-        y: 1026.4829
+        x: 2183.4736
+        y: 915.006
         width: 160
         height: 30
     - id: 170
@@ -16838,8 +16253,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2056.675
-        y: 1148.0803
+        x: 2046.1165
+        y: 998.3738
         width: 160
         height: 30
     - id: 171
@@ -16893,8 +16308,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2397.918
-        y: 1096.8496
+        x: 2356.2695
+        y: 990.5679
         width: 160
         height: 30
     - id: 172
@@ -16956,8 +16371,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2403.862
-        y: 1159.5068
+        x: 2362.2136
+        y: 1053.2251
         width: 160
         height: 30
     - id: 173
@@ -17015,8 +16430,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2405.488
-        y: 1220.8907
+        x: 2363.8396
+        y: 1114.609
         width: 160
         height: 30
     - id: 174
@@ -17074,13 +16489,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2059.1394
-        y: 1212.959
+        x: 2048.5808
+        y: 1063.2524
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.11000112
+    canvasScrollPosition: {x: 1141.1456, y: 349.03818}
+    canvasZoom: 0.59000146
   - id: 13
     fields:
     - title: Title

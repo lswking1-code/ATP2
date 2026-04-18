@@ -875,6 +875,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5127665253469060, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
       insertIndex: -1
       addedObject: {fileID: 78123621}
+    - targetCorrespondingSourceObject: {fileID: 5127665253469060, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 78123624}
   m_SourcePrefab: {fileID: 100100000, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
 --- !u!1 &78123620 stripped
 GameObject:
@@ -916,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61fa0820f68425b4f8aeb805c9782159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 838518176}
   agent: {fileID: 78123623}
   speedParam: Speed
   slopeParam: Slope
@@ -940,6 +943,16 @@ MonoBehaviour:
   forcedLookRotateSpeed: 360
   slopeNormalizeThreshold: 0.25
   minSpeedToDetectSlope: 0.05
+  footstepClips: []
+  footstepClipsUp: []
+  footstepClipsDown: []
+  stepDistance: 0.8
+  stepVolume: 1
+  minMoveSpeedSqr: 0.01
+  stairVerticalThreshold: 0.15
+  footstepAudioAnchor: {fileID: 0}
+  footstepMinDistance: 1
+  footstepMaxDistance: 25
 --- !u!195 &78123623
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -962,6 +975,28 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &78123624
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78123620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: daf568f51c2fa264691d172eec050e32, type: 3}
+  m_Controller: {fileID: 22100000, guid: 015c052a87a8784468c38e176b767c1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &81569770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,6 +4823,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762454525}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &772867446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772867447}
+  - component: {fileID: 772867449}
+  - component: {fileID: 772867448}
+  m_Layer: 0
+  m_Name: TunnelLightEventTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772867447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772867446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.98, y: -12.52, z: 10.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2147000102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &772867448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772867446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77243ae9a80e4e54a8c5961369d4df56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tunnelLights:
+  - {fileID: 2336062595163137928}
+  - {fileID: 2336062595163137927}
+  - {fileID: 2336062595163137926}
+  - {fileID: 1578465550}
+  - {fileID: 1578465549}
+  blinkDuration: 5
+  blinkIntervalMin: 0.06
+  blinkIntervalMax: 0.2
+  offProbability: 0.65
+  loopSfx: {fileID: 8300000, guid: b4020b1e2c8cef742a08b97efd76bbc7, type: 3}
+  sfxSourcePoint: {fileID: 2147000108}
+  volume: 0.6
+  minDistance: 2.5
+  maxDistance: 35
+  rolloffMode: 0
+  audioFadeOut: 0.2
+  triggerOnce: 1
+  hasTriggered: 0
+--- !u!65 &772867449
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772867446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 4, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &802209364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,6 +5223,67 @@ MonoBehaviour:
   forcedLookRotateSpeed: 360
   slopeNormalizeThreshold: 0.1
   minSpeedToDetectSlope: 0.05
+  footstepClips:
+  - {fileID: 8300000, guid: bdc13f14cbe4c3745a22d8a185551c47, type: 3}
+  - {fileID: 8300000, guid: 23e9ce7249a3cf741af2232760d9851e, type: 3}
+  - {fileID: 8300000, guid: f6c2d65434b23a8478a9701059e5fe79, type: 3}
+  - {fileID: 8300000, guid: 569c11cf066b9b847a6887ed4df6c36f, type: 3}
+  - {fileID: 8300000, guid: e1d10feff23673940b01d3e0948bf07a, type: 3}
+  - {fileID: 8300000, guid: 890ec8ad27b3dc34ba43a93fa868fa91, type: 3}
+  - {fileID: 8300000, guid: 5cf0d90c0ec5baf44a82c79b51223437, type: 3}
+  - {fileID: 8300000, guid: f34ae0c7420a33b41965d5963d498580, type: 3}
+  - {fileID: 8300000, guid: d369dafc635316344870224937d5c46c, type: 3}
+  - {fileID: 8300000, guid: 11f64016c8e68c44e9de6f07da6c9063, type: 3}
+  - {fileID: 8300000, guid: b178ea620fc5e5141a17e9caa625c655, type: 3}
+  - {fileID: 8300000, guid: 944b5536b063b9e40883dfbb36fc35f7, type: 3}
+  - {fileID: 8300000, guid: 34c09ea7386782a4cb1c72c7bb728c73, type: 3}
+  - {fileID: 8300000, guid: 6d9307dfdc6c6624f93bc219463a1898, type: 3}
+  - {fileID: 8300000, guid: 51d71dfffa92ea24cb00dd995282b12e, type: 3}
+  - {fileID: 8300000, guid: 1e0affd2699132743a47c5a48e6f6d79, type: 3}
+  - {fileID: 8300000, guid: 61731b55a07f9e6479d6079b0eac13b6, type: 3}
+  - {fileID: 8300000, guid: f0303cad57a77134f8cc92a7c25f2079, type: 3}
+  - {fileID: 8300000, guid: 81901d17e193a61429eeb12ec3e57ee0, type: 3}
+  - {fileID: 8300000, guid: c90da5ad516b03347bf1e2c33b67b2c1, type: 3}
+  - {fileID: 8300000, guid: c4ffa8e726f2b8d4285c75e2ea926fe3, type: 3}
+  - {fileID: 8300000, guid: 7ae499fae99af854c8dd0900cc39c7b0, type: 3}
+  - {fileID: 8300000, guid: a1b734aff07cb8748b6a2fe2b0968742, type: 3}
+  - {fileID: 8300000, guid: fa65aac6b8bd4db45937c0c3e05e3372, type: 3}
+  - {fileID: 8300000, guid: eebdb5c79ddedf540b609bdb0c1a50bd, type: 3}
+  - {fileID: 8300000, guid: 880164637f6d2564bb586931490c1ffd, type: 3}
+  - {fileID: 8300000, guid: 5e44a74145dd84144b7e774041cb0443, type: 3}
+  - {fileID: 8300000, guid: 3b2e4253efdfac24bb02d46ce8905928, type: 3}
+  - {fileID: 8300000, guid: 586de2b442885174da1e44e27b11ae99, type: 3}
+  - {fileID: 8300000, guid: ccdc12698439eb34792e1ed1f667e4c6, type: 3}
+  - {fileID: 8300000, guid: fbcf1dfca164acb4cb068e45885bca61, type: 3}
+  - {fileID: 8300000, guid: 76ff1c7e754382e4f86caf4ee11856d1, type: 3}
+  - {fileID: 8300000, guid: da12b784c863a3d4695771b5abb7469e, type: 3}
+  - {fileID: 8300000, guid: 7116325ccad7b5549a912b5ac9ccb25e, type: 3}
+  - {fileID: 8300000, guid: 97b093f334a999c4281955a9c109d4a8, type: 3}
+  - {fileID: 8300000, guid: f04e26009bc49b24f8e5b908e807a0fa, type: 3}
+  - {fileID: 8300000, guid: d9a01ce7ff99e2246b1211178e802a26, type: 3}
+  - {fileID: 8300000, guid: 5ce8c8bb574fa364691aeed8c0a2e213, type: 3}
+  - {fileID: 8300000, guid: dfaa8579876e3994aa9c5be6f8cade85, type: 3}
+  - {fileID: 8300000, guid: 916e3235bec576745928310b45632b08, type: 3}
+  - {fileID: 8300000, guid: 084f30a7eeb94ff4ab50dea4112f825d, type: 3}
+  - {fileID: 8300000, guid: f896f2394ac72f0408e073eb7b72fec0, type: 3}
+  - {fileID: 8300000, guid: 1246c2ee3a5eddd478446844825c469b, type: 3}
+  - {fileID: 8300000, guid: bc30428d4e0af3949a43c798dbede280, type: 3}
+  - {fileID: 8300000, guid: 05e22b639da93e747bb37c0145398d4e, type: 3}
+  - {fileID: 8300000, guid: 590967e3f27db5f40b241de3bbcfda1a, type: 3}
+  footstepClipsUp: []
+  footstepClipsDown: []
+  stepDistance: 2
+  stepVolume: 1
+  minMoveSpeedSqr: 0.01
+  stairVerticalThreshold: 0.15
+  footstepAudioAnchor: {fileID: 838518179}
+  footstepMinDistance: 1
+  footstepMaxDistance: 25
+--- !u!4 &838518179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6522329275384735907, guid: 37bbbb489c971f94882d3ae7bcbd90e4, type: 3}
+  m_PrefabInstance: {fileID: 838518174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &852658336
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,6 +8336,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577760156}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!108 &1578465549 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 5110561553894035832, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+  m_PrefabInstance: {fileID: 2336062595163137923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &1578465550 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8285228780325340780, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+  m_PrefabInstance: {fileID: 2336062595163137923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603782115
 GameObject:
   m_ObjectHideFlags: 0
@@ -9754,6 +9945,7 @@ Transform:
   - {fileID: 2147000104}
   - {fileID: 2147000108}
   - {fileID: 2147000110}
+  - {fileID: 772867447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147000103
@@ -9767,7 +9959,6 @@ GameObject:
   - component: {fileID: 2147000104}
   - component: {fileID: 2147000105}
   - component: {fileID: 2147000106}
-  - component: {fileID: 2147000112}
   m_Layer: 0
   m_Name: TunnelRoarTrigger
   m_TagString: Untagged
@@ -9918,35 +10109,6 @@ AudioReverbZone:
   m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
---- !u!114 &2147000112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2147000103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77243ae9a80e4e54a8c5961369d4df56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tunnelLights:
-  - {fileID: 2336062595163137928}
-  - {fileID: 2336062595163137927}
-  - {fileID: 2336062595163137926}
-  blinkDuration: 5
-  blinkIntervalMin: 0.06
-  blinkIntervalMax: 0.2
-  offProbability: 0.65
-  loopSfx: {fileID: 8300000, guid: b4020b1e2c8cef742a08b97efd76bbc7, type: 3}
-  sfxSourcePoint: {fileID: 2147000108}
-  volume: 0.6
-  minDistance: 2.5
-  maxDistance: 35
-  rolloffMode: 0
-  audioFadeOut: 0.2
-  triggerOnce: 1
-  hasTriggered: 0
 --- !u!1001 &2336062595163137923
 PrefabInstance:
   m_ObjectHideFlags: 0

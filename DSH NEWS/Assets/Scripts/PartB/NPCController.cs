@@ -93,6 +93,44 @@ public class NPCController : MonoBehaviour
     [SerializeField, Tooltip("检测坡度时的最小移动速度（m/s），低于该值不更新坡度。")]
     private float minSpeedToDetectSlope = 0.05f;
 
+    [Header("Footsteps")]
+    [SerializeField, Tooltip("普通地面脚步音效（可配置多个用于随机播放）。")]
+    private AudioClip[] footstepClips;
+
+    [SerializeField, Tooltip("上楼/上阶梯时的脚步音效（优先于普通音效）。")]
+    private AudioClip[] footstepClipsUp;
+
+    [SerializeField, Tooltip("下楼/下阶梯时的脚步音效（优先于普通音效）。")]
+    private AudioClip[] footstepClipsDown;
+
+    [SerializeField, Tooltip("每走多少米触发一次脚步声（世界单位）。"), Min(0.05f)]
+    private float stepDistance = 0.8f;
+
+    [SerializeField, Range(0f, 1f), Tooltip("脚步音量（由 AudioManager 的 sfxVolume 再乘）。")]
+    private float stepVolume = 1f;
+
+    [SerializeField, Tooltip("移动最小阈值（水平速度平方），低于该值不播放脚步声。")]
+    private float minMoveSpeedSqr = 0.01f;
+
+    [SerializeField, Tooltip("判定为上/下阶梯的垂直高度阈值（米）。")]
+    private float stairVerticalThreshold = 0.15f;
+
+    [SerializeField, Tooltip("可选：脚步 3D 发声点（如脚部子物体）；未指定则使用本物体 transform。")]
+    private Transform footstepAudioAnchor;
+
+    [SerializeField, Tooltip("脚步 3D 音效：最小衰减距离（米），与 AudioSource.minDistance 一致。")]
+    private float footstepMinDistance = 1f;
+
+    [SerializeField, Tooltip("脚步 3D 音效：最大可听距离（米），超出后基本静音。")]
+    private float footstepMaxDistance = 25f;
+
+    // 脚步：水平位移累积
+    private Vector3 lastFootstepPosition;
+    private float stepAccumulator;
+    private float lastStepY;
+
+    private Transform FootstepAudioAnchor => footstepAudioAnchor != null ? footstepAudioAnchor : transform;
+
     // 运行时状态
     private State currentState = State.Idle;
     private int patrolIndex = 0;
@@ -128,6 +166,9 @@ public class NPCController : MonoBehaviour
 
         // 初始化地面高度缓存
         lastGroundY = SampleGroundY(transform.position);
+
+        lastFootstepPosition = transform.position;
+        lastStepY = transform.position.y;
     }
 
     private void Start()
@@ -171,6 +212,8 @@ public class NPCController : MonoBehaviour
             UpdateForcedLookAt();
 
         if (pausedByPlayer) return;
+
+        HandleFootsteps();
 
         switch (currentState)
         {
@@ -237,6 +280,79 @@ public class NPCController : MonoBehaviour
 
         // 写回 Animator
         animator.SetFloat(speedParam, smoothedSpeed);
+    }
+
+    private void HandleFootsteps()
+    {
+        if (footstepClips == null || footstepClips.Length == 0)
+        {
+            lastFootstepPosition = transform.position;
+            stepAccumulator = 0f;
+            return;
+        }
+
+        if (agent == null || !agent.isOnNavMesh)
+        {
+            lastFootstepPosition = transform.position;
+            return;
+        }
+
+        if (agent.isStopped)
+        {
+            lastFootstepPosition = transform.position;
+            stepAccumulator = 0f;
+            return;
+        }
+
+        Vector3 delta = transform.position - lastFootstepPosition;
+        delta.y = 0f;
+        float dist = delta.magnitude;
+        float dt = Mathf.Max(Time.deltaTime, 1e-6f);
+        float horizSpeedSqr = (dist / dt) * (dist / dt);
+
+        if (horizSpeedSqr < minMoveSpeedSqr)
+        {
+            lastFootstepPosition = transform.position;
+            stepAccumulator = 0f;
+            return;
+        }
+
+        stepAccumulator += dist;
+        if (stepAccumulator >= stepDistance)
+        {
+            float verticalDeltaSinceLastStep = transform.position.y - lastStepY;
+            PlayFootstep(verticalDeltaSinceLastStep);
+            stepAccumulator = 0f;
+        }
+
+        lastFootstepPosition = transform.position;
+    }
+
+    private void PlayFootstep(float verticalDeltaSinceLastStep)
+    {
+        if (AudioManager.Instance == null) return;
+
+        AudioClip[] source = footstepClips;
+
+        if (verticalDeltaSinceLastStep > stairVerticalThreshold && footstepClipsUp != null && footstepClipsUp.Length > 0)
+            source = footstepClipsUp;
+        else if (verticalDeltaSinceLastStep < -stairVerticalThreshold && footstepClipsDown != null && footstepClipsDown.Length > 0)
+            source = footstepClipsDown;
+
+        if (source == null || source.Length == 0) return;
+
+        AudioClip clip = source[Random.Range(0, source.Length)];
+        if (clip == null) return;
+
+        // 使用 3D 一次性音源，避免走全局 2D sfxSource（否则会全场景都能听见）
+        AudioManager.Instance.PlaySFX3D(
+            clip,
+            FootstepAudioAnchor,
+            Mathf.Clamp01(stepVolume),
+            footstepMinDistance,
+            footstepMaxDistance
+        );
+        lastStepY = transform.position.y;
     }
 
     // ========== 玩家阻挡判定、暂停/恢复 ==========

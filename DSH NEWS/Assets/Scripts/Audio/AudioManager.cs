@@ -4,67 +4,67 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// È«¾ÖÒôÆµ¹ÜÀíÆ÷£¨µ¥Àý£©¡£
-/// ¸ºÔð±³¾°ÒôÀÖºÍÒ»´ÎÐÔÒôÐ§µÄ²¥·Å¡¢µ­Èë/µ­³öÒÔ¼°ÒôÁ¿¿ØÖÆ¡£
-/// Ö§³Ö°´³¡¾°×Ô¶¯ÇÐ»»±³¾°ÒôÀÖ£ºÔÚ Inspector ÖÐÎª²»Í¬³¡¾°Ö¸¶¨¶ÔÓ¦µÄ AudioClip£¨°´ Scene Name »ò Build Index£©£¬¼ÓÔØ³¡¾°Ê±×Ô¶¯ÇÐ»»£¨Ö§³Öµ­Èë/µ­³ö£©¡£
-/// ½¨Òé½«´Ë×é¼þ¹ÒÔÚ³¡¾°ÖÐµÄÒ»¸ö¶ÔÏóÉÏ£¨»òÔÚÔËÐÐÊ±Ö÷¶¯´´½¨£©£¬²¢±£³ÖÎª DontDestroyOnLoad ÒÔÔÚ³¡¾°¼ä¸´ÓÃ¡£
+/// È«ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+/// ï¿½ï¿½ï¿½ð±³¾ï¿½ï¿½ï¿½ï¿½Öºï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ä²ï¿½ï¿½Å¡ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½
+/// Ö§ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ Inspector ï¿½ï¿½Îªï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ AudioClipï¿½ï¿½ï¿½ï¿½ Scene Name ï¿½ï¿½ Build Indexï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½Ê±ï¿½Ô¶ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ö§ï¿½Öµï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+/// ï¿½ï¿½ï¿½é½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª DontDestroyOnLoad ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ä¸´ï¿½Ã¡ï¿½
 /// </summary>
 public class AudioManager : MonoBehaviour
 {
-    // µ¥ÀýÊµÀý
+    // ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
     public static AudioManager Instance { get; private set; }
 
     [Header("Sources")]
-    [SerializeField, Tooltip("ÓÃÓÚ²¥·Å±³¾°ÒôÀÖ£¬Ö§³Öµ­Èë/µ­³öÓëÑ­»·")]
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½Ú²ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½Ö§ï¿½Öµï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½")]
     private AudioSource musicSource;
 
-    [SerializeField, Tooltip("ÓÃÓÚ²¥·ÅÒ»´ÎÐÔÒôÐ§£¨Ê¹ÓÃ PlayOneShot£©")]
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ê¹ï¿½ï¿½ PlayOneShotï¿½ï¿½")]
     private AudioSource sfxSource;
 
     [Header("Volumes")]
-    [SerializeField, Range(0f, 1f), Tooltip("±³¾°ÒôÀÖ×ÜÌåÒôÁ¿")]
+    [SerializeField, Range(0f, 1f), Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     private float musicVolume = 1f;
 
-    [SerializeField, Range(0f, 1f), Tooltip("ÒôÐ§×ÜÌåÒôÁ¿")]
+    [SerializeField, Range(0f, 1f), Tooltip("ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     private float sfxVolume = 1f;
 
     // Scene-based music mapping
     [Header("Scene Music")]
-    [SerializeField, Tooltip("ÆôÓÃÊ±»áÔÚ³¡¾°¼ÓÔØÊ±¸ù¾ÝÓ³Éä×Ô¶¯ÇÐ»»±³¾°ÒôÀÖ")]
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     private bool autoSwitchOnSceneLoad = true;
 
-    [SerializeField, Tooltip("µ±³¡¾°Ã»ÓÐÆ¥ÅäÌõÄ¿Ê±Ê¹ÓÃµÄºó±¸±³¾°ÒôÀÖ£¨¿ÉÁô¿Õ£©")]
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½Ä¿Ê±Ê¹ï¿½ÃµÄºó±¸±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ£ï¿½")]
     private AudioClip defaultMusicClip;
 
-    [SerializeField, Tooltip("Ä¬ÈÏµ­Èë/µ­³öÊ±³¤£¨Ãë£©£¬µ±³¡¾°ÌõÄ¿Î´Ö¸¶¨Ê±Ê¹ÓÃ")]
+    [SerializeField, Tooltip("Ä¬ï¿½Ïµï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Î´Ö¸ï¿½ï¿½Ê±Ê¹ï¿½ï¿½")]
     private float defaultSceneFadeTime = 0.5f;
 
     [System.Serializable]
     private class SceneMusicEntry
     {
-        [Tooltip("ÓÅÏÈÍ¨¹ý Scene Name Æ¥Åä£¨Exact match£©¡£Èç¹ûÁô¿Õ£¬Ôò³¢ÊÔÊ¹ÓÃ Build Index Æ¥Åä¡£")]
+        [Tooltip("ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ Scene Name Æ¥ï¿½ä£¨Exact matchï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ Build Index Æ¥ï¿½ä¡£")]
         public string sceneName = "";
-        [Tooltip("¿ÉÑ¡£ºÍ¨¹ý Build Index Æ¥Åä³¡¾°£¬-1 ±íÊ¾²»Ê¹ÓÃ¡£")]
+        [Tooltip("ï¿½ï¿½Ñ¡ï¿½ï¿½Í¨ï¿½ï¿½ Build Index Æ¥ï¿½ä³¡ï¿½ï¿½ï¿½ï¿½-1 ï¿½ï¿½Ê¾ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½")]
         public int sceneBuildIndex = -1;
-        [Tooltip("Îª¸Ã³¡¾°²¥·ÅµÄ AudioClip")]
+        [Tooltip("Îªï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ AudioClip")]
         public AudioClip clip;
-        [Tooltip("Èç¹û <= 0 ÔòÊ¹ÓÃÄ¬ÈÏµÄµ­Èë/µ­³öÊ±³¤")]
+        [Tooltip("ï¿½ï¿½ï¿½ <= 0 ï¿½ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½ÏµÄµï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½")]
         public float fadeTime = -1f;
-        [Tooltip("²¥·ÅÊ±ÊÇ·ñÑ­»·")]
+        [Tooltip("ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ç·ï¿½Ñ­ï¿½ï¿½")]
         public bool loop = true;
     }
 
-    [SerializeField, Tooltip("°´³¡¾°Ó³ÉäµÄÒôÀÖÁÐ±í£¬Ö§³Ö°´ Scene Name »ò Build Index Æ¥Åä")]
+    [SerializeField, Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ö§ï¿½Ö°ï¿½ Scene Name ï¿½ï¿½ Build Index Æ¥ï¿½ï¿½")]
     private List<SceneMusicEntry> sceneMusic = new List<SceneMusicEntry>();
 
-    // µ±Ç°ÓÃÓÚµ­Èë/µ­³ö±³¾°ÒôÀÖµÄÐ­³ÌÒýÓÃ
+    // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ð­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private Coroutine musicFadeCoroutine;
-    // ±ê¼ÇÊÇ·ñÍê³É³õÊ¼»¯£¨ÓÃÓÚ±à¼­Æ÷ OnValidate ¼ì²é£©
+    // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½É³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±à¼­ï¿½ï¿½ OnValidate ï¿½ï¿½é£©
     private bool isInitialized = false;
 
     /// <summary>
-    /// Awake£º³õÊ¼»¯µ¥Àý£¬È·±£ÒôÔ´´æÔÚ²¢Ó¦ÓÃÄ¬ÈÏÒôÁ¿¡£
-    /// Èç¹ûÒÑÓÐÆäËûÊµÀýÔòÏú»Ùµ±Ç°¶ÔÏó¡£
+    /// Awakeï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Ú²ï¿½Ó¦ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ùµï¿½Ç°ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     private void Awake()
     {
@@ -81,13 +81,13 @@ public class AudioManager : MonoBehaviour
         EnsureAudioSources();
         ApplyVolumes();
 
-        // ¶©ÔÄ³¡¾°¼ÓÔØÊÂ¼þ£¨ÓÃÓÚ×Ô¶¯ÇÐ»»±³¾°ÒôÀÖ£©
+        // ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½
         if (autoSwitchOnSceneLoad)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        // Ê×´Î½øÈëÊ±¸ù¾Ýµ±Ç°³¡¾°²¥·Å
+        // ï¿½×´Î½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ýµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (autoSwitchOnSceneLoad)
         {
             var active = SceneManager.GetActiveScene();
@@ -103,18 +103,18 @@ public class AudioManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // È¡Ïû¶©ÔÄ£¬±ÜÃâÄÚ´æÐ¹Â©
+        // È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ð¹Â©
         if (autoSwitchOnSceneLoad)
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
-        // ÇåÀíµ¥ÀýÒýÓÃ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Instance == this) Instance = null;
     }
 
     /// <summary>
-    /// ³¡¾°¼ÓÔØ»Øµ÷£º¸ù¾ÝÐÂ³¡¾°ÇÐ»»±³¾°ÒôÀÖ£¨Èç¹ûÆôÓÃ£©¡£
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½
     /// </summary>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -123,9 +123,9 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ¸ù¾Ý Scene ¶ÔÏó²éÕÒÓ³Éä²¢²¥·Å¶ÔÓ¦µÄ±³¾°ÒôÀÖ¡£
-    /// ²éÕÒË³Ðò£ºÏÈ°´ Scene.name£¨·Ç¿Õ¾«È·Æ¥Åä£©£¬ÔÙ°´ buildIndex£¨>=0 Æ¥Åä£©£¬×îºóÊ¹ÓÃ defaultMusicClip£¨Èç¹ûÓÐ£©¡£
-    /// Èç¹ûÕÒµ½Æ¥ÅäÇÒÓëµ±Ç° musicSource.clip ÏàÍ¬£¬Ôò²»»áÖØ¸´ÇÐ»»¡£
+    /// ï¿½ï¿½ï¿½ï¿½ Scene ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ä²¢ï¿½ï¿½ï¿½Å¶ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½
+    /// ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½È°ï¿½ Scene.nameï¿½ï¿½ï¿½Ç¿Õ¾ï¿½È·Æ¥ï¿½ä£©ï¿½ï¿½ï¿½Ù°ï¿½ buildIndexï¿½ï¿½>=0 Æ¥ï¿½ä£©ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ defaultMusicClipï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½
+    /// ï¿½ï¿½ï¿½ï¿½Òµï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ëµ±Ç° musicSource.clip ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ò²»»ï¿½ï¿½Ø¸ï¿½ï¿½Ð»ï¿½ï¿½ï¿½
     /// </summary>
     public void PlayMusicForScene(Scene scene)
     {
@@ -135,7 +135,7 @@ public class AudioManager : MonoBehaviour
 
         SceneMusicEntry match = null;
 
-        // 1. °´ Name ¾«È·Æ¥Åä
+        // 1. ï¿½ï¿½ Name ï¿½ï¿½È·Æ¥ï¿½ï¿½
         for (int i = 0; i < sceneMusic.Count; i++)
         {
             var e = sceneMusic[i];
@@ -146,7 +146,7 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        // 2. °´ Build Index Æ¥Åä£¨Ö»ÓÐÔÚÃ»ÓÐÍ¨¹ý name Æ¥ÅäÊ±£©
+        // 2. ï¿½ï¿½ Build Index Æ¥ï¿½ä£¨Ö»ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Í¨ï¿½ï¿½ name Æ¥ï¿½ï¿½Ê±ï¿½ï¿½
         if (match == null)
         {
             for (int i = 0; i < sceneMusic.Count; i++)
@@ -160,10 +160,10 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        // Èç¹ûÕÒµ½ÁË Scene Ó³Éä£¬Ê¹ÓÃÓ³Éä²¥·Å
+        // ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ Scene Ó³ï¿½ä£¬Ê¹ï¿½ï¿½Ó³ï¿½ä²¥ï¿½ï¿½
         if (match != null && match.clip != null)
         {
-            // ±ÜÃâ¶ÔÏàÍ¬ clip ×öÖØ¸´ÇÐ»»
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ clip ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Ð»ï¿½
             if (musicSource != null && musicSource.clip == match.clip && musicSource.isPlaying)
                 return;
 
@@ -172,7 +172,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Ê¹ÓÃÄ¬ÈÏÒôÀÖ£¨Èç¹ûÉèÖÃ£©
+        // Ê¹ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½
         if (defaultMusicClip != null)
         {
             if (musicSource != null && musicSource.clip == defaultMusicClip && musicSource.isPlaying)
@@ -182,13 +182,13 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            // Èç¹ûÃ»ÓÐÈÎºÎÒôÀÖ£¬Í£Ö¹µ±Ç°²¥·Å£¨µ­³ö£©
+            // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Ö£ï¿½Í£Ö¹ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             StopMusic(defaultSceneFadeTime);
         }
     }
 
     /// <summary>
-    /// Í¨¹ý³¡¾°Ãû£¨·½±ã½Å±¾µ÷ÓÃ£©´¥·¢²¥·Å¡£
+    /// Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¡ï¿½
     /// </summary>
     public void PlayMusicForScene(string sceneName)
     {
@@ -216,7 +216,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// È·±£ musicSource ºÍ sfxSource ´æÔÚ£»ÈôÎ´ÔÚ Inspector Ö¸¶¨Ôò¶¯Ì¬´´½¨×Ó¶ÔÏóºÍ AudioSource¡£
+    /// È·ï¿½ï¿½ musicSource ï¿½ï¿½ sfxSource ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Î´ï¿½ï¿½ Inspector Ö¸ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ AudioSourceï¿½ï¿½
     /// </summary>
     private void EnsureAudioSources()
     {
@@ -240,8 +240,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ½«ÐòÁÐ»¯µÄÒôÁ¿ÖµÓ¦ÓÃµ½¶ÔÓ¦µÄ AudioSource¡£
-    /// ÔÚÔËÐÐÊ±»ò±à¼­Æ÷ÐÞ¸ÄÖµºóµ÷ÓÃÒÔÉúÐ§¡£
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÓ¦ï¿½Ãµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ AudioSourceï¿½ï¿½
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½à¼­ï¿½ï¿½ï¿½Þ¸ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
     /// </summary>
     private void ApplyVolumes()
     {
@@ -252,8 +252,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ²¥·ÅÒ»´ÎÐÔÒôÐ§£¨PlayOneShot£©£¬»á¿¼ÂÇ sfxVolume ²ÎÊý¡£
-    /// clip Îª null »ò sfxSource ²»´æÔÚÊ±²»Ö´ÐÐ¡£
+    /// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½PlayOneShotï¿½ï¿½ï¿½ï¿½ï¿½á¿¼ï¿½ï¿½ sfxVolume ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    /// clip Îª null ï¿½ï¿½ sfxSource ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö´ï¿½Ð¡ï¿½
     /// </summary>
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
@@ -262,8 +262,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÔÚÖ¸¶¨ÊÀ½ç×ø±ê²¥·Å 3D Ò»´ÎÐÔÒôÐ§¡£
-    /// Ê¹ÓÃÁÙÊ± AudioSource£¬²¥·ÅÍê±Ïºó×Ô¶¯Ïú»Ù¡£
+    /// ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê²¥ï¿½ï¿½ 3D Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+    /// Ê¹ï¿½ï¿½ï¿½ï¿½Ê± AudioSourceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïºï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ù¡ï¿½
     /// </summary>
     public AudioSource PlaySFX3D(
         AudioClip clip,
@@ -290,7 +290,7 @@ public class AudioManager : MonoBehaviour
 
         source.Play();
 
-        // ¿¼ÂÇ pitch ±ä»¯ºó£¬°´Êµ¼Ê²¥·ÅÊ±³¤Ïú»Ù£¬±ÜÃâ³¡¾°²ÐÁô¡£
+        // ï¿½ï¿½ï¿½ï¿½ pitch ï¿½ä»¯ï¿½ó£¬°ï¿½Êµï¿½Ê²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ù£ï¿½ï¿½ï¿½ï¿½â³¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         float pitchAbs = Mathf.Max(0.01f, Mathf.Abs(source.pitch));
         float lifeTime = (clip.length / pitchAbs) + 0.1f;
         Destroy(tempGo, lifeTime);
@@ -299,8 +299,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÔÚÖ¸¶¨¹Òµã£¨Transform£©Î»ÖÃ²¥·Å 3D Ò»´ÎÐÔÒôÐ§¡£
-    /// ÉùÔ´»á¸úËæ¹ÒµãÒÆ¶¯£¬²¥·ÅÍê±Ïºó×Ô¶¯Ïú»Ù¡£
+    /// ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Òµã£¨Transformï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ 3D Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+    /// ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïºï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ù¡ï¿½
     /// </summary>
     public AudioSource PlaySFX3D(
         AudioClip clip,
@@ -339,8 +339,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÔÚÖ¸¶¨¹Òµã²¥·Å¿ÉÍ£Ö¹µÄ 3D Ñ­»·ÒôÐ§¡£
-    /// µ÷ÓÃ StopLoopSFX(source) ¿ÉÍ£Ö¹²¢ÇåÀí¡£
+    /// ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Òµã²¥ï¿½Å¿ï¿½Í£Ö¹ï¿½ï¿½ 3D Ñ­ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+    /// ï¿½ï¿½ï¿½ï¿½ StopLoopSFX(source) ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public AudioSource PlayLoopSFX3D(
         AudioClip clip,
@@ -374,8 +374,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Í£Ö¹ÓÉ PlayLoopSFX3D ´´½¨µÄÑ­»·ÒôÐ§£¬²¢ÇåÀíÁÙÊ±¶ÔÏó¡£
-    /// fadeOut <= 0 Ê±Á¢¼´Í£Ö¹£»·ñÔò°´Ê±³¤µ­³öºóÍ£Ö¹¡£
+    /// Í£Ö¹ï¿½ï¿½ PlayLoopSFX3D ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+    /// fadeOut <= 0 Ê±ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½
     /// </summary>
     public void StopLoopSFX(AudioSource source, float fadeOut = 0f)
     {
@@ -392,7 +392,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Á¢¼´ÉèÖÃ²¢²¥·Å±³¾°ÒôÀÖ£¨ÎÞµ­Èëµ­³ö£©¡£
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½Þµï¿½ï¿½ëµ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void PlayMusicImmediate(AudioClip clip, bool loop = true)
     {
@@ -406,8 +406,8 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ê¹ÓÃµ­³öµ±Ç°ÒôÀÖ¡¢µ­ÈëÐÂÒôÀÖµÄ·½Ê½ÇÐ»»±³¾°ÒôÀÖ¡£
-    /// fadeTime Îªµ­Èë/µ­³öÊ±³¤£¨Ãë£©¡£
+    /// Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ·ï¿½Ê½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½
+    /// fadeTime Îªï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½
     /// </summary>
     public void PlayMusic(AudioClip clip, float fadeTime = 0.5f, bool loop = true)
     {
@@ -420,7 +420,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Í£Ö¹µ±Ç°±³¾°ÒôÀÖ£¨¿É´øµ­³ö£©¡£
+    /// Í£Ö¹ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½É´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void StopMusic(float fadeTime = 0.5f)
     {
@@ -430,7 +430,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÉèÖÃ±³¾°ÒôÀÖ×ÜÌåÒôÁ¿£¨0-1£©£¬²¢Á¢¼´Ó¦ÓÃµ½ musicSource¡£
+    /// ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ãµï¿½ musicSourceï¿½ï¿½
     /// </summary>
     public void SetMusicVolume(float v)
     {
@@ -440,7 +440,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÉèÖÃÒôÐ§×ÜÌåÒôÁ¿£¨0-1£©£¬²¢Á¢¼´Ó¦ÓÃµ½ sfxSource¡£
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ãµï¿½ sfxSourceï¿½ï¿½
     /// </summary>
     public void SetSfxVolume(float v)
     {
@@ -450,7 +450,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ¾²Òô/È¡Ïû¾²Òô£¨½öÓ°Ïì´Ë¹ÜÀíÆ÷³ÖÓÐµÄÒôÔ´£©¡£
+    /// ï¿½ï¿½ï¿½ï¿½/È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void SetMute(bool mute)
     {
@@ -459,21 +459,21 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ½«µ±Ç°ÒôÀÖµ­³ö²¢ÇÐ»»µ½ newClip µÄÐ­³ÌÊµÏÖ¡£
-    /// Èô newClip Îª null Ôò½öµ­³ö²¢Í£Ö¹¡£
+    /// ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ newClip ï¿½ï¿½Ð­ï¿½ï¿½Êµï¿½Ö¡ï¿½
+    /// ï¿½ï¿½ newClip Îª null ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½
     /// </summary>
     private IEnumerator FadeMusicRoutine(AudioClip newClip, float duration)
     {
         float startVol = musicSource.volume;
         float target = 0f;
 
-        // µ­³öµ±Ç°ÒôÀÖ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
         float t = 0f;
         while (t < duration)
         {
             t += Time.unscaledDeltaTime;
             float factor = Mathf.Clamp01(t / duration);
-            // ³ËÒÔ musicVolume ÒÔÖ§³ÖÈ«¾ÖÒôÁ¿Ëõ·Å
+            // ï¿½ï¿½ï¿½ï¿½ musicVolume ï¿½ï¿½Ö§ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             musicSource.volume = Mathf.Lerp(startVol, target, factor) * musicVolume;
             yield return null;
         }
@@ -489,7 +489,7 @@ public class AudioManager : MonoBehaviour
 
         musicSource.Play();
 
-        // µ­Èëµ½Éè¶¨µÄ musicVolume£¨´Ó 0 µ½ 1 µÄ²åÖµ£¬ÔÙ³ËÒÔ musicVolume£©
+        // ï¿½ï¿½ï¿½ëµ½ï¿½è¶¨ï¿½ï¿½ musicVolumeï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ 1 ï¿½Ä²ï¿½Öµï¿½ï¿½ï¿½Ù³ï¿½ï¿½ï¿½ musicVolumeï¿½ï¿½
         t = 0f;
         while (t < duration)
         {
@@ -504,7 +504,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ½«µ±Ç°ÒôÀÖµ­³ö²¢Í£Ö¹µÄÐ­³ÌÊµÏÖ¡£
+    /// ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½Ð­ï¿½ï¿½Êµï¿½Ö¡ï¿½
     /// </summary>
     private IEnumerator StopMusicRoutine(float duration)
     {
@@ -524,7 +524,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Èç¹û´«ÈëµÄÐ­³ÌÕýÔÚÔËÐÐÔòÍ£Ö¹Ëü²¢·µ»Ø null£¨·½±ã¸³Öµ/Á´Ê½µ÷ÓÃ£©¡£
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nullï¿½ï¿½ï¿½ï¿½ï¿½ã¸³Öµ/ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½
     /// </summary>
     private Coroutine StopCoroutineIfRunning(Coroutine c)
     {

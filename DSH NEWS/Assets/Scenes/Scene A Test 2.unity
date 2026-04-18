@@ -1725,6 +1725,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: de8489f24ee46774dac33fe89181cdec, type: 3}
   - {fileID: 32900000, guid: 58f6ccd0d6a71d64eaa5bcf062f62355, type: 3}
   - {fileID: 32900000, guid: 7e87ad488aa4fd446833cd2a927bc71d, type: 3}
+  - {fileID: 32900000, guid: 5d77cc541a6ab864fab341dd4b20e79e, type: 3}
   glitchCanvasRenderPath: 1
   compositeCamera: {fileID: 1987265193}
   screenSpaceCameraPlaneDistance: 10
@@ -2211,6 +2212,70 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 6d6c48aa-3f1e-4eaa-8571-f877e8a8b7d6
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 81c86946-8823-4811-8086-69a3d3fd5254
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowImage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Fire
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: f3d8e368-34e4-4cd0-a4a6-000307a219e9
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 807aefdc-4766-487a-8240-e456621c4318
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: Subtitle
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: New Mars Discovery
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1544884886

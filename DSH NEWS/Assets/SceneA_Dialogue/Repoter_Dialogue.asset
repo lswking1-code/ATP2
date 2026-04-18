@@ -4704,7 +4704,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2240.297
-        y: 472.0028
+        y: 469.63013
         width: 160
         height: 30
     - id: 70
@@ -5367,8 +5367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1421.7294, y: 594.02856}
-    canvasZoom: 0.37000006
+    canvasScrollPosition: {x: 1971.5867, y: 394.41495}
+    canvasZoom: 0.9699996
   - id: 6
     fields:
     - title: Title
@@ -5683,7 +5683,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2256.735
-        y: 833.43585
+        y: 832.045
         width: 160
         height: 30
     - id: 87
@@ -5858,7 +5858,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2252.76
+        x: 2252.7598
         y: 1204.657
         width: 160
         height: 30
@@ -6297,7 +6297,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2636.1143
+        x: 2634.6475
         y: 639.6233
         width: 160
         height: 30
@@ -7134,8 +7134,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1931.8696, y: 969.2018}
-    canvasZoom: 0.5800001
+    canvasScrollPosition: {x: 1807.3365, y: 604.8996}
+    canvasZoom: 0.34000015
   - id: 7
     fields:
     - title: Title
@@ -7544,7 +7544,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2267.6804
-        y: 1685.7343
+        y: 1685.0292
         width: 160
         height: 30
     - id: 89
@@ -7826,6 +7826,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: f3d8e368-34e4-4cd0-a4a6-000307a219e9
+        type: 0
+        typeString: 
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -7854,7 +7858,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3018.7947
-        y: 2395.9314
+        y: 2394.0554
         width: 160
         height: 30
     - id: 100
@@ -7889,6 +7893,10 @@ MonoBehaviour:
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 807aefdc-4766-487a-8240-e456621c4318
         type: 0
         typeString: 
       conversationID: 7
@@ -8189,6 +8197,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 6d6c48aa-3f1e-4eaa-8571-f877e8a8b7d6
+        type: 0
+        typeString: 
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -8210,7 +8222,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2670.3232
+        x: 2666.8157
         y: 1095.732
         width: 160
         height: 30
@@ -8335,7 +8347,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2666.7222
-        y: 1648.4923
+        y: 1647.2773
         width: 160
         height: 30
     - id: 112
@@ -8394,7 +8406,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2527.6914
-        y: 1823.9954
+        y: 1821.9126
         width: 160
         height: 30
     - id: 113
@@ -8424,10 +8436,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 81c86946-8823-4811-8086-69a3d3fd5254
         type: 0
         typeString: 
       conversationID: 7
@@ -8441,18 +8457,18 @@ MonoBehaviour:
       - originConversationID: 7
         originDialogueID: 113
         destinationConversationID: 7
-        destinationDialogueID: 99
+        destinationDialogueID: 124
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["PlayedC"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2758.9993
-        y: 1884.7595
+        x: 2753.4988
+        y: 1879.1919
         width: 160
         height: 30
     - id: 114
@@ -8624,8 +8640,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2527.9695
-        y: 1765.8882
+        x: 2528.9187
+        y: 1764.9391
         width: 160
         height: 30
     - id: 118
@@ -8679,8 +8695,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2751.538
-        y: 1761.5508
+        x: 2750.589
+        y: 1760.6017
         width: 160
         height: 30
     - id: 119
@@ -8712,10 +8728,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+        value: "AnimatorTrigger(TalkB, Reporter);\nSendMessage(GlitchFromSequence,
+          1|0, ValueMaster); \nAnimatorTrigger(StopTalk, Reporter)@{{end}};"
         type: 0
         typeString: 
       conversationID: 7
@@ -8739,8 +8753,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2753.1172
-        y: 1822.4814
+        x: 2752.2307
+        y: 1818.7473
         width: 160
         height: 30
     - id: 120
@@ -8927,9 +8941,69 @@ MonoBehaviour:
         y: 1599.6383
         width: 160
         height: 30
+    - id: 124
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ' '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          SendMessage(GlitchVideoFromSequence,
+          11|0, ValueMaster); Delay(18.0);
+
+          AnimatorTrigger(StopTalk, Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 124
+        destinationConversationID: 7
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2756.0552
+        y: 1942.3196
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2138.8918, y: 1517.3733}
-    canvasZoom: 0.6040015
+    canvasScrollPosition: {x: 2120.1938, y: 1230.1967}
+    canvasZoom: 0.4899997
   - id: 8
     fields:
     - title: Title

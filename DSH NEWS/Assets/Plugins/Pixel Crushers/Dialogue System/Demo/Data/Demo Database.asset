@@ -2708,7 +2708,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       conversationID: 6
-      isRoot: 0
+      isRoot: 1
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
@@ -2940,8 +2940,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 102.44789, y: 0}
+    canvasZoom: 0.8200002
   syncInfo:
     syncActors: 0
     syncItems: 0

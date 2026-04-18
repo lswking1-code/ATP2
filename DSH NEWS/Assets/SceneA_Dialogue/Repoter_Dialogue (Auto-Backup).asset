@@ -5185,7 +5185,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2010.4124
+        x: 2011.2253
         y: 989.1398
         width: 160
         height: 30
@@ -5367,8 +5367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1661.937, y: 737.12494}
-    canvasZoom: 0.64
+    canvasScrollPosition: {x: 1421.7294, y: 594.02856}
+    canvasZoom: 0.37000006
   - id: 6
     fields:
     - title: Title
@@ -7134,8 +7134,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2040.8735, y: 801.3572}
-    canvasZoom: 0.58000004
+    canvasScrollPosition: {x: 2219.1052, y: 689.5924}
+    canvasZoom: 0.46000016
   - id: 7
     fields:
     - title: Title
@@ -7544,7 +7544,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2267.6804
-        y: 1685.7343
+        y: 1685.0292
         width: 160
         height: 30
     - id: 89
@@ -7629,7 +7629,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The failure of this Mars observation mission has dampened the institute's 
+        value: The failure of this Mars observation mission has dampened the institute's
           attempts, and has prompted them to begin reassessing the feasibility of
           the programme
         type: 0
@@ -7662,8 +7662,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2259.474
-        y: 1879.8959
+        x: 2273.6208
+        y: 1829.498
         width: 160
         height: 30
     - id: 95
@@ -8335,65 +8335,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2666.7222
-        y: 1648.4923
-        width: 160
-        height: 30
-    - id: 111
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'There are also reports about abnormal liquids flowing back up through
-          household drains:'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'However, after analyzing the photograph, the Department of Science
-          discovered that prolonged viewing of the image lead to fainting amongst
-          research team. '
-        type: 0
-        typeString: 
-      conversationID: 7
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 7
-        originDialogueID: 111
-        destinationConversationID: 7
-        destinationDialogueID: 112
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2533.0947
-        y: 1826.3303
+        y: 1647.2773
         width: 160
         height: 30
     - id: 112
@@ -8451,8 +8393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2536.541
-        y: 1882.255
+        x: 2527.6914
+        y: 1822.9741
         width: 160
         height: 30
     - id: 113
@@ -8495,13 +8437,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 7
-        originDialogueID: 113
-        destinationConversationID: 7
-        destinationDialogueID: 99
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: Variable["PlayedC"] = true
       onExecute:
@@ -8509,8 +8445,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2758.9993
-        y: 1884.7595
+        x: 2754.4155
+        y: 1879.1919
         width: 160
         height: 30
     - id: 114
@@ -8672,7 +8608,7 @@ MonoBehaviour:
       - originConversationID: 7
         originDialogueID: 117
         destinationConversationID: 7
-        destinationDialogueID: 111
+        destinationDialogueID: 112
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8682,8 +8618,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2527.2322
-        y: 1765.8882
+        x: 2528.9187
+        y: 1764.9391
         width: 160
         height: 30
     - id: 118
@@ -8738,7 +8674,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2751.538
-        y: 1761.5508
+        y: 1760.6017
         width: 160
         height: 30
     - id: 119
@@ -8797,8 +8733,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2753.1172
-        y: 1822.4814
+        x: 2752.2307
+        y: 1820.648
         width: 160
         height: 30
     - id: 120
@@ -8985,9 +8921,61 @@ MonoBehaviour:
         y: 1599.6383
         width: 160
         height: 30
+    - id: 124
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The following is a virtual copy of the original photograph.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["PlayedC"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2757.6099
+        y: 1947.8566
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1843.4485, y: 1207.6478}
-    canvasZoom: 0.4240015
+    canvasScrollPosition: {x: 2409.094, y: 1633.7393}
+    canvasZoom: 0.75999945
   - id: 8
     fields:
     - title: Title
@@ -10389,7 +10377,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Maintenance of various computer systems appears to still be progressing
           slowly. Governments around the world have yet to publicly release any updated
-          information regarding Y2K.
+          information regarding the Y2K problem.
         type: 0
         typeString: 
       - title: Sequence
@@ -10448,10 +10436,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: However, a spokesperson clarified at the latest technology press conference
-          that the maintenance initiative may be expanded beyond computer systems
-          to encompass all electronic products, including household items such as
-          televisions and radios.
+        value: However, a spokesperson clarified at the latest press conference that
+          the maintenance  may be expanded beyond computer systems to encompass all
+          electronic products, including household items such as televisions and
+          radios.
         type: 0
         typeString: 
       - title: Sequence
@@ -10509,9 +10497,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Various sectors of society have already begun to express scepticism
-          over the actions currently being taken by governments worldwide, as well
-          as their refusal to disclose further information.
+        value: 'Yet the public have already begun to express scepticism over the
+          actions currently being taken by governments worldwide, as well as their
+          refusal to disclose further information.
 
 '
         type: 0
@@ -10571,8 +10559,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Last week, isolated social groups took to the streets in protest over
-          their dissatisfaction with the system maintenance initiative. The primary
+        value: Last week, some social groups took to the streets in protest over
+          their dissatisfaction with the system maintenance initiative. Their primary
           accusation levelled at the government centred on suspicions that the motives
           behind carrying out this maintenance are not entirely above board
         type: 0
@@ -10595,65 +10583,6 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 112
         destinationConversationID: 8
-        destinationDialogueID: 113
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 4064.2515
-        y: 1728.1497
-        width: 160
-        height: 30
-    - id: 113
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: They believe the entire initiative is nothing more than an excuse
-          for the government to once again line its own pockets.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 113
-        destinationConversationID: 8
         destinationDialogueID: 114
         isConnector: 0
         priority: 2
@@ -10664,8 +10593,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4062.0396
-        y: 1796.6493
+        x: 4064.2515
+        y: 1713.2374
         width: 160
         height: 30
     - id: 114
@@ -10725,8 +10654,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4057.8176
-        y: 1881.5502
+        x: 4060.4495
+        y: 1785.0588
         width: 160
         height: 30
     - id: 115
@@ -10752,7 +10681,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This station will continue to track the latest update.
+        value: This programme will continue to track the latest update.
         type: 0
         typeString: 
       - title: Sequence
@@ -10783,8 +10712,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4056.4336
-        y: 1945.7026
+        x: 4060.4136
+        y: 1855.1553
         width: 160
         height: 30
     - id: 116
@@ -11150,8 +11079,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2558.6064, y: 1198.8121}
-    canvasZoom: 0.54999954
+    canvasScrollPosition: {x: 3068.8398, y: 1438.0698}
+    canvasZoom: 0.6699994
   - id: 9
     fields:
     - title: Title
@@ -13492,8 +13421,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2658.2456
-        y: 833.74646
+        x: 2659.664
+        y: 829.49115
         width: 160
         height: 30
     - id: 104
@@ -13968,8 +13897,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2656.9956
-        y: 901.0532
+        x: 2659.8325
+        y: 896.0887
         width: 160
         height: 30
     - id: 119
@@ -14030,8 +13959,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2654.875
-        y: 990.68066
+        x: 2661.9844
+        y: 954.6316
         width: 160
         height: 30
     - id: 120
@@ -14089,8 +14018,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2649.1582
-        y: 1076.2358
+        x: 2663.5847
+        y: 1012.4407
         width: 160
         height: 30
     - id: 122
@@ -14273,8 +14202,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1399.1388, y: 983.0989}
-    canvasZoom: 0.4600001
+    canvasScrollPosition: {x: 1451.6188, y: 631.0589}
+    canvasZoom: 0.55000013
   - id: 11
     fields:
     - title: Title
@@ -15433,8 +15362,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Passengers awaiting their flights will be able to enjoy free and high-speed
-          wireless internet access during their wait.
+        value: Passengers who are waiting their flights will be able to enjoy free
+          and high-speed wireless internet access during their wait.
         type: 0
         typeString: 
       - title: Sequence
@@ -15584,8 +15513,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1853.9773
-        y: 792.5807
+        x: 1851.2745
+        y: 777.2654
         width: 160
         height: 30
     - id: 156
@@ -15729,8 +15658,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'It will continue to orbit Mars and conduct ongoing observations of
-          the Martian surface conditions '
+        value: 'It will continue to orbit around Mars and conduct ongoing observations
+          of the Martian surface conditions. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16370,8 +16299,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2051.9497
-        y: 988.3738
+        x: 2046.1165
+        y: 998.3738
         width: 160
         height: 30
     - id: 171
@@ -16606,13 +16535,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2054.414
-        y: 1053.2524
+        x: 2048.5808
+        y: 1063.2524
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1346.839, y: 848.4536}
-    canvasZoom: 0.5600015
+    canvasScrollPosition: {x: 1141.1456, y: 349.03818}
+    canvasZoom: 0.59000146
   - id: 13
     fields:
     - title: Title

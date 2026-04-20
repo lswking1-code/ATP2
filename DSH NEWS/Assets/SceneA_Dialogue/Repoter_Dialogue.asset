@@ -1112,8 +1112,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 572.3134, y: 17.063992}
-    canvasZoom: 0.6710527
+    canvasScrollPosition: {x: 581.43726, y: 23.403687}
+    canvasZoom: 0.74500895
   - id: 2
     fields:
     - title: Title
@@ -2085,8 +2085,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 494.2247, y: 95.45475}
-    canvasZoom: 1.0822436
+    canvasScrollPosition: {x: 180.38663, y: 282.21054}
+    canvasZoom: 0.6460264
   - id: 3
     fields:
     - title: Title
@@ -2897,8 +2897,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 696.2993, y: 90.150635}
-    canvasZoom: 0.8267229
+    canvasScrollPosition: {x: 436.5294, y: 227.80315}
+    canvasZoom: 0.6080291
   - id: 4
     fields:
     - title: Title
@@ -3985,8 +3985,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 420.04065, y: 19.108473}
-    canvasZoom: 1.0425799
+    canvasScrollPosition: {x: 320.6877, y: 0}
+    canvasZoom: 0.6530852
   - id: 5
     fields:
     - title: Title
@@ -4310,6 +4310,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: c2d1749d-e834-41cc-8c9f-f73fdd4ded60
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -4461,8 +4465,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2542.242
-        y: 903.98627
+        x: 2559.074
+        y: 897.6369
         width: 160
         height: 30
     - id: 57
@@ -4495,8 +4499,14 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
+          Audio(selection);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: cebd19ee-1e54-4fde-a61d-5de8aabb5587
         type: 0
         typeString: 
       conversationID: 5
@@ -4521,8 +4531,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2770.7214
-        y: 831.6096
+        x: 2768.6895
+        y: 835.67346
         width: 160
         height: 30
     - id: 58
@@ -4767,7 +4777,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2544.8354
-        y: 977.0509
+        y: 975.74243
         width: 160
         height: 30
     - id: 71
@@ -4986,6 +4996,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 1df6c16e-f88d-462b-860c-cb0e4688a337
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -5007,8 +5021,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2761.8186
-        y: 1140.2507
+        x: 2758.0564
+        y: 1138.9619
         width: 160
         height: 30
     - id: 78
@@ -5041,8 +5055,14 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
+          Audio(selection);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 466c6632-8c38-4b64-b114-42ff93012102
         type: 0
         typeString: 
       conversationID: 5
@@ -5067,8 +5087,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2008.9568
-        y: 844.9977
+        x: 2009.8306
+        y: 844.03796
         width: 160
         height: 30
     - id: 79
@@ -5341,6 +5361,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: eb4cca46-4a7c-4bca-a47a-cd06509fc03e
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -5367,8 +5391,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1595.622, y: 72.090645}
-    canvasZoom: 0.6099999
+    canvasScrollPosition: {x: 1720.8484, y: 799.2389}
+    canvasZoom: 0.6115854
   - id: 6
     fields:
     - title: Title
@@ -5921,7 +5945,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2252.7954
+        x: 2255.2053
         y: 1270.0984
         width: 160
         height: 30
@@ -6085,6 +6109,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: b2f13b86-64fc-4bdf-a190-d822a924f1b2
+        type: 0
+        typeString: 
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -6112,7 +6140,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2699.0854
+        x: 2700.5513
         y: 1402.3035
         width: 160
         height: 30
@@ -7134,8 +7162,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2283.2393, y: 385.42633}
-    canvasZoom: 0.64000005
+    canvasScrollPosition: {x: 1981.3268, y: 700.08606}
+    canvasZoom: 0.59928703
   - id: 7
     fields:
     - title: Title
@@ -7424,7 +7452,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2273.0872
-        y: 1489.7401
+        y: 1488.6014
         width: 160
         height: 30
     - id: 87
@@ -8814,8 +8842,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2940.958
-        y: 1464.491
+        x: 2939.6938
+        y: 1455.6396
         width: 160
         height: 30
     - id: 121
@@ -9002,8 +9030,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1905.2275, y: 860.12836}
-    canvasZoom: 0.4899997
+    canvasScrollPosition: {x: 2141.5945, y: 1211.0902}
+    canvasZoom: 0.69758165
   - id: 8
     fields:
     - title: Title
@@ -9323,6 +9351,10 @@ MonoBehaviour:
         typeString: 
       - title: Response Menu Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 2c43a8ae-fc0f-40a5-8aab-2c90733f2e87
         type: 0
         typeString: 
       conversationID: 8
@@ -10616,8 +10648,7 @@ MonoBehaviour:
         destinationDialogueID: 115
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
-        false)
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11014,6 +11045,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
+          Audio(selection);
+
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
@@ -11044,13 +11077,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3128.8572
+        x: 3127.254
         y: 1496.046
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2803.812, y: 1045.9152}
-    canvasZoom: 0.63999945
+    canvasScrollPosition: {x: 3189.6316, y: 1070.7709}
+    canvasZoom: 0.5012201
   - id: 9
     fields:
     - title: Title
@@ -14176,8 +14209,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1603.6838, y: 216.37112}
-    canvasZoom: 0.67
+    canvasScrollPosition: {x: 1696.8809, y: 1090.7957}
+    canvasZoom: 0.7275629
   - id: 11
     fields:
     - title: Title
@@ -15790,7 +15823,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2180.8713
-        y: 448.53033
+        y: 447.43585
         width: 160
         height: 30
     - id: 161
@@ -16518,8 +16551,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 999.4795, y: 0}
-    canvasZoom: 0.5600015
+    canvasScrollPosition: {x: 1151.8677, y: 185.16191}
+    canvasZoom: 0.6833902
   - id: 13
     fields:
     - title: Title

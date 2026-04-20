@@ -2064,26 +2064,14 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: ShowImage
+          m_MethodName: ShowContent
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: fire
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1693797254}
-          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: Subtitle
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Observe The Moon
+            m_StringArgument: moon
             m_BoolArgument: 0
           m_CallState: 2
   - guid: 7814f5a6-d966-4433-9314-31be174add51
@@ -2124,14 +2112,14 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: ShowImage
+          m_MethodName: ShowContent
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: News
+            m_StringArgument: sewer
             m_BoolArgument: 0
           m_CallState: 2
   - guid: e3914008-e65c-4ea6-b12e-c928b4b2f5d7
@@ -2201,19 +2189,7 @@ MonoBehaviour:
   - guid: b7f5c443-e626-4074-adf7-a6759b9c5a68
     onExecute:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1693797254}
-          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: HideImage
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - guid: 6d6c48aa-3f1e-4eaa-8571-f877e8a8b7d6
     onExecute:
       m_PersistentCalls:
@@ -2243,7 +2219,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Fire
+            m_StringArgument: fire
             m_BoolArgument: 0
           m_CallState: 2
   - guid: f3d8e368-34e4-4cd0-a4a6-000307a219e9
@@ -2252,7 +2228,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: HideImage
+          m_MethodName: HideBroadcast
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2268,14 +2244,102 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: Subtitle
+          m_MethodName: ShowContent
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: New Mars Discovery
+            m_StringArgument: mars1
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 466c6632-8c38-4b64-b114-42ff93012102
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: eclipse
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: eb4cca46-4a7c-4bca-a47a-cd06509fc03e
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: cebd19ee-1e54-4fde-a61d-5de8aabb5587
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: tamagochi
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 1df6c16e-f88d-462b-860c-cb0e4688a337
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+  - guid: c2d1749d-e834-41cc-8c9f-f73fdd4ded60
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: b2f13b86-64fc-4bdf-a190-d822a924f1b2
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 2c43a8ae-fc0f-40a5-8aab-2c90733f2e87
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1544884886
@@ -2462,6 +2526,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tvImage: {fileID: 1007248065}
   subtitle: {fileID: 349282385}
+  contents:
+  - id: fossil
+    sprite: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
+    subtitle: An ancient fossil?
+  - id: moon
+    sprite: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
+    subtitle: a full moon.
+  - id: tube
+    sprite: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}
+    subtitle: A weird tube.
+  - id: eclipse
+    sprite: {fileID: 21300000, guid: 6d4b1b6110ff84d869defe10f73702a2, type: 3}
+    subtitle: Eclipse is here...
+  - id: tamagochi
+    sprite: {fileID: 21300000, guid: 2340c0ec6b6cd4195a2be4c05eff9d04, type: 3}
+    subtitle: New Tamagochi!
+  - id: fire
+    sprite: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
+    subtitle: 
+  - id: news
+    sprite: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}
+    subtitle: 
+  - id: earthquake
+    sprite: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
+    subtitle: 
+  - id: mars1
+    sprite: {fileID: 21300000, guid: fa1182e42f84c2343a6a6827b075da08, type: 3}
+    subtitle: Footage of Mars surface.
+  - id: sewer
+    sprite: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}
+    subtitle: A weird sewer.
   earthquake: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
   fire: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
   news: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}

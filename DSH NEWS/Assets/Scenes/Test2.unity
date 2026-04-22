@@ -878,6 +878,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5127665253469060, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
       insertIndex: -1
       addedObject: {fileID: 78123624}
+    - targetCorrespondingSourceObject: {fileID: 5127665253469060, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 78123625}
   m_SourcePrefab: {fileID: 100100000, guid: 04dadcfb8f3a78347aff46020e1aae74, type: 3}
 --- !u!1 &78123620 stripped
 GameObject:
@@ -997,6 +1000,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &78123625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78123620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a78b6ec069e7548a8a66d6bb725860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnInteract: 0
+  disableAfterInteract: 1
+  startDialogueOnInteract: 1
+  conversationTitle: S2_homeless
+  dialogueActor: {fileID: 2280377}
+  dialogueConversant: {fileID: 0}
+  interactSound: {fileID: 0}
+  soundVolume: 1
 --- !u!1 &81569770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,9 +5351,9 @@ MonoBehaviour:
       m_Calls: []
   destroyOnInteract: 0
   disableAfterInteract: 1
-  startDialogueOnInteract: 0
-  conversationTitle: 
-  dialogueActor: {fileID: 0}
+  startDialogueOnInteract: 1
+  conversationTitle: S2_stranger1
+  dialogueActor: {fileID: 2280377}
   dialogueConversant: {fileID: 0}
   interactSound: {fileID: 0}
   soundVolume: 1
@@ -5834,8 +5860,8 @@ MonoBehaviour:
   destroyOnInteract: 0
   disableAfterInteract: 1
   startDialogueOnInteract: 1
-  conversationTitle: 
-  dialogueActor: {fileID: 0}
+  conversationTitle: S2_security
+  dialogueActor: {fileID: 2280377}
   dialogueConversant: {fileID: 0}
   interactSound: {fileID: 0}
   soundVolume: 1

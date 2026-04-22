@@ -3,7 +3,7 @@ using UnityEngine;
 public class GateController : MonoBehaviour
 {
     [Header("Gate Target")]
-    [SerializeField] private Transform gatePanel;
+    [SerializeField] private Transform[] gatePanels;
 
     [Header("Detection")]
     [SerializeField] private string playerTag = "Player";
@@ -21,19 +21,17 @@ public class GateController : MonoBehaviour
     [SerializeField] private Vector3 openLocalPosition = new Vector3(0f, 0f, 1f);
 
     private bool isOpenTarget;
+    private int playerInsideCount;
 
     private void Awake()
     {
-        if (gatePanel == null)
-            gatePanel = transform;
+        if (gatePanels == null || gatePanels.Length == 0)
+            gatePanels = new[] { transform };
 
         if (moveSpeed <= 0f)
             moveSpeed = 0.01f;
 
-        if (useRotation)
-            gatePanel.localRotation = Quaternion.Euler(closedEuler);
-        else
-            gatePanel.localPosition = closedLocalPosition;
+        SetAllGatesToClosedStateImmediately();
 
         Collider triggerCollider = GetComponent<Collider>();
         if (triggerCollider == null || !triggerCollider.isTrigger)
@@ -44,39 +42,63 @@ public class GateController : MonoBehaviour
 
     private void Update()
     {
-        if (gatePanel == null) return;
+        if (gatePanels == null || gatePanels.Length == 0) return;
 
-        if (useRotation)
+        for (int i = 0; i < gatePanels.Length; i++)
         {
-            Quaternion targetRotation = isOpenTarget
-                ? Quaternion.Euler(openEuler)
-                : Quaternion.Euler(closedEuler);
+            Transform gatePanel = gatePanels[i];
+            if (gatePanel == null) continue;
 
-            gatePanel.localRotation = Quaternion.RotateTowards(
-                gatePanel.localRotation,
-                targetRotation,
+            if (useRotation)
+            {
+                Quaternion targetRotation = isOpenTarget
+                    ? Quaternion.Euler(openEuler)
+                    : Quaternion.Euler(closedEuler);
+
+                gatePanel.localRotation = Quaternion.RotateTowards(
+                    gatePanel.localRotation,
+                    targetRotation,
+                    moveSpeed * Time.deltaTime
+                );
+                continue;
+            }
+
+            Vector3 targetPosition = isOpenTarget ? openLocalPosition : closedLocalPosition;
+            gatePanel.localPosition = Vector3.MoveTowards(
+                gatePanel.localPosition,
+                targetPosition,
                 moveSpeed * Time.deltaTime
             );
-            return;
         }
-
-        Vector3 targetPosition = isOpenTarget ? openLocalPosition : closedLocalPosition;
-        gatePanel.localPosition = Vector3.MoveTowards(
-            gatePanel.localPosition,
-            targetPosition,
-            moveSpeed * Time.deltaTime
-        );
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag(playerTag)) return;
+        playerInsideCount++;
         isOpenTarget = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag(playerTag)) return;
-        isOpenTarget = false;
+        playerInsideCount = Mathf.Max(0, playerInsideCount - 1);
+        isOpenTarget = playerInsideCount > 0;
+    }
+
+    private void SetAllGatesToClosedStateImmediately()
+    {
+        if (gatePanels == null) return;
+
+        for (int i = 0; i < gatePanels.Length; i++)
+        {
+            Transform gatePanel = gatePanels[i];
+            if (gatePanel == null) continue;
+
+            if (useRotation)
+                gatePanel.localRotation = Quaternion.Euler(closedEuler);
+            else
+                gatePanel.localPosition = closedLocalPosition;
+        }
     }
 }

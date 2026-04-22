@@ -1727,6 +1727,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 7e87ad488aa4fd446833cd2a927bc71d, type: 3}
   - {fileID: 32900000, guid: 5d77cc541a6ab864fab341dd4b20e79e, type: 3}
   - {fileID: 32900000, guid: 41300e91dd2482e48b22f4ac4f2e9e44, type: 3}
+  - {fileID: 32900000, guid: f3414b1a9d7344649be018cf64501722, type: 3}
   glitchCanvasRenderPath: 1
   compositeCamera: {fileID: 1987265193}
   screenSpaceCameraPlaneDistance: 10

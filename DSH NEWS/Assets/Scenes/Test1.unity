@@ -1741,7 +1741,7 @@ MonoBehaviour:
     Entries:
     - Manuscript: {fileID: 1060024581}
       HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      TextFile: {fileID: 4900000, guid: 2f431ad1e5404b5469ee68d218810ada, type: 3}
       GlitchTextFile: {fileID: 4900000, guid: 5e04ecd8e19a919489039be4f127219d, type: 3}
       Id: a
       ScriptIndex: 0

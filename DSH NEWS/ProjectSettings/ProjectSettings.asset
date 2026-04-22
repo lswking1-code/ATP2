@@ -823,7 +823,9 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Standalone: TMP_PRESENT
+    Android: USE_CINEMACHINE;USE_CINEMACHINE_3;USE_NEW_INPUT
+    Standalone: TMP_PRESENT;USE_CINEMACHINE;USE_CINEMACHINE_3;USE_NEW_INPUT
+    WebGL: USE_CINEMACHINE;USE_CINEMACHINE_3;USE_NEW_INPUT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

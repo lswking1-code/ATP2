@@ -5188,6 +5188,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1352303529906801858, guid: 37bbbb489c971f94882d3ae7bcbd90e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 838518178}
+    - targetCorrespondingSourceObject: {fileID: 1352303529906801858, guid: 37bbbb489c971f94882d3ae7bcbd90e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 838518180}
   m_SourcePrefab: {fileID: 100100000, guid: 37bbbb489c971f94882d3ae7bcbd90e4, type: 3}
 --- !u!1 &838518175 stripped
 GameObject:
@@ -5305,6 +5308,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6522329275384735907, guid: 37bbbb489c971f94882d3ae7bcbd90e4, type: 3}
   m_PrefabInstance: {fileID: 838518174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &838518180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838518175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a78b6ec069e7548a8a66d6bb725860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnInteract: 0
+  disableAfterInteract: 1
+  startDialogueOnInteract: 0
+  conversationTitle: 
+  dialogueActor: {fileID: 0}
+  dialogueConversant: {fileID: 0}
+  interactSound: {fileID: 0}
+  soundVolume: 1
 --- !u!1 &852658336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,7 +5833,7 @@ MonoBehaviour:
       m_Calls: []
   destroyOnInteract: 0
   disableAfterInteract: 1
-  startDialogueOnInteract: 0
+  startDialogueOnInteract: 1
   conversationTitle: 
   dialogueActor: {fileID: 0}
   dialogueConversant: {fileID: 0}

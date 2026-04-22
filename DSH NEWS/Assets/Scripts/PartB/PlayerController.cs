@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     // 交互状态
     private bool isInteracting = false;
     private IInteractable currentInteractable;
+    private NPCController currentNpcController;
     private bool cursorWasLocked = true;
     private bool cursorWasVisible = true;
     private bool hasApplicationFocus = true;
@@ -383,12 +384,23 @@ public class PlayerController : MonoBehaviour
         }
 
         currentInteractable = interactable;
+        currentNpcController = TryGetNpcController(interactable);
+        if (currentNpcController != null)
+        {
+            currentNpcController.OnPlayerInteractStart();
+        }
         isInteracting = true;
     }
 
     private void EndInteraction()
     {
         if (!isInteracting) return;
+
+        if (currentNpcController != null)
+        {
+            currentNpcController.OnPlayerInteractEnd();
+        }
+        currentNpcController = null;
 
         // 恢复光标状态
         Cursor.lockState = cursorWasLocked ? CursorLockMode.Locked : CursorLockMode.None;
@@ -404,6 +416,14 @@ public class PlayerController : MonoBehaviour
         isInteracting = false;
 
         ApplyGameplayCursorState("EndInteraction");
+    }
+
+    private NPCController TryGetNpcController(IInteractable interactable)
+    {
+        if (interactable is not Component interactableComponent)
+            return null;
+
+        return interactableComponent.GetComponentInParent<NPCController>();
     }
 
     private void ApplyGameplayCursorState(string reason)

@@ -1701,9 +1701,9 @@ MonoBehaviour:
     Day: 4
     Entries:
     - Manuscript: {fileID: 1060024581}
-      HasGlitch: 1
-      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
-      GlitchTextFile: {fileID: 4900000, guid: 3ab23188546f8d449a3ad9c1fa9db1d0, type: 3}
+      HasGlitch: 0
+      TextFile: {fileID: 4900000, guid: 3ab23188546f8d449a3ad9c1fa9db1d0, type: 3}
+      GlitchTextFile: {fileID: 0}
       Id: a
       ScriptIndex: 0
       Values:
@@ -1712,9 +1712,9 @@ MonoBehaviour:
       - ValueIndex: 2
         ValueAmount: 15
     - Manuscript: {fileID: 1658591185}
-      HasGlitch: 0
-      TextFile: {fileID: 4900000, guid: f7636a1ba59de404bbd477691b79419d, type: 3}
-      GlitchTextFile: {fileID: 0}
+      HasGlitch: 1
+      TextFile: {fileID: 4900000, guid: 21da97bfe8220a04c9f541f0eb612bd6, type: 3}
+      GlitchTextFile: {fileID: 4900000, guid: f7636a1ba59de404bbd477691b79419d, type: 3}
       Id: b
       ScriptIndex: 0
       Values: []

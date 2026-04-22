@@ -1726,6 +1726,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 58f6ccd0d6a71d64eaa5bcf062f62355, type: 3}
   - {fileID: 32900000, guid: 7e87ad488aa4fd446833cd2a927bc71d, type: 3}
   - {fileID: 32900000, guid: 5d77cc541a6ab864fab341dd4b20e79e, type: 3}
+  - {fileID: 32900000, guid: 41300e91dd2482e48b22f4ac4f2e9e44, type: 3}
   glitchCanvasRenderPath: 1
   compositeCamera: {fileID: 1987265193}
   screenSpaceCameraPlaneDistance: 10
@@ -2333,6 +2334,38 @@ MonoBehaviour:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
           m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 825e9d79-c2b9-459a-a152-b88445cd6f69
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 72d11993-e67e-4b0d-81a5-49a4d0d21612
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideImage
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

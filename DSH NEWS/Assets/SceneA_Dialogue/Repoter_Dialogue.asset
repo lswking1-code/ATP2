@@ -4375,6 +4375,12 @@ MonoBehaviour:
         destinationDialogueID: 78
         isConnector: 0
         priority: 2
+      - originConversationID: 5
+        originDialogueID: 50
+        destinationConversationID: 5
+        destinationDialogueID: 85
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["FinishedBranch"] < 2
       userScript: 
       onExecute:
@@ -4827,8 +4833,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2544.8354
-        y: 975.74243
+        x: 2492.602
+        y: 956.3967
         width: 160
         height: 30
     - id: 71
@@ -4891,8 +4897,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2548.3953
-        y: 1054.4552
+        x: 2496.1619
+        y: 1035.1095
         width: 160
         height: 30
     - id: 75
@@ -5009,8 +5015,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2765.2366
-        y: 1050.5648
+        x: 2771.04
+        y: 1031.2192
         width: 160
         height: 30
     - id: 77
@@ -5072,8 +5078,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2758.0564
-        y: 1138.9619
+        x: 2769.6636
+        y: 1090.598
         width: 160
         height: 30
     - id: 78
@@ -5499,9 +5505,376 @@ MonoBehaviour:
         y: 549.3336
         width: 160
         height: 30
+    - id: 85
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The demolition of St. Elizabeth's Psychiatric Hospital, originally
+          scheduled to commence last October, will now officially get underway this
+          coming Monday after the successful dead wood clearance operation.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          Audio(selection);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: dc1e68d7-ab80-4a7f-bb39-5faeeead39e7
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 85
+        destinationConversationID: 5
+        destinationDialogueID: 86
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["SituationD"] == true and (Variable["PlayedD"] ==
+        false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3031.7983
+        y: 838.62964
+        width: 160
+        height: 30
+    - id: 86
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: As the latest demolition techniques are to be employed in this project,
+          the general director, Mr. Royce Chamberlain, has stated that the operation
+          could be completed in its entirety as early as the end of this year.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 86
+        destinationConversationID: 5
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3031.7158
+        y: 900.71704
+        width: 160
+        height: 30
+    - id: 87
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: However, according to official records, the local government has previously
+          undertaken several demolition attempts on St. Elizabeth's Psychiatric Hospital,
+          all of which were halted midway for reasons that remain unexplained.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 87
+        destinationConversationID: 5
+        destinationDialogueID: 88
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3029.5884
+        y: 968.0238
+        width: 160
+        height: 30
+    - id: 88
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Coupled with the persistent haunting legends that have circulated
+          ever since the hospital was abandoned, a great many members of the public
+          are not in favour of the local government proceeding with the demolition
+          plan.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 88
+        destinationConversationID: 5
+        destinationDialogueID: 89
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3028.3455
+        y: 1026.8298
+        width: 160
+        height: 30
+    - id: 89
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Chamberlain, however, stated: "We will not be terminating a demolition
+          project that has already been decided upon simply because of these rumours."'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 89
+        destinationConversationID: 5
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3027.4456
+        y: 1088.5358
+        width: 160
+        height: 30
+    - id: 90
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Regarding the aftermath of the demolition, the local government has
+          indicated that discussions are still ongoing as to the most suitable plan
+          for making use of the vacant land.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkA, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 90
+        destinationConversationID: 5
+        destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PlayedD"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3023.3413
+        y: 1157.3541
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1733.5328, y: 421.40134}
-    canvasZoom: 0.8469137
+    canvasScrollPosition: {x: 1240.474, y: 881.0761}
+    canvasZoom: 0.516914
   - id: 6
     fields:
     - title: Title

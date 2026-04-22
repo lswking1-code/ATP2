@@ -3,38 +3,41 @@ using UnityEngine.Events;
 using PixelCrushers.DialogueSystem;
 
 
-/// Í¨ÓÃ¿É½»»¥ÎïÌå×é¼ş¡£
-/// ÔÚ Inspector ÖĞÍ¨¹ı UnityEvent Ö¸¶¨½»»¥Ê±´¥·¢µÄĞĞÎª
-/// £¨ÀıÈç²¥·Å¶¯»­¡¢ÇĞ»»×´Ì¬¡¢·¢ËÍÊÂ¼şµÈ£©¡£
-/// ¿ÉÒÔÑ¡Ôñ²¥·ÅÒôĞ§¡¢ÔÚ½»»¥ºóÏú»Ù×ÔÉí»ò½ûÖ¹ÔÙ´Î½»»¥¡£
+/// é€šç”¨å¯äº¤äº’ç‰©ä½“ç»„ä»¶ / Generic interactable object component.
+/// åœ¨ Inspector ä¸­é€šè¿‡ UnityEvent æŒ‡å®šäº¤äº’æ—¶è§¦å‘çš„è¡Œä¸º /
+/// Configure interaction behaviors via UnityEvent in the Inspector
+/// ï¼ˆä¾‹å¦‚æ’­æ”¾åŠ¨ç”»ã€åˆ‡æ¢çŠ¶æ€ã€å‘é€äº‹ä»¶ç­‰ï¼‰/
+/// (e.g., play animations, toggle states, send events).
+/// å¯ä»¥é€‰æ‹©æ’­æ”¾éŸ³æ•ˆã€åœ¨äº¤äº’åé”€æ¯è‡ªèº«æˆ–ç¦æ­¢å†æ¬¡äº¤äº’ /
+/// Optionally play SFX, destroy itself after interaction, or disable re-interaction.
 
 public class Interactable : MonoBehaviour, IInteractable
 {
-    [Header("ÊÂ¼ş")]
-    [SerializeField, Tooltip("½»»¥Ê±´¥·¢µÄÊÂ¼ş£¨¿ÉÔÚ Inspector ÖĞÍÏÈëÆäËû×é¼şµÄ·½·¨£©¡£")]
+    [Header("äº‹ä»¶ / Events")]
+    [SerializeField, Tooltip("äº¤äº’æ—¶è§¦å‘çš„äº‹ä»¶ï¼ˆå¯åœ¨ Inspector ä¸­æ‹–å…¥å…¶ä»–ç»„ä»¶çš„æ–¹æ³•ï¼‰/ Event invoked on interaction (you can drag methods from other components in the Inspector).")]
     private UnityEvent onInteract;
 
-    [SerializeField, Tooltip("½»»¥ºóÊÇ·ñÏú»Ù¸ÃÎïÌå¡£")]
+    [SerializeField, Tooltip("äº¤äº’åæ˜¯å¦é”€æ¯è¯¥ç‰©ä½“ / Whether to destroy this object after interaction.")]
     private bool destroyOnInteract = false;
 
-    [SerializeField, Tooltip("½»»¥ºóÊÇ·ñ½ûÖ¹ÖØ¸´½»»¥£¨ÈôÎª false£¬¿ÉÖØ¸´´¥·¢ onInteract£©¡£")]
+    [SerializeField, Tooltip("äº¤äº’åæ˜¯å¦ç¦æ­¢é‡å¤äº¤äº’ï¼ˆè‹¥ä¸º falseï¼Œå¯é‡å¤è§¦å‘ onInteractï¼‰/ Whether to block repeated interaction after first use (if false, onInteract can be triggered repeatedly).")]
     private bool disableAfterInteract = true;
 
-    [Header("¶Ô»°ÏµÍ³")]
-    [SerializeField, Tooltip("½»»¥Ê±ÊÇ·ñ×Ô¶¯´¥·¢ Pixel Crushers Dialogue System µÄ¶Ô»°¡£")]
+    [Header("å¯¹è¯ç³»ç»Ÿ / Dialogue System")]
+    [SerializeField, Tooltip("äº¤äº’æ—¶æ˜¯å¦è‡ªåŠ¨è§¦å‘ Pixel Crushers Dialogue System çš„å¯¹è¯ / Whether to automatically start a Pixel Crushers Dialogue System conversation on interaction.")]
     private bool startDialogueOnInteract = false;
 
-    [SerializeField, Tooltip("Òª²¥·ÅµÄ Conversation Title£¨ĞèÓë Dialogue Database ÖĞµÄ»á»°±êÌâÒ»ÖÂ£©¡£")]
+    [SerializeField, Tooltip("è¦æ’­æ”¾çš„ Conversation Titleï¼ˆéœ€ä¸ Dialogue Database ä¸­çš„ä¼šè¯æ ‡é¢˜ä¸€è‡´ï¼‰/ Conversation Title to play (must match the title in the Dialogue Database).")]
     private string conversationTitle;
 
-    [SerializeField, Tooltip("¶Ô»°ÖĞµÄ Actor£¨Í¨³£ÎªÍæ¼Ò£©¡£Áô¿ÕÊ±Ê¹ÓÃ Camera.main µÄ Transform¡£")]
+    [SerializeField, Tooltip("å¯¹è¯ä¸­çš„ Actorï¼ˆé€šå¸¸ä¸ºç©å®¶ï¼‰ã€‚ç•™ç©ºæ—¶ä½¿ç”¨ Camera.main çš„ Transform / Actor in the conversation (usually the player). If empty, Camera.main transform is used.")]
     private Transform dialogueActor;
 
-    [SerializeField, Tooltip("¶Ô»°ÖĞµÄ Conversant£¨Í¨³£Îªµ±Ç°ÎïÌå/NPC£©¡£Áô¿ÕÊ±Ê¹ÓÃµ±Ç°ÎïÌåµÄ Transform¡£")]
+    [SerializeField, Tooltip("å¯¹è¯ä¸­çš„ Conversantï¼ˆé€šå¸¸ä¸ºå½“å‰ç‰©ä½“/NPCï¼‰ã€‚ç•™ç©ºæ—¶ä½¿ç”¨å½“å‰ç‰©ä½“çš„ Transform / Conversant in the conversation (usually this object/NPC). If empty, this object's transform is used.")]
     private Transform dialogueConversant;
 
-    [Header("ÒôÆµ")]
-    [SerializeField, Tooltip("½»»¥Ê±²¥·ÅµÄÒôĞ§£¨¿ÉÑ¡£©¡£")]
+    [Header("éŸ³é¢‘ / Audio")]
+    [SerializeField, Tooltip("äº¤äº’æ—¶æ’­æ”¾çš„éŸ³æ•ˆï¼ˆå¯é€‰ï¼‰/ Optional sound effect played on interaction.")]
     private AudioClip interactSound;
 
     [SerializeField, Range(0f, 1f)]
@@ -43,13 +46,14 @@ public class Interactable : MonoBehaviour, IInteractable
     private bool hasInteracted = false;
 
 
-    /// IInteractable ½Ó¿ÚÊµÏÖ£¬ÓÉ PlayerController µ÷ÓÃ¡£
+    /// IInteractable æ¥å£å®ç°ï¼Œç”± PlayerController è°ƒç”¨ /
+    /// IInteractable implementation, called by PlayerController.
 
     public void OnInteract()
     {
         if (hasInteracted && disableAfterInteract) return;
 
-        onInteract?.Invoke(); // ´¥·¢ÊÂ¼ş£¨Èç¹ûÓĞ¼àÌı£©
+        onInteract?.Invoke(); // è§¦å‘äº‹ä»¶ï¼ˆå¦‚æœæœ‰ç›‘å¬ï¼‰/ Invoke event (if there are listeners).
 
         TryStartDialogue();
 
@@ -65,7 +69,8 @@ public class Interactable : MonoBehaviour, IInteractable
         if (disableAfterInteract)
             hasInteracted = true;
 
-        // ¿ÉÑ¡£º½»»¥ºó¸üĞÂÌáÊ¾×´Ì¬£¨Èç¹ûĞèÒª UI Ë¢ĞÂÌáÊ¾ÏÔÊ¾£©¡£
+        // å¯é€‰ï¼šäº¤äº’åæ›´æ–°æç¤ºçŠ¶æ€ï¼ˆå¦‚æœéœ€è¦ UI åˆ·æ–°æç¤ºæ˜¾ç¤ºï¼‰/
+        // Optional: refresh prompt state after interaction (if UI hint refresh is needed).
     }
 
     private void TryStartDialogue()
@@ -74,7 +79,7 @@ public class Interactable : MonoBehaviour, IInteractable
 
         if (string.IsNullOrWhiteSpace(conversationTitle))
         {
-            Debug.LogWarning($"[{name}] ÒÑ¹´Ñ¡ startDialogueOnInteract£¬µ« conversationTitle Îª¿Õ¡£");
+            Debug.LogWarning($"[{name}] å·²å‹¾é€‰ startDialogueOnInteractï¼Œä½† conversationTitle ä¸ºç©ºã€‚");
             return;
         }
 

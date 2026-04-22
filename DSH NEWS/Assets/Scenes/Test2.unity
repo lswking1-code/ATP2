@@ -10099,9 +10099,9 @@ MonoBehaviour:
   roarClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}
   roarSourcePoint: {fileID: 2147000108}
   volume: 1
-  minDistance: 2.5
-  maxDistance: 65
-  rolloffMode: 0
+  minDistance: 8
+  maxDistance: 80
+  rolloffMode: 1
   triggerOnce: 1
   hasTriggered: 0
 --- !u!1 &2147000107
@@ -10129,7 +10129,7 @@ Transform:
   m_GameObject: {fileID: 2147000107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.95, y: -18.37, z: 0.61}
+  m_LocalPosition: {x: -7.95, y: -16.5, z: -3.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

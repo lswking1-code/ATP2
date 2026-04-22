@@ -4490,6 +4490,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: c14453a0-0ca7-413a-9866-051da57d4147
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -5501,8 +5505,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1717.72, y: 650.30853}
-    canvasZoom: 0.49725762
+    canvasScrollPosition: {x: 1740.0605, y: 663.7017}
+    canvasZoom: 0.52725774
   - id: 6
     fields:
     - title: Title
@@ -6289,6 +6293,10 @@ MonoBehaviour:
           Reporter)@{{end}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: fb20169a-d98b-442d-b405-fccf40e16648
+        type: 0
+        typeString: 
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -6311,8 +6319,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2486.6853
-        y: 823.6007
+        x: 2487.4028
+        y: 822.88336
         width: 160
         height: 30
     - id: 101
@@ -7272,8 +7280,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1981.3268, y: 700.08606}
-    canvasZoom: 0.59928703
+    canvasScrollPosition: {x: 1940.8994, y: 566.8213}
+    canvasZoom: 0.56928706
   - id: 7
     fields:
     - title: Title
@@ -9140,8 +9148,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2129.8816, y: 1522.5798}
-    canvasZoom: 0.5475818
+    canvasScrollPosition: {x: 2438.1042, y: 1496.8696}
+    canvasZoom: 0.9075815
   - id: 8
     fields:
     - title: Title
@@ -9801,7 +9809,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3348.4497
-        y: 1203.7201
+        y: 1202.0394
         width: 160
         height: 30
     - id: 94
@@ -11192,8 +11200,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2979.608, y: 1365.9619}
-    canvasZoom: 1.2599839
+    canvasScrollPosition: {x: 3066.3862, y: 1471.5654}
+    canvasZoom: 0.6899845
   - id: 9
     fields:
     - title: Title
@@ -12985,7 +12993,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1928.0636
-        y: 1338.1644
+        y: 1336.9039
         width: 160
         height: 30
     - id: 94
@@ -13111,7 +13119,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2185.8599
-        y: 679.59845
+        y: 681.3521
         width: 160
         height: 30
     - id: 96
@@ -13634,7 +13642,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 3dfd1ac7-7de2-40ce-b24c-890321a861b4
+        value: 825e9d79-c2b9-459a-a152-b88445cd6f69
         type: 0
         typeString: 
       conversationID: 10
@@ -13658,7 +13666,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2188.3513
+        x: 2186.7998
         y: 473.18384
         width: 160
         height: 30
@@ -13707,7 +13715,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 112
         destinationConversationID: 10
-        destinationDialogueID: 122
+        destinationDialogueID: 123
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -14162,9 +14170,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'The man has since been taken into police custody and faces accusations
-          from several of those filmed of violating personal privacy and portrait
-          rights, though he has denied all charges. '
+        value: Local police department issued a search operation of the man and urge
+          citizens to provide any useful information that help to capture him.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14185,7 +14192,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 122
         destinationConversationID: 10
-        destinationDialogueID: 123
+        destinationDialogueID: 126
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -14195,8 +14202,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2043.065
-        y: 1039.2646
+        x: 2061.1604
+        y: 1170.6934
         width: 160
         height: 30
     - id: 123
@@ -14245,7 +14252,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 123
         destinationConversationID: 10
-        destinationDialogueID: 124
+        destinationDialogueID: 122
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -14255,70 +14262,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2043.105
-        y: 1100.091
+        x: 2045.9622
+        y: 1060.091
         width: 160
         height: 30
-    - id: 124
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Further details regarding the case remain unclear, But the local court
-          is compulsorily expected to hear the case next month.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 124
-        destinationConversationID: 10
-        destinationDialogueID: 98
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: Variable["PlayedB"] = true
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2037.5576
-        y: 1156.6334
-        width: 160
-        height: 30
-    - id: 125
+    - id: 126
       fields:
       - title: Title
         value: 
@@ -14348,7 +14296,7 @@ MonoBehaviour:
         value: 'AnimatorTrigger(TalkA, Reporter);
 
           SendMessage(GlitchVideoFromSequence,
-          12|0, ValueMaster); Delay(18.0);
+          12|0, ValueMaster); Delay(22.2);
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -14360,21 +14308,27 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 126
+        destinationConversationID: 10
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: Variable["PlayedA"] = true
+      userScript: Variable["PlayedB"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1936.8558
-        y: 1387.9935
+        x: 2151.925
+        y: 1279.9446
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1639.4348, y: 1161.049}
-    canvasZoom: 0.727562
+    canvasScrollPosition: {x: 605.3076, y: 0}
+    canvasZoom: 0.27999955
   - id: 11
     fields:
     - title: Title
@@ -15492,7 +15446,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 2e0d7a7f-9052-491f-8ce9-ed746d089416
+        value: 72d11993-e67e-4b0d-81a5-49a4d0d21612
         type: 0
         typeString: 
       conversationID: 12
@@ -17084,8 +17038,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 396.99585, y: 312.05383}
-    canvasZoom: 0.41339037
+    canvasScrollPosition: {x: 2551.873, y: 410.06857}
+    canvasZoom: 0.7433902
   - id: 13
     fields:
     - title: Title

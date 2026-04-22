@@ -16577,10 +16577,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkD, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
+        value: "AnimatorTrigger(TalkD, Reporter);\nSendMessage(GlitchFromSequence,
+          3|0.7, ValueMaster); \nAnimatorTrigger(StopTalk, Reporter)@{{end}};"
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -16608,8 +16606,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2231.885
-        y: 1054.7712
+        x: 2230.079
+        y: 1058.3832
         width: 160
         height: 30
     - id: 173
@@ -17127,7 +17125,7 @@ MonoBehaviour:
         value: 'AnimatorTrigger(TalkD, Reporter);
 
           SendMessage(GlitchVideoFromSequence,
-          13|0, ValueMaster); Delay(19.0);
+          13|0, ValueMaster); Delay(18.5);
 
           AnimatorTrigger(StopTalk, Reporter)@{{end}};'
         type: 0
@@ -17162,8 +17160,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2180.4336, y: 307.18213}
-    canvasZoom: 0.5333902
+    canvasScrollPosition: {x: 2000.4684, y: 912.3382}
+    canvasZoom: 0.89338976
   - id: 13
     fields:
     - title: Title

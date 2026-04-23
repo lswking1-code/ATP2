@@ -545,9 +545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueEvent: {fileID: 11400000, guid: 87b558a72a5ac1745b3f4db88cc30473, type: 2}
-  influenceValue: 0
-  viewership: 0
-  day: 0
+  influenceValue: 40
+  viewership: 65
+  day: 5
   Situations: []
 --- !u!1 &799467042
 GameObject:

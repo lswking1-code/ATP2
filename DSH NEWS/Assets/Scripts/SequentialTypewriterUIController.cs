@@ -87,6 +87,12 @@ public class SequentialTypewriterUIController : MonoBehaviour
 
     private List<string> SelectContentBranch()
     {
+        // ABC 分支判定总览（按顺序）：
+        // 1) 读不到 ValueManage -> 直接走 A（兜底）
+        // 2) viewership <= X -> A
+        // 3) viewership > X 且 influence < Y -> B
+        // 4) viewership > X 且 influence >= Y -> C
+        // 其中 X = viewershipThresholdX，Y = influenceThresholdY（都在 Inspector 可配）
         if (valueManage == null)
         {
             return branchAContentList;
@@ -95,11 +101,13 @@ public class SequentialTypewriterUIController : MonoBehaviour
         float viewership = valueManage.viewership;
         float influence = valueManage.influenceValue;
 
+        // 第一道门：收视率未超过 X，固定进入 A
         if (viewership <= viewershipThresholdX)
         {
             return branchAContentList;
         }
 
+        // 第二道门：收视率已超过 X 后，再用影响力与 Y 比较决定 B/C
         if (influence < influenceThresholdY)
         {
             return branchBContentList;

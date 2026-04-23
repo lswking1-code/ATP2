@@ -1425,8 +1425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 353}
-  m_SizeDelta: {x: 1600, y: 130}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644408196
 MonoBehaviour:
@@ -1570,9 +1570,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9575394e8f051a3478518d8fc657225f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  branchAContentList: []
-  branchBContentList: []
-  branchCContentList: []
+  branchAContentList:
+  - Dead End
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  branchBContentList:
+  - True End
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  branchCContentList:
+  - Bad End
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - I don't want to look at the computer screen anymore, I want to go to sleep.
   textUiList:
   - {fileID: 306704313}
   - {fileID: 393239045}
@@ -1581,8 +1599,8 @@ MonoBehaviour:
   - {fileID: 630854558}
   - {fileID: 686582681}
   - {fileID: 445513234}
-  viewershipThresholdX: 0
-  influenceThresholdY: 0
+  viewershipThresholdX: 80
+  influenceThresholdY: 60
   valueManage: {fileID: 0}
   charIntervalSeconds: 0.05
   itemIntervalSeconds: 1

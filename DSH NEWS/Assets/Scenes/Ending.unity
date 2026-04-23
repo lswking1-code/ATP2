@@ -1572,25 +1572,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   branchAContentList:
   - Dead End
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - 'You failed to pay the rent on time. '
+  - 'He rejected your request for grace and kicked you out. '
+  - "You are now homeless\u2026. "
+  - 'Three days later a pedestrian found a body at the end of the pavement '
+  - 'The body is crooked in a weird way and present a visually horrific form '
+  - "The local Police Department began to conduct an investigation regarding the
+    man\u2019s death. "
+  - 'However there is little progress being made so far. '
   branchBContentList:
   - True End
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - 'You head to the studio for work as usual. '
+  - The scenery along the way remains unchanged as ever
+  - 'People in the subway getting on and off the trains toward their destinations. '
+  - 'Yet even this now feels incredibly precious.  '
+  - 'Because in a place unknown to them, you have experienced and fought with the
+    horror that the rest of the world could never begin to imagine. '
+  - 'you have come to understand the value that lies within those ordinary, unremarkable
+    moments. '
+  - 'Just like them, you survived the onslaught of those strange and unsettling forces. '
+  - "More than that \u2014 you succeeded in stopping the Anomalies from further encroaching
+    upon this world. "
+  - And now this world, free from the influence of those abnormal phenomena, has
+    not become worse.
   branchCContentList:
   - Bad End
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
-  - I don't want to look at the computer screen anymore, I want to go to sleep.
+  - 'You woke up by a strange noise outside the house '
+  - 'Someone is knocking your window '
+  - 'You can hear a low roar coming from every corner inside the house '
+  - 'You are so afraid that you locked yourself inside the bedroom. '
+  - 'The situation continues for the next few days '
+  - 'You tried to phone the police for help, but no one answered on the other side
+    of the line. '
+  - "Seems like no one will come to save you\u2026. "
   textUiList:
   - {fileID: 306704313}
   - {fileID: 393239045}

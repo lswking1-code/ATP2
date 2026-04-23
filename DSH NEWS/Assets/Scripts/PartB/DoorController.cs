@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 
 
@@ -39,6 +40,10 @@ public class DoorController : MonoBehaviour, IInteractable
 
     [SerializeField, Range(0f, 1f), Tooltip("音效音量")]
     private float soundVolume = 1f;
+
+    [Header("Debug")]
+    [SerializeField, Tooltip("启用后，记录每次门状态修改来源")]
+    private bool logStateChanges = false;
 
     // 内部状态
     private Quaternion closedRotation;
@@ -99,6 +104,7 @@ public class DoorController : MonoBehaviour, IInteractable
         PlayToggleSound(!isOpen);
 
         isOpen = !isOpen;
+        LogStateChange("Toggle", to);
     }
 
 
@@ -111,6 +117,41 @@ public class DoorController : MonoBehaviour, IInteractable
         animCoroutine = StartCoroutine(AnimateRotation(hinge.localRotation, openRotation, openSpeed));
         PlayToggleSound(true);
         isOpen = true;
+        LogStateChange("Open", openRotation);
+    }
+
+    /// <summary>
+    /// 以指定局部欧拉角打开门（用于剧情微开等自定义角度）。
+    /// </summary>
+    public void OpenToLocalEuler(Vector3 targetOpenEuler, bool playSound = true)
+    {
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+
+        Quaternion targetRotation = Quaternion.Euler(targetOpenEuler);
+        animCoroutine = StartCoroutine(AnimateRotation(hinge.localRotation, targetRotation, openSpeed));
+
+        if (playSound)
+            PlayToggleSound(true);
+
+        isOpen = true;
+        LogStateChange("OpenToLocalEuler", targetRotation);
+    }
+
+    /// <summary>
+    /// 基于“关门角度”按增量打开（例如 Y +20 度用于微开缝隙）。
+    /// </summary>
+    public void OpenByDeltaFromClosed(Vector3 deltaEuler, bool playSound = true)
+    {
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+
+        Quaternion targetRotation = closedRotation * Quaternion.Euler(deltaEuler);
+        animCoroutine = StartCoroutine(AnimateRotation(hinge.localRotation, targetRotation, openSpeed));
+
+        if (playSound)
+            PlayToggleSound(true);
+
+        isOpen = true;
+        LogStateChange("OpenByDeltaFromClosed", targetRotation);
     }
 
 
@@ -123,6 +164,7 @@ public class DoorController : MonoBehaviour, IInteractable
         animCoroutine = StartCoroutine(AnimateRotation(hinge.localRotation, closedRotation, openSpeed));
         PlayToggleSound(false);
         isOpen = false;
+        LogStateChange("Close", closedRotation);
     }
 
     private IEnumerator AnimateRotation(Quaternion from, Quaternion to, float speed)
@@ -156,6 +198,22 @@ public class DoorController : MonoBehaviour, IInteractable
         var clip = opening ? openSound : closeSound;
         if (clip != null)
             AudioManager.Instance.PlaySFX(clip, soundVolume);
+    }
+
+    private void LogStateChange(string action, Quaternion targetRotation)
+    {
+        if (!logStateChanges) return;
+
+        // skipFrames=2: 0=LogStateChange, 1=当前开关方法, 2=实际调用者
+        StackTrace trace = new StackTrace(2, true);
+        StackFrame callerFrame = trace.FrameCount > 0 ? trace.GetFrame(0) : null;
+        string caller = callerFrame != null
+            ? $"{callerFrame.GetMethod().DeclaringType?.Name}.{callerFrame.GetMethod().Name}"
+            : "UnknownCaller";
+
+        UnityEngine.Debug.Log(
+            $"[DoorController] {name} action={action}, caller={caller}, targetEuler={targetRotation.eulerAngles}, isOpen={isOpen}",
+            this);
     }
 
     // 可选：在编辑器中显示当前状态信息

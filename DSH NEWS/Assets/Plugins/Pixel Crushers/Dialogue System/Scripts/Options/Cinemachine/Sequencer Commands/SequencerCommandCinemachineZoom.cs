@@ -39,23 +39,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             {
                 if (DialogueDebug.LogInfo) Debug.Log("Dialogue System: Sequencer: CinemachineZoom(" + vcam + ", " + 
                     zoom + ", " + duration + ")");
-#if USE_CINEMACHINE_3
-                if (vcam.Lens.Orthographic)
-                {
-                    if (duration > 0)
-                    {
-                        var originalSize = vcam.Lens.OrthographicSize;
-                        float elapsed = 0;
-                        while (elapsed < duration)
-                        {
-                            vcam.Lens.OrthographicSize = Mathf.Lerp(originalSize, zoom, elapsed / duration);
-                            yield return null;
-                            elapsed += DialogueTime.deltaTime;
-                        }
-                    }
-                    vcam.Lens.OrthographicSize = zoom;
-                }
-#else
+#if USE_CINEMACHINE
                 if (vcam.m_Lens.Orthographic)
                 {
                     if (duration > 0)
@@ -70,6 +54,22 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
                         }
                     }
                     vcam.m_Lens.OrthographicSize = zoom;
+                }
+#else
+                if (vcam.Lens.Orthographic)
+                {
+                    if (duration > 0)
+                    {
+                        var originalSize = vcam.Lens.OrthographicSize;
+                        float elapsed = 0;
+                        while (elapsed < duration)
+                        {
+                            vcam.Lens.OrthographicSize = Mathf.Lerp(originalSize, zoom, elapsed / duration);
+                            yield return null;
+                            elapsed += DialogueTime.deltaTime;
+                        }
+                    }
+                    vcam.Lens.OrthographicSize = zoom;
                 }
 #endif
                 else

@@ -929,6 +929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890593572}
   - component: {fileID: 1890593573}
+  - component: {fileID: 1890593574}
   m_Layer: 0
   m_Name: HomeManager
   m_TagString: Untagged
@@ -972,6 +973,24 @@ MonoBehaviour:
   positionToGo: {x: 0, y: 0, z: 0}
   rotationToGo: {x: 0, y: 0, z: 0}
   SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}
+--- !u!114 &1890593574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890593571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e4c91d82b14e5f8c3d2a1b0e9f8c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueManageOverride: {fileID: 0}
+  valueEvent: {fileID: 11400000, guid: 87b558a72a5ac1745b3f4db88cc30473, type: 2}
+  viewershipEventIndex: 2
+  luaVariableName: Viewership
+  influenceEventIndex: 1
+  influenceLuaVariableName: Influence
 --- !u!1 &2063610305
 GameObject:
   m_ObjectHideFlags: 0

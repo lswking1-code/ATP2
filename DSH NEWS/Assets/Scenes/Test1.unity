@@ -1617,6 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903561670}
   - component: {fileID: 903561669}
+  - component: {fileID: 903561671}
   m_Layer: 0
   m_Name: Dialogue Trigger
   m_TagString: Untagged
@@ -1704,6 +1705,26 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 0aa3378679462479b971f84ad2d2dc86, type: 2}
+--- !u!114 &903561671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903561668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9de54b5b4a48bfa3f0fd9d40ef8f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  dayConversations:
+  - Day: 1
+    ConversationTitle: S1_Day1
+  usePatternFallback: 1
+  fallbackPattern: S1_Day{0}
+  defaultConversationTitle: 
+  papersRoot: {fileID: 921857521}
 --- !u!4 &903561670
 Transform:
   m_ObjectHideFlags: 0

@@ -4524,7 +4524,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkB, Reporter);
 
-          AudioWait(selection);
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4556,7 +4556,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2486
+        x: 2486.8423
         y: 837.4558
         width: 160
         height: 30
@@ -4653,7 +4653,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AudioWait(selection);
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -4745,7 +4745,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2768.607
-        y: 897.1383
+        y: 897.76086
         width: 160
         height: 30
     - id: 61
@@ -5144,7 +5144,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AudioWait(selection);
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5176,8 +5176,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2010.1499
-        y: 842.8811
+        x: 2012.4639
+        y: 844.03796
         width: 160
         height: 30
     - id: 79
@@ -5508,10 +5508,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkE, Reporter);
 
-          AudioWait(news_op3);
+          Audio(news_op2);
 
           AnimatorTrigger(StopTalk,
-          Reporter);'
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -5574,7 +5574,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AudioWait(selection);
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -5911,8 +5911,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2005.08, y: 693.95245}
-    canvasZoom: 1.1282526
+    canvasScrollPosition: {x: 796.41504, y: 0}
+    canvasZoom: 0.17440084
   - id: 6
     fields:
     - title: Title
@@ -6172,11 +6172,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
-          AudioWaitOnce(selection);
-
-          Delay({{end}});
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -6184,10 +6182,6 @@ MonoBehaviour:
         typeString: 
       - title: EventGuid
         value: d2e8cb18-e425-4de1-9490-69a5cbc76c55
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
         type: 0
         typeString: 
       conversationID: 6
@@ -6212,7 +6206,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2255.723
+        x: 2256.735
         y: 832.045
         width: 160
         height: 30
@@ -6679,18 +6673,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
-          AudioWaitOnce(selection);
-
-          Delay({{end}});
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: d726ba81-43fa-4fc4-b776-8534af8b2a35
+        value: 27f39c7d-eef4-457e-961a-1022045a2040
         type: 0
         typeString: 
       conversationID: 6
@@ -6983,18 +6975,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
-          AudioWaitOnce(selection);
-
-          Delay({{end}});
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
-          Reporter)@{{end}}; '
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: f3c6d4fe-022c-432a-8dbb-c3fdd0942b8d
+        value: dab8516a-71ad-48a2-9694-950e360c6dfe
         type: 0
         typeString: 
       conversationID: 6
@@ -7019,7 +7009,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3046.319
+        x: 3046.3188
         y: 813.16455
         width: 160
         height: 30
@@ -7408,11 +7398,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
-          AudioWaitOnce(selection);
-
-          Delay({{end}});
+          Audio(selection);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
@@ -7713,10 +7701,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkE, Reporter);
 
-          AudioWait(news_op3);
+          Audio(news_op2);
 
           AnimatorTrigger(StopTalk,
-          Reporter);'
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -7749,8 +7737,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2018.6763, y: 717.0839}
-    canvasZoom: 1.0400298
+    canvasScrollPosition: {x: 1221.0354, y: 0}
+    canvasZoom: 0.14716938
   - id: 7
     fields:
     - title: Title
@@ -8019,7 +8007,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: a8575b16-c0d7-4b27-af91-f3d0afbf560e
+        value: 98c35c69-a428-4a20-aad2-63dedc8eeaac
         type: 0
         typeString: 
       conversationID: 7
@@ -8044,7 +8032,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2276.2551
+        x: 2277.2039
         y: 1488.6014
         width: 160
         height: 30
@@ -8512,8 +8500,6 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
@@ -8637,14 +8623,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9105244f-ab44-4b44-b1e9-4248aacfaa16
+        value: 7fe22bdd-6ced-444a-99e9-9170fa3a8623
         type: 0
         typeString: 
       conversationID: 7
@@ -9294,14 +9278,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 09eb23a9-9ff7-429d-9a6d-ae65ca0bd92d
+        value: aee435e2-1b3f-4fde-bc61-2d9d67c7ef5c
         type: 0
         typeString: 
       conversationID: 7
@@ -9600,10 +9582,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkE, Reporter);
 
-          AudioWait(news_op3);
+          Audio(news_op2);
 
           AnimatorTrigger(StopTalk,
-          Reporter);'
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -9636,8 +9618,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2126.87, y: 1398.277}
-    canvasZoom: 0.7146753
+    canvasScrollPosition: {x: 1954.5638, y: 1383.8776}
+    canvasZoom: 0.4054281
   - id: 8
     fields:
     - title: Title
@@ -9727,7 +9709,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 0
         destinationConversationID: 8
-        destinationDialogueID: 128
+        destinationDialogueID: 93
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10026,14 +10008,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7c3c8b18-4618-4aed-aae7-d6503e9aad9e
+        value: 4eef5fbc-5be3-43f4-a129-65ae4a4e8a7e
         type: 0
         typeString: 
       conversationID: 8
@@ -10153,14 +10133,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 494288bf-7bc0-4baa-ab56-5aa310ab8942
+        value: 088c28fb-4c45-4d69-b5ed-9155fb54cffa
         type: 0
         typeString: 
       conversationID: 8
@@ -10247,6 +10225,71 @@ MonoBehaviour:
         serializedVersion: 2
         x: 3822.8665
         y: 1578.2527
+        width: 160
+        height: 30
+    - id: 93
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Hello everyone, this is INTERNATIONAL NEWS channel!, welcome to the
+          daily news.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          Audio(news_opening);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 237f3af5-81da-4457-9986-ccb5e615eff8
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 93
+        destinationConversationID: 8
+        destinationDialogueID: 86
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 3348.4497
+        y: 1202.0394
         width: 160
         height: 30
     - id: 94
@@ -10940,14 +10983,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 0af09477-cd9b-4aaf-90c5-c6c345169f4f
+        value: 4ff54c14-ee2c-4ffe-b3f8-c274741cb4bc
         type: 0
         typeString: 
       conversationID: 8
@@ -10985,7 +11026,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 4069.7363
-        y: 1510.5437
+        y: 1509.1943
         width: 160
         height: 30
     - id: 110
@@ -11650,135 +11691,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3115.5486
+        x: 3113.8083
         y: 1498.4188
         width: 160
         height: 30
-    - id: 128
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Hello everyone, this is INTERNATIONAL NEWS channel!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
-
-          AudioWait(news_op3);
-
-          AnimatorTrigger(StopTalk,
-          Reporter);'
-        type: 0
-        typeString: 
-      - title: EventGuid
-        value: 9ac851dd-d861-4b2d-9cfe-e9dcdf31d924
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 128
-        destinationConversationID: 8
-        destinationDialogueID: 129
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3333.9421
-        y: 1146.4335
-        width: 160
-        height: 30
-    - id: 129
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: welcome to the daily news.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 129
-        destinationConversationID: 8
-        destinationDialogueID: 86
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 3345.6072
-        y: 1232.7559
-        width: 160
-        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2740.137, y: 1295.5503}
-    canvasZoom: 0.6510944
+    canvasScrollPosition: {x: 1969.3113, y: 1249.2532}
+    canvasZoom: 0.27944517
   - id: 9
     fields:
     - title: Title
@@ -13310,7 +13229,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 607319f7-d82b-4cab-97e2-1afacedd587c
+        value: fb345c9f-1fcb-4dc0-a1e6-544cd2bdfe03
         type: 0
         typeString: 
       conversationID: 10
@@ -13736,16 +13655,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          Audio(selection);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: fa8f7cf7-b641-4a7e-878b-9ad6b4a4bf0f
+        value: 964674c9-e0ff-4ec7-9d6d-52966e390679
         type: 0
         typeString: 
       conversationID: 10
@@ -13868,7 +13785,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 51d0c33c-1257-4e3e-a769-a61da6e481a7
+        value: 984a2545-b411-44b8-866d-01274f59d78b
         type: 0
         typeString: 
       conversationID: 10
@@ -13933,14 +13850,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: e76b28f6-3b44-41e1-ad99-543e4d6072da
+        value: 6fe463e2-9264-418f-818b-6c921a879043
         type: 0
         typeString: 
       conversationID: 10
@@ -13965,8 +13880,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2432.131
-        y: 776.271
+        x: 2433.0186
+        y: 769.08484
         width: 160
         height: 30
     - id: 100
@@ -14057,14 +13972,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'AnimatorTrigger(TalkC, Reporter);
 
-          Audio(selection);
-
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 86b100d2-e30b-46c2-a284-a3b440ea6d6f
+        value: f45d59a2-eac7-462a-a391-9f4c1a99070f
         type: 0
         typeString: 
       conversationID: 10
@@ -14090,7 +14003,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2661.3906
-        y: 767.0678
+        y: 767.9552
         width: 160
         height: 30
     - id: 102
@@ -14235,16 +14148,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hello everyone, this is INTERNATIONAL NEWS channel!
+        value: Hello everyone, this is INTERNATIONAL NEWS channel!, welcome to the
+          daily news.
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
-          AudioWait(news_op3);
+          Audio(news_opening);
 
           AnimatorTrigger(StopTalk,
-          Reporter);'
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -14262,7 +14176,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 105
         destinationConversationID: 10
-        destinationDialogueID: 127
+        destinationDialogueID: 95
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -14272,8 +14186,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2180.9517
-        y: 436.48303
+        x: 2190.713
+        y: 574.91833
         width: 160
         height: 30
     - id: 112
@@ -14932,67 +14846,9 @@ MonoBehaviour:
         y: 1254.6299
         width: 160
         height: 30
-    - id: 127
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: welcome to the daily news.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 127
-        destinationConversationID: 10
-        destinationDialogueID: 95
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2192.6167
-        y: 522.80536
-        width: 160
-        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1639.2734, y: 547.44275}
-    canvasZoom: 0.62709665
+    canvasScrollPosition: {x: 1427.846, y: 409.9658}
+    canvasZoom: 0.39319044
   - id: 11
     fields:
     - title: Title
@@ -15745,16 +15601,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          Audio(selection);
+        value: 'AnimatorTrigger(TalkA, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 571857bf-8033-4bea-93d8-a80a55806a60
+        value: f4ead95d-82c3-419c-b0bc-17755b17e6e7
         type: 0
         typeString: 
       conversationID: 12
@@ -15877,7 +15731,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: c9bf57bb-fb14-43f2-9ef2-907b18fecc4c
+        value: a834882b-2181-4d3a-b054-4f373c690045
         type: 0
         typeString: 
       conversationID: 12
@@ -15939,16 +15793,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          Audio(selection);
+        value: 'AnimatorTrigger(TalKC, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 482a5d59-03a6-4571-ae05-ff4a15531f21
+        value: 461ebbdc-4803-447d-95db-508148657c1b
         type: 0
         typeString: 
       conversationID: 12
@@ -15973,8 +15825,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1841.8173
-        y: 477.4679
+        x: 1847.9822
+        y: 473.0642
         width: 160
         height: 30
     - id: 142
@@ -16022,7 +15874,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 142
         destinationConversationID: 12
-        destinationDialogueID: 150
+        destinationDialogueID: 149
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16032,7 +15884,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1848.0483
+        x: 1848.8256
         y: 547.4718
         width: 160
         height: 30
@@ -16118,16 +15970,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hello everyone, this is INTERNATIONAL NEWS channel.
+        value: Hello everyone, this is INTERNATIONAL NEWS channel!, welcome to the
+          daily news.
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkE, Reporter);
-
-          AudioWait(news_op3);
+        value: 'AnimatorTrigger(TalkC, Reporter);
 
           AnimatorTrigger(StopTalk,
-          Reporter);'
+          Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
@@ -16145,7 +15996,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 147
         destinationConversationID: 12
-        destinationDialogueID: 183
+        destinationDialogueID: 137
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16155,8 +16006,67 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1594.5673
-        y: 180.4094
+        x: 1597.5653
+        y: 247.36807
+        width: 160
+        height: 30
+    - id: 149
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Passengers who are waiting their flights will be able to enjoy free
+          and high-speed wireless internet access during their wait.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkB, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 149
+        destinationConversationID: 12
+        destinationDialogueID: 150
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1850.9924
+        y: 623.1515
         width: 160
         height: 30
     - id: 150
@@ -16274,7 +16184,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1851.2745
+        x: 1852.8291
         y: 777.2654
         width: 160
         height: 30
@@ -16551,7 +16461,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: d94e38ff-fff1-4439-a3f4-85d5c3a123d1
+        value: 881ade02-3207-4f9c-ab6e-36a114ecfda4
         type: 0
         typeString: 
       conversationID: 12
@@ -17331,16 +17241,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          Audio(selection);
+        value: 'AnimatorTrigger(TalKB, Reporter);
 
           AnimatorTrigger(StopTalk,
           Reporter)@{{end}};'
         type: 0
         typeString: 
       - title: EventGuid
-        value: abf8f347-1b5e-4f43-8893-9469fcb767c7
+        value: a219b74d-412d-4eea-bf74-768a82f35d1e
         type: 0
         typeString: 
       conversationID: 12
@@ -17365,8 +17273,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2486.7795
-        y: 480.50238
+        x: 2485.336
+        y: 479.503
         width: 160
         height: 30
     - id: 176
@@ -17735,67 +17643,9 @@ MonoBehaviour:
         y: 1110.0353
         width: 160
         height: 30
-    - id: 183
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: welcome to the daily news.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkC, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 183
-        destinationConversationID: 12
-        destinationDialogueID: 137
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1598.4553
-        y: 282.7011
-        width: 160
-        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1587.078, y: 341.61298}
-    canvasZoom: 0.77164364
+    canvasScrollPosition: {x: 1040.3411, y: 127.94089}
+    canvasZoom: 0.6476982
   - id: 13
     fields:
     - title: Title

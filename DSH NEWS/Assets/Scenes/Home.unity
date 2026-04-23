@@ -965,6 +965,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   sceneToGo: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  enableDayBasedBranch: 1
+  endingStartDay: 6
+  endingSceneToGo: {fileID: 11400000, guid: be4de46368106924e82c6073a3acb3be, type: 2}
+  valueManageOverride: {fileID: 0}
   positionToGo: {x: 0, y: 0, z: 0}
   rotationToGo: {x: 0, y: 0, z: 0}
   SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}

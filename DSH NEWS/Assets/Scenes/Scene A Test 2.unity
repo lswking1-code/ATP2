@@ -565,7 +565,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1474,7 +1474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
@@ -2082,7 +2082,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1693797254}
           m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
-          m_MethodName: HideImage
+          m_MethodName: HideBroadcast
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2376,6 +2376,150 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: e8631237-df9e-48b5-a39b-74565d685928
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 9663a6d2-5865-4dcd-8523-c872da9b278b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: e7b1f861-e03c-4052-82be-2eb2d36e90e3
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 8bdf1603-8481-4bb6-9266-a8a5b8453d59
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 27f39c7d-eef4-457e-961a-1022045a2040
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 2fbf6ed8-7cba-4b20-87a5-e132ff12745f
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: dab8516a-71ad-48a2-9694-950e360c6dfe
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0f4d6495-1505-420e-bf28-60f6128cd93f
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 96a063b1-50eb-44e2-a31a-67bf64033441
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1544884886
 Transform:
   m_ObjectHideFlags: 0
@@ -2574,7 +2718,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 6d4b1b6110ff84d869defe10f73702a2, type: 3}
     subtitle: Eclipse is here...
   - id: tamagochi
-    sprite: {fileID: 21300000, guid: 2340c0ec6b6cd4195a2be4c05eff9d04, type: 3}
+    sprite: {fileID: 21300000, guid: f7c5c7830c99b4c1f8401037d2a15473, type: 3}
     subtitle: New Tamagochi!
   - id: fire
     sprite: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
@@ -2591,6 +2735,42 @@ MonoBehaviour:
   - id: sewer
     sprite: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}
     subtitle: A weird sewer.
+  - id: asylum
+    sprite: {fileID: 21300000, guid: 2117038d55328b94d84cbd3390844b22, type: 3}
+    subtitle: A successful Operation.
+  - id: polar
+    sprite: {fileID: 21300000, guid: 7cf18cc3aaacdf04da01e493969b50d8, type: 3}
+    subtitle: A failed attempt.
+  - id: missing
+    sprite: {fileID: 21300000, guid: 468e909bacceb9a49ae204ed7a4fa302, type: 3}
+    subtitle: A missing student.
+  - id: ghost
+    sprite: {fileID: 21300000, guid: 721b94a9ac695424b89ea6e5d98f9ad4, type: 3}
+    subtitle: Disturbing.
+  - id: nokia
+    sprite: {fileID: 21300000, guid: 0b9017606d4bf504aba977946d393f2c, type: 3}
+    subtitle: Tech changes life!
+  - id: election
+    sprite: {fileID: 21300000, guid: c55798a0ae3be0849a7864edf4b6ab7a, type: 3}
+    subtitle: A bold claim.
+  - id: space probe
+    sprite: {fileID: 21300000, guid: 18668282b335d5c4b80c68c3cc51c767, type: 3}
+    subtitle: What a pity.
+  - id: y2k
+    sprite: {fileID: 21300000, guid: 5051c834f06a98b4dae88dfb17ee0493, type: 3}
+    subtitle: Doubtful.
+  - id: man
+    sprite: {fileID: 21300000, guid: 0cb20e0e194519d4ea457d31c91b1f46, type: 3}
+    subtitle: Creepy as hell.
+  - id: applewifi
+    sprite: {fileID: 21300000, guid: aec836a1e423aad479feebc471683622, type: 3}
+    subtitle: A revolutionary product.
+  - id: wifi
+    sprite: {fileID: 21300000, guid: 656217e6b536abe4587143ee5a5b0bdd, type: 3}
+    subtitle: Wait and see.
+  - id: fileroom
+    sprite: {fileID: 21300000, guid: 3ed3e1d0d11611b44bf0009655a19248, type: 3}
+    subtitle: Is it plausable?
   earthquake: {fileID: 21300000, guid: b353aaf4fbc5a4736848f90593f23ed9, type: 3}
   fire: {fileID: 21300000, guid: a922ade7559a6114b8b6c68b87ff878d, type: 3}
   news: {fileID: 21300000, guid: 5fd32495d75dcc84faf2441d90ad90a7, type: 3}

@@ -4556,7 +4556,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2486.8423
+        x: 2486
         y: 837.4558
         width: 160
         height: 30
@@ -5176,8 +5176,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2012.4639
-        y: 844.03796
+        x: 2010.1499
+        y: 842.8811
         width: 160
         height: 30
     - id: 79
@@ -5911,8 +5911,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1924.7328, y: 363.4638}
-    canvasZoom: 0.8644006
+    canvasScrollPosition: {x: 1871.2278, y: 503.5437}
+    canvasZoom: 0.73020613
   - id: 6
     fields:
     - title: Title
@@ -6682,7 +6682,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 27f39c7d-eef4-457e-961a-1022045a2040
+        value: d726ba81-43fa-4fc4-b776-8534af8b2a35
         type: 0
         typeString: 
       conversationID: 6
@@ -6984,7 +6984,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: dab8516a-71ad-48a2-9694-950e360c6dfe
+        value: f3c6d4fe-022c-432a-8dbb-c3fdd0942b8d
         type: 0
         typeString: 
       conversationID: 6
@@ -7737,8 +7737,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2061.8318, y: 399.62097}
-    canvasZoom: 0.83716923
+    canvasScrollPosition: {x: 2067.163, y: 611.0387}
+    canvasZoom: 0.82026196
   - id: 7
     fields:
     - title: Title
@@ -8007,7 +8007,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 98c35c69-a428-4a20-aad2-63dedc8eeaac
+        value: a8575b16-c0d7-4b27-af91-f3d0afbf560e
         type: 0
         typeString: 
       conversationID: 7
@@ -8032,7 +8032,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2277.2039
+        x: 2276.2551
         y: 1488.6014
         width: 160
         height: 30
@@ -8628,7 +8628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7fe22bdd-6ced-444a-99e9-9170fa3a8623
+        value: 9105244f-ab44-4b44-b1e9-4248aacfaa16
         type: 0
         typeString: 
       conversationID: 7
@@ -9283,7 +9283,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: aee435e2-1b3f-4fde-bc61-2d9d67c7ef5c
+        value: 09eb23a9-9ff7-429d-9a6d-ae65ca0bd92d
         type: 0
         typeString: 
       conversationID: 7
@@ -9618,8 +9618,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2240.4148, y: 930.8678}
-    canvasZoom: 0.8254279
+    canvasScrollPosition: {x: 2489.197, y: 982.84607}
+    canvasZoom: 0.87278557
   - id: 8
     fields:
     - title: Title
@@ -10013,7 +10013,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 4eef5fbc-5be3-43f4-a129-65ae4a4e8a7e
+        value: 7c3c8b18-4618-4aed-aae7-d6503e9aad9e
         type: 0
         typeString: 
       conversationID: 8
@@ -10138,7 +10138,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 088c28fb-4c45-4d69-b5ed-9155fb54cffa
+        value: 494288bf-7bc0-4baa-ab56-5aa310ab8942
         type: 0
         typeString: 
       conversationID: 8
@@ -10988,7 +10988,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 4ff54c14-ee2c-4ffe-b3f8-c274741cb4bc
+        value: 0af09477-cd9b-4aaf-90c5-c6c345169f4f
         type: 0
         typeString: 
       conversationID: 8
@@ -11691,13 +11691,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3113.8083
+        x: 3115.5486
         y: 1498.4188
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2919.859, y: 1371.1812}
-    canvasZoom: 1.1494447
+    canvasScrollPosition: {x: 3661.459, y: 1476.078}
+    canvasZoom: 1.1576022
   - id: 9
     fields:
     - title: Title
@@ -13229,7 +13229,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: fb345c9f-1fcb-4dc0-a1e6-544cd2bdfe03
+        value: 607319f7-d82b-4cab-97e2-1afacedd587c
         type: 0
         typeString: 
       conversationID: 10
@@ -13662,7 +13662,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 964674c9-e0ff-4ec7-9d6d-52966e390679
+        value: fa8f7cf7-b641-4a7e-878b-9ad6b4a4bf0f
         type: 0
         typeString: 
       conversationID: 10
@@ -13855,7 +13855,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 6fe463e2-9264-418f-818b-6c921a879043
+        value: e76b28f6-3b44-41e1-ad99-543e4d6072da
         type: 0
         typeString: 
       conversationID: 10
@@ -13880,8 +13880,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2433.0186
-        y: 769.08484
+        x: 2432.131
+        y: 774.4092
         width: 160
         height: 30
     - id: 100
@@ -13977,7 +13977,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: f45d59a2-eac7-462a-a391-9f4c1a99070f
+        value: 86b100d2-e30b-46c2-a284-a3b440ea6d6f
         type: 0
         typeString: 
       conversationID: 10
@@ -14003,7 +14003,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2661.3906
-        y: 767.9552
+        y: 767.0678
         width: 160
         height: 30
     - id: 102
@@ -14148,8 +14148,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hello everyone, this is INTERNATIONAL NEWS channel!, welcome to the
-          daily news.
+        value: Hello everyone, this is INTERNATIONAL NEWS channel!
         type: 0
         typeString: 
       - title: Sequence
@@ -14176,7 +14175,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 105
         destinationConversationID: 10
-        destinationDialogueID: 95
+        destinationDialogueID: 127
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -14186,8 +14185,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2190.713
-        y: 574.91833
+        x: 2180.9517
+        y: 436.48303
         width: 160
         height: 30
     - id: 112
@@ -14846,9 +14845,67 @@ MonoBehaviour:
         y: 1254.6299
         width: 160
         height: 30
+    - id: 127
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: welcome to the daily news.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AnimatorTrigger(TalkC, Reporter);
+
+          AnimatorTrigger(StopTalk,
+          Reporter)@{{end}};'
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 127
+        destinationConversationID: 10
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2192.6167
+        y: 522.80536
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1727.7554, y: 646.82684}
-    canvasZoom: 0.8131902
+    canvasScrollPosition: {x: 1621.488, y: 498.51447}
+    canvasZoom: 0.7891731
   - id: 11
     fields:
     - title: Title
@@ -15608,7 +15665,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: f4ead95d-82c3-419c-b0bc-17755b17e6e7
+        value: 571857bf-8033-4bea-93d8-a80a55806a60
         type: 0
         typeString: 
       conversationID: 12
@@ -15800,7 +15857,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 461ebbdc-4803-447d-95db-508148657c1b
+        value: 482a5d59-03a6-4571-ae05-ff4a15531f21
         type: 0
         typeString: 
       conversationID: 12
@@ -15825,8 +15882,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1847.9822
-        y: 473.0642
+        x: 1841.8173
+        y: 477.4679
         width: 160
         height: 30
     - id: 142
@@ -15874,7 +15931,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 142
         destinationConversationID: 12
-        destinationDialogueID: 149
+        destinationDialogueID: 150
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16008,65 +16065,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1597.5653
         y: 247.36807
-        width: 160
-        height: 30
-    - id: 149
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Passengers who are waiting their flights will be able to enjoy free
-          and high-speed wireless internet access during their wait.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'AnimatorTrigger(TalkB, Reporter);
-
-          AnimatorTrigger(StopTalk,
-          Reporter)@{{end}};'
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 149
-        destinationConversationID: 12
-        destinationDialogueID: 150
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1849.4377
-        y: 623.1515
         width: 160
         height: 30
     - id: 150
@@ -16461,7 +16459,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 881ade02-3207-4f9c-ab6e-36a114ecfda4
+        value: d94e38ff-fff1-4439-a3f4-85d5c3a123d1
         type: 0
         typeString: 
       conversationID: 12
@@ -17248,7 +17246,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: a219b74d-412d-4eea-bf74-768a82f35d1e
+        value: abf8f347-1b5e-4f43-8893-9469fcb767c7
         type: 0
         typeString: 
       conversationID: 12
@@ -17644,8 +17642,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1545.1791, y: 289.03064}
-    canvasZoom: 0.97769797
+    canvasScrollPosition: {x: 1541.0048, y: 491.17154}
+    canvasZoom: 1.4317657
   - id: 13
     fields:
     - title: Title

@@ -16,6 +16,9 @@ public class TVOverlay : MonoBehaviour
 
     public SpriteRenderer tvImage;
     public TextMeshPro subtitle;
+    [Header("圖片顯示設定")]
+    [Min(0.01f)]
+    public float unifiedImageHeight = 1.0f;
 
     [Header("可擴充內容（用 id 對應圖文）")]
     public List<OverlayContent> contents = new List<OverlayContent>();
@@ -26,9 +29,12 @@ public class TVOverlay : MonoBehaviour
     public Sprite news;
 
     private readonly Dictionary<string, OverlayContent> _contentMap = new Dictionary<string, OverlayContent>();
+    private Vector3 _baseImageScale = Vector3.one;
+    private bool _hasCachedBaseScale;
 
     private void Awake()
     {
+        CacheBaseImageScale();
         BuildContentMap();
     }
 
@@ -103,6 +109,41 @@ public class TVOverlay : MonoBehaviour
         return _contentMap.TryGetValue(id.Trim(), out content);
     }
 
+    private void CacheBaseImageScale()
+    {
+        if (tvImage == null) return;
+        _baseImageScale = tvImage.transform.localScale;
+        _hasCachedBaseScale = true;
+    }
+
+    private void ApplyUnifiedImageHeight(Sprite sprite)
+    {
+        if (tvImage == null || sprite == null) return;
+        if (!_hasCachedBaseScale) CacheBaseImageScale();
+
+        float spriteHeight = sprite.bounds.size.y;
+        if (spriteHeight <= 0f) return;
+
+        float scaleMultiplier = unifiedImageHeight / spriteHeight;
+        tvImage.transform.localScale = _baseImageScale * scaleMultiplier;
+    }
+
+    private void SetImageSprite(Sprite sprite)
+    {
+        if (tvImage == null) return;
+        tvImage.enabled = sprite != null;
+        tvImage.sprite = sprite;
+
+        if (sprite != null)
+        {
+            ApplyUnifiedImageHeight(sprite);
+        }
+        else if (_hasCachedBaseScale)
+        {
+            tvImage.transform.localScale = _baseImageScale;
+        }
+    }
+
     public void ShowContent(string id)
     {
         if (!TryGetContent(id, out OverlayContent content))
@@ -111,8 +152,7 @@ public class TVOverlay : MonoBehaviour
             return;
         }
 
-        tvImage.enabled = content.sprite != null;
-        tvImage.sprite = content.sprite;
+        SetImageSprite(content.sprite);
 
         if (subtitle != null)
         {
@@ -128,8 +168,7 @@ public class TVOverlay : MonoBehaviour
             return;
         }
 
-        tvImage.enabled = content.sprite != null;
-        tvImage.sprite = content.sprite;
+        SetImageSprite(content.sprite);
     }
 
     public void Subtitle(string text)
@@ -159,8 +198,7 @@ public class TVOverlay : MonoBehaviour
     // 一次關閉圖片與新聞字幕
     public void HideBroadcast()
     {
-        tvImage.enabled = false;
-        tvImage.sprite = null;
+        SetImageSprite(null);
         if (subtitle != null)
         {
             subtitle.text = string.Empty;

@@ -46,6 +46,10 @@ public class ManuscriptManager : MonoBehaviour
         valueManage = FindFirstObjectByType<ValueManage>();
         if (valueManage != null)
         {
+            if (valueManage.Situations != null)
+            {
+                valueManage.Situations.Clear();
+            }
             day = valueManage.day;
         }
 
@@ -176,18 +180,6 @@ public class ManuscriptManager : MonoBehaviour
         _selectedManuscripts.Add(manuscript);
         manuscript.SetSelected(true);
 
-        if (ValueEvent != null && entry.Values != null && entry.Values.Count > 0)
-        {
-            for (int i = 0; i < entry.Values.Count; i++)
-            {
-                ValueChange v = entry.Values[i];
-                ValueEvent.RaiseEvent(v.ValueIndex, v.ValueAmount);
-            }
-        }
-        if (valueManage != null && entry.Id != string.Empty)
-        {
-            valueManage.SetSituation(entry.Id, true);
-        }
         if (ScriptChangeEvent != null && entry.ScriptIndex != 0)
         {
             ScriptChangeEvent.RaiseEvent(entry.ScriptIndex);
@@ -196,8 +188,45 @@ public class ManuscriptManager : MonoBehaviour
         // 仅当选中数量达到 MaxSelectionCount 时才载入下一场景
         if (_selectedManuscripts.Count >= MaxSelectionCount && SceneToGo != null && SceneLoadEvent != null)
         {
+            if (valueManage != null)
+            {
+                foreach (Manuscript selectedManuscript in _selectedManuscripts)
+                {
+                    ManuscriptEntry selectedEntry = FindEntryByManuscript(selectedManuscript);
+                    if (selectedEntry == null)
+                    {
+                        continue;
+                    }
+
+                    if (ValueEvent != null && selectedEntry.Values != null && selectedEntry.Values.Count > 0)
+                    {
+                        for (int i = 0; i < selectedEntry.Values.Count; i++)
+                        {
+                            ValueChange v = selectedEntry.Values[i];
+                            ValueEvent.RaiseEvent(v.ValueIndex, v.ValueAmount);
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(selectedEntry.Id))
+                    {
+                        valueManage.SetSituation(selectedEntry.Id, true);
+                    }
+                }
+            }
             SceneLoadEvent.RaiseLoadRequestEvent(SceneToGo, PositionToGo, RotationToGo, true);
         }
+    }
+
+    private ManuscriptEntry FindEntryByManuscript(Manuscript manuscript)
+    {
+        for (int i = 0; i < _activeEntries.Count; i++)
+        {
+            if (_activeEntries[i] != null && _activeEntries[i].Manuscript == manuscript)
+            {
+                return _activeEntries[i];
+            }
+        }
+        return null;
     }
 
     // 带故障逻辑的选中接口，供 Manuscript 调用

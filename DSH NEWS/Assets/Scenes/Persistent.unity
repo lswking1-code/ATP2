@@ -1115,8 +1115,8 @@ MonoBehaviour:
   doubleVisionMaxEffect: 0.35
   doubleVisionWaving: 0.5
   stopEffectsWhenZeroHealth: 1
-  showInEditor: 0
-  simulateHealth: 1
+  showInEditor: 1
+  simulateHealth: 0.1
 --- !u!1 &1595356897
 GameObject:
   m_ObjectHideFlags: 0

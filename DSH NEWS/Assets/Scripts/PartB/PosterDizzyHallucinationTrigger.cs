@@ -67,6 +67,7 @@ public class PosterDizzyHallucinationTrigger : MonoBehaviour
     private bool hasSnapshot;
     private readonly Dictionary<NavMeshAgent, bool> npcStoppedState = new Dictionary<NavMeshAgent, bool>();
     private Material originalPosterMaterial;
+    private float nextConditionCheckTime;
 
     private struct GlitchSnapshot
     {
@@ -90,6 +91,11 @@ public class PosterDizzyHallucinationTrigger : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        TryReplacePosterByCondition();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         bool isPlayer = other.CompareTag("Player");
@@ -101,8 +107,6 @@ public class PosterDizzyHallucinationTrigger : MonoBehaviour
         {
             return;
         }
-
-        ReplacePosterOnActivation();
 
         if (isPlayer)
         {
@@ -344,6 +348,18 @@ public class PosterDizzyHallucinationTrigger : MonoBehaviour
 
         posterRenderer.material = activatedPosterMaterial;
         posterReplaced = true;
+    }
+
+    private void TryReplacePosterByCondition()
+    {
+        if (posterReplaced) return;
+        if (Time.unscaledTime < nextConditionCheckTime) return;
+        nextConditionCheckTime = Time.unscaledTime + 0.25f;
+
+        isActivatedByCondition = IsActivatedByValueManage();
+        if (!isActivatedByCondition) return;
+
+        ReplacePosterOnActivation();
     }
 
     private void HandleNpcEnter(Collider other)

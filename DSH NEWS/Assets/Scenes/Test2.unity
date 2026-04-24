@@ -847,11 +847,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8206214049592298689, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
   m_PrefabInstance: {fileID: 54730512}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &54730514 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3779922783785526383, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
-  m_PrefabInstance: {fileID: 54730512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &54730515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 975236837742388658, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
@@ -2647,6 +2642,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2197962136638882781, guid: f3b41268e58d8274cb60155512d3ac55, type: 3}
+--- !u!4 &235477302 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 798534896906106654, guid: 97aa48724114bb04ab61a7bea01ea3e5, type: 3}
+  m_PrefabInstance: {fileID: 235477298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &243923026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,6 +4095,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7114860280336778977, guid: 97aa48724114bb04ab61a7bea01ea3e5, type: 3}
   m_PrefabInstance: {fileID: 482527010}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &482527012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 798534896906106654, guid: 97aa48724114bb04ab61a7bea01ea3e5, type: 3}
+  m_PrefabInstance: {fileID: 482527010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &488622323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5377,7 +5382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -5419,7 +5424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -5439,7 +5444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -5576,11 +5581,6 @@ PrefabInstance:
 --- !u!4 &601867809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7114860280336778977, guid: 97aa48724114bb04ab61a7bea01ea3e5, type: 3}
-  m_PrefabInstance: {fileID: 601867808}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &601867810 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 798534896906106654, guid: 97aa48724114bb04ab61a7bea01ea3e5, type: 3}
   m_PrefabInstance: {fileID: 601867808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &601867811 stripped
@@ -5976,8 +5976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 58811609}
+  gates:
+  - panel: {fileID: 58811609}
+    openSide: -1
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -6525,7 +6526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -6686,8 +6687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 601867810}
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -7359,8 +7359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 1097985118}
+  gates:
+  - panel: {fileID: 1097985118}
+    openSide: 1
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -8902,9 +8903,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 334657548}
-  - {fileID: 235477299}
+  gates:
+  - panel: {fileID: 334657548}
+    openSide: 1
+  - panel: {fileID: 235477302}
+    openSide: -1
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -8978,8 +8981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 1933592478}
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -9111,7 +9113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -9239,7 +9241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -9418,11 +9420,6 @@ PrefabInstance:
 --- !u!4 &1255001949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8206214049592298689, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
-  m_PrefabInstance: {fileID: 1255001948}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1255001950 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3779922783785526383, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
   m_PrefabInstance: {fileID: 1255001948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255001951 stripped
@@ -10115,7 +10112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c324a151aa21f4faae8b7d213a1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSequence: {fileID: 0}
+  targetSequence: {fileID: 1532524906}
 --- !u!65 &1379274067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12275,9 +12272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 54730514}
-  - {fileID: 230007099}
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -12573,9 +12568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 1255001950}
-  - {fileID: 1035943953}
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -12733,9 +12726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels:
-  - {fileID: 179411976}
-  - {fileID: 482527011}
+  gates:
+  - panel: {fileID: 179411976}
+    openSide: 1
+  - panel: {fileID: 482527012}
+    openSide: -1
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -13430,7 +13425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -13840,11 +13835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8206214049592298689, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
   m_PrefabInstance: {fileID: 1933592476}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1933592478 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3779922783785526383, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
-  m_PrefabInstance: {fileID: 1933592476}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1933592479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 975236837742388658, guid: 21fe766612e6c3a4496adccaad0887dd, type: 3}
@@ -14009,7 +13999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -14785,7 +14775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120
@@ -14805,7 +14795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b15245e101774a84151bf8be05344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePanels: []
+  gates: []
   playerTag: Player
   useRotation: 1
   moveSpeed: 120

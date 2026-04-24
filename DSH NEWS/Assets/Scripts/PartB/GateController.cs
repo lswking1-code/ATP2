@@ -2,8 +2,21 @@ using UnityEngine;
 
 public class GateController : MonoBehaviour
 {
+    private enum OpenSide
+    {
+        Left = -1,
+        Right = 1
+    }
+
+    [System.Serializable]
+    private class GateLeaf
+    {
+        public Transform panel;
+        public OpenSide openSide = OpenSide.Right;
+    }
+
     [Header("Gate Target")]
-    [SerializeField] private Transform[] gatePanels;
+    [SerializeField] private GateLeaf[] gates;
 
     [Header("Detection")]
     [SerializeField] private string playerTag = "Player";
@@ -25,8 +38,13 @@ public class GateController : MonoBehaviour
 
     private void Awake()
     {
-        if (gatePanels == null || gatePanels.Length == 0)
-            gatePanels = new[] { transform };
+        if (gates == null || gates.Length == 0)
+        {
+            gates = new[]
+            {
+                new GateLeaf { panel = transform, openSide = OpenSide.Right }
+            };
+        }
 
         if (moveSpeed <= 0f)
             moveSpeed = 0.01f;
@@ -42,17 +60,28 @@ public class GateController : MonoBehaviour
 
     private void Update()
     {
-        if (gatePanels == null || gatePanels.Length == 0) return;
+        if (gates == null || gates.Length == 0) return;
 
-        for (int i = 0; i < gatePanels.Length; i++)
+        for (int i = 0; i < gates.Length; i++)
         {
-            Transform gatePanel = gatePanels[i];
+            GateLeaf gate = gates[i];
+            if (gate == null) continue;
+
+            Transform gatePanel = gate.panel;
             if (gatePanel == null) continue;
+
+            float directionSign = (float)gate.openSide;
 
             if (useRotation)
             {
+                Vector3 signedOpenEuler = new Vector3(
+                    openEuler.x,
+                    openEuler.y * directionSign,
+                    openEuler.z
+                );
+
                 Quaternion targetRotation = isOpenTarget
-                    ? Quaternion.Euler(openEuler)
+                    ? Quaternion.Euler(signedOpenEuler)
                     : Quaternion.Euler(closedEuler);
 
                 gatePanel.localRotation = Quaternion.RotateTowards(
@@ -63,7 +92,13 @@ public class GateController : MonoBehaviour
                 continue;
             }
 
-            Vector3 targetPosition = isOpenTarget ? openLocalPosition : closedLocalPosition;
+            Vector3 signedOpenLocalPosition = new Vector3(
+                openLocalPosition.x * directionSign,
+                openLocalPosition.y,
+                openLocalPosition.z
+            );
+
+            Vector3 targetPosition = isOpenTarget ? signedOpenLocalPosition : closedLocalPosition;
             gatePanel.localPosition = Vector3.MoveTowards(
                 gatePanel.localPosition,
                 targetPosition,
@@ -88,11 +123,14 @@ public class GateController : MonoBehaviour
 
     private void SetAllGatesToClosedStateImmediately()
     {
-        if (gatePanels == null) return;
+        if (gates == null) return;
 
-        for (int i = 0; i < gatePanels.Length; i++)
+        for (int i = 0; i < gates.Length; i++)
         {
-            Transform gatePanel = gatePanels[i];
+            GateLeaf gate = gates[i];
+            if (gate == null) continue;
+
+            Transform gatePanel = gate.panel;
             if (gatePanel == null) continue;
 
             if (useRotation)

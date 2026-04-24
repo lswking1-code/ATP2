@@ -5621,6 +5621,10 @@ PrefabInstance:
       value: AD1
       objectReference: {fileID: 0}
     - target: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5634,6 +5638,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 572328703}
+    - targetCorrespondingSourceObject: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 572328705}
   m_SourcePrefab: {fileID: 100100000, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
 --- !u!1 &572328701 stripped
 GameObject:
@@ -5689,6 +5696,29 @@ MonoBehaviour:
     - RequiredDay: -1
       SituationId: 
       PosterMaterial: {fileID: 2100000, guid: 147be9663d99a6e4ab94a38eb9dd3f1b, type: 2}
+--- !u!114 &572328705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572328701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a78b6ec069e7548a8a66d6bb725860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnInteract: 0
+  disableAfterInteract: 1
+  startDialogueOnInteract: 0
+  conversationTitle: 
+  dialogueActor: {fileID: 0}
+  dialogueConversant: {fileID: 0}
+  interactSound: {fileID: 0}
+  soundVolume: 1
 --- !u!64 &579565072
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13960,6 +13990,10 @@ PrefabInstance:
       value: AD1
       objectReference: {fileID: 0}
     - target: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13973,6 +14007,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1856947094}
+    - targetCorrespondingSourceObject: {fileID: 8905178781990348477, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1856947095}
   m_SourcePrefab: {fileID: 100100000, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
 --- !u!1 &1856947091 stripped
 GameObject:
@@ -14028,6 +14065,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1160172995570297472, guid: d998e8c51c9eb5749a27fcececbd4d4b, type: 3}
+--- !u!114 &1856947095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856947091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a78b6ec069e7548a8a66d6bb725860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnInteract: 0
+  disableAfterInteract: 1
+  startDialogueOnInteract: 0
+  conversationTitle: 
+  dialogueActor: {fileID: 0}
+  dialogueConversant: {fileID: 0}
+  interactSound: {fileID: 0}
+  soundVolume: 1
 --- !u!1 &1870291799
 GameObject:
   m_ObjectHideFlags: 0

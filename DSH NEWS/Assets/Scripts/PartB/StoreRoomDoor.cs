@@ -30,11 +30,17 @@ public class StoreRoomDoor : MonoBehaviour
     [SerializeField, Tooltip("近距触发后在房间内播放的诡异声")]
     private AudioClip roomCreepyClip;
 
+    [SerializeField, Tooltip("玩家靠近触发关门瞬间播放的关门声（3D，与 DoorController 默认关声可分开配）")]
+    private AudioClip nearTriggerCloseDoorClip;
+
     [SerializeField, Tooltip("门附近的 3D 声源点；为空时用当前物体")]
     private Transform doorCueSourcePoint;
 
     [SerializeField, Tooltip("房内诡异声的 3D 声源点；为空时用当前物体")]
     private Transform roomCreepySourcePoint;
+
+    [SerializeField, Tooltip("近距关门声源点；空则优先用门提示音点，否则用当前物体")]
+    private Transform nearCloseDoorSourcePoint;
 
     [SerializeField, Range(0f, 1f)]
     private float volume = 0.9f;
@@ -211,9 +217,12 @@ public class StoreRoomDoor : MonoBehaviour
         }
         else
         {
-            doorController.Close();
+            bool hasNearCloseSfx = nearTriggerCloseDoorClip != null;
+            doorController.Close(playSound: !hasNearCloseSfx);
         }
 
+        Transform nearCloseAnchor = nearCloseDoorSourcePoint != null ? nearCloseDoorSourcePoint : doorCueSourcePoint;
+        Play3DClip(nearTriggerCloseDoorClip, nearCloseAnchor);
         Play3DClip(roomCreepyClip, roomCreepySourcePoint);
     }
 

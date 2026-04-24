@@ -156,13 +156,14 @@ public class DoorController : MonoBehaviour, IInteractable
 
 
     /// 强制关闭门（可在代码中调用）
-
-    public void Close()
+    /// <param name="playSound">为 false 时不播 DoorController 上的默认关门声，便于外部单独播放关声</param>
+    public void Close(bool playSound = true)
     {
         if (!isOpen) return;
         if (animCoroutine != null) StopCoroutine(animCoroutine);
         animCoroutine = StartCoroutine(AnimateRotation(hinge.localRotation, closedRotation, openSpeed));
-        PlayToggleSound(false);
+        if (playSound)
+            PlayToggleSound(false);
         isOpen = false;
         LogStateChange("Close", closedRotation);
     }

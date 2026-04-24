@@ -7236,8 +7236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77243ae9a80e4e54a8c5961369d4df56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDay: 1
-  targetSituationId: a
+  targetDay: 3
+  targetSituationId: c
   valueManage: {fileID: 0}
   tunnelLights:
   - {fileID: 2336062595163137928}
@@ -15802,8 +15802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2320cd650133e84f94f96b47371c802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDay: 0
-  targetSituationId: 
+  targetDay: 6
+  targetSituationId: d
   valueManage: {fileID: 0}
   roarClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}
   roarSourcePoint: {fileID: 2147000108}

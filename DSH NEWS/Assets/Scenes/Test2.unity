@@ -3719,18 +3719,29 @@ MonoBehaviour:
   closeDoorOnEnter: 1
   nearAreaToiletClip: {fileID: 8300000, guid: 9bd1c6793fce46d43b97157e2b85de1d, type: 3}
   toiletInnerAudioPoint: {fileID: 821986515}
+  nearAreaSoundSettings:
+    volume: 1
+    minDistance: 2
+    maxDistance: 25
+    rolloffMode: 0
   insideAfterLockClip: {fileID: 8300000, guid: 6932de8a9768a48468231d69ad9b35b5, type: 3}
+  insideAfterLockSoundSettings:
+    volume: 1
+    minDistance: 2
+    maxDistance: 25
+    rolloffMode: 0
   monsterOutsideClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}
   monsterOutsideAudioPoint: {fileID: 1013221518}
+  monsterOutsideSoundSettings:
+    volume: 1
+    minDistance: 2
+    maxDistance: 25
+    rolloffMode: 0
   delayBeforeMonsterRoar: 0.6
   toiletLights:
   - {fileID: 1479685084}
   flickerMinInterval: 0.05
   flickerMaxInterval: 0.18
-  volume: 1
-  minDistance: 2
-  maxDistance: 25
-  rolloffMode: 0
   triggerOnce: 1
   isActivatedByCondition: 0
   nearAreaTriggered: 0
@@ -8260,7 +8271,7 @@ Transform:
   m_GameObject: {fileID: 1013221517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 34.81, y: -6.877, z: 2.302}
+  m_LocalPosition: {x: 33.443, y: -6.877, z: 2.302}
   m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11711,6 +11722,95 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 25.648, y: -7.35, z: 3.054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1559119068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559119071}
+  - component: {fileID: 1559119070}
+  - component: {fileID: 1559119069}
+  m_Layer: 0
+  m_Name: PosterDizzyHallucinationTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1559119069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559119068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc080939dce74e54388902ad1f14f38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetDay: 3
+  targetSituationId: c
+  valueManage: {fileID: 0}
+  glitchControl: {fileID: 0}
+  hallucinationLoopClip: {fileID: 8300000, guid: 59dd83d6d477bdd4f80fe17669415c6a, type: 3}
+  audioAnchor: {fileID: 0}
+  posterRenderer: {fileID: 1114518831}
+  activatedPosterMaterial: {fileID: 2100000, guid: 147be9663d99a6e4ab94a38eb9dd3f1b, type: 2}
+  posterLookTarget: {fileID: 1114518832}
+  targetScanLineJitter: 0.65
+  targetVerticalJump: 0.55
+  targetHorizontalShake: 0.45
+  targetColorDrift: 0.4
+  enterDuration: 0.35
+  exitDuration: 0.45
+  volume: 0.8
+  minDistance: 1.5
+  maxDistance: 20
+  rolloffMode: 0
+  audioFadeOut: 0.2
+  playerInside: 0
+  isActivatedByCondition: 0
+  posterReplaced: 0
+--- !u!65 &1559119070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559119068}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1559119071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559119068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.03, y: -6.68, z: 2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16231,3 +16331,4 @@ SceneRoots:
   - {fileID: 1021592796}
   - {fileID: 1556669847}
   - {fileID: 379863989}
+  - {fileID: 1559119071}

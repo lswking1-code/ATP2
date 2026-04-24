@@ -11,6 +11,20 @@ using UnityEngine;
 /// </summary>
 public class ToiletEventController : MonoBehaviour
 {
+    [System.Serializable]
+    private struct Sound3DSettings
+    {
+        [Range(0f, 1f)] public float volume;
+        [Min(0f)] public float minDistance;
+        [Min(0f)] public float maxDistance;
+        public AudioRolloffMode rolloffMode;
+
+        public void Clamp()
+        {
+            if (maxDistance < minDistance) maxDistance = minDistance;
+        }
+    }
+
     [Header("Activation (ValueManage)")]
     [SerializeField, Tooltip(">=0 时要求 day 精确匹配；-1 表示不检查 day。")]
     private int targetDay = -1;
@@ -35,9 +49,27 @@ public class ToiletEventController : MonoBehaviour
     [SerializeField, Tooltip("厕所内声音 3D 声源点（为空时使用当前对象）")]
     private Transform toiletInnerAudioPoint;
 
+    [SerializeField, Tooltip("Step1 声音参数（音量/范围/衰减）")]
+    private Sound3DSettings nearAreaSoundSettings = new Sound3DSettings
+    {
+        volume = 1f,
+        minDistance = 2f,
+        maxDistance = 25f,
+        rolloffMode = AudioRolloffMode.Logarithmic
+    };
+
     [Header("Inside Event Sound (Step 3)")]
     [SerializeField, Tooltip("门被强制关闭后，在厕所内循环/单次播放的声响（单次）")]
     private AudioClip insideAfterLockClip;
+
+    [SerializeField, Tooltip("Step3 声音参数（音量/范围/衰减）")]
+    private Sound3DSettings insideAfterLockSoundSettings = new Sound3DSettings
+    {
+        volume = 1f,
+        minDistance = 2f,
+        maxDistance = 25f,
+        rolloffMode = AudioRolloffMode.Logarithmic
+    };
 
     [Header("Monster Outside Sound (Step 4)")]
     [SerializeField, Tooltip("门外怪物叫声")]
@@ -45,6 +77,15 @@ public class ToiletEventController : MonoBehaviour
 
     [SerializeField, Tooltip("怪物叫声声源点（为空时使用当前对象）")]
     private Transform monsterOutsideAudioPoint;
+
+    [SerializeField, Tooltip("Step4 声音参数（音量/范围/衰减）")]
+    private Sound3DSettings monsterOutsideSoundSettings = new Sound3DSettings
+    {
+        volume = 1f,
+        minDistance = 2f,
+        maxDistance = 25f,
+        rolloffMode = AudioRolloffMode.Logarithmic
+    };
 
     [SerializeField, Min(0f), Tooltip("锁门后到怪物叫声开始的延迟秒数")]
     private float delayBeforeMonsterRoar = 0.6f;
@@ -58,19 +99,6 @@ public class ToiletEventController : MonoBehaviour
 
     [SerializeField, Min(0.01f), Tooltip("闪烁最长间隔")]
     private float flickerMaxInterval = 0.18f;
-
-    [Header("3D Audio Common")]
-    [SerializeField, Range(0f, 1f)]
-    private float volume = 1f;
-
-    [SerializeField, Min(0f)]
-    private float minDistance = 2f;
-
-    [SerializeField, Min(0f)]
-    private float maxDistance = 25f;
-
-    [SerializeField]
-    private AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic;
 
     [Header("Flow")]
     [SerializeField, Tooltip("是否只触发一次整段厕所事件")]
@@ -93,10 +121,9 @@ public class ToiletEventController : MonoBehaviour
             flickerMaxInterval = flickerMinInterval;
         }
 
-        if (maxDistance < minDistance)
-        {
-            maxDistance = minDistance;
-        }
+        nearAreaSoundSettings.Clamp();
+        insideAfterLockSoundSettings.Clamp();
+        monsterOutsideSoundSettings.Clamp();
     }
 
     private void OnDisable()
@@ -118,7 +145,7 @@ public class ToiletEventController : MonoBehaviour
         if (!CanTriggerByValueManage()) return;
 
         nearAreaTriggered = true;
-        Play3DClip(nearAreaToiletClip, toiletInnerAudioPoint);
+        Play3DClip(nearAreaToiletClip, toiletInnerAudioPoint, nearAreaSoundSettings);
     }
 
     public void NotifyInsideToiletEnter(Collider other)
@@ -153,7 +180,7 @@ public class ToiletEventController : MonoBehaviour
             Debug.LogWarning("[ToiletEventController] DoorController is missing.", this);
         }
 
-        Play3DClip(insideAfterLockClip, toiletInnerAudioPoint);
+        Play3DClip(insideAfterLockClip, toiletInnerAudioPoint, insideAfterLockSoundSettings);
         StartFlicker();
 
         if (delayBeforeMonsterRoar > 0f)
@@ -161,7 +188,7 @@ public class ToiletEventController : MonoBehaviour
             yield return new WaitForSeconds(delayBeforeMonsterRoar);
         }
 
-        float monsterDuration = Play3DClip(monsterOutsideClip, monsterOutsideAudioPoint);
+        float monsterDuration = Play3DClip(monsterOutsideClip, monsterOutsideAudioPoint, monsterOutsideSoundSettings);
         if (monsterDuration > 0f)
         {
             yield return new WaitForSeconds(monsterDuration);
@@ -251,7 +278,7 @@ public class ToiletEventController : MonoBehaviour
     /// <summary>
     /// 返回 clip 时长，供调用方等待播放完成。
     /// </summary>
-    private float Play3DClip(AudioClip clip, Transform sourcePoint)
+    private float Play3DClip(AudioClip clip, Transform sourcePoint, Sound3DSettings settings)
     {
         if (clip == null)
         {
@@ -266,7 +293,7 @@ public class ToiletEventController : MonoBehaviour
         }
 
         Transform anchor = sourcePoint != null ? sourcePoint : transform;
-        manager.PlaySFX3D(clip, anchor, volume, minDistance, maxDistance, rolloffMode);
+        manager.PlaySFX3D(clip, anchor, settings.volume, settings.minDistance, settings.maxDistance, settings.rolloffMode);
         return clip.length;
     }
 }

@@ -182,7 +182,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8715415038254814529, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357358652}
   m_SourcePrefab: {fileID: 100100000, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
 --- !u!4 &239722839 stripped
 Transform:
@@ -1080,6 +1083,40 @@ MonoBehaviour:
   ambientOverrideColor: {r: 0.4209609, g: 0.4209609, b: 0.4209609, a: 1}
   ambientOverrideSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   fadeDuration: 0.7
+--- !u!1 &1357358647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715415038254814529, guid: f9532ffba498af34e9b30d6595ddbe07, type: 3}
+  m_PrefabInstance: {fileID: 239722838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1357358652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357358647}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfea5ed4cd5feff47bd657f6899ae6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionLossEnabled: 1
+  visionLossStartsAt: 0.55
+  visionLossMaxEffect: 0.6
+  visionLossHeartBeat: 0
+  detailLossEnabled: 1
+  detailLossStartsAt: 0.45
+  detailLossMaxEffect: 0.8
+  colorLossEnabled: 1
+  colorLossStartsAt: 0.65
+  colorLossTowardRedStartsAt: 0.15
+  doubleVisionEnabled: 1
+  doubleVisionStartsAt: 0.25
+  doubleVisionMaxEffect: 0.35
+  doubleVisionWaving: 0.5
+  stopEffectsWhenZeroHealth: 1
+  showInEditor: 0
+  simulateHealth: 1
 --- !u!1 &1595356897
 GameObject:
   m_ObjectHideFlags: 0

@@ -5963,6 +5963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5012457219528316997, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
+      propertyPath: closedEuler.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6943844984119931395, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_Name
       value: Toilet2
@@ -5981,7 +5985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5989,7 +5993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6001,7 +6005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7716546968925300921, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -8882,8 +8886,8 @@ MonoBehaviour:
   targetSituationId: 
   valueManage: {fileID: 0}
   doorController: {fileID: 1542956083}
-  slightOpenDeltaEuler: {x: 0, y: 190, z: 0}
-  slightOpenDuration: 1
+  slightOpenDeltaEuler: {x: 0, y: 20, z: 0}
+  slightOpenDuration: 5
   doorCueClip: {fileID: 8300000, guid: 24f59d51433593647a1dd969e03d2d3d, type: 3}
   roomCreepyClip: {fileID: 8300000, guid: f454003a5139b6140a8e1919b8a449c4, type: 3}
   nearTriggerCloseDoorClip: {fileID: 8300000, guid: cfcd9383779722147b2549821697240e, type: 3}
@@ -9441,7 +9445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hinge: {fileID: 3017210564939991597}
   closedEuler: {x: 0, y: 180, z: 0}
-  openEuler: {x: 0, y: 270, z: 0}
+  openEuler: {x: 0, y: 180, z: 0}
   startOpen: 0
   openSpeed: 5
   disableAfterInteract: 0
@@ -12208,11 +12212,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: targetDay
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: valueManage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: npcController
+      value: 
+      objectReference: {fileID: 2120575912}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: followDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: targetSituationId
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: isActivatedByCondition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
       propertyPath: disableBehavioursWhenFollowing.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
       propertyPath: 'disableBehavioursWhenFollowing.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2120575907}
+    - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      propertyPath: 'disableBehavioursWhenFollowing.Array.data[1]'
       value: 
       objectReference: {fileID: 2120575907}
     m_RemovedComponents: []
@@ -12225,6 +12257,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5842801398274655206, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2120575911}
+    - targetCorrespondingSourceObject: {fileID: 5842801398274655206, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2120575912}
   m_SourcePrefab: {fileID: 100100000, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
 --- !u!1 &2120575906 stripped
 GameObject:
@@ -12242,6 +12277,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dede7991648c6499ad97188f1e3ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &2120575908 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 1492844503896510427, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
+  m_PrefabInstance: {fileID: 2120575905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2120575910
 Animator:
   serializedVersion: 7
@@ -12287,6 +12327,52 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.2499998, z: 0}
+--- !u!114 &2120575912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120575906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa0820f68425b4f8aeb805c9782159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2120575910}
+  agent: {fileID: 2120575908}
+  speedParam: Speed
+  slopeParam: Slope
+  slopeDampTime: 0.12
+  speedSmoothTime: 0.15
+  patrolPoints: []
+  patrolWaitTime: 0
+  patrolLoop: 1
+  arriveThreshold: 0.2
+  patrolPointRadius: 0.5
+  interestPoints: []
+  interestChance: 0.2
+  interestActionTime: 3
+  interestPointRadius: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerBlockRadius: 1
+  playerBlockAngle: 90
+  requireLineOfSight: 1
+  forcedLookRotateSpeed: 360
+  slopeNormalizeThreshold: 0.25
+  minSpeedToDetectSlope: 0.05
+  footstepClips: []
+  footstepClipsUp: []
+  footstepClipsDown: []
+  stepDistance: 0.8
+  stepVolume: 1
+  minMoveSpeedSqr: 0.01
+  stairVerticalThreshold: 0.15
+  footstepAudioAnchor: {fileID: 0}
+  footstepMinDistance: 1
+  footstepMaxDistance: 25
 --- !u!114 &2142846408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12963,7 +13049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6156036014037969389, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.25
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 6156036014037969389, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
       propertyPath: m_LocalRotation.w

@@ -5565,9 +5565,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6959592612865951592, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
-      propertyPath: 'm_Materials.Array.data[2]'
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bc5f9aa3c9e15034998bc770430efcf7, type: 2}
+    - target: {fileID: 6959592612865951592, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d13683f6bc8f5640891d752f38a2001, type: 2}
+    - target: {fileID: 6959592612865951592, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5870b2e63668ee34ab595a46521b503b, type: 2}
     - target: {fileID: 8133039437951089671, guid: 03a62fc4e3cf45348a270236e91372a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.45
@@ -7228,8 +7236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77243ae9a80e4e54a8c5961369d4df56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDay: -1
-  targetSituationId: 
+  targetDay: 1
+  targetSituationId: a
   valueManage: {fileID: 0}
   tunnelLights:
   - {fileID: 2336062595163137928}
@@ -9223,10 +9231,8 @@ MonoBehaviour:
   posterRenderers:
   - {fileID: 1114518831}
   - {fileID: 619660737}
-  - {fileID: 1856947092}
-  - {fileID: 572328702}
   targetMaterial: {fileID: 2100000, guid: 3443191bd14fd8d4d805008a7d9fa208, type: 2}
-  materialSlotIndex: 1
+  materialSlotIndex: 0
   checkInterval: 0.25
   hasSwitched: 0
 --- !u!4 &1099210905
@@ -15796,7 +15802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2320cd650133e84f94f96b47371c802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDay: -1
+  targetDay: 0
   targetSituationId: 
   valueManage: {fileID: 0}
   roarClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}

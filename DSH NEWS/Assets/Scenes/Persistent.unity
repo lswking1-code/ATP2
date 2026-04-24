@@ -1076,6 +1076,9 @@ MonoBehaviour:
   unloadedSceneEvent: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   firstLoadScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
   menuScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  ambientOverrideScene: {fileID: 11400000, guid: e85c79917b23c694d8d61d418dc108b1, type: 2}
+  ambientOverrideColor: {r: 0.4209609, g: 0.4209609, b: 0.4209609, a: 1}
+  ambientOverrideSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   fadeDuration: 0.7
 --- !u!1 &1595356897
 GameObject:

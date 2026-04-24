@@ -32,6 +32,13 @@ public class SceneLoader : MonoBehaviour, ISaveable
     public GameSceneSO firstLoadScene;
     public GameSceneSO menuScene;
 
+    [Header("Environment Lighting")]
+    [Tooltip("进入该场景时覆盖 Ambient Color（例如 Test1）")]
+    public GameSceneSO ambientOverrideScene;
+    public Color ambientOverrideColor = Color.gray;
+    [Tooltip("进入该场景时覆盖 Skybox 材质")]
+    public Material ambientOverrideSkybox;
+
     private GameSceneSO currentLoadedScene;
     private GameSceneSO sceneToLoad;
     private Vector3 positionToGo;
@@ -39,6 +46,11 @@ public class SceneLoader : MonoBehaviour, ISaveable
     private bool fadeScreen;
     private bool isLoading;
     public float fadeDuration = 0.5f;
+    private Color cachedAmbientColor;
+    private Material cachedSkybox;
+    private bool hasCachedAmbientColor;
+    private bool hasCachedSkybox;
+    private bool ambientOverrideApplied;
 
     private void Start()
     {
@@ -177,6 +189,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     private void OnLoadCompleted(AsyncOperationHandle<SceneInstance> obj)
     {
         currentLoadedScene = sceneToLoad;
+        ApplyAmbientColorForScene(currentLoadedScene);
         ApplyRenderScaleForScene(currentLoadedScene);
         ApplyFullScreenRetroForScene(currentLoadedScene);
         ApplyVHSEffectForScene(currentLoadedScene);
@@ -203,6 +216,52 @@ public class SceneLoader : MonoBehaviour, ISaveable
         {
             afterSceneLoadedEvent.RaiseEvent();
         }
+    }
+
+    private void ApplyAmbientColorForScene(GameSceneSO targetScene)
+    {
+        bool shouldOverrideAmbient = targetScene != null && ambientOverrideScene != null && targetScene == ambientOverrideScene;
+        if (shouldOverrideAmbient)
+        {
+            if (!ambientOverrideApplied)
+            {
+                cachedAmbientColor = RenderSettings.ambientLight;
+                hasCachedAmbientColor = true;
+                cachedSkybox = RenderSettings.skybox;
+                hasCachedSkybox = true;
+            }
+
+            RenderSettings.ambientMode = AmbientMode.Flat;
+            RenderSettings.ambientLight = ambientOverrideColor;
+            RenderSettings.ambientSkyColor = ambientOverrideColor;
+            RenderSettings.ambientEquatorColor = ambientOverrideColor;
+            RenderSettings.ambientGroundColor = ambientOverrideColor;
+            if (ambientOverrideSkybox != null)
+            {
+                RenderSettings.skybox = ambientOverrideSkybox;
+            }
+            DynamicGI.UpdateEnvironment();
+            ambientOverrideApplied = true;
+            return;
+        }
+
+        if (ambientOverrideApplied && hasCachedAmbientColor)
+        {
+            RenderSettings.ambientMode = AmbientMode.Flat;
+            RenderSettings.ambientLight = cachedAmbientColor;
+            RenderSettings.ambientSkyColor = cachedAmbientColor;
+            RenderSettings.ambientEquatorColor = cachedAmbientColor;
+            RenderSettings.ambientGroundColor = cachedAmbientColor;
+            if (hasCachedSkybox)
+            {
+                RenderSettings.skybox = cachedSkybox;
+            }
+            DynamicGI.UpdateEnvironment();
+        }
+
+        ambientOverrideApplied = false;
+        hasCachedAmbientColor = false;
+        hasCachedSkybox = false;
     }
 
     private void ApplyFullScreenRetroForScene(GameSceneSO targetScene)

@@ -2791,6 +2791,310 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: a069196e-d17b-48cd-ad54-65e3502ad9d6
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: sewer
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 94c45c26-4bbc-4b5f-b4ec-066ba0ef0597
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: missing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: e4404c43-6465-475a-a656-2dcb9657a8d8
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: nokia
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 2c968f54-3ede-4163-a181-140fe82e4301
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: election
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 3773ecbe-8bff-4174-8bbe-26370031229f
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: space probe
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 739ae987-7229-41a0-942d-bc0fe4e732a6
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 3b9883b7-9ccc-4f5d-a44f-f407c5933bbc
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: fileroom
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: d2c6ec5d-e388-483a-8d7a-455884cd4a02
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: man
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 84ea352b-eb62-4506-85e5-b215afc2613b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: applewifi
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: fb168c8f-014b-41ce-9231-270c9a79cce3
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: missing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 7fd4ca3d-2724-4a2d-aedb-4b16d007f013
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: y2k
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 275bdab0-03e2-499e-b8a1-769e20abe97a
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: tamagochi
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 54d97000-a5cc-4252-a05a-f949cec9e3ee
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: missing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 786da456-aba6-49d1-b3cb-b68df30b4629
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: space probe
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: d67c3b01-8302-4153-9ffc-3042af786773
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: wifi
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: c70ee6f1-3c34-4141-9208-856a28382589
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: fossil
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 9ecfdfdf-eb5a-42c9-87af-774581435810
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: ShowContent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: fileroom
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 9c935095-482a-46c8-a859-1a38a73d969c
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: ffcbc7a8-f755-488d-ae7a-8f84fdc174b2
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1693797254}
+          m_TargetAssemblyTypeName: TVOverlay, Assembly-CSharp
+          m_MethodName: HideBroadcast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1544884886
 Transform:
   m_ObjectHideFlags: 0
@@ -2945,6 +3249,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: 4d8ac55591e7b214e8d8cc57d72d92b3, type: 2}
   sceneToGo: {fileID: 11400000, guid: 48962fef9db5e2d42ab28438edc5d694, type: 2}
+  enableDayBasedBranch: 0
+  endingStartDay: 0
+  endingSceneToGo: {fileID: 0}
+  valueManageOverride: {fileID: 0}
   positionToGo: {x: 30, y: -16, z: 20}
   rotationToGo: {x: 0, y: 180, z: 0}
   SwitchScanLineEvent: {fileID: 11400000, guid: 6d52a4294148b9a4aae6c01cb222cc58, type: 2}

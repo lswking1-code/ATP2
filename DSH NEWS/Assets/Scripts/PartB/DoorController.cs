@@ -38,12 +38,19 @@ public class DoorController : MonoBehaviour, IInteractable
     [SerializeField, Tooltip("关闭时播放的音效（可选）")]
     private AudioClip closeSound;
 
+    [SerializeField, Tooltip("门被剧情锁定时，玩家交互播放的上锁提示音（可选）")]
+    private AudioClip lockedSound;
+
     [SerializeField, Range(0f, 1f), Tooltip("音效音量")]
     private float soundVolume = 1f;
 
     [Header("Debug")]
     [SerializeField, Tooltip("启用后，记录每次门状态修改来源")]
     private bool logStateChanges = false;
+
+    [Header("Interaction")]
+    [SerializeField, Tooltip("为 true 时禁用玩家交互（剧情可继续调用 Open/Close）")]
+    private bool interactionLocked = false;
 
     // 内部状态
     private Quaternion closedRotation;
@@ -80,6 +87,11 @@ public class DoorController : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        if (interactionLocked)
+        {
+            PlayLockedSound();
+            return;
+        }
         if (hasInteracted && disableAfterInteract) return;
 
         Toggle();
@@ -168,6 +180,14 @@ public class DoorController : MonoBehaviour, IInteractable
         LogStateChange("Close", closedRotation);
     }
 
+    /// <summary>
+    /// 锁定或解锁玩家交互（不影响外部脚本强制调用 Open/Close）。
+    /// </summary>
+    public void SetInteractionLocked(bool locked)
+    {
+        interactionLocked = locked;
+    }
+
     private IEnumerator AnimateRotation(Quaternion from, Quaternion to, float speed)
     {
         float t = 0f;
@@ -199,6 +219,13 @@ public class DoorController : MonoBehaviour, IInteractable
         var clip = opening ? openSound : closeSound;
         if (clip != null)
             AudioManager.Instance.PlaySFX(clip, soundVolume);
+    }
+
+    private void PlayLockedSound()
+    {
+        if (AudioManager.Instance == null) return;
+        if (lockedSound == null) return;
+        AudioManager.Instance.PlaySFX(lockedSound, soundVolume);
     }
 
     private void LogStateChange(string action, Quaternion targetRotation)

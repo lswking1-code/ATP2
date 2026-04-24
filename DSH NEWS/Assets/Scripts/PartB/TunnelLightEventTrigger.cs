@@ -5,6 +5,16 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class TunnelLightEventTrigger : MonoBehaviour
 {
+    [Header("Activation (ValueManage)")]
+    [SerializeField, Tooltip(">=0 时要求 day 精确匹配；-1 表示不检查 day。")]
+    private int targetDay = -1;
+
+    [SerializeField, Tooltip("非空时要求 GetSituation(targetSituationId) 为 true（大小写敏感）。")]
+    private string targetSituationId = "";
+
+    [SerializeField, Tooltip("留空则自动查找场景中的 ValueManage。")]
+    private ValueManage valueManage;
+
     [Header("Lights")]
     [SerializeField, Tooltip("隧道内受影响的灯光列表")]
     private List<Light> tunnelLights = new List<Light>();
@@ -80,6 +90,9 @@ public class TunnelLightEventTrigger : MonoBehaviour
     [SerializeField, Tooltip("运行时触发状态（只读）")]
     private bool hasTriggered = false;
 
+    [SerializeField, Tooltip("运行时：ValueManage 条件是否满足")]
+    private bool isActivatedByCondition;
+
     private bool isRunning = false;
     private bool emergencySequenceCompleted = false;
     private AudioSource playingLoopSource;
@@ -127,6 +140,8 @@ public class TunnelLightEventTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (isRunning) return;
         if (triggerOnce && hasTriggered) return;
+        isActivatedByCondition = IsActivatedByValueManage();
+        if (!isActivatedByCondition) return;
 
         hasTriggered = true;
         StartCoroutine(RunEvent());
@@ -309,5 +324,15 @@ public class TunnelLightEventTrigger : MonoBehaviour
         }
 
         playingLoopSource = null;
+    }
+
+    private bool IsActivatedByValueManage()
+    {
+        if (valueManage == null) valueManage = FindFirstObjectByType<ValueManage>();
+        if (valueManage == null) return false;
+
+        bool dayOk = targetDay < 0 || valueManage.day == targetDay;
+        bool situationOk = string.IsNullOrWhiteSpace(targetSituationId) || valueManage.GetSituation(targetSituationId);
+        return dayOk && situationOk;
     }
 }

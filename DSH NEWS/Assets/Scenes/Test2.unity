@@ -3683,6 +3683,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+--- !u!1 &379863987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379863989}
+  - component: {fileID: 379863988}
+  m_Layer: 0
+  m_Name: ToiletEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &379863988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379863987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f480f58b045294b85fca6517348d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetDay: 6
+  targetSituationId: d
+  valueManage: {fileID: 0}
+  doorController: {fileID: 793694450}
+  closeDoorOnEnter: 1
+  nearAreaToiletClip: {fileID: 8300000, guid: 9bd1c6793fce46d43b97157e2b85de1d, type: 3}
+  toiletInnerAudioPoint: {fileID: 821986515}
+  insideAfterLockClip: {fileID: 8300000, guid: 6932de8a9768a48468231d69ad9b35b5, type: 3}
+  monsterOutsideClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}
+  monsterOutsideAudioPoint: {fileID: 1013221518}
+  delayBeforeMonsterRoar: 0.6
+  toiletLights:
+  - {fileID: 1479685084}
+  flickerMinInterval: 0.05
+  flickerMaxInterval: 0.18
+  volume: 1
+  minDistance: 2
+  maxDistance: 25
+  rolloffMode: 0
+  triggerOnce: 1
+  isActivatedByCondition: 0
+  nearAreaTriggered: 0
+  insideTriggered: 0
+  eventRunning: 0
+  eventCompleted: 0
+--- !u!4 &379863989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379863987}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389757722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,8 +4599,10 @@ MonoBehaviour:
   disableAfterInteract: 0
   openSound: {fileID: 8300000, guid: 751878cf60ea88c429de3f9e3934397d, type: 3}
   closeSound: {fileID: 8300000, guid: 4339e6d4dc7133043873c96a01390402, type: 3}
+  lockedSound: {fileID: 0}
   soundVolume: 1
   logStateChanges: 0
+  interactionLocked: 0
 --- !u!4 &513518551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9137471584877218158, guid: 9ea5693c8160149be857eb871dd7c7f3, type: 3}
@@ -6869,6 +6940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77243ae9a80e4e54a8c5961369d4df56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetDay: -1
+  targetSituationId: 
+  valueManage: {fileID: 0}
   tunnelLights:
   - {fileID: 2336062595163137928}
   - {fileID: 2336062595163137927}
@@ -6899,6 +6973,7 @@ MonoBehaviour:
   audioFadeOut: 0.2
   triggerOnce: 1
   hasTriggered: 0
+  isActivatedByCondition: 0
 --- !u!65 &772867449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6928,6 +7003,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5012457219528316997, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
+      propertyPath: lockedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 19b2073af2af93849aeea4323d170b72, type: 3}
     - target: {fileID: 5012457219528316997, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
       propertyPath: closedEuler.y
       value: 180
@@ -6981,6 +7060,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
+--- !u!114 &793694450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5012457219528316997, guid: 201ebc29da9fa4342b94e4a8fa7525cb, type: 3}
+  m_PrefabInstance: {fileID: 793694449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd681ea1eb7fb16498d2fe8aa8845aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &821986512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7084,6 +7174,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3675278233617657403, guid: bab30944aadbf8e4096b82f3e92ddf78, type: 3}
+--- !u!4 &821986515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8286622251319091589, guid: f26ee71618c6ca44b8879e9e3d69b582, type: 3}
+  m_PrefabInstance: {fileID: 821986512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &838518174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8140,6 +8235,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7268174802822498646, guid: 43da7a3efe3746e44893bfb730a1fb3a, type: 3}
+--- !u!1 &1013221517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013221518}
+  m_Layer: 0
+  m_Name: Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013221518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013221517}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 34.81, y: -6.877, z: 2.302}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1020623069 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 3377655754914469866, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
@@ -8175,6 +8301,74 @@ Light:
   m_CorrespondingSourceObject: {fileID: 8835453191386086397, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
   m_PrefabInstance: {fileID: 2336062595163137923}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1021592793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021592796}
+  - component: {fileID: 1021592795}
+  - component: {fileID: 1021592794}
+  m_Layer: 0
+  m_Name: ToiletEventTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1021592794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021592793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4fe826653922545873c74f479b33c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 379863988}
+  triggerType: 0
+--- !u!65 &1021592795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021592793}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1021592796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021592793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.4, y: -7.35, z: 10.474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026969224
 GameObject:
   m_ObjectHideFlags: 0
@@ -10489,7 +10683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDay: 2
-  targetSituationId: B
+  targetSituationId: b
   valueManage: {fileID: 0}
   doorController: {fileID: 1542956083}
   slightOpenDeltaEuler: {x: 0, y: 20, z: 0}
@@ -10581,6 +10775,127 @@ Transform:
   - {fileID: 1840182515}
   - {fileID: 2079462269}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1479685083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479685086}
+  - component: {fileID: 1479685084}
+  - component: {fileID: 1479685085}
+  m_Layer: 0
+  m_Name: Point Light (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1479685084
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479685083}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 0.94509804, g: 0.92156863, b: 0.8392157, a: 1}
+  m_Intensity: 10
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &1479685085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479685083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!4 &1479685086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479685083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.507, y: 4.865, z: 2.941}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 561717621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492809650
 GameObject:
@@ -11257,8 +11572,10 @@ MonoBehaviour:
   disableAfterInteract: 0
   openSound: {fileID: 8300000, guid: 19b2073af2af93849aeea4323d170b72, type: 3}
   closeSound: {fileID: 8300000, guid: 19b2073af2af93849aeea4323d170b72, type: 3}
+  lockedSound: {fileID: 0}
   soundVolume: 1
   logStateChanges: 1
+  interactionLocked: 0
 --- !u!1 &1551429490
 GameObject:
   m_ObjectHideFlags: 0
@@ -11331,6 +11648,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551429490}
   m_CullTransparentMesh: 1
+--- !u!1 &1556669844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556669847}
+  - component: {fileID: 1556669846}
+  - component: {fileID: 1556669845}
+  m_Layer: 0
+  m_Name: ToiletEventTrigger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1556669845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556669844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4fe826653922545873c74f479b33c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 379863988}
+  triggerType: 1
+--- !u!65 &1556669846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556669844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1556669847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556669844}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.648, y: -7.35, z: 3.054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567563070
 GameObject:
   m_ObjectHideFlags: 0
@@ -12986,8 +13371,10 @@ MonoBehaviour:
   disableAfterInteract: 0
   openSound: {fileID: 8300000, guid: 6d93095eb4964be4c96366e918bc0243, type: 3}
   closeSound: {fileID: 8300000, guid: cfcd9383779722147b2549821697240e, type: 3}
+  lockedSound: {fileID: 0}
   soundVolume: 1
   logStateChanges: 0
+  interactionLocked: 0
 --- !u!64 &1843285562
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14619,7 +15006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
       propertyPath: targetSituationId
-      value: B
+      value: b
       objectReference: {fileID: 0}
     - target: {fileID: 9022343242325401226, guid: e75d5e87beadbe343b3bcb39b935864c, type: 3}
       propertyPath: isActivatedByCondition
@@ -14971,6 +15358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2320cd650133e84f94f96b47371c802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetDay: -1
+  targetSituationId: 
+  valueManage: {fileID: 0}
   roarClip: {fileID: 8300000, guid: 864b680cf96069f48ab12fe74aadc178, type: 3}
   roarSourcePoint: {fileID: 2147000108}
   volume: 1
@@ -14979,6 +15369,7 @@ MonoBehaviour:
   rolloffMode: 1
   triggerOnce: 1
   hasTriggered: 0
+  isActivatedByCondition: 0
 --- !u!1 &2147000107
 GameObject:
   m_ObjectHideFlags: 0
@@ -15519,10 +15910,13 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 541399889}
     - targetCorrespondingSourceObject: {fileID: 7364236454670356613, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
-      insertIndex: 12
-      addedObject: {fileID: 389757723}
+      insertIndex: 6
+      addedObject: {fileID: 1479685086}
     - targetCorrespondingSourceObject: {fileID: 7364236454670356613, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
       insertIndex: 13
+      addedObject: {fileID: 389757723}
+    - targetCorrespondingSourceObject: {fileID: 7364236454670356613, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
+      insertIndex: 14
       addedObject: {fileID: 1713743879}
     - targetCorrespondingSourceObject: {fileID: 7364236454670356613, guid: e7214ffe267b6664995c8bbd7e37f132, type: 3}
       insertIndex: -1
@@ -15817,6 +16211,7 @@ SceneRoots:
   - {fileID: 970147820}
   - {fileID: 821986512}
   - {fileID: 793694449}
+  - {fileID: 1013221518}
   - {fileID: 2145409069}
   - {fileID: 1588261314}
   - {fileID: 1843285558}
@@ -15833,3 +16228,6 @@ SceneRoots:
   - {fileID: 2031778932}
   - {fileID: 1379274068}
   - {fileID: 1532524907}
+  - {fileID: 1021592796}
+  - {fileID: 1556669847}
+  - {fileID: 379863989}

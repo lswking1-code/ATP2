@@ -14976,8 +14976,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 830.65796
-        y: 1
+        x: 1053.5327
+        y: 121.93981
         width: 160
         height: 30
     - id: 12
@@ -15003,8 +15003,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Almost no one watches my news program. At this rate, I won't be able
-          to pay next month's rent. I need to work harder...
+        value: Almost no one watches my news program today. Without the bonous, I
+          won't be able to afford the rent....
         type: 0
         typeString: 
       - title: Sequence
@@ -15032,8 +15032,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 465.00458
-        y: 144.0263
+        x: 689.0172
+        y: 263.82822
         width: 160
         height: 30
     - id: 13
@@ -15059,8 +15059,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: My news program wasn't doing very well, but it seems like more people
-          are watching, which might be a good thing.
+        value: My news program wasn't doing very well, but at least there are more
+          people watching the program
         type: 0
         typeString: 
       - title: Sequence
@@ -15089,8 +15089,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 667.5249
-        y: 144.32758
+        x: 881.2963
+        y: 264.1295
         width: 160
         height: 30
     - id: 14
@@ -15117,7 +15117,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: I heard my news program on the street today. Maybe it has some influence
-          now, but the situation is still not optimistic.
+          now.
         type: 0
         typeString: 
       - title: Sequence
@@ -15146,8 +15146,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 864.11127
-        y: 146.32338
+        x: 1071.0552
+        y: 263.84943
         width: 160
         height: 30
     - id: 5
@@ -15225,8 +15225,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 826.38855
-        y: 232.4079
+        x: 1049.2633
+        y: 353.34772
         width: 160
         height: 30
     - id: 18
@@ -15280,8 +15280,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 464.47363
-        y: 356.68887
+        x: 688.48627
+        y: 476.49078
         width: 160
         height: 30
     - id: 19
@@ -15336,8 +15336,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 656.64966
-        y: 353.3681
+        x: 880.6623
+        y: 474.30792
         width: 160
         height: 30
     - id: 20
@@ -15393,8 +15393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 836.64966
-        y: 353.3681
+        x: 1060.6624
+        y: 473.16998
         width: 160
         height: 30
     - id: 21
@@ -15449,8 +15449,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1016.64966
-        y: 353.3681
+        x: 1239.5244
+        y: 474.30792
         width: 160
         height: 30
     - id: 22
@@ -15504,8 +15504,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1196.6497
-        y: 353.3681
+        x: 1419.5244
+        y: 474.30792
         width: 160
         height: 30
     - id: 6
@@ -15531,7 +15531,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (you earn 500$ from the excellent work you done last week)
+        value: There aren't any good shows on TV...
         type: 0
         typeString: 
       - title: Sequence
@@ -15559,8 +15559,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.3199
-        y: 486.74863
+        x: 1042.5884
+        y: 628.59515
         width: 160
         height: 30
     - id: 10
@@ -15614,8 +15614,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.69464
-        y: 648.395
+        x: 1040.3912
+        y: 690.39984
         width: 160
         height: 30
     - id: 11
@@ -15667,8 +15667,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 828.3576
-        y: 724.62744
+        x: 1040.6292
+        y: 754.85095
         width: 160
         height: 30
     - id: 15
@@ -15724,8 +15724,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1043.3555
-        y: 141.93294
+        x: 1267.3682
+        y: 261.73483
         width: 160
         height: 30
     - id: 16
@@ -15752,7 +15752,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Many people on the street are talking about the news I reported; I
-          shouldn't have to worry about rent next month.
+          don't  have to worry about my rent for now.
         type: 0
         typeString: 
       - title: Sequence
@@ -15780,8 +15780,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1223.7045
-        y: 141.00845
+        x: 1446.5791
+        y: 261.94827
         width: 160
         height: 30
     - id: 17
@@ -15859,13 +15859,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 826.509
-        y: 53.11458
+        x: 1049.3838
+        y: 174.05438
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 231.87929, y: 176.62305}
-    canvasZoom: 0.5788004
+    canvasScrollPosition: {x: 358.48615, y: 263.60706}
+    canvasZoom: 0.84880006
   - id: 12
     fields:
     - title: Title
@@ -18693,8 +18693,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 646.08167
+        y: 77.50343
         width: 160
         height: 30
     - id: 1
@@ -18748,8 +18748,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157
-        y: 164
+        x: 643.08167
+        y: 211.50343
         width: 160
         height: 30
     - id: 2
@@ -18809,8 +18809,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157
-        y: 257
+        x: 643.08167
+        y: 304.50336
         width: 160
         height: 30
     - id: 3
@@ -18864,8 +18864,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 68
-        y: 345
+        x: 554.0816
+        y: 392.50336
         width: 160
         height: 30
     - id: 4
@@ -18919,8 +18919,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 303
-        y: 343
+        x: 789.08167
+        y: 390.50336
         width: 160
         height: 30
     - id: 5
@@ -18968,12 +18968,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 186
-        y: 445
+        x: 672.08167
+        y: 492.50336
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.1047363, y: 102.740005}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.9051976
   - id: 16
     fields:
@@ -19074,8 +19074,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 331
-        y: 241
+        x: 590
+        y: 267
         width: 160
         height: 30
     - id: 1
@@ -19135,8 +19135,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 331
-        y: 291
+        x: 590
+        y: 317
         width: 160
         height: 30
     - id: 2
@@ -19190,8 +19190,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 238
-        y: 383
+        x: 497
+        y: 409
         width: 160
         height: 30
     - id: 3
@@ -19245,8 +19245,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 439
-        y: 385
+        x: 698
+        y: 411
         width: 160
         height: 30
     - id: 4
@@ -19294,8 +19294,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 335
-        y: 495
+        x: 594
+        y: 521
         width: 160
         height: 30
     entryGroups: []
@@ -20055,7 +20055,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 193.93735}
+    canvasScrollPosition: {x: 0, y: 35.709564}
     canvasZoom: 0.7900002
   - id: 19
     fields:
@@ -20156,8 +20156,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 562.19775
+        y: 94.83516
         width: 160
         height: 30
     - id: 4
@@ -20211,8 +20211,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162.82352
-        y: 115.80672
+        x: 561.7246
+        y: 164.15836
         width: 160
         height: 30
     - id: 5
@@ -20238,7 +20238,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Bad
+        value: Not great, lost sleep again last night. Sleeping pill doesn't work
+          anymore.
         type: 0
         typeString: 
       - title: Sequence
@@ -20266,8 +20267,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162.82352
-        y: 166.80672
+        x: 562.8235
+        y: 221.75171
         width: 160
         height: 30
     - id: 6
@@ -20293,8 +20294,228 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Anyway, let's start the broadcast, now you can choose two paper from
-          these four.
+        value: 'You should quit taking that long ago, the longer period you take
+          it becomes less effective. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 19
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 6
+        destinationConversationID: 19
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 567.21906
+        y: 286.0375
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The therapist, I think you should contact him again.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 19
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 7
+        destinationConversationID: 19
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 568.3516
+        y: 348.3516
+        width: 160
+        height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: It won't work...That's not something can be done with that...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 19
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 8
+        destinationConversationID: 19
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 565.0549
+        y: 416.48346
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Whatever you say, but now I need you to finish today''s broadcast.  '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 19
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 9
+        destinationConversationID: 19
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 565.0549
+        y: 497.80222
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Yes, chief.
         type: 0
         typeString: 
       - title: Sequence
@@ -20316,12 +20537,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162.82352
-        y: 216.80672
+        x: 561.7582
+        y: 575.8241
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 4.395569, y: 74.72534}
     canvasZoom: 0.9100001
   - id: 20
     fields:
@@ -20422,8 +20643,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 607.8723
+        y: 132.12766
         width: 160
         height: 30
     - id: 4
@@ -20477,8 +20698,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165.24368
-        y: 105.31932
+        x: 605.66925
+        y: 195.74484
         width: 160
         height: 30
     - id: 5
@@ -20532,8 +20753,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165.24368
-        y: 156.31932
+        x: 605.66925
+        y: 246.74484
         width: 160
         height: 30
     - id: 6
@@ -20559,8 +20780,229 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Anyway, let's start the broadcast, now you can choose two paper from
-          these four.
+        value: Glad to hear that, I think you can handle today's broadcast as well
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 20
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 20
+        originDialogueID: 6
+        destinationConversationID: 20
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 605.66925
+        y: 296.7449
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'By the way, I actually saw something strange on my way home. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 20
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 20
+        originDialogueID: 7
+        destinationConversationID: 20
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 605.66925
+        y: 346.7449
+        width: 160
+        height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: It couldn't be. You must be having illusions no? These things only
+          happen in the novels.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 20
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 20
+        originDialogueID: 8
+        destinationConversationID: 20
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 604.04254
+        y: 402.12762
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: What if we are in this novel?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 20
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 20
+        originDialogueID: 9
+        destinationConversationID: 20
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 602.97864
+        y: 464.89362
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Don''t be silly. This topic ends and focus on today''s broadcast
+          now. '
         type: 0
         typeString: 
       - title: Sequence
@@ -20582,12 +21024,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165.24368
-        y: 206.31932
+        x: 602.97876
+        y: 530.851
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 65.95746}
     canvasZoom: 0.94000006
   - id: 21
     fields:
@@ -20688,8 +21130,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 573
+        y: 89
         width: 160
         height: 30
     - id: 4
@@ -20703,11 +21145,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 8
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -20715,7 +21157,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: How is your day?
+        value: Have you seen something when you come here?
         type: 0
         typeString: 
       - title: Sequence
@@ -20743,8 +21185,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 148.3025
-        y: 127.90755
+        x: 573.3025
+        y: 143.90755
         width: 160
         height: 30
     - id: 5
@@ -20758,11 +21200,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 8
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 8
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -20770,7 +21212,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good
+        value: What in particular?
         type: 0
         typeString: 
       - title: Sequence
@@ -20798,11 +21240,122 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 148.3025
-        y: 178.90755
+        x: 576.3025
+        y: 196.90753
         width: 160
         height: 30
     - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'Don''t you see the changes? People acting weird, abnormal things
+          appearing in the street. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 6
+        destinationConversationID: 21
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 575.3025
+        y: 245.90753
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: This world is becoming werid as hell
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 7
+        destinationConversationID: 21
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 574
+        y: 299
+        width: 160
+        height: 30
+    - id: 8
       fields:
       - title: Title
         value: 
@@ -20825,8 +21378,119 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Anyway, let's start the broadcast, now you can choose two paper from
-          these four.
+        value: 'Well, nothing strange to me. Are you seeing these hallucinations
+          again. '
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 8
+        destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 574
+        y: 356
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I do think you need to look for your therapist again before it gets
+          worse.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 9
+        destinationConversationID: 21
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 574
+        y: 405.10715
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ......
         type: 0
         typeString: 
       - title: Sequence
@@ -20848,13 +21512,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 148.3025
-        y: 228.90755
+        x: 573.47925
+        y: 475.5523
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 62.745975, y: 82.10565}
+    canvasZoom: 1.03
   - id: 22
     fields:
     - title: Title
@@ -20954,8 +21618,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 528
+        y: 67
         width: 160
         height: 30
     - id: 4
@@ -20981,7 +21645,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: How is your day?
+        value: How's your day?
         type: 0
         typeString: 
       - title: Sequence
@@ -21009,8 +21673,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170.89075
-        y: 102.09242
+        x: 531.89075
+        y: 124.09242
         width: 160
         height: 30
     - id: 5
@@ -21036,7 +21700,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good
+        value: Actually I felt great! I think I never felt this awesome before!
         type: 0
         typeString: 
       - title: Sequence
@@ -21064,8 +21728,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170.89075
-        y: 153.09242
+        x: 531.89075
+        y: 175.09242
         width: 160
         height: 30
     - id: 6
@@ -21091,8 +21755,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Anyway, let's start the broadcast, now you can choose two paper from
-          these four.
+        value: Glad to hear that, let's start today's broadcast. We're counting on
+          you.
         type: 0
         typeString: 
       - title: Sequence
@@ -21114,8 +21778,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170.89075
-        y: 203.09242
+        x: 534.89075
+        y: 226.09242
         width: 160
         height: 30
     entryGroups: []
@@ -21220,8 +21884,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160.80672
-        y: 30
+        x: 530.8067
+        y: 76
         width: 160
         height: 30
     - id: 4
@@ -21247,7 +21911,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: How is your day?
+        value: 'Hey, can you still can '
         type: 0
         typeString: 
       - title: Sequence
@@ -21275,8 +21939,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144.26889
-        y: 117.42015
+        x: 532.2689
+        y: 127.42015
         width: 160
         height: 30
     - id: 5
@@ -21302,7 +21966,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good
+        value: ......
         type: 0
         typeString: 
       - title: Sequence
@@ -21330,8 +21994,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144.26889
-        y: 168.42015
+        x: 532.2689
+        y: 183.42015
         width: 160
         height: 30
     - id: 6
@@ -21345,11 +22009,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 8
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -21357,8 +22021,62 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Anyway, let's start the broadcast, now you can choose two paper from
-          these four.
+        value: The Studio remained silent for the whole time.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 23
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 23
+        originDialogueID: 6
+        destinationConversationID: 23
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 534.2689
+        y: 237.42017
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The Studio remained silent for the whole time.
         type: 0
         typeString: 
       - title: Sequence
@@ -21380,8 +22098,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144.26889
-        y: 218.42015
+        x: 534
+        y: 295
         width: 160
         height: 30
     entryGroups: []

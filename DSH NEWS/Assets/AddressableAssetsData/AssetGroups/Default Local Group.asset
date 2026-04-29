@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 69841d64b57d08c44a9a36cc0a6b0b8b
   m_SerializeEntries:
+  - m_GUID: 094491fbdff494d4bbec43af1f39c5b7
+    m_Address: Assets/Scenes/Persistent.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5647705459eff694c9665a7001222a00
     m_Address: Assets/Scenes/Home.unity
     m_ReadOnly: 0
@@ -43,4 +48,6 @@ MonoBehaviour:
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4556c7341e33a3f4ead0821f50238e4e, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 00929727cead1354fbdb5f99ad2ebbea, type: 2}
+    - {fileID: 11400000, guid: c9d7aaf27f246b447956b9b7b89cde4a, type: 2}

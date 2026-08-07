@@ -44,6 +44,13 @@ public class NPC2FollowOnEvent : MonoBehaviour
     [SerializeField, Min(0f), Tooltip("停下时转向角速度（度/秒）。")]
     private float rotateSpeed = 360f;
 
+    [Header("Animator (follow mode)")]
+    [SerializeField, Tooltip("跟随模式下写入的动画速度参数名（与 NPCController 一致）。")]
+    private string speedParam = "Speed";
+
+    [SerializeField, Tooltip("水平速度平滑时间（秒）。")]
+    private float speedSmoothTime = 0.15f;
+
     [Header("Debug")]
     [SerializeField, Tooltip("当前 ValueManage 条件是否满足（可跟随）。")]
     private bool isActivatedByCondition;
@@ -52,6 +59,11 @@ public class NPC2FollowOnEvent : MonoBehaviour
     private float repathTimer;
     private float nextPlayerResolveTime;
     private bool warnedMissingValueManage;
+    private float nextAnimDebugLogTime;
+    private Animator followAnimator;
+    private float nextConditionDebugLogTime;
+    private float smoothedSpeed;
+    private float smoothedSpeedVel;
 
     private void Reset()
     {
@@ -64,7 +76,28 @@ public class NPC2FollowOnEvent : MonoBehaviour
         if (agent == null) agent = GetComponent<NavMeshAgent>();
         if (npcController == null) npcController = GetComponent<NPCController>();
         if (valueManage == null) valueManage = FindFirstObjectByType<ValueManage>();
+        followAnimator = GetComponent<Animator>();
         TryAssignPlayer();
+
+        // #region agent log
+        var ctrl = followAnimator != null && followAnimator.runtimeAnimatorController != null
+            ? followAnimator.runtimeAnimatorController.name
+            : "null";
+        bool hasAvatar = followAnimator != null && followAnimator.avatar != null;
+        bool avatarHuman = hasAvatar && followAnimator.avatar.isHuman;
+        AgentRuntimeLogger.Log(
+            "pre-fix",
+            "C",
+            "NPC2FollowOnEvent.Awake",
+            "npc2 animator setup",
+            "{\"go\":\"" + name +
+            "\",\"controller\":\"" + ctrl +
+            "\",\"hasAvatar\":" + (hasAvatar ? "true" : "false") +
+            ",\"avatarIsHuman\":" + (avatarHuman ? "true" : "false") +
+            ",\"applyRootMotion\":" + (followAnimator != null && followAnimator.applyRootMotion ? "true" : "false") +
+            ",\"npcControllerEnabled\":" + (npcController != null && npcController.enabled ? "true" : "false") +
+            "}");
+        // #endregion
     }
 
     /// <summary>
@@ -74,6 +107,31 @@ public class NPC2FollowOnEvent : MonoBehaviour
     {
         bool wantFollow = IsFollowAllowedByValueManage();
         isActivatedByCondition = wantFollow;
+
+        // #region agent log
+        if (Time.time >= nextConditionDebugLogTime)
+        {
+            nextConditionDebugLogTime = Time.time + 1f;
+            int day = valueManage != null ? valueManage.day : -999;
+            bool situationOk = valueManage != null &&
+                               !string.IsNullOrWhiteSpace(targetSituationId) &&
+                               valueManage.GetSituation(targetSituationId);
+            AgentRuntimeLogger.Log(
+                "post-fix",
+                "E",
+                "NPC2FollowOnEvent.LateUpdate",
+                "follow condition sample",
+                "{\"go\":\"" + name +
+                "\",\"wantFollow\":" + (wantFollow ? "true" : "false") +
+                ",\"followModeActive\":" + (followModeActive ? "true" : "false") +
+                ",\"day\":" + day +
+                ",\"targetDay\":" + targetDay +
+                ",\"targetSituationId\":\"" + (targetSituationId ?? "") +
+                "\",\"situationOk\":" + (situationOk ? "true" : "false") +
+                ",\"npcControllerEnabled\":" + (npcController != null && npcController.enabled ? "true" : "false") +
+                "}");
+        }
+        // #endregion
 
         if (wantFollow != followModeActive)
         {
@@ -119,6 +177,65 @@ public class NPC2FollowOnEvent : MonoBehaviour
 
             if (facePlayerWhenStopped) RotateTowardsPlayer();
         }
+
+        // NPCController 在跟随模式下被禁用，由其原先负责的 Animator.Speed 写入需在此接管。
+        UpdateFollowAnimatorSpeed();
+
+        // #region agent log
+        if (Time.time >= nextAnimDebugLogTime)
+        {
+            nextAnimDebugLogTime = Time.time + 0.5f;
+            if (followAnimator == null) followAnimator = GetComponent<Animator>();
+            float agentSpeed = agent.velocity.magnitude;
+            float animSpeed = 0f;
+            string stateName = "n/a";
+            string ctrl = "null";
+            bool animEnabled = false;
+            if (followAnimator != null)
+            {
+                animEnabled = followAnimator.enabled;
+                if (followAnimator.runtimeAnimatorController != null)
+                    ctrl = followAnimator.runtimeAnimatorController.name;
+                if (followAnimator.isInitialized)
+                {
+                    animSpeed = followAnimator.GetFloat(speedParam);
+                    var info = followAnimator.GetCurrentAnimatorStateInfo(0);
+                    stateName = info.IsName("Movement") ? "Movement" : info.fullPathHash.ToString();
+                }
+            }
+
+            AgentRuntimeLogger.Log(
+                "post-fix",
+                "A",
+                "NPC2FollowOnEvent.LateUpdate",
+                "follow move vs animator",
+                "{\"go\":\"" + name +
+                "\",\"followMode\":true" +
+                ",\"npcControllerEnabled\":" + (npcController != null && npcController.enabled ? "true" : "false") +
+                ",\"agentSpeed\":" + agentSpeed.ToString("F3") +
+                ",\"agentIsStopped\":" + (agent.isStopped ? "true" : "false") +
+                ",\"animSpeedParam\":" + animSpeed.ToString("F3") +
+                ",\"smoothedSpeed\":" + smoothedSpeed.ToString("F3") +
+                ",\"animatorEnabled\":" + (animEnabled ? "true" : "false") +
+                ",\"controller\":\"" + ctrl +
+                "\",\"state\":\"" + stateName +
+                "\",\"sqrDist\":" + sqr.ToString("F2") +
+                "}");
+        }
+        // #endregion
+    }
+
+    private void UpdateFollowAnimatorSpeed()
+    {
+        if (followAnimator == null) followAnimator = GetComponent<Animator>();
+        if (followAnimator == null || string.IsNullOrEmpty(speedParam) || agent == null) return;
+
+        Vector3 horizVel = agent.velocity;
+        horizVel.y = 0f;
+        float targetSpeed = agent.isStopped ? 0f : horizVel.magnitude;
+
+        smoothedSpeed = Mathf.SmoothDamp(smoothedSpeed, targetSpeed, ref smoothedSpeedVel, speedSmoothTime);
+        followAnimator.SetFloat(speedParam, smoothedSpeed);
     }
 
     private bool IsFollowAllowedByValueManage()
@@ -157,6 +274,21 @@ public class NPC2FollowOnEvent : MonoBehaviour
             agent.isStopped = false;
             repathTimer = 0f;
         }
+
+        smoothedSpeed = 0f;
+        smoothedSpeedVel = 0f;
+
+        // #region agent log
+        AgentRuntimeLogger.Log(
+            "post-fix",
+            "A",
+            "NPC2FollowOnEvent.EnterFollowMode",
+            "disabled NPCController for follow",
+            "{\"go\":\"" + name +
+            "\",\"npcControllerWasNull\":" + (npcController == null ? "true" : "false") +
+            ",\"npcControllerEnabledNow\":" + (npcController != null && npcController.enabled ? "true" : "false") +
+            "}");
+        // #endregion
     }
 
     private void ExitFollowMode()
@@ -166,6 +298,12 @@ public class NPC2FollowOnEvent : MonoBehaviour
             agent.ResetPath();
             agent.isStopped = false;
         }
+
+        if (followAnimator == null) followAnimator = GetComponent<Animator>();
+        if (followAnimator != null && !string.IsNullOrEmpty(speedParam))
+            followAnimator.SetFloat(speedParam, 0f);
+        smoothedSpeed = 0f;
+        smoothedSpeedVel = 0f;
 
         if (npcController != null) npcController.enabled = true;
     }

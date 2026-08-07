@@ -146,7 +146,6 @@ public class NPCController : MonoBehaviour
     private float lastGroundY;
     private bool forceLookAtTarget = false;
     private Transform forcedLookTarget;
-    private float nextSpeedDebugLogTime;
 
     private void Reset()
     {
@@ -281,31 +280,6 @@ public class NPCController : MonoBehaviour
 
         // 写回 Animator
         animator.SetFloat(speedParam, smoothedSpeed);
-
-        // #region agent log
-        // Only sample npcs whose name suggests npc2 / male03_2 to avoid spam from all NPCs.
-        if (Time.time >= nextSpeedDebugLogTime &&
-            (name.IndexOf("npc2", System.StringComparison.OrdinalIgnoreCase) >= 0 ||
-             name.IndexOf("male03", System.StringComparison.OrdinalIgnoreCase) >= 0))
-        {
-            nextSpeedDebugLogTime = Time.time + 0.5f;
-            string ctrl = animator.runtimeAnimatorController != null
-                ? animator.runtimeAnimatorController.name
-                : "null";
-            AgentRuntimeLogger.Log(
-                "pre-fix",
-                "B",
-                "NPCController.UpdateSmoothedSpeedAndApply",
-                "writing Speed to animator",
-                "{\"go\":\"" + name +
-                "\",\"enabled\":true" +
-                ",\"agentSpeed\":" + targetSpeed.ToString("F3") +
-                ",\"smoothedSpeed\":" + smoothedSpeed.ToString("F3") +
-                ",\"isStopped\":" + (agent.isStopped ? "true" : "false") +
-                ",\"controller\":\"" + ctrl +
-                "\",\"animatorNull\":false}");
-        }
-        // #endregion
     }
 
     private void HandleFootsteps()
